@@ -481,7 +481,7 @@ section.section-tight { padding: clamp(48px, 7vw, 80px) 0; }
 }
 .footer-logo-section {
   max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad) 48px;
-  display: flex; align-items: center;
+  display: flex; align-items: flex-start;
 }
 .footer-inner {
   max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad);
