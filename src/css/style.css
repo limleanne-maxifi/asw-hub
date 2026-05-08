@@ -173,7 +173,7 @@ p  { margin: 0 0 1em; color: var(--paper-mute); }
    HERO
    ============================================================ */
 .hero {
-  padding: clamp(48px, 8vw, 98px) 0 clamp(40px, 5.6vw, 67px);
+  padding: clamp(20px, 3vw, 40px) 0 clamp(16px, 2vw, 32px);
   background:
     radial-gradient(ellipse at 20% 0%, rgba(37, 99, 235, 0.18), transparent 55%),
     radial-gradient(ellipse at 80% 30%, rgba(30, 58, 95, 0.6), transparent 60%),
