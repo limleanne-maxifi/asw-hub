@@ -1,5 +1,5 @@
 [build]
-  base    = "asw-hub"
+  base    = "."
   publish = "_site"
   command = "npm run build"
 
