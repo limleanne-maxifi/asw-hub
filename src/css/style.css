@@ -539,7 +539,7 @@ section.section-tight { padding: clamp(48px, 7vw, 80px) 0; }
 .service-name { color: var(--paper-mute); }
 .footer-contact { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--hairline); }
 .footer-contact p { margin: 0 0 8px; font-size: 14px; }
-.footer-contact a { color: var(--paper-mute); }
+.footer-contact a { color: var(--paper-mute); white-space: nowrap; }
 .footer-contact a:hover { color: var(--paper); }
 .footer-links { display: flex; gap: 24px; }
 .footer-links a { color: var(--paper-faint); font-size: 13px; }
