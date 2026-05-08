@@ -6,7 +6,11 @@ summary: The SES2+ regulatory package, the legacy of Functional Airspace Blocks,
 
 ## What this theme covers
 
-The Single European Sky (SES) is the European Union's twenty-five-year programme to unify the management of European airspace into a single, performance-driven system. The revised SES2+ regulatory package, agreed in 2024 after years of negotiation triggered by the post-pandemic capacity crises, introduces sharper performance targets for ANSPs, a strengthened role for the EUROCONTROL Network Manager, and revised governance for cross-border service provision. ASW 2026 is the first major industry gathering since SES2+ entered force, and the sessions in this track address the operational consequences: how the new performance scheme reshapes the cost–capacity trade-off ANSPs face, what happens to the legacy of Functional Airspace Blocks (FABs) under the revised text, how the European ATM Master Plan is being rewritten to align with SES2+ deliverables, and where SES2+ leaves the long-running debate over civil–military airspace coordination. The track also examines the political backdrop — what the European Commission expected from SES2+, what Member States agreed to, and where the practical implementation gap remains.
+The Single European Sky (SES) is the European Union's twenty-five-year programme to unify the management of European airspace into a single, performance-driven system. The revised SES2+ regulatory package, agreed in 2024 after years of negotiation triggered by the post-pandemic capacity crises, introduces sharper performance targets for ANSPs, a strengthened role for the EUROCONTROL Network Manager, and revised governance for cross-border service provision.
+
+ASW 2026 is the first major industry gathering since SES2+ entered force. The sessions in this track address the operational consequences: how the new performance scheme reshapes the cost–capacity trade-off ANSPs face, what happens to the legacy of Functional Airspace Blocks (FABs) under the revised text, and how the European ATM Master Plan is being rewritten to align with SES2+ deliverables.
+
+The track also examines where SES2+ leaves the long-running debate over civil–military airspace coordination, and the political backdrop — what the European Commission expected from SES2+, what Member States agreed to, and where the practical implementation gap remains.
 
 ## Why it matters now
 
@@ -18,23 +22,35 @@ SES2+ moved from political agreement to legal text during 2024 and entered force
 
 ### What is the Single European Sky and what does SES2+ change?
 
-The Single European Sky is the EU regulatory framework, originating in 2004, intended to unify the management of European airspace into a performance-driven, technology-enabled system that crosses national boundaries. SES2+ is the 2024 revision of that framework, agreed in response to two decades of uneven implementation and the post-pandemic capacity crises. The principal changes in SES2+ are sharper performance targets across capacity, environment, and cost-efficiency; strengthened powers for the EUROCONTROL Network Manager; revised governance for cross-border service provision; and a tightened relationship between SES performance assessment and EU funding eligibility for ANSP investments. SES2+ does not redraw national borders or create a single ANSP, but it tightens the obligations on each Member State to deliver against common targets.
+The Single European Sky is the EU regulatory framework, originating in 2004, intended to unify the management of European airspace into a performance-driven, technology-enabled system that crosses national boundaries. SES2+ is the 2024 revision of that framework, agreed in response to two decades of uneven implementation and the post-pandemic capacity crises.
+
+The principal changes in SES2+ are sharper performance targets across capacity, environment, and cost-efficiency; strengthened powers for the EUROCONTROL Network Manager; revised governance for cross-border service provision; and a tightened relationship between SES performance assessment and EU funding eligibility for ANSP investments.
+
+SES2+ does not redraw national borders or create a single ANSP, but it tightens the obligations on each Member State to deliver against common targets.
 
 ### How does the SES performance scheme work in practice?
 
-The SES performance scheme requires Member States to set binding national or regional targets across four key performance areas — safety, capacity, environment, and cost-efficiency — for each multi-year reference period. Targets are reviewed by the European Commission and the Performance Review Body, with adjustment mechanisms where targets are judged insufficient. ANSPs are then assessed against the agreed targets, and divergences between actual performance and target trigger financial consequences through the en-route charging mechanism. Reference Period 4 (RP4) is being negotiated through 2025–26 under the revised SES2+ text. The new period introduces stricter capacity targets in response to the 2022–24 European summer disruption.
+The SES performance scheme requires Member States to set binding national or regional targets across four key performance areas: safety, capacity, environment, and cost-efficiency — for each multi-year reference period. Targets are reviewed by the European Commission and the Performance Review Body, with adjustment mechanisms where targets are judged insufficient.
+
+ANSPs are then assessed against the agreed targets, and divergences between actual performance and target trigger financial consequences through the en-route charging mechanism. Reference Period 4 (RP4) is being negotiated through 2025–26 under the revised SES2+ text. The new period introduces stricter capacity targets in response to the 2022–24 European summer disruption.
 
 ### What happened to Functional Airspace Blocks under SES2+?
 
-Functional Airspace Blocks were the SES2 architectural concept under which adjacent ANSPs were expected to integrate their airspace management across national borders. In practice, FABs delivered limited operational integration — most remained governance structures rather than operational entities — and SES2+ has formally moved beyond the FAB concept as the principal organising framework. The revised text instead emphasises specific cross-border service provision arrangements, joint procurement, and shared technical infrastructure as the practical paths to the integration the FABs were intended to deliver. Existing FAB structures are not abolished, but they are no longer the central architectural concept of European ATM governance.
+Functional Airspace Blocks were the SES2 architectural concept under which adjacent ANSPs were expected to integrate their airspace management across national borders. In practice, FABs delivered limited operational integration — most remained governance structures rather than operational entities. SES2+ has formally moved beyond the FAB concept as the principal organising framework.
+
+The revised text instead emphasises specific cross-border service provision arrangements, joint procurement, and shared technical infrastructure as the practical paths to the integration the FABs were intended to deliver. Existing FAB structures are not abolished, but they are no longer the central architectural concept of European ATM governance.
 
 ### What is the role of the EUROCONTROL Network Manager?
 
-The EUROCONTROL Network Manager is the centralised function responsible for managing European en-route traffic flow, allocating airspace capacity, coordinating cross-border operations, and providing the operational data services on which ANSPs and airspace users depend. The Network Manager is not an ANSP — it does not provide air traffic control services itself — but it sets the daily and tactical traffic flow regulations that determine where ATFM delays are applied. Under SES2+ the Network Manager's mandate has been strengthened, particularly in relation to capacity recovery during disruption events and the coordination of contingency arrangements between ANSPs.
+The EUROCONTROL Network Manager is the centralised function responsible for managing European en-route traffic flow, allocating airspace capacity, coordinating cross-border operations, and providing the operational data services on which ANSPs and airspace users depend. The Network Manager is not an ANSP — it does not provide air traffic control services itself — but it sets the daily and tactical traffic flow regulations that determine where ATFM delays are applied.
+
+Under SES2+ the Network Manager's mandate has been strengthened, particularly in relation to capacity recovery during disruption events and the coordination of contingency arrangements between ANSPs.
 
 ### Why has Single European Sky implementation taken so long?
 
-The Single European Sky has progressed slowly because European airspace management remains a sovereign competence of Member States, with national ANSPs typically employing significant unionised workforces and operating under national charging regimes that fund both ATM infrastructure and ancillary state functions. Each major SES legislative step has therefore required Member State agreement on changes that affect employment, national revenue, and civil–military airspace governance. The political conditions for sharper integration only emerged after the 2022–24 capacity crises made the cost of fragmentation visible to airline customers and travelling passengers. SES2+ reflects what was politically achievable in that window, rather than what the European Commission would have written in isolation.
+The Single European Sky has progressed slowly because European airspace management remains a sovereign competence of Member States, with national ANSPs typically employing significant unionised workforces and operating under national charging regimes that fund both ATM infrastructure and ancillary state functions. Each major SES legislative step has required Member State agreement on changes that affect employment, national revenue, and civil–military airspace governance.
+
+The political conditions for sharper integration only emerged after the 2022–24 capacity crises made the cost of fragmentation visible to airline customers and travelling passengers. SES2+ reflects what was politically achievable in that window, rather than what the European Commission would have written in isolation.
 
 <script type="application/ld+json">
 {
