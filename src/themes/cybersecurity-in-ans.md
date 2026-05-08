@@ -6,7 +6,11 @@ summary: ENISA's ATM threat landscape, NIS2 Directive applicability to ANSPs, se
 
 ## What this theme covers
 
-The cybersecurity posture of air navigation service providers has shifted from a niche operational specialism into a regulated, board-level discipline. ASW 2026 sessions in this track address the threat landscape — the categories of cyber threat that ENISA and equivalent national agencies report as material to ATM operations — and the regulatory framework that now determines minimum cyber maturity. The principal regulatory threads are the EU NIS2 Directive (Directive 2022/2555), which places ANSPs in scope as essential entities with specific obligations on risk management, incident reporting, and supervision; the ICAO Aviation Cybersecurity Strategy and the supporting Action Plan; and the EASA-led Part-IS framework for information security in aviation organisations. The track also addresses the operational dimensions: the security operations centre (SOC) capability ANSPs are building or sourcing; supply chain risk management in an industry that depends on long product lifecycles and a relatively concentrated supplier base; and the integration of cybersecurity into the safety case as ATM systems become increasingly software-defined.
+The cybersecurity posture of air navigation service providers has shifted from a niche operational specialism into a regulated, board-level discipline. ASW 2026 sessions in this track address the threat landscape — the categories of cyber threat that ENISA and equivalent national agencies report as material to ATM operations — and the regulatory framework that now determines minimum cyber maturity.
+
+The principal regulatory threads are the EU NIS2 Directive (Directive 2022/2555), which places ANSPs in scope as essential entities with specific obligations on risk management, incident reporting, and supervision; the ICAO Aviation Cybersecurity Strategy and the supporting Action Plan; and the EASA-led Part-IS framework for information security in aviation organisations.
+
+The track also addresses the operational dimensions: the security operations centre (SOC) capability ANSPs are building or sourcing; supply chain risk management in an industry that depends on long product lifecycles and a relatively concentrated supplier base; and the integration of cybersecurity into the safety case as ATM systems become increasingly software-defined.
 
 ## Why it matters now
 

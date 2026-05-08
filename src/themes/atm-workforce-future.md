@@ -6,7 +6,11 @@ summary: The ATCO retirement wave, the controller recruitment pipeline, simulati
 
 ## What this theme covers
 
-The ATM workforce question is the single hardest constraint on European and global airspace capacity in 2026. Air traffic controller (ATCO) cohorts recruited in the 1980s and 1990s are reaching retirement age in significant numbers; recruitment and training pipelines were thinned during the pandemic and are still rebuilding; and the role itself is changing as digital tools and AI-assisted decision support reshape what a controller does day-to-day. ASW 2026 sessions in this track address the operational consequences. The principal threads are: the demographic profile of the European ATCO workforce and the resulting retirement pressure through 2030; the recruitment and selection pipeline, including aptitude testing, simulation-based selection, and the gap between Initial Training and Operational Training that has historically driven attrition; the changing competency framework for controllers operating with AI-assisted tools; the CANSO Tomorrow's Voices programme and equivalent initiatives that draw younger industry voices into governance and policy debates; and the broader question of role evolution as ANSPs move towards higher-automation operating concepts.
+The ATM workforce question is the single hardest constraint on European and global airspace capacity in 2026. Air traffic controller (ATCO) cohorts recruited in the 1980s and 1990s are reaching retirement age in significant numbers; recruitment and training pipelines were thinned during the pandemic and are still rebuilding; and the role itself is changing as digital tools and AI-assisted decision support reshape what a controller does day-to-day.
+
+ASW 2026 sessions in this track address the operational consequences. The principal threads are: the demographic profile of the European ATCO workforce and the resulting retirement pressure through 2030; the recruitment and selection pipeline, including aptitude testing, simulation-based selection, and the gap between Initial Training and Operational Training that has historically driven attrition; the changing competency framework for controllers operating with AI-assisted tools.
+
+The CANSO Tomorrow's Voices programme and equivalent initiatives draw younger industry voices into governance and policy debates, and the broader question of role evolution as ANSPs move towards higher-automation operating concepts.
 
 ## Why it matters now
 
@@ -18,23 +22,45 @@ The training cycle from selected candidate to unrestricted en-route ATCO is typi
 
 ### Why are air traffic controllers in short supply in 2026?
 
-Air traffic controllers are in short supply in 2026 because of a structural mismatch between the demographic profile of the existing workforce, the pace of the recruitment pipeline, and the post-pandemic recovery in traffic demand. Many ANSPs employ controllers recruited in the 1980s and 1990s; those cohorts are reaching national retirement ages in significant numbers through the 2020s. The training pipeline — typically three to five years from selection to unrestricted en-route rating — was reduced during the pandemic when many ANSPs paused recruitment, and the rebuild has been slower than the recovery in traffic. The result is that several major European ANSPs are operating below their authorised controller establishment, with no rapid path to closing the gap.
+Air traffic controllers are in short supply in 2026 because of a structural mismatch between the demographic profile of the existing workforce, the pace of the recruitment pipeline, and the post-pandemic recovery in traffic demand. Many ANSPs employ controllers recruited in the 1980s and 1990s; those cohorts are reaching national retirement ages in significant numbers through the 2020s.
+
+The training pipeline — typically three to five years from selection to unrestricted en-route rating — was reduced during the pandemic when many ANSPs paused recruitment, and the rebuild has been slower than the recovery in traffic.
+
+The result is that several major European ANSPs are operating below their authorised controller establishment, with no rapid path to closing the gap.
 
 ### How long does it take to train an air traffic controller?
 
-The training pipeline for an air traffic controller varies by ANSP and by intended operational role, but in Europe the typical timeline from selection to unrestricted en-route ATCO rating is three to five years. The pipeline comprises Initial Training (typically conducted at a national or regional ATCO training organisation, lasting 12–18 months for en-route ratings), Unit Training (on-site at the operational unit, including extensive simulator work and supervised live operations, lasting 12–24 months), and Continuation Training and Endorsements over the controller's career. Initial Training failure rates have historically been a major driver of pipeline attrition, and a significant proportion of selected candidates do not complete training successfully even after the substantial cost of selection and Initial Training.
+The training pipeline for an air traffic controller varies by ANSP and by intended operational role, but in Europe the typical timeline from selection to unrestricted en-route ATCO rating is three to five years.
+
+The pipeline comprises Initial Training (typically conducted at a national or regional ATCO training organisation, lasting 12–18 months for en-route ratings), Unit Training (on-site at the operational unit, including extensive simulator work and supervised live operations, lasting 12–24 months), and Continuation Training and Endorsements over the controller's career.
+
+Initial Training failure rates have historically been a major driver of pipeline attrition, and a significant proportion of selected candidates do not complete training successfully even after the substantial cost of selection and Initial Training.
 
 ### How is simulation changing controller training?
 
-Simulation has become the central technology of controller training, with high-fidelity radar simulation enabling trainees to develop operational skills at greater intensity and lower risk than is possible in live traffic. The 2026 generation of training simulators integrates AI-driven pseudo-pilots that respond realistically to clearances, scenario libraries that exercise specific operational conditions, and recorded performance data that supports objective assessment of trainee progress. Several ANSPs have introduced simulation-based selection — using simulator performance as a primary input into the recruitment decision — and the broader integration of simulation across Initial, Unit, and Continuation Training is reducing pipeline lead time and improving completion rates. Simulation does not replace live traffic experience but it materially changes the structure of the training pipeline.
+Simulation has become the central technology of controller training, with high-fidelity radar simulation enabling trainees to develop operational skills at greater intensity and lower risk than is possible in live traffic.
+
+The 2026 generation of training simulators integrates AI-driven pseudo-pilots that respond realistically to clearances, scenario libraries that exercise specific operational conditions, and recorded performance data that supports objective assessment of trainee progress. Several ANSPs have introduced simulation-based selection — using simulator performance as a primary input into the recruitment decision.
+
+The broader integration of simulation across Initial, Unit, and Continuation Training is reducing pipeline lead time and improving completion rates. Simulation does not replace live traffic experience but it materially changes the structure of the training pipeline.
 
 ### What is the CANSO Tomorrow's Voices programme?
 
-CANSO Tomorrow's Voices is the global ATM industry's initiative to bring early-career and emerging professional voices into industry governance and policy debate. The programme provides structured channels through which younger ANSP staff, technology suppliers, regulators, and academic researchers participate in CANSO working groups, contribute to position papers, and present at industry events including Airspace World. Tomorrow's Voices addresses two industry challenges simultaneously: the talent retention problem (giving early-career professionals visibility and influence increases retention) and the governance modernisation problem (industry policy positions improve when developed by a wider range of perspectives than the traditional senior leadership cohort). The programme has expanded through 2024–25 and ASW 2026 will feature its largest cohort to date.
+CANSO Tomorrow's Voices is the global ATM industry's initiative to bring early-career and emerging professional voices into industry governance and policy debate. The programme provides structured channels through which younger ANSP staff, technology suppliers, regulators, and academic researchers participate in CANSO working groups, contribute to position papers, and present at industry events including Airspace World.
+
+Tomorrow's Voices addresses two industry challenges simultaneously: the talent retention problem (giving early-career professionals visibility and influence increases retention) and the governance modernisation problem (industry policy positions improve when developed by a wider range of perspectives than the traditional senior leadership cohort).
+
+The programme has expanded through 2024–25 and ASW 2026 will feature its largest cohort to date.
 
 ### How is the controller role changing in an AI-augmented operations room?
 
-The controller role is changing along several dimensions as AI-assisted decision support tools enter operational service. First, the controller's information environment is becoming richer: predictive conflict alerts, optimised arrival sequences, and complexity forecasts are layered on top of conventional radar and flight data displays. Second, the controller's decision rhythm is shifting: routine sequencing decisions are increasingly informed by tool recommendations, freeing controller attention for complex or non-standard situations. Third, the competency framework is evolving: training and licensing now address trust calibration, automation monitoring, and the ability to operate effectively when an AI tool is unavailable or producing unreliable output. The role remains the controller's, but the working environment in which controllers exercise that role is materially different from the pre-AI generation.
+The controller role is changing along several dimensions as AI-assisted decision support tools enter operational service.
+
+First, the controller's information environment is becoming richer: predictive conflict alerts, optimised arrival sequences, and complexity forecasts are layered on top of conventional radar and flight data displays. Second, the controller's decision rhythm is shifting: routine sequencing decisions are increasingly informed by tool recommendations, freeing controller attention for complex or non-standard situations.
+
+Third, the competency framework is evolving: training and licensing now address trust calibration, automation monitoring, and the ability to operate effectively when an AI tool is unavailable or producing unreliable output.
+
+The role remains the controller's, but the working environment in which controllers exercise that role is materially different from the pre-AI generation.
 
 <script type="application/ld+json">
 {

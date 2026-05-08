@@ -6,7 +6,11 @@ summary: U-space regulation under EU 2021/664, U-space service provider certific
 
 ## What this theme covers
 
-Unmanned traffic management (UTM) — the operational discipline that ensures unmanned aircraft can operate safely in shared airspace — has moved from regulatory concept to operational rollout. The European Union's U-space regulation, formally Implementing Regulation (EU) 2021/664 supported by 2021/665 and 2021/666, entered application in January 2023 and is being progressively activated by Member States designating U-space airspace volumes. ASW 2026 sessions in this track address the operational state of U-space across the EU; the certification and supervision of U-space service providers (USSPs); the architecture of the UTM/ATM interface, including the obligations on ANSPs to coordinate with USSPs in shared airspace; the development of drone corridor governance for routine BVLOS operations; and the European reference architecture work emerging from D-FLIGHT and equivalent national programmes. The track also examines counter-UAS — the operational and regulatory response to unauthorised drone incursions in controlled airspace — and the integration questions raised by larger uncrewed platforms including high-altitude operations and inner-space platforms.
+Unmanned traffic management (UTM) — the operational discipline that ensures unmanned aircraft can operate safely in shared airspace — has moved from regulatory concept to operational rollout. The European Union's U-space regulation, formally Implementing Regulation (EU) 2021/664 supported by 2021/665 and 2021/666, entered application in January 2023 and is being progressively activated by Member States designating U-space airspace volumes.
+
+ASW 2026 sessions in this track address the operational state of U-space across the EU; the certification and supervision of U-space service providers (USSPs); the architecture of the UTM/ATM interface, including the obligations on ANSPs to coordinate with USSPs in shared airspace; the development of drone corridor governance for routine BVLOS operations; and the European reference architecture work emerging from D-FLIGHT and equivalent national programmes.
+
+The track also examines counter-UAS — the operational and regulatory response to unauthorised drone incursions in controlled airspace — and the integration questions raised by larger uncrewed platforms including high-altitude operations and inner-space platforms.
 
 ## Why it matters now
 
