@@ -83,8 +83,8 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 h1, h2, h3, h4 { color: var(--paper); margin: 0 0 0.5em; line-height: 1.2; letter-spacing: -0.015em; }
 h1 { font-size: clamp(36px, 5.5vw, 64px); font-weight: 700; letter-spacing: -0.025em; }
-h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 600; }
-h3 { font-size: clamp(20px, 2vw, 24px); font-weight: 600; }
+h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 600; padding-bottom: 12px; border-bottom: 2px solid var(--electric-2); }
+h3 { font-size: clamp(20px, 2vw, 24px); font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid var(--electric-2); }
 h4 { font-size: 18px; font-weight: 600; }
 p  { margin: 0 0 1em; color: var(--paper-mute); }
 
@@ -212,7 +212,7 @@ p  { margin: 0 0 1em; color: var(--paper-mute); }
 /* ============================================================
    SECTIONS
    ============================================================ */
-section { padding: clamp(64px, 9vw, 112px) 0; border-bottom: 1px solid var(--hairline); }
+section { padding: 52px 0; border-bottom: 1px solid var(--hairline); }
 section.section-tight { padding: clamp(48px, 7vw, 80px) 0; }
 .section-head { max-width: 720px; margin: 0 0 48px; }
 .section-head p { font-size: 17px; color: var(--paper-mute); margin: 12px 0 0; }
