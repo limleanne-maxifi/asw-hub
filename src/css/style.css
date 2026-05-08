@@ -354,7 +354,7 @@ section.section-tight { padding: clamp(48px, 7vw, 80px) 0; }
    ============================================================ */
 .signup {
   background: linear-gradient(135deg, var(--electric) 0%, var(--steel-2) 100%);
-  padding: clamp(40px, 6vw, 64px);
+  padding: clamp(28px, 4vw, 44px);
   border-radius: var(--radius-l);
   text-align: center;
   animation: fadeInUp 600ms cubic-bezier(.2,.6,.3,1) 400ms both;
