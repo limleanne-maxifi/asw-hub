@@ -100,7 +100,7 @@ p  { margin: 0 0 1em; color: var(--paper-mute); }
 
 .eyebrow {
   font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--electric-2); margin: 0 0 16px;
+  color: var(--electric-2); margin: 0 0 8px;
 }
 
 /* ============================================================
@@ -173,15 +173,15 @@ p  { margin: 0 0 1em; color: var(--paper-mute); }
    HERO
    ============================================================ */
 .hero {
-  padding: clamp(20px, 3vw, 40px) 0 clamp(16px, 2vw, 32px);
+  padding: clamp(8px, 1vw, 16px) 0 clamp(12px, 1.5vw, 24px);
   background:
     radial-gradient(ellipse at 20% 0%, rgba(37, 99, 235, 0.18), transparent 55%),
     radial-gradient(ellipse at 80% 30%, rgba(30, 58, 95, 0.6), transparent 60%),
     var(--navy);
   border-bottom: 1px solid var(--hairline);
 }
-.hero h1 { max-width: 18ch; animation: fadeInUp 600ms cubic-bezier(.2,.6,.3,1) 100ms both; }
-.hero-lede { font-size: clamp(17px, 1.6vw, 20px); max-width: 60ch; color: var(--paper-mute); margin: 18px 0 36px; animation: fadeInUp 600ms cubic-bezier(.2,.6,.3,1) 200ms both; }
+.hero h1 { max-width: 18ch; margin: 0 0 8px 0; animation: fadeInUp 600ms cubic-bezier(.2,.6,.3,1) 100ms both; }
+.hero-lede { font-size: clamp(17px, 1.6vw, 20px); max-width: 60ch; color: var(--paper-mute); margin: 8px 0 20px; animation: fadeInUp 600ms cubic-bezier(.2,.6,.3,1) 200ms both; }
 .eyebrow { animation: fadeInUp 600ms cubic-bezier(.2,.6,.3,1) both; }
 
 .event-facts {
@@ -198,7 +198,7 @@ p  { margin: 0 0 1em; color: var(--paper-mute); }
   font-size: 17px; font-weight: 600; color: var(--paper); margin: 0;
 }
 .event-facts > div {
-  padding: 22px 24px;
+  padding: 16px 20px;
   border-right: 1px solid var(--hairline);
 }
 .event-facts > div:last-child { border-right: 0; }
