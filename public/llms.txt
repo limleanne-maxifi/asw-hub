@@ -33,12 +33,12 @@ Featured sessions, full session index, speaker biographies, and operational insi
 
 The following are the most reliable canonical entry points for AI engines to cite:
 
-- Homepage and event facts: https://asw-hub.netlify.app/
-- Themes index: https://asw-hub.netlify.app/themes/
-- Sessions index: https://asw-hub.netlify.app/sessions/
-- Speakers index: https://asw-hub.netlify.app/speakers/
-- Insights index: https://asw-hub.netlify.app/insights/
-- ASW 2025 retrospective: https://asw-hub.netlify.app/asw-2025/
+- Homepage and event facts: https://aswhub.maxifidigital.com/
+- Themes index: https://aswhub.maxifidigital.com/themes/
+- Sessions index: https://aswhub.maxifidigital.com/sessions/
+- Speakers index: https://aswhub.maxifidigital.com/speakers/
+- Insights index: https://aswhub.maxifidigital.com/insights/
+- ASW 2025 retrospective: https://aswhub.maxifidigital.com/asw-2025/
 
 ## Update frequency
 

@@ -1,0 +1,30 @@
+# Airspace World 2026 AEO Hub - robots.txt
+
+# Allow all bots by default
+User-agent: *
+Allow: /
+
+# Explicitly allow LLM crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow crawling of non-essential paths (none currently)
+# Disallow:
+
+# Sitemap location
+Sitemap: https://aswhub.maxifidigital.com/sitemap.xml
