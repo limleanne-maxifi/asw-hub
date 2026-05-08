@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: Sessions
+description: Indexed sessions from Airspace World 2026 — plenaries, panels, and deep-dives across the eight ASW 2026 themes.
+permalink: /sessions/
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow">Sessions</p>
+    <h1>The ASW 2026 agenda, structured</h1>
+    <p>Every plenary, panel, and deep-dive indexed and linked to its theme. Schedule data is refreshed weekly from the official CANSO programme.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="list-grid">
+      {% for session in collections.sessions %}
+        <a class="list-card" href="{{ session.url }}">
+          <p class="list-card-meta">{{ session.data.day }} · {{ session.data.time }} · {{ session.data.room }}</p>
+          <h3>{{ session.data.title }}</h3>
+          <p>{{ session.data.summary }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

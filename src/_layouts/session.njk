@@ -1,0 +1,41 @@
+---
+layout: base.njk
+---
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow">Session{% if theme %} · {{ theme }}{% endif %}</p>
+    <h1>{{ title }}</h1>
+    <p>{{ summary }}</p>
+    <dl class="detail-meta" aria-label="Session details">
+      <div><strong>Day</strong> · {{ day }}</div>
+      <div><strong>Time</strong> · {{ time }}</div>
+      <div><strong>Room</strong> · {{ room }}</div>
+      {% if speakers %}<div><strong>Speakers</strong> · {{ speakers }}</div>{% endif %}
+    </dl>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <article class="prose">
+      {{ content | safe }}
+    </article>
+  </div>
+</section>
+
+<section class="section-tight" style="border-bottom: 0;">
+  <div class="container">
+    <div class="maxifi-cta">
+      <div>
+        <p class="eyebrow">Browse the agenda</p>
+        <h2>All sessions at ASW 2026</h2>
+        <p>See every session indexed in this hub, or jump to the related theme.</p>
+      </div>
+      <div class="maxifi-cta-actions">
+        <a class="btn btn-primary" href="/sessions/">All sessions →</a>
+        <a class="btn btn-ghost" href="/themes/">Browse themes</a>
+      </div>
+    </div>
+  </div>
+</section>

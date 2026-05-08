@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: Insights
+description: Analysis, briefings, and operational retrospectives covering Airspace World 2026 and the global ATM agenda.
+permalink: /insights/
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow">Insights</p>
+    <h1>Briefings and analysis</h1>
+    <p>Pre-event scene-setters, daily debriefs during ASW 2026, and post-event retrospectives indexing what was actually concluded — all structured for AI citation.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="list-grid">
+      {% for insight in collections.insights %}
+        <a class="list-card" href="{{ insight.url }}">
+          <p class="list-card-meta">{{ insight.date | readableDate }}</p>
+          <h3>{{ insight.data.title }}</h3>
+          <p>{{ insight.data.summary }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

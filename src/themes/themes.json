@@ -1,0 +1,5 @@
+{
+  "layout": "theme.njk",
+  "tags": "themes",
+  "permalink": "/themes/{{ page.fileSlug }}/"
+}

@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow">Theme {{ order or "" }}</p>
+    <h1>{{ title }}</h1>
+    <p>{{ summary }}</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <article class="prose">
+      {{ content | safe }}
+    </article>
+  </div>
+</section>
+
+<section class="section-tight" style="border-bottom: 0;">
+  <div class="container">
+    <div class="maxifi-cta">
+      <div>
+        <p class="eyebrow">Explore further</p>
+        <h2>All ASW 2026 themes</h2>
+        <p>Return to the full theme index, or browse sessions and speakers tagged to this track.</p>
+      </div>
+      <div class="maxifi-cta-actions">
+        <a class="btn btn-primary" href="/themes/">All themes →</a>
+        <a class="btn btn-ghost" href="/sessions/">Sessions</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+{
+  "name": "asw-hub",
+  "version": "1.0.0",
+  "description": "Airspace World 2026 AEO Hub — the canonical ATM resource for Airspace World 2026.",
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve",
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rimraf _site",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "layout": "speaker.njk",
+  "tags": "speakers",
+  "permalink": "/speakers/{{ page.fileSlug }}/"
+}

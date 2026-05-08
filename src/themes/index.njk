@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: Themes
+description: Eight tracks shaping the agenda at Airspace World 2026 — digital ATM, sustainable aviation, Single European Sky, capacity, AI in ATC, drones, cybersecurity, and the ATM workforce.
+permalink: /themes/
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow">Themes</p>
+    <h1>Eight tracks shaping ASW 2026</h1>
+    <p>Each theme indexes the sessions, speakers, and insights aligned to a major operational or technological challenge in modern air traffic management.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="theme-grid">
+      {% for theme in collections.themes %}
+        <a class="theme-card" href="{{ theme.url }}">
+          <div>
+            <span class="theme-card-num">{{ "0" + (loop.index | string) if loop.index < 10 else loop.index }}</span>
+            <h3>{{ theme.data.title }}</h3>
+          </div>
+          <span class="theme-card-arrow">Explore →</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: Speakers
+description: Confirmed speakers at Airspace World 2026 — the ANSP executives, regulators, technologists, and operators on the ASW 2026 stage.
+permalink: /speakers/
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow">Speakers</p>
+    <h1>The ASW 2026 stage</h1>
+    <p>Speaker confirmations are added here as CANSO publishes them. The list is refreshed weekly against the official programme.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    {% if collections.speakers.length %}
+      <div class="list-grid">
+        {% for speaker in collections.speakers %}
+          <a class="list-card" href="{{ speaker.url }}">
+            <p class="list-card-meta">{{ speaker.data.organisation or "Speaker" }}</p>
+            <h3>{{ speaker.data.title }}</h3>
+            <p>{{ speaker.data.role }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>Speaker confirmations open soon. Subscribe on the homepage to be notified as new speakers are added.</p>
+    {% endif %}
+  </div>
+</section>

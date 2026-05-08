@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow">Speaker</p>
+    <h1>{{ title }}</h1>
+    <p>{{ role }}{% if organisation %}, {{ organisation }}{% endif %}</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <article class="prose">
+      {{ content | safe }}
+    </article>
+  </div>
+</section>
+
+<section class="section-tight" style="border-bottom: 0;">
+  <div class="container">
+    <div class="maxifi-cta">
+      <div>
+        <p class="eyebrow">More from ASW 2026</p>
+        <h2>All confirmed speakers</h2>
+        <p>Browse the full speaker index, or jump back to the agenda.</p>
+      </div>
+      <div class="maxifi-cta-actions">
+        <a class="btn btn-primary" href="/speakers/">All speakers →</a>
+        <a class="btn btn-ghost" href="/sessions/">Sessions</a>
+      </div>
+    </div>
+  </div>
+</section>

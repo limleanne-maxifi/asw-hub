@@ -1,0 +1,34 @@
+<header class="nav-main" role="banner">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/" aria-label="Airspace World 2026 AEO Hub home">
+      <span class="nav-brand-mark" aria-hidden="true">ASW</span>
+      <span class="nav-brand-text">Airspace World 2026 Hub</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+      <a href="/themes/" {% if page.url == "/themes/" or "/themes/" in page.url %}aria-current="page"{% endif %}>Themes</a>
+      <a href="/speakers/" {% if "/speakers/" in page.url %}aria-current="page"{% endif %}>Speakers</a>
+      <a href="/sessions/" {% if "/sessions/" in page.url %}aria-current="page"{% endif %}>Sessions</a>
+      <a href="/insights/" {% if "/insights/" in page.url %}aria-current="page"{% endif %}>Insights</a>
+      <a class="nav-cta" href="https://maxifidigital.com/services/aeo-audit/" rel="noopener">Book an Audit →</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  (function () {
+    var btn = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (!btn || !links) return;
+    btn.addEventListener('click', function () {
+      var open = links.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    });
+  })();
+</script>
