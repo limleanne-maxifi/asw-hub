@@ -4,7 +4,7 @@ order: 5
 featured: true
 day: Wednesday 27 May 2026
 time: 11:00 – 11:50
-room: Frequentist Theatre
+room: Frequentis Theatre
 theme: Digital ATM Transformation
 speakers: Global ANSP Leaders
 summary: A cross-continental panel examining why modernisation speed is critical in the 2020s — the competitive and operational imperatives driving ANSPs in North America, Europe, Asia-Pacific, and Latin America to accelerate digital transformation timelines.

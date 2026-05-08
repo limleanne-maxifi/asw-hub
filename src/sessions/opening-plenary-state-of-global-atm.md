@@ -4,7 +4,7 @@ order: 1
 featured: true
 day: Tuesday 26 May 2026
 time: 10:00 – 10:25
-room: Frequentist Theatre
+room: Frequentis Theatre
 theme: Opening
 speakers: CANSO Leadership
 summary: Opens the three-day Airspace World 2026 conference agenda with keynote remarks on the state of global air traffic management and industry priorities.
@@ -24,4 +24,4 @@ This is the session that frames how the rest of the conference is read. The prio
 
 ## Where to be
 
-**Frequentist Theatre** — Tuesday, 26 May at 10:00am. Arrive early for preferred seating.
+**Frequentis Theatre** — Tuesday, 26 May at 10:00am. Arrive early for preferred seating.
