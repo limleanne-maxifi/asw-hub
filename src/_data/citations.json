@@ -1,0 +1,71 @@
+{
+  "_comment": "Update this file on the 1st of each month with new citation audit data. The page at /citation-report/ reads from this file automatically on the next Eleventy build.",
+
+  "lastUpdated": "May 2026",
+
+  "summary": {
+    "queriesTestedThisMonth": 20,
+    "hubCitationRate": 0,
+    "unstructuredCitationRate": 0,
+    "deltaPoints": 0,
+    "_note": "Initial state pre-event. First real data: June 2026 audit."
+  },
+
+  "engines": [
+    {
+      "name": "ChatGPT",
+      "structuredRate": 0,
+      "unstructuredRate": 0
+    },
+    {
+      "name": "Perplexity",
+      "structuredRate": 0,
+      "unstructuredRate": 0
+    },
+    {
+      "name": "Google AI Overviews",
+      "structuredRate": 0,
+      "unstructuredRate": 0
+    }
+  ],
+
+  "sampleQueries": [
+    {
+      "query": "What are the key themes at Airspace World 2026?",
+      "hubCited": false,
+      "hubCitedPage": "",
+      "notes": "Pre-event baseline — first measurement after launch will appear in June 2026 report."
+    },
+    {
+      "query": "Who is presenting on AI in air traffic control at ASW 2026?",
+      "hubCited": false,
+      "hubCitedPage": "",
+      "notes": "Speaker pages launching pre-event will be measured in June."
+    },
+    {
+      "query": "What is the EASA AI certification framework?",
+      "hubCited": false,
+      "hubCitedPage": "",
+      "notes": "Theme page expansion in progress."
+    },
+    {
+      "query": "When and where is Airspace World 2026?",
+      "hubCited": false,
+      "hubCitedPage": "",
+      "notes": "Event schema in place. Should be cited from launch."
+    },
+    {
+      "query": "What did CANSO conclude about U-space at ASW 2025?",
+      "hubCited": false,
+      "hubCitedPage": "",
+      "notes": "ASW 2025 retrospective live — first measurement in June."
+    }
+  ],
+
+  "history": [
+    {
+      "label": "May",
+      "hubCitationRate": 0
+    }
+  ]
+}
