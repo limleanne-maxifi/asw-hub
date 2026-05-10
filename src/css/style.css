@@ -565,6 +565,61 @@ section:nth-of-type(4) { animation-delay: 200ms; }
 section:nth-of-type(5) { animation-delay: 250ms; }
 section:nth-of-type(6) { animation-delay: 300ms; }
 
+/* ============================================================
+   HOW IT WORKS — STEPS
+   ============================================================ */
+.how-steps {
+  list-style: none;
+  margin: 2.5rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.how-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.how-step:last-child { border-bottom: 1px solid var(--hairline); }
+
+.how-step-num {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--electric-2);
+  line-height: 1;
+  padding-top: 0.25rem;
+}
+
+.how-step-body h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.how-step-body p { margin: 0; color: rgba(248, 250, 252, 0.75); }
+
+.how-step-body code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.875em;
+  background: rgba(37, 99, 235, 0.15);
+  color: var(--electric-2);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .how-step {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .how-step-num { font-size: 1.75rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

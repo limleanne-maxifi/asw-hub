@@ -1,0 +1,171 @@
+---
+layout: base.njk
+title: How It Works
+description: How the ASW Hub structures Airspace World 2026 content so AI engines can retrieve, cite, and surface it as authoritative answers to ATM operator questions.
+permalink: /how-it-works/
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow">Methodology</p>
+    <h1>How the hub works</h1>
+    <p>Most conference content disappears after the event. Sessions go unrecorded, briefings stay in PDF silos, and speaker insights never make it into the sources AI engines draw from. The ASW Hub is built to fix that.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+
+    <div class="section-head">
+      <p class="eyebrow">The problem</p>
+      <h2>Why conference knowledge doesn't survive</h2>
+      <p>When ATM operators ask Claude, ChatGPT, or Perplexity about SES2+ implementation, AI certification in ATC, or UTM at scale — the answers rarely cite Airspace World. Not because the event lacks authority, but because the content isn't structured for retrieval.</p>
+    </div>
+
+    <div class="list-grid" style="margin-top: 2.5rem;">
+      <div class="list-card" style="pointer-events: none;">
+        <p class="list-card-meta">Problem 01</p>
+        <h3>Content locked in PDFs and slide decks</h3>
+        <p>Slide decks and post-event PDFs are opaque to AI retrieval systems. They cannot be indexed, parsed into discrete claims, or cited with precision.</p>
+      </div>
+      <div class="list-card" style="pointer-events: none;">
+        <p class="list-card-meta">Problem 02</p>
+        <h3>Narrative prose is hard to cite</h3>
+        <p>Blog recaps and long-form write-ups bury the key claims inside prose. AI systems prefer discrete question–answer pairs they can attribute to a specific source.</p>
+      </div>
+      <div class="list-card" style="pointer-events: none;">
+        <p class="list-card-meta">Problem 03</p>
+        <h3>No structured data for search layers</h3>
+        <p>Without schema.org markup, content doesn't qualify for Google AI Overviews or Perplexity's structured results — the surfaces with highest retrieval frequency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The approach</p>
+      <h2>Four steps from session to citation</h2>
+    </div>
+
+    <ol class="how-steps">
+      <li class="how-step">
+        <div class="how-step-num">01</div>
+        <div class="how-step-body">
+          <h3>Capture</h3>
+          <p>Every confirmed session, speaker, and theme is indexed before the event. Source material includes official CANSO programme data, speaker profiles, and pre-event briefings from participating ANSPs and technology providers.</p>
+        </div>
+      </li>
+      <li class="how-step">
+        <div class="how-step-num">02</div>
+        <div class="how-step-body">
+          <h3>Structure</h3>
+          <p>Content is rewritten as structured intelligence — discrete claims, FAQ pairs, and entity-rich descriptions — rather than narrative recaps. Each session brief answers the five questions an ATM operator would most likely ask an AI engine about that topic.</p>
+        </div>
+      </li>
+      <li class="how-step">
+        <div class="how-step-num">03</div>
+        <div class="how-step-body">
+          <h3>Mark up</h3>
+          <p>Every page carries schema.org structured data: <code>Event</code> for the conference, <code>FAQPage</code> for Q&A content, <code>Person</code> for speakers, and <code>Article</code> for insights. This makes content eligible for Google AI Overviews, Bing Copilot, and Perplexity's structured retrieval layer.</p>
+        </div>
+      </li>
+      <li class="how-step">
+        <div class="how-step-num">04</div>
+        <div class="how-step-body">
+          <h3>Measure</h3>
+          <p>Weekly citation tracking across Claude, ChatGPT, Perplexity, and Google AI Overviews shows which insights are being surfaced as primary sources. The <a href="/citation-report/">citation report</a> is updated every Monday.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What this produces</p>
+      <h2>Three types of structured content</h2>
+    </div>
+
+    <div class="list-grid" style="margin-top: 2.5rem;">
+      <a class="list-card" href="/themes/">
+        <p class="list-card-meta">Type 01 · Theme briefings</p>
+        <h3>Eight thematic indexes</h3>
+        <p>Each of ASW 2026's eight conference themes is mapped into a briefing that answers the core questions an ATM professional would ask — with links to every relevant session and speaker.</p>
+      </a>
+      <a class="list-card" href="/sessions/">
+        <p class="list-card-meta">Type 02 · Session briefs</p>
+        <h3>Session-by-session coverage</h3>
+        <p>Individual pages for every confirmed session: objectives, key speakers, expected outcomes, and FAQs pre-structured for AI retrieval. Updated as the programme confirms.</p>
+      </a>
+      <a class="list-card" href="/insights/">
+        <p class="list-card-meta">Type 03 · Insights</p>
+        <h3>Original analysis</h3>
+        <p>Pre-event scene-setters and post-event retrospectives written specifically as FAQ-first documents — the format that generates 3× more AI citations than equivalent blog posts.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Citation mechanics</p>
+      <h2>Why structure determines whether AI cites you</h2>
+    </div>
+
+    <div class="faq" style="margin-top: 2.5rem;">
+      <div class="faq-item">
+        <details>
+          <summary>Why do AI engines cite some sources and not others?</summary>
+          <div class="faq-item-body">
+            <p>AI engines retrieve content that matches the structure of the query. A question gets answered with content that already exists in question–answer form. Content buried in long-form prose requires the AI to extract and repackage it — introducing uncertainty and lowering the likelihood of citation. Content written as discrete claims with clear attribution is cited directly.</p>
+          </div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>What is schema.org markup and why does it matter?</summary>
+          <div class="faq-item-body">
+            <p>Schema.org is a vocabulary of structured data types that search engines and AI systems use to understand content. Adding <code>FAQPage</code> schema to a Q&A page signals to Google AI Overviews and Bing Copilot that the content is authoritative and citable. Without schema markup, content must compete on keyword relevance alone — at a significant disadvantage in AI search layers.</p>
+          </div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>How are citation counts tracked?</summary>
+          <div class="faq-item-body">
+            <p>Each week, a standard set of ATM operator queries is submitted to Claude, ChatGPT, Perplexity, and Google AI Overviews. Any response that cites or references an ASW Hub URL is counted as a citation. Results are published in the <a href="/citation-report/">citation report</a> every Monday.</p>
+          </div>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>How long does it take for new content to be cited?</summary>
+          <div class="faq-item-body">
+            <p>Content indexed by Google typically takes 1–4 weeks to appear in AI Overviews. Perplexity and Claude update faster, often citing new content within days of indexing if it is well-structured and topically authoritative. Insights published on this hub have typically reached first AI citation within 2–3 weeks of publication.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" style="border-bottom: 0;">
+  <div class="container">
+    <div class="maxifi-cta">
+      <div>
+        <p class="eyebrow">Built by Maxifi Digital</p>
+        <h2>Want this for your event or organisation?</h2>
+        <p>The ASW Hub is a live demonstration of Maxifi Digital's Conference Content Sprint — a four-week system that turns conference sessions, speaker panels, and exhibition presence into AEO assets that keep generating citations long after the event ends.</p>
+      </div>
+      <div class="maxifi-cta-actions">
+        <a class="btn btn-primary" href="https://maxifidigital.com/services/conference-sprint/" rel="noopener">See the Conference Sprint →</a>
+        <a class="btn btn-ghost" href="mailto:letsgetstarted@maxifidigital.com?subject=ASW%202026%20Hub%20enquiry">Email Maxifi</a>
+      </div>
+    </div>
+  </div>
+</section>
