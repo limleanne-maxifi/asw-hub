@@ -1,0 +1,50 @@
+/* ===========================================================
+   LAYER 1: PROBLEM SECTION
+   =========================================================== */
+
+.problem-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: var(--asw-warm-white);
+}
+
+.problem-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--asw-accent);
+  margin-bottom: 16px;
+}
+
+.problem-heading {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--asw-navy);
+  margin-bottom: 20px;
+  line-height: 1.2;
+  max-width: 720px;
+}
+
+.problem-intro {
+  font-size: 1.05rem;
+  color: #475569;
+  max-width: 720px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+.problem-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  margin-bottom: 32px;
+}
+
+.problem-side { padding: 32px; }
+.problem-before { background: #FFF1F2; }
+.problem-after { background: #F0FDF4; }
+
+.problem-side-label {
+  font-family: 'JetBrains

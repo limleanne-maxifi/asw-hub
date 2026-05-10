@@ -1,6 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "public": "/" });
+  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     if (!dateObj) return "";
@@ -15,6 +16,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("isoDate", (dateObj) => {
     if (!dateObj) return "";
     return new Date(dateObj).toISOString().split("T")[0];
+  });
+
+  eleventyConfig.addFilter("dateToISO", (date) => {
+    return new Date(date).toISOString().split('T')[0];
   });
 
   eleventyConfig.addCollection("themes", (api) =>
@@ -35,11 +40,11 @@ module.exports = function (eleventyConfig) {
     )
   );
 
-  eleventyConfig.addCollection("insights", (api) =>
-    api.getFilteredByGlob("src/insights/*.md").sort((a, b) =>
-      new Date(b.date) - new Date(a.date)
-    )
-  );
+  eleventyConfig.addCollection("insights", function(collectionApi) {
+    return collectionApi.getFilteredByTag("insights").sort((a, b) => {
+      return b.date - a.date;
+    });
+  });
 
   eleventyConfig.addCollection("featuredSessions", (api) =>
     api

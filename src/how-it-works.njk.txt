@@ -1,0 +1,149 @@
+---
+layout: layouts/base.njk
+title: "How AEO Structures Conference Content | Maxifi Digital"
+description: "A six-stage methodology that transforms unstructured conference content into AI-citable assets. See it in practice using Airspace World 2026 sessions."
+permalink: /how-it-works/
+eleventyNavigation:
+  key: How It Works
+  order: 2
+---
+
+<article class="methodology-page">
+  <div class="container">
+    
+    <header class="methodology-header">
+      <div class="methodology-eyebrow">Methodology</div>
+      <h1 class="methodology-title">How AEO structures conference content</h1>
+      <p class="methodology-lede">
+        Six stages that turn one Airspace World session into an asset AI engines can find, 
+        understand, and cite. This is the same methodology applied across every page on this hub.
+      </p>
+    </header>
+    
+    <ol class="methodology-stages" aria-label="The six stages of AEO content structuring">
+      
+      <li class="stage" id="stage-1">
+        <div class="stage-number" aria-hidden="true">01</div>
+        <div class="stage-content">
+          <h2 class="stage-title">Raw content capture</h2>
+          <p class="stage-summary">
+            Sessions begin as recordings, slide decks, and notes — formats AI engines cannot read directly. 
+            The first task is comprehensive content capture: full transcripts, slide text extraction, 
+            and structured metadata about who spoke, when, and on what.
+          </p>
+          <div class="stage-example">
+            <strong>Example from this hub:</strong> Each ASW 2026 session is captured with its full 
+            title, speakers, organisation affiliations, scheduled time, and theme alignment.
+          </div>
+        </div>
+      </li>
+      
+      <li class="stage" id="stage-2">
+        <div class="stage-number" aria-hidden="true">02</div>
+        <div class="stage-content">
+          <h2 class="stage-title">Entity extraction</h2>
+          <p class="stage-summary">
+            Within raw content, identify the entities AI engines recognise: people, organisations, 
+            technologies, regulations, geographic locations. These become the connection points 
+            that link your content to the broader knowledge graph AI engines maintain.
+          </p>
+          <div class="stage-example">
+            <strong>Example from this hub:</strong> A session on U-space mentions EASA, the U-space 
+            Service Provider regulation (EU 2021/664), and specific ANSPs. Each becomes a tagged 
+            entity that AI engines can match against existing knowledge.
+          </div>
+        </div>
+      </li>
+      
+      <li class="stage" id="stage-3">
+        <div class="stage-number" aria-hidden="true">03</div>
+        <div class="stage-content">
+          <h2 class="stage-title">Question-and-answer restructuring</h2>
+          <p class="stage-summary">
+            AI engines disproportionately cite content formatted as questions with self-contained answers. 
+            Restructure session content to lead with the questions the session answered — phrased 
+            the way a journalist or professional would actually search for them.
+          </p>
+          <div class="stage-example">
+            <strong>Example from this hub:</strong> A session on AI in ATC becomes five Q&A pairs 
+            including <em>"What is the EASA AI certification framework?"</em> and <em>"Which AI tools 
+            are operational in European ANSPs in 2026?"</em>
+          </div>
+        </div>
+      </li>
+      
+      <li class="stage" id="stage-4">
+        <div class="stage-number" aria-hidden="true">04</div>
+        <div class="stage-content">
+          <h2 class="stage-title">Schema markup</h2>
+          <p class="stage-summary">
+            Structured Q&A becomes machine-readable through JSON-LD schema markup — specifically 
+            FAQPage, Person, Event, and Article types. This is the layer most sites miss. Without 
+            it, even well-written content struggles for AI citation. With it, content becomes 
+            extractable as discrete, citable data points.
+          </p>
+          <div class="stage-example">
+            <strong>Example from this hub:</strong> Every theme page carries FAQPage JSON-LD with 
+            five questions. Every speaker page carries Person schema with role, organisation, and 
+            session attribution.
+          </div>
+        </div>
+      </li>
+      
+      <li class="stage" id="stage-5">
+        <div class="stage-number" aria-hidden="true">05</div>
+        <div class="stage-content">
+          <h2 class="stage-title">Internal linking for topical authority</h2>
+          <p class="stage-summary">
+            AI engines reward sites that comprehensively cover a topic from multiple angles. Each 
+            theme links to relevant sessions. Each session links to its speakers. Each speaker links 
+            to their session and theme. This interconnected structure signals topical authority — 
+            the basis on which AI engines decide which source to cite.
+          </p>
+          <div class="stage-example">
+            <strong>Example from this hub:</strong> The "AI in Air Traffic Control" theme connects 
+            to two sessions, three speakers, and five FAQ entries — creating a knowledge graph AI 
+            engines treat as authoritative on the topic.
+          </div>
+        </div>
+      </li>
+      
+      <li class="stage" id="stage-6">
+        <div class="stage-number" aria-hidden="true">06</div>
+        <div class="stage-content">
+          <h2 class="stage-title">Publishing for AI discoverability</h2>
+          <p class="stage-summary">
+            Final step: the content goes live with proper canonical URLs, sitemap registration, 
+            llms.txt declarations, and submission to Google Search Console and Bing Webmaster Tools. 
+            Bing matters specifically because it feeds Perplexity's citation engine. AI engines need 
+            to know the content exists before they can cite it.
+          </p>
+          <div class="stage-example">
+            <strong>Example from this hub:</strong> Every page is registered in the sitemap, declared 
+            in llms.txt with topic categorisation, and indexed across both Google and Bing within 
+            72 hours of publication.
+          </div>
+        </div>
+      </li>
+      
+    </ol>
+    
+    <aside class="methodology-cta">
+      <h2 class="methodology-cta-title">Apply this methodology to your own content</h2>
+      <p class="methodology-cta-text">
+        Maxifi Digital structures conference content, executive thought leadership, and brand 
+        expertise so AI engines can find and cite it. The hub you're reading is a working 
+        demonstration of the methodology.
+      </p>
+      <div class="methodology-cta-actions">
+        <a href="https://maxifidigital.com/services/conference-sprint/" class="btn btn-primary">
+          See the Conference Sprint
+        </a>
+        <a href="https://maxifidigital.com/scorecard/" class="btn btn-secondary">
+          Take the AEO Scorecard
+        </a>
+      </div>
+    </aside>
+    
+  </div>
+</article>
