@@ -1,0 +1,37 @@
+{
+  "insights": [
+    {
+      "id": "why-faqs-beat-blogs-for-ai-citation",
+      "title": "Why FAQs beat blogs for AI citation",
+      "citationCount": 12,
+      "aiCitations": 8,
+      "humanCitations": 4,
+      "sources": [
+        "Claude (Anthropic)",
+        "ChatGPT (OpenAI)",
+        "Perplexity AI",
+        "Google AI Overviews"
+      ]
+    },
+    {
+      "id": "why-asw-2026-matters",
+      "title": "Why ASW 2026 matters more than the last three combined",
+      "citationCount": 24,
+      "aiCitations": 18,
+      "humanCitations": 6,
+      "sources": [
+        "Claude (Anthropic)",
+        "ChatGPT (OpenAI)",
+        "Perplexity AI",
+        "Google AI Overviews"
+      ]
+    }
+  ],
+  "summary": {
+    "totalCitations": 36,
+    "totalAiCitations": 26,
+    "totalHumanCitations": 10,
+    "averageCitationsPerInsight": 18,
+    "lastUpdated": "2026-05-10"
+  }
+}

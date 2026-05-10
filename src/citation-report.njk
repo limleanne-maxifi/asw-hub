@@ -1,0 +1,81 @@
+---
+layout: base.njk
+title: Citation Report
+description: Track which ASW Hub insights are cited in ChatGPT, Claude, Perplexity, and Google AI Overviews — the primary sources LLMs retrieve for ATM operator questions.
+permalink: /citation-report/
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow">Citation Report</p>
+    <h1>How AI is citing the hub</h1>
+    <p>Real-time tracking of ASW Hub insights cited in Claude, ChatGPT, Perplexity, and Google AI Overviews. Updated weekly.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+      <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
+        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Total citations</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">{{ citations.summary.totalCitations }}</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">Across {{ citations.insights.length }} insights</p>
+      </div>
+      <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
+        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">AI citations</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">{{ citations.summary.totalAiCitations }}</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">From LLM responses</p>
+      </div>
+      <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
+        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Human citations</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">{{ citations.summary.totalHumanCitations }}</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">From web/articles</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 2rem; margin-bottom: 1.5rem;">Most-cited insights</h2>
+    <div class="list-grid">
+      {% for insight in citations.insights | sort(attribute="citationCount") | reverse %}
+      <div style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem;">
+        <h3 style="margin-top: 0;">{{ insight.title }}</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0 0 0; font-size: 0.875rem;">
+          <div>
+            <p style="margin: 0 0 0.25rem 0; color: #999; font-weight: 500;">Total citations</p>
+            <p style="margin: 0; font-size: 1.5rem; font-weight: 700;">{{ insight.citationCount }}</p>
+          </div>
+          <div>
+            <p style="margin: 0 0 0.25rem 0; color: #999; font-weight: 500;">AI citations</p>
+            <p style="margin: 0; font-size: 1.5rem; font-weight: 700;">{{ insight.aiCitations }}</p>
+          </div>
+        </div>
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
+          <p style="margin: 0 0 0.5rem 0; font-size: 0.75rem; color: #999; text-transform: uppercase; font-weight: 500;">Cited in</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            {% for source in insight.sources %}
+            <span style="background: #f5f5f5; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem;">{{ source }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        <a href="/insights/{{ insight.id }}/" style="display: inline-block; margin-top: 1rem; color: #0066cc; text-decoration: none; font-weight: 500;">Read insight →</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" style="border-bottom: 0;">
+  <div class="container">
+    <div class="maxifi-cta">
+      <div>
+        <p class="eyebrow">Methodology</p>
+        <h2>How citations are tracked</h2>
+        <p>We monitor citations across four major platforms: Claude and ChatGPT (conversational retrieval), Perplexity AI (search), and Google AI Overviews (search results). Citations are counted weekly and reported here. This is the canonical record of which ASW Hub insights are cited as primary sources for ATM operator questions.</p>
+      </div>
+      <div class="maxifi-cta-actions">
+        <a class="btn btn-primary" href="/insights/">All insights →</a>
+        <a class="btn btn-ghost" href="/themes/">Browse by theme</a>
+      </div>
+    </div>
+  </div>
+</section>
