@@ -1,5 +1,5 @@
 ---
-title: "Welcome Ceremony"
+title: "Opening Plenary: State of Global ATM"
 order: 1
 featured: true
 day: Tuesday 26 May 2026
