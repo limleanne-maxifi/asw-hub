@@ -193,7 +193,7 @@
           + '<p>Structure this article so each H2 section is a self-contained answer unit. The first paragraph after each H2 is the most likely text to be cited by an AI engine.</p>'
           + '<ol>'
           + '<li><strong>Answer first</strong> — state the key finding immediately after the H2, before any context or caveats</li>'
-          + '<li><strong>FAQ schema opportunity</strong> — any H2 + answer pair can be wrapped in FAQPage JSON-LD to unlock rich results in Google and increase Perplexity citation rate</li>'
+          + '<li><strong>FAQ schema opportunity</strong> — any H2 + answer pair can be wrapped in FAQ Page JSON-LD to unlock rich results in Google and increase Perplexity citation rate</li>'
           + '<li><strong>Bullet points</strong> — AI engines extract lists verbatim; each bullet should be a complete, standalone fact</li>'
           + '<li><strong>Link to theme pages</strong> — cross-linking to /themes/ creates topical clustering and reinforces hub authority</li>'
           + '</ol>'
