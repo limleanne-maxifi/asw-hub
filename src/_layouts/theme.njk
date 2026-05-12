@@ -5,7 +5,7 @@ layout: base.njk
 <header class="page-header" data-aeo-id="theme-header">
   <div class="container">
     <p class="eyebrow">Theme {{ order or "" }}</p>
-    <h1 data-aeo-id="theme-title">{{ title | replace(": ", ":<br>") | safe }}</h1>
+    <h1 data-aeo-id="theme-title">{% if noTitleBreak %}{{ title }}{% else %}{{ title | replace(": ", ":<br>") | safe }}{% endif %}</h1>
     <p>{{ summary }}</p>
   </div>
 </header>

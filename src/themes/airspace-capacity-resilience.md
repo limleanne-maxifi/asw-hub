@@ -1,5 +1,6 @@
 ﻿---
 title: "Airspace Capacity & Network Resilience: what it means for ATM in 2026"
+noTitleBreak: true
 order: 4
 summary: The 2022–24 European summer capacity crises, ATFM delay structures, contingency routing, cross-border mutual support agreements, and how ANSPs and the Network Manager are rebuilding resilience for 2026.
 ---
