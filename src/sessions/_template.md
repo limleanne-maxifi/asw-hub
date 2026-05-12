@@ -4,6 +4,7 @@ order: 99
 featured: false
 eleventyExcludeFromCollections: true
 permalink: false
+layout: false
 day: Tuesday 26 May 2026
 time: 00:00 – 00:00
 room: ROOM NAME HERE

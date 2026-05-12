@@ -5,6 +5,7 @@ organisation: Organisation Full Name
 summary: One sentence bio — role, organisation, and why they are relevant to ASW 2026.
 eleventyExcludeFromCollections: true
 permalink: false
+layout: false
 ---
 
 ## Role and remit
