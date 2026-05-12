@@ -1,4 +1,4 @@
----
+﻿---
 title: "Cybersecurity in Air Navigation Services: what it means for ATM in 2026"
 order: 7
 summary: ENISA's ATM threat landscape, NIS2 Directive applicability to ANSPs, security operations centres, supply chain security, and the ICAO cybersecurity framework shaping ANS cyber posture in 2026.
@@ -111,6 +111,10 @@ ASW 2026 cybersecurity sessions cover NIS2 implementation, supply chain risk, an
 
 [View sessions covering this theme →](/sessions/)
 
+
+## What ASW 2025 told us about this theme
+
+ASW 2025 addressed NIS2 transposition for the first time with a dedicated session on ANSP compliance obligations. [Read the ASW 2025 retrospective](/asw-2025/)
 ---
 
 **For organisations exhibiting at ASW 2026:** Your cybersecurity content can be structured like this. Maxifi Digital turns conference sessions into AI-citable authority pages in four weeks. [See the Conference Sprint →](https://maxifidigital.com/services/conference-sprint/)

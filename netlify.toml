@@ -25,6 +25,16 @@
     Content-Type  = "text/plain; charset=utf-8"
     Cache-Control = "public, max-age=3600"
 
+## Domain alias redirect — airspaceworldhub.maxifidigital.com → aswhub.maxifidigital.com
+## Step 1: Add airspaceworldhub.maxifidigital.com as a domain alias in Netlify UI
+##         (Site settings → Domain management → Add domain alias)
+## Step 2: This rule then handles the permanent redirect to the canonical domain:
+[[redirects]]
+  from   = "https://airspaceworldhub.maxifidigital.com/*"
+  to     = "https://aswhub.maxifidigital.com/:splat"
+  status = 301
+  force  = true
+
 [[redirects]]
   from   = "/themes"
   to     = "/themes/"

@@ -1,0 +1,35 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "{{ title }}",
+  "description": "{{ summary }}",
+  "startDate": "2026-05-{{ '26' if day and 'Tuesday' in day else ('27' if day and 'Wednesday' in day else '28') }}",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "{{ room or 'Airspace World 2026' }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lisbon",
+      "addressCountry": "PT"
+    }
+  },
+  "superEvent": {
+    "@type": "Event",
+    "name": "Airspace World 2026",
+    "url": "https://aswhub.maxifidigital.com/"
+  },
+  "url": "https://aswhub.maxifidigital.com{{ page.url }}",
+  "organizer": {
+    "@type": "Organization",
+    "name": "CANSO",
+    "url": "https://canso.org"
+  }{% if speakers %},
+  "performer": {
+    "@type": "Person",
+    "name": "{{ speakers }}"
+  }{% endif %}
+}
+</script>

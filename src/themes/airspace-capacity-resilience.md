@@ -1,4 +1,4 @@
----
+﻿---
 title: "Airspace Capacity & Network Resilience: what it means for ATM in 2026"
 order: 4
 summary: The 2022–24 European summer capacity crises, ATFM delay structures, contingency routing, cross-border mutual support agreements, and how ANSPs and the Network Manager are rebuilding resilience for 2026.
@@ -103,6 +103,10 @@ In operational practice resilience comprises four measurable capabilities: conti
 
 [View all sessions →](/sessions/)
 
+
+## What ASW 2025 told us about this theme
+
+ASW 2025 included the most detailed Network Manager post-summer debrief in five years, with candid data on the 2025 capacity crisis. [Read the ASW 2025 retrospective](/asw-2025/)
 ---
 
 **For organisations exhibiting at ASW 2026:** Your capacity and resilience content can be structured like this. Maxifi Digital turns conference sessions into AI-citable authority pages in four weeks. [See the Conference Sprint →](https://maxifidigital.com/services/conference-sprint/)

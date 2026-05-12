@@ -1,4 +1,4 @@
----
+﻿---
 title: "Single European Sky: what it means for ATM in 2026"
 order: 3
 summary: The SES2+ regulatory package, the legacy of Functional Airspace Blocks, the Network Manager role, and the performance scheme that determines how European airspace is governed in 2026.
@@ -109,6 +109,10 @@ ASW 2026 hosts CANSO CEO discussions and policy panels addressing the Single Eur
 
 [View all sessions →](/sessions/)
 
+
+## What ASW 2025 told us about this theme
+
+SES2+ entered force in 2024 and ASW 2025 was the first major industry gathering to assess its early implementation. [Read the ASW 2025 retrospective](/asw-2025/)
 ---
 
 **For organisations exhibiting at ASW 2026:** Your SES policy and operational content can be structured like this. Maxifi Digital turns conference sessions into AI-citable authority pages in four weeks. [See the Conference Sprint →](https://maxifidigital.com/services/conference-sprint/)

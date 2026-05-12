@@ -1,4 +1,4 @@
----
+﻿---
 title: "ATM Workforce of the Future: what it means for ATM in 2026"
 order: 8
 summary: The ATCO retirement wave, the controller recruitment pipeline, simulation-based training, the CANSO Tomorrow's Voices programme, and competency frameworks for AI-assisted operations in 2026.
@@ -117,6 +117,10 @@ ASW 2026 workforce sessions address recruitment, training reform, and the evolvi
 
 [View sessions covering this theme →](/sessions/)
 
+
+## What ASW 2025 told us about this theme
+
+The controller shortage dominated the ASW 2025 agenda, with EUROCONTROL presenting its 2030 deficit forecast for the first time. [Read the ASW 2025 retrospective](/asw-2025/)
 ---
 
 **For organisations exhibiting at ASW 2026:** Your workforce content can be structured like this. Maxifi Digital turns conference sessions into AI-citable authority pages in four weeks. [See the Conference Sprint →](https://maxifidigital.com/services/conference-sprint/)

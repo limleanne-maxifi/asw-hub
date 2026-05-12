@@ -1,4 +1,4 @@
----
+﻿---
 title: "Digital ATM Transformation: what it means for ATM in 2026"
 order: 1
 summary: The shift from voice-and-radar to data-driven, cloud-native air traffic management — datalink, digital towers, SWIM, and the SESAR/NextGen modernisation programmes that are reshaping how airspace is managed in 2026.
@@ -120,6 +120,10 @@ Several ASW 2026 sessions are tagged to digital ATM transformation:
 
 [View all sessions →](/sessions/)
 
+
+## What ASW 2025 told us about this theme
+
+ASW 2025 produced the clearest public picture yet of SESAR deployment progress and the gaps remaining before 2030. [Read the ASW 2025 retrospective](/asw-2025/)
 ---
 
 **For organisations exhibiting at ASW 2026:** Your digital ATM transformation content can be structured like this. Maxifi Digital turns conference sessions into AI-citable authority pages in four weeks. [See the Conference Sprint →](https://maxifidigital.com/services/conference-sprint/)

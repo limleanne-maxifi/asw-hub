@@ -1,4 +1,4 @@
----
+﻿---
 title: "Drones & Unmanned Traffic Management: what it means for ATM in 2026"
 order: 6
 summary: U-space regulation under EU 2021/664, U-space service provider certification, the UTM/ATM interface, drone corridor governance, and operational rollout of unmanned traffic management in 2026.
@@ -105,6 +105,10 @@ Other Member States have developed equivalent national reference architectures �
 
 [View all sessions →](/sessions/)
 
+
+## What ASW 2025 told us about this theme
+
+ASW 2025 featured the first consolidated operational review of live U-space deployments across Europe. [Read the ASW 2025 retrospective](/asw-2025/)
 ---
 
 **For organisations exhibiting at ASW 2026:** Your drone and UTM content can be structured like this. Maxifi Digital turns conference sessions into AI-citable authority pages in four weeks. [See the Conference Sprint →](https://maxifidigital.com/services/conference-sprint/)

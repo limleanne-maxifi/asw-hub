@@ -1,4 +1,4 @@
----
+﻿---
 title: "AI in Air Traffic Control: what it means for ATM in 2026"
 order: 5
 summary: The EASA AI certification framework, the first operationally certified conflict detection tools, arrival management ML systems, and the human factors research informing AI-assisted ATC in 2026.
@@ -107,6 +107,10 @@ ASW 2026 hosts dedicated AI in ATC sessions covering certification, operational 
 
 [View sessions covering this theme →](/sessions/)
 
+
+## What ASW 2025 told us about this theme
+
+ASW 2025 saw the first public operational trial results for AI-assisted conflict detection at London Terminal Control. [Read the ASW 2025 retrospective](/asw-2025/)
 ---
 
 **For organisations exhibiting at ASW 2026:** Your AI in ATC content can be structured like this. Maxifi Digital turns conference sessions into AI-citable authority pages in four weeks. [See the Conference Sprint →](https://maxifidigital.com/services/conference-sprint/)

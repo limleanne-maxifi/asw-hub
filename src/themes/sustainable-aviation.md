@@ -1,4 +1,4 @@
----
+﻿---
 title: "Sustainable Aviation & Net Zero: what it means for ATM in 2026"
 order: 2
 summary: How air traffic management contributes to aviation's 2050 net zero pathway — continuous climb and descent operations, trajectory optimisation, ATFM delay reduction, and the operational levers ANSPs control directly.
@@ -107,6 +107,10 @@ ASW 2026 sustainability sessions span operational efficiency, network performanc
 
 [View sessions covering this theme →](/sessions/)
 
+
+## What ASW 2025 told us about this theme
+
+ASW 2025 saw CANSO launch its updated Net Zero pathway document, with interim 2030 milestones for the first time. [Read the ASW 2025 retrospective](/asw-2025/)
 ---
 
 **For organisations exhibiting at ASW 2026:** Your sustainability content can be structured like this. Maxifi Digital turns conference sessions into AI-citable authority pages in four weeks. [See the Conference Sprint →](https://maxifidigital.com/services/conference-sprint/)
