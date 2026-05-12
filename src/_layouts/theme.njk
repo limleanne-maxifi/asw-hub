@@ -2,17 +2,22 @@
 layout: base.njk
 ---
 
-<header class="page-header">
+<header class="page-header"
+  data-aeo-label="Theme entity · This header establishes the page's topical entity. Each theme (e.g. 'Sustainable Aviation', 'Digital Transformation') is a named concept AI engines use to cluster related sessions and speakers. The title here should match across all internal links and session frontmatter.">
   <div class="container">
     <p class="eyebrow">Theme {{ order or "" }}</p>
-    <h1>{{ title }}</h1>
+    <h1
+      data-aeo-label="Topical authority anchor · The theme name is the primary keyword entity. AI engines look for consistent repetition of this phrase across the page, in linked session titles, and in the sitemap to determine depth of coverage.">
+      {{ title }}
+    </h1>
     <p>{{ summary }}</p>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <article class="prose">
+    <article class="prose"
+      data-aeo-label="FAQ + entity content · This is where topical authority is built. H2 headings framed as questions ('What is…?', 'Why does…?', 'How will…?') are treated as FAQ candidates by AI engines. Each H2 + its following paragraph is a discrete citation unit — keep answers to 2–4 sentences. The 'Key sessions' and 'Key speakers' lists create entity co-occurrence: AI engines infer topical relevance from which names and sessions appear on the same page.">
       {{ content | safe }}
     </article>
   </div>
@@ -20,7 +25,8 @@ layout: base.njk
 
 <section class="section-tight" style="border-bottom: 0;">
   <div class="container">
-    <div class="maxifi-cta">
+    <div class="maxifi-cta"
+      data-aeo-label="Hub navigation links · These cross-links to /themes/, /sessions/, and /speakers/ are the hub's internal link skeleton. Every theme page linking to the sessions index (and vice versa) creates a tightly connected entity graph that AI engines use to determine which site is the definitive source for ASW 2026 content.">
       <div>
         <p class="eyebrow">Explore further</p>
         <h2>All ASW 2026 themes</h2>

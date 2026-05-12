@@ -614,3 +614,154 @@
 @media (max-width: 640px) {
   .insights-grid { grid-template-columns: 1fr; }
 }
+
+/* ===========================================================
+   AEO INSPECTOR — annotation layer
+   =========================================================== */
+
+/* ── Toggle button (fixed bottom-right) ── */
+.aeo-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  background: #1E293B;
+  color: #94A3B8;
+  border: 1px solid #334155;
+  border-radius: 100px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease,
+              box-shadow 160ms ease;
+  user-select: none;
+}
+
+.aeo-toggle:hover {
+  background: #263348;
+  color: #CBD5E1;
+  border-color: #475569;
+}
+
+.aeo-toggle:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 3px;
+}
+
+.aeo-toggle-icon {
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 160ms ease;
+}
+
+.aeo-toggle--on {
+  background: #1D3461;
+  color: #93C5FD;
+  border-color: #2563EB;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.25);
+}
+
+.aeo-toggle--on .aeo-toggle-icon {
+  opacity: 1;
+  color: #60A5FA;
+}
+
+/* ── ⓘ Badge ── */
+.aeo-badge {
+  display: none; /* hidden until inspector is active */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  background: #1D3461;
+  color: #60A5FA;
+  border: 1px solid #2563EB;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.aeo-badge:hover,
+.aeo-badge:focus-visible {
+  background: #2563EB;
+  color: #fff;
+  transform: scale(1.15);
+  outline: none;
+}
+
+/* Show badges when inspector is active */
+body.aeo-active .aeo-badge {
+  display: inline-flex;
+}
+
+/* Pulse the annotated element outline when inspector is on */
+body.aeo-active [data-aeo-label] {
+  outline: 1px dashed rgba(37, 99, 235, 0.3);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ── Tooltip ── */
+.aeo-tooltip {
+  position: absolute;
+  z-index: 9999;
+  max-width: 320px;
+  background: #0F172A;
+  color: #E2E8F0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #1E3A5F;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.aeo-tooltip--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .aeo-toggle,
+  .aeo-badge,
+  .aeo-tooltip {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Mobile: push toggle above any fixed bottom nav ── */
+@media (max-width: 640px) {
+  .aeo-toggle {
+    bottom: 16px;
+    right: 16px;
+    font-size: 0.72rem;
+    padding: 8px 13px;
+  }
+
+  .aeo-tooltip {
+    max-width: calc(100vw - 32px);
+  }
+}
