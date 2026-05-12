@@ -3,25 +3,17 @@ layout: base.njk
 schemaSpeaker: true
 ---
 
-<header class="page-header"
-  data-aeo-label="Person schema · This header maps to Schema.org Person JSON-LD. The speaker's name, job title, and organisation are structured as a named entity, so AI engines can answer 'Who are the speakers at ASW 2026?' and attribute expertise correctly.">
+<header class="page-header" data-aeo-id="speaker-header">
   <div class="container">
     <p class="eyebrow">Speaker</p>
-    <h1
-      data-aeo-label="Named entity · The speaker's name is the canonical entity identifier. It must match exactly across all pages (speaker index, session pages, JSON-LD) for AI engines to consolidate citations and build a reliable knowledge-graph entry for this person.">
-      {{ title }}
-    </h1>
-    <p
-      data-aeo-label="Role + organisation entity · Job title and organisation are the two attributes AI engines most commonly surface when identifying experts. Consistent phrasing here, in the JSON-LD, and in session pages reinforces entity disambiguation.">
-      {{ role }}{% if organisation %}, {{ organisation }}{% endif %}
-    </p>
+    <h1 data-aeo-id="speaker-title">{{ title }}</h1>
+    <p data-aeo-id="speaker-role">{{ role }}{% if organisation %}, {{ organisation }}{% endif %}</p>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <article class="prose"
-      data-aeo-label="Speaker bio content · This article should open with the speaker's primary area of expertise (first sentence = most cited). The '## ASW 2026 sessions' section links back to session pages — bidirectional linking between speaker and session is a strong entity co-occurrence signal for AI engines.">
+    <article class="prose" data-aeo-id="speaker-article">
       {{ content | safe }}
     </article>
   </div>
@@ -29,8 +21,7 @@ schemaSpeaker: true
 
 <section class="section-tight" style="border-bottom: 0;">
   <div class="container">
-    <div class="maxifi-cta"
-      data-aeo-label="Internal link equity · Cross-links to /speakers/ and /sessions/ strengthen the hub's topical authority. AI engines use internal link patterns to determine which pages are the canonical source for a given entity cluster.">
+    <div class="maxifi-cta" data-aeo-id="speaker-cta">
       <div>
         <p class="eyebrow">More from ASW 2026</p>
         <h2>All confirmed speakers</h2>

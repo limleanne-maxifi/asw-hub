@@ -3,25 +3,17 @@ layout: base.njk
 schemaInsight: true
 ---
 
-<header class="page-header"
-  data-aeo-label="Article schema · This header is mapped to Schema.org Article JSON-LD. The title, summary, and date make this a dateable, attributable piece of content — AI engines prefer citing structured articles over undated pages because they can assess recency and relevance.">
+<header class="page-header" data-aeo-id="insight-header">
   <div class="container">
     <p class="eyebrow">Insight · {{ date | readableDate }}</p>
-    <h1
-      data-aeo-label="Article headline · The H1 is used as the Article.headline in JSON-LD. Write it as a clear statement of the article's finding or argument — AI engines frequently quote headlines verbatim when citing content in an answer.">
-      {{ title }}
-    </h1>
-    <p
-      data-aeo-label="Article description · This summary maps to Article.description in JSON-LD. It should be one complete, standalone sentence — AI engines use this as the pull quote when citing the article in an answer panel or footnote.">
-      {{ summary }}
-    </p>
+    <h1 data-aeo-id="insight-title">{{ title }}</h1>
+    <p data-aeo-id="insight-summary">{{ summary }}</p>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <article class="prose"
-      data-aeo-label="Article body · Structure this with H2s as section headers. The first paragraph after each H2 is the most likely citation target — state the key finding immediately, before elaborating. FAQPage schema can be added to any H2 + answer pair to unlock FAQ rich results in Google and increase Perplexity citation rate.">
+    <article class="prose" data-aeo-id="insight-article">
       {{ content | safe }}
     </article>
   </div>
@@ -29,8 +21,7 @@ schemaInsight: true
 
 <section class="section-tight" style="border-bottom: 0;">
   <div class="container">
-    <div class="maxifi-cta"
-      data-aeo-label="Related content links · Linking insights back to /insights/ and /themes/ creates topical clustering. AI engines use co-citation patterns — if multiple insights link to the same theme, that theme page gains authority as the canonical reference for that topic.">
+    <div class="maxifi-cta" data-aeo-id="insight-cta">
       <div>
         <p class="eyebrow">More analysis</p>
         <h2>All ASW 2026 insights</h2>
