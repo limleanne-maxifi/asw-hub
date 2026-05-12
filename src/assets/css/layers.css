@@ -14,7 +14,7 @@
    =========================================================== */
 
 .problem-section {
-  padding: clamp(60px, 8vw, 100px) 0;
+  padding: clamp(40px, 6vw, 72px) 0;
   background: var(--navy, #0B1628);
 }
 
@@ -144,7 +144,7 @@
    =========================================================== */
 
 .methodology-page {
-  padding: clamp(60px, 8vw, 100px) 0;
+  padding: clamp(40px, 6vw, 72px) 0;
 }
 
 .methodology-header {
@@ -295,7 +295,7 @@
    =========================================================== */
 
 .citation-report {
-  padding: clamp(60px, 8vw, 100px) 0;
+  padding: clamp(40px, 6vw, 72px) 0;
 }
 
 .citation-header {
@@ -498,7 +498,7 @@
    =========================================================== */
 
 .insights-hero {
-  padding: clamp(60px, 8vw, 100px) 0 0;
+  padding: clamp(40px, 6vw, 72px) 0 0;
 }
 
 .insights-eyebrow {
