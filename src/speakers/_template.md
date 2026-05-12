@@ -3,6 +3,8 @@ title: SPEAKER NAME OR TITLE (e.g. "NATS Chief Executive")
 role: Job Title, Organisation
 organisation: Organisation Full Name
 summary: One sentence bio — role, organisation, and why they are relevant to ASW 2026.
+eleventyExcludeFromCollections: true
+permalink: false
 ---
 
 ## Role and remit
