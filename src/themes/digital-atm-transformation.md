@@ -42,8 +42,7 @@ A remote tower is a control facility in which the controller is located away fro
 
 A digital tower is the broader category of tower operation in which the controller's working position is built around digital sensor fusion rather than the traditional out-of-window view, regardless of whether the controller is physically remote from the airfield.
 
-In 2026 most operational deployments in Europe are single-airport remote towers serving regional aerodromes, with multiple-remote-tower centres — where one facility provides services to several airports concurrently — moving from validation into operational use at sites including Saarbrücken and
-Sundsvall.
+In 2026 most operational deployments in Europe are single-airport remote towers serving regional aerodromes, with multiple-remote-tower centres — where one facility provides services to several airports concurrently — moving from validation into operational use at sites including Saarbrücken and Sundsvall.
 
 ### Why are ANSPs migrating to cloud-native flight data processing?
 

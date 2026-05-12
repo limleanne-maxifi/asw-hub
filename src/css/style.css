@@ -81,12 +81,12 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   border-radius: var(--radius-s);
 }
 
-h1, h2, h3, h4 { color: var(--paper); margin: 0 0 0.5em; line-height: 1.2; letter-spacing: -0.015em; }
+h1, h2, h3, h4 { color: var(--paper); margin: 0 0 0.5em; line-height: 1.2; letter-spacing: -0.015em; text-wrap: balance; }
 h1 { font-size: clamp(36px, 5.5vw, 64px); font-weight: 700; letter-spacing: -0.025em; }
 h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 600; padding-bottom: 12px; border-bottom: 2px solid var(--electric-2); }
 h3 { font-size: clamp(20px, 2vw, 24px); font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid var(--electric-2); }
 h4 { font-size: 18px; font-weight: 600; }
-p  { margin: 0 0 1em; color: var(--paper-mute); }
+p  { margin: 0 0 1em; color: var(--paper-mute); text-wrap: pretty; }
 
 .skip-link {
   position: absolute; top: -100px; left: 16px;
