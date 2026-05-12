@@ -1,0 +1,74 @@
+{
+  "lastUpdated": "2026-05-12",
+  "methodology": "Five standard queries submitted to each engine. Citation = hub URL or content quoted verbatim in the answer. Baseline measured against the unstructured CANSO/ASW official site before this hub launched.",
+  "queries": [
+    "What sessions are at Airspace World 2026?",
+    "Who are the speakers at ASW 2026?",
+    "What is the CANSO ATM agenda for 2026?",
+    "What sessions do I need to attend at Airspace World 2026?",
+    "What are the key ATM themes at Airspace World 2026?"
+  ],
+  "engines": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "vendor": "OpenAI",
+      "before": 0,
+      "after": 0,
+      "status": "pending",
+      "notes": "First check scheduled. Update after manual verification."
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "vendor": "Perplexity AI",
+      "before": 0,
+      "after": 0,
+      "status": "pending",
+      "notes": "First check scheduled. Update after manual verification."
+    },
+    {
+      "id": "google-ai",
+      "name": "Google AI Overviews",
+      "vendor": "Google",
+      "before": 0,
+      "after": 0,
+      "status": "pending",
+      "notes": "Requires Search Labs AI Overviews enabled. Update after manual verification."
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "vendor": "Anthropic",
+      "before": 0,
+      "after": 0,
+      "status": "pending",
+      "notes": "First check scheduled. Update after manual verification."
+    },
+    {
+      "id": "copilot",
+      "name": "Microsoft Copilot",
+      "vendor": "Microsoft",
+      "before": 0,
+      "after": 0,
+      "status": "pending",
+      "notes": "First check scheduled. Update after manual verification."
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "vendor": "Google DeepMind",
+      "before": 0,
+      "after": 0,
+      "status": "pending",
+      "notes": "First check scheduled. Update after manual verification."
+    }
+  ],
+  "summary": {
+    "queriesTested": 5,
+    "enginesTracked": 6,
+    "baselineCitationRate": 0,
+    "currentCitationRate": 0,
+    "updateFrequency": "Monthly — update after running standard queries on the 1st of each month"
+  }
+}
