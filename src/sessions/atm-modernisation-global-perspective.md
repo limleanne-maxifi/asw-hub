@@ -6,22 +6,24 @@ day: Wednesday 27 May 2026
 time: 11:00 – 11:50
 room: Frequentis Theatre
 theme: Innovation to Enable Future Skies
-speakers: Global ANSP Leaders
-summary: A cross-continental panel examining why modernisation speed is critical in the 2020s — the competitive and operational imperatives driving ANSPs in North America, Europe, Asia-Pacific, and Latin America to accelerate digital transformation timelines.
+speakers: Klaus Meier · Mark Hind · Philipp Piber (Managing Director, Austro Control) · Rebecca Guy
+chair: Markus Klopf
+summary: A global panel examining why modernisation speed is critical — the operational and competitive imperatives driving ANSPs to accelerate digital transformation timelines, what implementation looks like in practice, and why the pace of change must increase.
 ---
 
 ## What to expect
 
-A global perspective on ATM modernisation urgency:
+ATM modernisation is no longer a future programme — it is an active operational imperative. This session brings together global perspectives on what it takes to move from concept to reality, and why speed is the defining variable:
 
-- **Why speed matters** — the capacity, sustainability, and safety imperatives driving accelerated timelines
-- **Regional modernisation strategies** — how different regulatory regimes and market structures shape transformation pace
-- **Lessons from early movers** — operational results from ANSPs that have cut over digital systems in the past 12–24 months
-- **Barriers to speed** — staffing, investment, regulatory alignment, legacy system decommissioning
+- **The case for speed** — the capacity, safety, and sustainability consequences of delayed modernisation
+- **From concept to operational deployment** — what the transition looks like for ANSPs that have moved digital systems into live operations
+- **Barriers and how to overcome them** — investment cycles, workforce transitions, regulatory alignment, and legacy system complexity
+- **The global competitive context** — how different regulatory regimes and funding structures shape modernisation pace across regions
+- **Why the gap between concept and reality persists** — an honest assessment of why ATM modernisation consistently takes longer than planned and what structural changes would accelerate delivery
 
 ## Why it matters
 
-Modernisation is no longer a luxury or a technology roadmap exercise — it's a business and operational necessity. This session frames the global competitive context and the consequences of delay.
+The ATM community has been discussing modernisation for decades. This session focuses on the transition from planning to execution — and on the urgent need to close the gap between what the technology can deliver and what is operationally deployed.
 
 ## Linked theme
 

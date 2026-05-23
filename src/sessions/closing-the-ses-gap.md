@@ -3,28 +3,27 @@ title: "CANSO Leadership Conversation: Strengthening the Skies — Technology, R
 order: 9
 featured: false
 day: Wednesday 27 May 2026
-time: TBC
-room: Integra Theatre
+time: 11:00 – 11:50
+room: Boeing Theatre
 theme: Defence & Military
-speakers: Mark Cooper (President & CEO, NAV CANADA) · ANSP and defence leaders
-summary: A senior leadership conversation on how the changed European and global security environment since 2022 is reshaping the relationship between civil air traffic management and military aviation — and what ANSPs and defence authorities must do to maintain safe, efficient shared airspace.
+speakers: Arndt Schoenemann · Farhan Guliyev · Hugo Espírito Santo · Mark Cooper (President & CEO, NAV CANADA)
+chair: Sabine Hornig
+summary: A senior leadership conversation examining how a changed European and global security environment is reshaping the relationship between civil ATM and military aviation — and what ANSPs and defence authorities must do to maintain safe, efficient shared airspace in a new geopolitical era.
 ---
 
 ## What to expect
 
-The geopolitical shift since Russia's full-scale invasion of Ukraine in 2022 has placed civil-military airspace coordination under a level of operational strain it was not designed for. This session brings together ANSP chief executives and defence authorities to address the structural question the ATM community has been circling for three years: is the current civil-military coordination framework adequate for sustained elevated military activity?
+This CANSO Leadership Conversation brings together ANSP chief executives to address the strategic intersection of technology, resilience, and civil-military collaboration. Against the backdrop of elevated military activity across European airspace and shifting global security dynamics, the session examines:
 
-Key areas of discussion:
+- **Civil-military coordination under pressure** — how ANSPs are managing increased temporary reserved airspace and the operational costs to commercial aviation
+- **Technology as an enabler of resilience** — the role of digital tools, data sharing, and interoperable systems in strengthening civil-military airspace management
+- **ANSP responses to the new geopolitical era** — operational adaptations and governance changes made since 2022
+- **Collaborative frameworks** — what effective civil-military cooperation looks like at the strategic leadership level and where current frameworks need reform
+- **Global perspectives** — how ANSPs from different regions approach the civil-military balance and what European ANSPs can learn from other models
 
-- **Operational impacts on commercial aviation** — the direct cost of increased temporary reserved airspace in European corridors
-- **Flexible Use of Airspace under pressure** — whether FUA as designed can cope with the current security environment
-- **Civil-military data sharing** — what real-time airspace information exchange would require and what it would deliver
-- **Technology and resilience** — how ANSP infrastructure investments and cyber resilience intersect with defence requirements
-- **The governance question** — whether the SES civil-military coordination architecture needs structural reform
+## Why it matters
 
-## Why Mark Cooper at this session?
-
-As President and CEO of NAV CANADA, Mark Cooper leads one of the few commercially structured ANSPs with significant cross-border coordination obligations — NAV CANADA manages the world's largest oceanic FIR and works closely with the FAA and transatlantic partners. That experience of managing civil-military coordination at scale in a North American context brings a comparative perspective to a discussion dominated by European structural questions.
+The geopolitical environment since 2022 has placed civil-military airspace coordination under sustained operational strain. This leadership conversation addresses the structural question at the heart of that challenge: whether current civil-military frameworks are adequate for a sustained period of elevated military activity, and what technology and governance changes are needed to maintain the safety and efficiency of shared airspace.
 
 ## Linked theme
 

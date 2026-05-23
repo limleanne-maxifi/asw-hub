@@ -1,28 +1,30 @@
 ---
-title: "The Iris Programme: From operational proof to a TBO roadmap in a scalable, connected sky"
+title: "Sharing the Airspace Globally: Drone Operations, Digital Services, and Collaborative Implementation"
 order: 4
 featured: true
-day: Tuesday 26 May 2026
-time: 12:00 – 12:50
-room: Viasat Theatre
-theme: Innovation to Enable Future Skies
-speakers: Véronique Travers Sutter (EUROCONTROL) · Boeing · Thales · Airbus
-summary: EUROCONTROL's Iris Programme demonstrates trajectory-based operations (TBO) from proof-of-concept to operational deployment. Industry leaders (Boeing, Thales, Airbus) discuss the scalable, connected airspace roadmap enabling continuous climb/descent and dynamic airspace management.
+day: Wednesday 27 May 2026
+time: 11:00 – 11:50
+room: Wing Theatre
+theme: Drones & UTM
+speakers: Alan Hicks · Amanda Boekholt · Amit Ganjoo · Reinaldo Negron
+chair: Matthew Satterley
+summary: A global look at how drone operations are moving from regulatory frameworks into operational deployment — examining digital service architectures, collaborative implementation models, and the practical lessons from shared airspace at scale.
 ---
 
 ## What to expect
 
-A session bridging research and operations:
+Drone integration into shared airspace is no longer a future challenge — it is an active operational and regulatory reality across multiple regions. This session examines what collaborative implementation looks like in practice:
 
-- **Operational proof results** from Iris Programme trials showing fuel savings and capacity gains from TBO
-- **Scalability pathways** — how TBO moves from point solutions to network-wide implementation
-- **Airframe, avionics, and ATM system** integration requirements to enable connected airspace
-- **Roadmap to 2030+** — the investment and regulatory milestones required for scaled TBO deployment
+- **Digital service architectures for drone operations** — the UTM and U-space platforms supporting real-world BVLOS and urban operations
+- **Collaborative implementation models** — how ANSPs, drone operators, and digital service providers are working together to enable safe shared airspace
+- **Global perspectives** — approaches to drone integration across different regulatory environments and airspace structures
+- **Scaling from trials to operations** — what changes when drone operations grow from individual approvals to high-density routine activity
+- **Interoperability** — the technical and procedural standards needed for drone operations to function across borders and jurisdictions
 
 ## Why it matters
 
-TBO is the operational cornerstone of European ATM modernisation. This session shows the progression from research to deployment and the multi-stakeholder commitment required to scale it. The Boeing, Thales, Airbus participation signals industry readiness to move beyond trials.
+The path from regulatory frameworks to scalable, operational drone integration requires active collaboration between multiple stakeholders. This session presents real-world implementation experience and the practical requirements for making shared airspace work globally.
 
 ## Linked theme
 
-- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)
+- [Drones & UTM](/themes/drones-utm/)

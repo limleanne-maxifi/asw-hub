@@ -1,35 +1,29 @@
 ---
-title: "Building the Safety Case for AI in Air Traffic Control"
+title: "Human-Centred AI in Air Traffic Control: Training and Operations"
 order: 10
 featured: true
 day: Wednesday 27 May 2026
-time: 14:00 – 14:50
-room: Frequentis Theatre
+time: 12:00 – 12:50
+room: Boeing Theatre
 theme: Innovation to Enable Future Skies
-speakers: Francesco Gaetani (Flight Standards Director, EASA) · EUROCONTROL Safety Unit · NATS · DFS Deutsche Flugsicherung
-summary: How ANSPs and regulators are constructing the safety arguments required to certify AI-assisted ATC tools — from machine learning for traffic flow prediction to AI-generated clearance suggestions — and what the EASA AI roadmap means for operational timelines.
+speakers: Anthony Mackay (VP & Chief Safety & Quality Officer, NAV CANADA) · Greg Pile · Terry Biggio
+chair: Tim Arel (Chair, CANSO; COO, FAA Air Traffic Organization)
+summary: How a human-centred design philosophy changes the application of AI in ATC — examining training implications, operational integration of AI tools, and what it means in practice to keep controllers meaningfully in the loop as AI capabilities expand.
 ---
 
 ## What to expect
 
-AI is moving from ATM research labs into operational trials. This session addresses the safety assurance challenge:
+AI is increasingly present in ATC environments, from decision-support tools to training simulation systems. This session examines what a genuinely human-centred approach to AI means for both training and live operations:
 
-- **EASA's AI Roadmap** and the certification framework for Level 1, 2, and 3 AI applications in ATC
-- **Safety case methodology** for machine learning systems with non-deterministic behaviour
-- **Operational trial results** from NATS and DFS on AI-assisted traffic flow management
-- **Human-machine teaming** — where AI augments controllers versus where it introduces risk
-- **Liability and accountability** frameworks for AI-generated ATC recommendations
+- **Human-centred AI design principles for ATC** — what distinguishes a human-centred AI system from one that merely has a human in the loop, and why the distinction matters for operational safety
+- **Training implications of AI in ATC** — how AI tools are changing what controllers need to learn, how they are trained, and what simulator environments must replicate to remain relevant
+- **Operational integration** — the practical experience of introducing AI tools into live ATC operations, including controller acceptance, workflow adaptation, and performance monitoring
+- **Safety and quality assurance** — how ANSPs are building safety and quality frameworks around AI tools that behave differently from traditional deterministic systems
+- **The NAV CANADA perspective** — Anthony Mackay brings direct operational and safety leadership experience to the question of how a major ANSP integrates AI while maintaining its safety obligations
 
-## Key questions this session will address
+## Why it matters
 
-**What is EASA's AI certification framework for ATC?**
-EASA's AI Roadmap (2023–2025) establishes three levels of AI application in aviation. Level 1 (decision support) is certifiable under current frameworks. Level 2 (supervisory control) requires new safety assurance methodologies. Level 3 (autonomous operation) remains research-stage. This session will clarify which ATC AI tools fall into each category.
-
-**How do you write a safety case for a machine learning system?**
-Traditional safety cases rely on deterministic behaviour analysis. ML systems learn and adapt, making exhaustive failure mode analysis impossible. The session will present the assurance-based approach being developed jointly by EASA, EUROCONTROL, and CANSO members.
-
-**Which AI ATC tools are closest to certification?**
-Conflict detection and resolution advisories, traffic flow prediction, and sector capacity tools are the nearest-term candidates. NATS will present results from its AI-assisted tactical flow management trial at London Terminal Control.
+AI in ATC is not primarily a technology question — it is a human performance question. How AI tools are designed, introduced, and governed determines whether they enhance or undermine controller effectiveness. This session examines the human-centred approach that makes AI a genuine operational asset.
 
 ## Linked theme
 

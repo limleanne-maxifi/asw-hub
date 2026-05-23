@@ -1,37 +1,26 @@
 ---
-title: "SES2+: Two Years of Implementation — What Has Actually Changed?"
+title: "CANSO Leadership Conversation: The Next Generation of ATM — Where Technology Meets Talent and Diversity"
 order: 11
 featured: false
-day: Tuesday 26 May 2026
-time: 16:00 – 16:50
+day: Thursday 28 May 2026
+time: 11:00 – 11:50
 room: Viasat Theatre
-theme: Policy, Regulation & Governance
-speakers: European Commission DG MOVE · EUROCONTROL · FABEC · BLUE MED FAB
-summary: A frank review of SES2+ implementation two years after the revised regulation entered force — which performance targets are being met, where the political obstacles remain, and what the European Commission's enforcement options look like.
+theme: People, Skills & Next-Gen
+speakers: Friedrich-Wilhelm Menge · Major General Cyro André Cruz · Marie-Pier Berman · Micilia Albertus-Verboom · Vincenzo Smorto
+chair: Benjamin Binet
+summary: A CANSO Leadership Conversation examining how the next generation of ATM will be shaped by the intersection of advanced technology and the talent, diversity, and human capability needed to operate it — and what aviation leaders must do now to build that future workforce.
 ---
 
 ## What to expect
 
-SES2+ entered into force in 2024. This session is the first major post-implementation review at Airspace World:
+The next generation of ATM is not only a technology transition — it is a talent and cultural transformation. This CANSO Leadership Conversation brings together senior leaders to address what it takes to build the workforce that will operate tomorrow's highly automated, AI-augmented airspace:
 
-- **Performance scheme results** under the Reference Period 4 targets
-- **Network management** under the strengthened EUROCONTROL mandate
-- **Functional airspace block performance** — which FABs are delivering and which are not
-- **Military-civil coordination** and the persistent obstacles to flexible use of airspace
-- **What enforcement looks like** under the new Commission powers
+- **The talent imperative** — the skills, competencies, and mindsets that next-generation ATM systems will require from controllers, engineers, and managers
+- **Diversity as a strategic asset** — why a more diverse ATM workforce is not just a social objective but an operational necessity for the innovation and problem-solving the sector needs
+- **Technology and people in parallel** — how ANSPs are managing the dual challenge of accelerating digital transformation while developing their human capability at the same pace
+- **Attracting the next generation** — what aviation must do to compete for talent in a world where technology careers offer many competing paths
+- **Leadership perspectives from across regions** — how ANSPs from different continents are approaching the talent and diversity challenge in their specific contexts
 
-## Key questions this session will address
+## Linked theme
 
-**Are ANSPs meeting their RP4 capacity targets?**
-The Reference Period 4 performance targets run 2025–2029. Preliminary data from EUROCONTROL's Performance Review Body shows five of nine FABs are on trajectory. The session will present the mid-period assessment.
-
-**Has SES2+ actually changed anything structurally?**
-Critics argue SES2+ is SES2 with minor amendments, and that the fundamental political obstacles — national sovereignty over airspace and ANSP employment concerns — remain unchanged. The Commission's DG MOVE will address this directly.
-
-**What are the Commission's enforcement tools?**
-Under SES2+, the Commission can impose corrective measures on ANSPs that persistently miss performance targets. This is a new power not available under SES2. The session will clarify the trigger conditions and process.
-
-## Linked themes
-
-- [Policy, Regulation & Governance](/themes/policy-regulation-governance/)
-- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)
+- [People, Skills & Next-Gen](/themes/people-skills-next-gen/)

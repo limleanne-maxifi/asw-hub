@@ -6,7 +6,8 @@ day: Tuesday 26 May 2026
 time: 13:00 – 13:50
 room: Frequentis Theatre
 theme: Seamless Skies for All
-speakers: Vanessa Robertson (moderator)
+speakers: Dragos Tonea · Giovanni Di Antonio · Kiko Dontchev (VP Launch, SpaceX) · Lakisha Price
+chair: Vanessa Robertson
 summary: How ANSPs and the EUROCONTROL Network Manager are moving space launch operations from exceptional events requiring ad hoc coordination to routinely managed operations integrated into normal airspace flow management.
 ---
 
@@ -19,6 +20,7 @@ Commercial space launch cadence from European spaceports is increasing. This ses
 - **Network Manager coordination** — the mechanisms available to the EUROCONTROL Network Manager for integrating space launch corridor reservations into the wider European network management picture
 - **CANSO operational standards development** — the work CANSO is doing to develop shared operational standards for ANSP-to-space-operator coordination, separating space traffic from conventional aviation
 - **Data sharing frameworks** — the information flows needed between space operators, national authorities, ANSPs, and the Network Manager to enable efficient and safe integration
+- **The operator perspective** — Kiko Dontchev (VP Launch, SpaceX) brings a direct commercial launch operator viewpoint to the discussion, addressing what the world's highest-cadence launch provider needs from ATM coordination frameworks
 
 ## Key questions this session will address
 
