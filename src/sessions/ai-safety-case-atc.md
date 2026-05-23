@@ -6,7 +6,7 @@ day: Wednesday 27 May 2026
 time: 14:00 – 14:50
 room: Frequentis Theatre
 theme: Innovation to Enable Future Skies
-speakers: EASA · EUROCONTROL Safety Unit · NATS · DFS Deutsche Flugsicherung
+speakers: Francesco Gaetani (Flight Standards Director, EASA) · EUROCONTROL Safety Unit · NATS · DFS Deutsche Flugsicherung
 summary: How ANSPs and regulators are constructing the safety arguments required to certify AI-assisted ATC tools — from machine learning for traffic flow prediction to AI-generated clearance suggestions — and what the EASA AI roadmap means for operational timelines.
 ---
 
