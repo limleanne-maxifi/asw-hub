@@ -1,35 +1,39 @@
 ---
-title: "EUROCONTROL Network Manager: 2026 Summer Capacity Forecast"
+title: "Navigating Europe's Air Traffic: Current Situation, Operational Challenges and How Europe Can Optimise Existing Capacity"
 order: 16
 featured: true
 day: Tuesday 26 May 2026
-time: 11:00 – 11:50
-room: Frequentis Theatre
+time: 14:00 – 14:50
+room: Viasat Theatre
 theme: Collaborative Operations for Sustainable Skies
-speakers: EUROCONTROL Network Manager · FABEC · MUAC · Airlines for Europe (A4E)
-summary: The authoritative European summer 2026 capacity outlook from EUROCONTROL's Network Manager — forecast traffic levels, identified pinch points, pre-tactical measures planned, and the weather and staffing risks that could push the network into crisis.
+speakers: Iacopo Prissinotti (Director Network Management, EUROCONTROL) · Ferenc Turi · Giovanni Russo · Ourania Georgoutsakou · Peggy Devestel
+summary: A senior panel examining the current state of European air traffic, the operational challenges constraining capacity, and the practical steps the network can take to optimise performance within existing infrastructure.
 ---
 
 ## What to expect
 
-Every summer, European airspace faces a capacity crisis. This session is the annual Network Manager forecast briefing:
+This session brings together Network Manager expertise and ANSP operational leadership to present an honest assessment of the European ATM capacity situation and the levers available to improve it:
 
-- **Traffic forecast** for summer 2026 — en-route, terminal, and airport demand projections
-- **Identified bottlenecks** — the sectors and airports expected to generate the most delay
-- **Pre-tactical measures** — what the Network Manager is putting in place before the season
-- **Staffing outlook** — where ANSP controller shortages are expected to constrain capacity
-- **Weather risk assessment** — convective weather forecast and its operational implications
+- **Current European traffic levels** — the state of demand recovery and the sectors under the greatest strain
+- **Operational bottlenecks** — where the network is losing capacity and why, from staffing constraints to airspace design limitations
+- **Network Manager coordination tools** — how pre-tactical and tactical demand management is applied across the European network
+- **Capacity optimisation options** — what ANSPs and the Network Manager can achieve within existing regulatory and contractual frameworks
+- **Cross-ANSP collaboration** — the role of bilateral and multilateral operational agreements in smoothing network flow
 
 ## Key questions this session will address
 
-**How much traffic is expected in European airspace in summer 2026?**
-EUROCONTROL's June-August 2026 forecast projects 11.2 million flights, approximately 4% above summer 2025. This will be the highest summer traffic volume in European airspace history.
+**What is the honest assessment of European ATM capacity headroom?**
+This session examines where the gap between traffic demand and declared capacity sits across the European network, and which structural factors — staffing, sectorisation, airspace design — are the binding constraints in the near term.
 
-**Which sectors will generate the most delay in summer 2026?**
-Based on Network Manager modelling, the three highest-risk sectors are Marseille, Barcelona, and MUAC upper airspace over the Benelux. Combined, these three areas generated 38% of European en-route delay in summer 2025.
+**How does the EUROCONTROL Network Manager coordinate capacity optimisation across 40+ ANSPs?**
+The Network Manager's role is unique — it does not control airspace directly but coordinates pre-tactical measures, slot allocation, and demand management across member states operating under different national frameworks. This session will explore how that coordination works in practice and where it faces friction.
 
-**What is the Network Manager's contingency for a repeat of summer 2025?**
-Summer 2025 saw 58 million minutes of delay — the second highest on record. The Network Manager will present the enhanced pre-tactical toolbox, including new demand management protocols agreed with airlines under the revised Network Operations Plan.
+**What realistic improvements are achievable without major infrastructure change?**
+Beyond long-term SESAR deployment, this session focuses on what operational and procedural changes can deliver tangible capacity gains on a shorter timescale — dynamic sectorisation, enhanced CDM, improved flow management position collaboration, and cross-border sector sharing.
+
+## Why it matters
+
+European airspace capacity has been a persistent structural constraint on aviation recovery and growth. With traffic levels continuing to rise and major SESAR deployment still years away from full effect, understanding what the network can realistically achieve with existing tools and infrastructure is critical for airlines, ANSPs, airports, and regulators alike. This session provides the authoritative operational perspective from EUROCONTROL's Network Management Directorate.
 
 ## Linked theme
 
