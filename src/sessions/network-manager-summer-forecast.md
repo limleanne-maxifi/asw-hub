@@ -7,6 +7,13 @@ time: 14:00 – 14:50
 room: Viasat Theatre
 theme: Collaborative Operations for Sustainable Skies
 speakers: Iacopo Prissinotti (Director Network Management, EUROCONTROL) · Ferenc Turi · Giovanni Russo · Ourania Georgoutsakou · Peggy Devestel
+speakerLinks:
+  - display: "Iacopo Prissinotti (Director Network Management, EUROCONTROL)"
+    slug: "iacopo-prissinotti"
+  - display: "Ferenc Turi"
+  - display: "Giovanni Russo"
+  - display: "Ourania Georgoutsakou"
+  - display: "Peggy Devestel"
 summary: A senior panel examining the current state of European air traffic, the operational challenges constraining capacity, and the practical steps the network can take to optimise performance within existing infrastructure.
 ---
 

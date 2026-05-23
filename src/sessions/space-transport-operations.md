@@ -7,6 +7,12 @@ time: 13:00 – 13:50
 room: Frequentis Theatre
 theme: Seamless Skies for All
 speakers: Dragos Tonea · Giovanni Di Antonio · Kiko Dontchev (VP Launch, SpaceX) · Lakisha Price
+speakerLinks:
+  - display: "Dragos Tonea"
+  - display: "Giovanni Di Antonio"
+  - display: "Kiko Dontchev (VP Launch, SpaceX)"
+    slug: "kiko-dontchev"
+  - display: "Lakisha Price"
 chair: Vanessa Robertson
 summary: How ANSPs and the EUROCONTROL Network Manager are moving space launch operations from exceptional events requiring ad hoc coordination to routinely managed operations integrated into normal airspace flow management.
 ---

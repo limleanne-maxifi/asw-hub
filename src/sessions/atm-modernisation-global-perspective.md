@@ -7,6 +7,12 @@ time: 11:00 – 11:50
 room: Frequentis Theatre
 theme: Innovation to Enable Future Skies
 speakers: Klaus Meier · Mark Hind · Philipp Piber (Managing Director, Austro Control) · Rebecca Guy
+speakerLinks:
+  - display: "Klaus Meier"
+  - display: "Mark Hind"
+  - display: "Philipp Piber (Managing Director, Austro Control)"
+    slug: "philipp-piber"
+  - display: "Rebecca Guy"
 chair: Markus Klopf
 summary: A global panel examining why modernisation speed is critical — the operational and competitive imperatives driving ANSPs to accelerate digital transformation timelines, what implementation looks like in practice, and why the pace of change must increase.
 ---

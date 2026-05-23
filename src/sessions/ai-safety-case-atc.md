@@ -7,7 +7,15 @@ time: 12:00 – 12:50
 room: Boeing Theatre
 theme: Innovation to Enable Future Skies
 speakers: Anthony Mackay (VP & Chief Safety & Quality Officer, NAV CANADA) · Greg Pile · Terry Biggio
+speakerLinks:
+  - display: "Anthony Mackay (VP & Chief Safety & Quality Officer, NAV CANADA)"
+    slug: "anthony-mackay"
+  - display: "Greg Pile"
+  - display: "Terry Biggio"
 chair: Tim Arel (Chair, CANSO; COO, FAA Air Traffic Organization)
+chairLink:
+  display: "Tim Arel (Chair, CANSO; COO, FAA Air Traffic Organization)"
+  slug: "tim-arel"
 summary: How a human-centred design philosophy changes the application of AI in ATC — examining training implications, operational integration of AI tools, and what it means in practice to keep controllers meaningfully in the loop as AI capabilities expand.
 ---
 

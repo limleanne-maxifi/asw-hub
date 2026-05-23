@@ -7,6 +7,12 @@ time: 11:00 – 11:50
 room: Boeing Theatre
 theme: Defence & Military
 speakers: Arndt Schoenemann · Farhan Guliyev · Hugo Espírito Santo · Mark Cooper (President & CEO, NAV CANADA)
+speakerLinks:
+  - display: "Arndt Schoenemann"
+  - display: "Farhan Guliyev"
+  - display: "Hugo Espírito Santo"
+  - display: "Mark Cooper (President & CEO, NAV CANADA)"
+    slug: "mark-cooper"
 chair: Sabine Hornig
 summary: A senior leadership conversation examining how a changed European and global security environment is reshaping the relationship between civil ATM and military aviation — and what ANSPs and defence authorities must do to maintain safe, efficient shared airspace in a new geopolitical era.
 ---

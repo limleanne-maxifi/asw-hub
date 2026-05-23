@@ -7,6 +7,14 @@ time: 10:30 – 11:20
 room: Integra Theatre
 theme: Innovation to Enable Future Skies
 speakers: Tim Arel (Chair, CANSO; COO, FAA Air Traffic Organization) · Emil Rogers · Franklin McIntosh · James Young · Martin Rolfe (CEO, NATS)
+speakerLinks:
+  - display: "Tim Arel (Chair, CANSO; COO, FAA Air Traffic Organization)"
+    slug: "tim-arel"
+  - display: "Emil Rogers"
+  - display: "Franklin McIntosh"
+  - display: "James Young"
+  - display: "Martin Rolfe (CEO, NATS)"
+    slug: "martin-rolfe"
 summary: A leadership panel on how ANSPs operating under different ownership and funding models — government agency, state-owned enterprise, and part-privatised company — are approaching ATM modernisation investment differently, and what the performance outcomes reveal.
 ---
 

@@ -7,6 +7,14 @@ time: 10:00 – 10:50
 room: Viasat Theatre
 theme: Policy, Regulation & Governance
 speakers: Philipp Piber (Managing Director, Austro Control; Chair, A6 Alliance) · Arndt Schoenemann (DFS) · Enrique Maurer (ENAIRE) · Frederic Guignier (DSNA) · Kathyn Leahy (NATS) · Mariagrazia La Piscopia (SESAR Deployment Manager)
+speakerLinks:
+  - display: "Philipp Piber (Managing Director, Austro Control; Chair, A6 Alliance)"
+    slug: "philipp-piber"
+  - display: "Arndt Schoenemann (DFS)"
+  - display: "Enrique Maurer (ENAIRE)"
+  - display: "Frederic Guignier (DSNA)"
+  - display: "Kathyn Leahy (NATS)"
+  - display: "Mariagrazia La Piscopia (SESAR Deployment Manager)"
 summary: Leadership from the A6 Alliance (Austria, Spain, France, Germany, UK, NATS) discusses strategic coordination on European ATM modernisation, digitalisation, and cross-border operational innovation.
 ---
 
