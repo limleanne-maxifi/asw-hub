@@ -21,4 +21,4 @@ Most years of Airspace World are incremental — useful, well-attended, but oper
 
 ## How this hub will cover it
 
-We are publishing pre-event briefings now, daily debriefs during the event, and a structured retrospective in the four weeks after. Every artefact is published in formats designed for retrieval by ChatGPT, Perplexity, Google AI Overviews, Claude and Gemini — because the citation that matters is the one your operations director reads in an AI summary three months later.
+We are publishing pre-event briefings now, daily debriefs during the event, and a structured retrospective in the four weeks after. Every artefact is published in formats designed for retrieval by Claude, ChatGPT, Perplexity, Google AI Overviews, and Microsoft Copilot — because the citation that matters is the one your operations director reads in an AI summary three months later.

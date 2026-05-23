@@ -1,71 +1,24 @@
 {
-  "_comment": "Update this file on the 1st of each month with new citation audit data. The page at /citation-report/ reads from this file automatically on the next Eleventy build.",
-  
-  "lastUpdated": "May 2026",
-  
-  "summary": {
-    "queriesTestedThisMonth": 20,
-    "hubCitationRate": 0,
-    "unstructuredCitationRate": 0,
-    "deltaPoints": 0,
-    "_note": "Initial state pre-event. First real data: June 2026 audit."
-  },
-  
-  "engines": [
-    {
-      "name": "ChatGPT",
-      "structuredRate": 0,
-      "unstructuredRate": 0
-    },
-    {
-      "name": "Perplexity",
-      "structuredRate": 0,
-      "unstructuredRate": 0
-    },
-    {
-      "name": "Google AI Overviews",
-      "structuredRate": 0,
-      "unstructuredRate": 0
-    }
+  "_comment": "Update src/_data/citations.json on the 1st of each month after running the standard audit queries. Set cited:true and add the response URL for each engine that cited the insight. Rebuild the site to publish.",
+
+  "_engines": "Claude (Anthropic) · ChatGPT (OpenAI) · Perplexity (Perplexity AI) · Google AI Overviews (Google) · Microsoft Copilot (Microsoft)",
+
+  "_how_to_audit": [
+    "1. Submit each of the 5 standard queries (see audit.json) to all 5 engines",
+    "2. For each insight: if the engine's answer cites or quotes a hub URL, set cited:true and paste the URL",
+    "3. Update summary.lastUpdated to today's date",
+    "4. Run npm run build — the citation-report page updates automatically"
   ],
-  
-  "sampleQueries": [
-    {
-      "query": "What are the key themes at Airspace World 2026?",
-      "hubCited": false,
-      "hubCitedPage": "",
-      "notes": "Pre-event baseline — first measurement after launch will appear in June 2026 report."
-    },
-    {
-      "query": "Who is presenting on AI in air traffic control at ASW 2026?",
-      "hubCited": false,
-      "hubCitedPage": "",
-      "notes": "Speaker pages launching pre-event will be measured in June."
-    },
-    {
-      "query": "What is the EASA AI certification framework?",
-      "hubCited": false,
-      "hubCitedPage": "",
-      "notes": "Theme page expansion in progress."
-    },
-    {
-      "query": "When and where is Airspace World 2026?",
-      "hubCited": false,
-      "hubCitedPage": "",
-      "notes": "Event schema in place. Should be cited from launch."
-    },
-    {
-      "query": "What did CANSO conclude about U-space at ASW 2025?",
-      "hubCited": false,
-      "hubCitedPage": "",
-      "notes": "ASW 2025 retrospective live — first measurement in June."
+
+  "_schema_example": {
+    "id": "insight-slug",
+    "title": "Insight title",
+    "engines": {
+      "claude":     { "cited": true,  "url": "https://claude.ai/..." },
+      "chatgpt":    { "cited": false, "url": "" },
+      "perplexity": { "cited": true,  "url": "https://perplexity.ai/search?q=..." },
+      "google-ai":  { "cited": false, "url": "" },
+      "copilot":    { "cited": false, "url": "" }
     }
-  ],
-  
-  "history": [
-    {
-      "label": "May",
-      "hubCitationRate": 0
-    }
-  ]
+  }
 }
