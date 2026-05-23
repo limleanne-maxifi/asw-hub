@@ -54,3 +54,23 @@
   from   = "/insights"
   to     = "/insights/"
   status = 301
+
+[[redirects]]
+  from   = "/how-it-works"
+  to     = "/how-it-works/"
+  status = 301
+
+[[redirects]]
+  from   = "/citation-report"
+  to     = "/citation-report/"
+  status = 301
+
+[[redirects]]
+  from   = "/aeo-audit-hub"
+  to     = "/aeo-audit-hub/"
+  status = 301
+
+[[redirects]]
+  from   = "/asw-2025"
+  to     = "/asw-2025/"
+  status = 301
