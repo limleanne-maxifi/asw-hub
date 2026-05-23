@@ -1,11 +1,12 @@
 {
-  "_note": "Pre-event baseline. Hub launched May 2026. First citation measurement: June 2026 audit. To update: set cited:true and add the url where the hub was cited for each engine.",
+  "_note": "Pre-event baseline. Hub launched May 2026. Quick check: June 1st. First full monthly audit: July 1st. To update: set cited:true and add the url where the hub was cited for each engine.",
   "engines": [
     { "id": "claude",    "name": "Claude",                "vendor": "Anthropic"       },
     { "id": "chatgpt",   "name": "ChatGPT",               "vendor": "OpenAI"          },
     { "id": "perplexity","name": "Perplexity",            "vendor": "Perplexity AI"   },
     { "id": "google-ai", "name": "Google AI Overviews",   "vendor": "Google"          },
-    { "id": "copilot",   "name": "Microsoft Copilot",     "vendor": "Microsoft"       }
+    { "id": "copilot",   "name": "Microsoft Copilot",     "vendor": "Microsoft"       },
+    { "id": "gemini",    "name": "Gemini",                "vendor": "Google DeepMind" }
   ],
   "insights": [
     {
@@ -16,7 +17,8 @@
         "chatgpt":    { "cited": false, "url": "" },
         "perplexity": { "cited": false, "url": "" },
         "google-ai":  { "cited": false, "url": "" },
-        "copilot":    { "cited": false, "url": "" }
+        "copilot":    { "cited": false, "url": "" },
+        "gemini":     { "cited": false, "url": "" }
       }
     },
     {
@@ -27,12 +29,14 @@
         "chatgpt":    { "cited": false, "url": "" },
         "perplexity": { "cited": false, "url": "" },
         "google-ai":  { "cited": false, "url": "" },
-        "copilot":    { "cited": false, "url": "" }
+        "copilot":    { "cited": false, "url": "" },
+        "gemini":     { "cited": false, "url": "" }
       }
     }
   ],
   "summary": {
     "lastUpdated": "2026-05-23",
-    "firstAuditDue": "2026-06-01"
+    "firstQuickCheck": "2026-06-01",
+    "firstFullAudit": "2026-07-01"
   }
 }

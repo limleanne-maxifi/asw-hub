@@ -1,10 +1,12 @@
 {
   "_comment": "Update src/_data/citations.json on the 1st of each month after running the standard audit queries. Set cited:true and add the response URL for each engine that cited the insight. Rebuild the site to publish.",
 
-  "_engines": "Claude (Anthropic) · ChatGPT (OpenAI) · Perplexity (Perplexity AI) · Google AI Overviews (Google) · Microsoft Copilot (Microsoft)",
+  "_engines": "Claude (Anthropic) · ChatGPT (OpenAI) · Perplexity (Perplexity AI) · Google AI Overviews (Google) · Microsoft Copilot (Microsoft) · Gemini (Google DeepMind)",
+
+  "_cadence": "Quick check June 1st (Perplexity + Claude move fast). First full 6-engine audit July 1st. Monthly thereafter.",
 
   "_how_to_audit": [
-    "1. Submit each of the 5 standard queries (see audit.json) to all 5 engines",
+    "1. Submit each of the 5 standard queries (see audit.json) to all 6 engines",
     "2. For each insight: if the engine's answer cites or quotes a hub URL, set cited:true and paste the URL",
     "3. Update summary.lastUpdated to today's date",
     "4. Run npm run build — the citation-report page updates automatically"
@@ -18,7 +20,8 @@
       "chatgpt":    { "cited": false, "url": "" },
       "perplexity": { "cited": true,  "url": "https://perplexity.ai/search?q=..." },
       "google-ai":  { "cited": false, "url": "" },
-      "copilot":    { "cited": false, "url": "" }
+      "copilot":    { "cited": false, "url": "" },
+      "gemini":     { "cited": false, "url": "" }
     }
   }
 }

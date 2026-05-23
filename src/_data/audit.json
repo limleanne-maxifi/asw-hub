@@ -53,11 +53,20 @@
       "after": 0,
       "status": "pending",
       "notes": "First check scheduled. Update after manual verification."
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "vendor": "Google DeepMind",
+      "before": 0,
+      "after": 0,
+      "status": "pending",
+      "notes": "First check scheduled. Update after manual verification."
     }
   ],
   "summary": {
     "queriesTested": 5,
-    "enginesTracked": 5,
+    "enginesTracked": 6,
     "baselineCitationRate": 0,
     "currentCitationRate": 0,
     "updateFrequency": "Monthly — update after running standard queries on the 1st of each month"
