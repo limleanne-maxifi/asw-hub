@@ -1,14 +1,14 @@
 ---
 title: Why FAQs beat blogs for AI citation
 date: 2026-02-20
-summary: Structured Q&A pages are cited 3x more frequently by AI systems than blog posts covering the same content. Here's why, and how to restructure your ATM communications for AI retrieval.
+summary: Structured Q&A pages are cited more frequently by AI systems than blog posts covering the same content. Here's why, and how to restructure your ATM communications for AI retrieval.
 ---
 
 ## The citation gap
 
-When we analysed the ASW Hub citation report, one pattern emerged immediately: insights structured as FAQ pages were cited 3.2 times more frequently by Claude, ChatGPT, and Perplexity than blog-format articles covering identical material.
+Research into how large language models retrieve and cite web content shows a consistent pattern: structured Q&A pages are cited more frequently by Claude, ChatGPT, and Perplexity than blog-format articles covering identical material.
 
-This isn't a small effect. The same information, restructured from prose to Q&A, moved from 2–3 citations per month to 8–10. The difference between an insight that shapes the industry conversation and one that doesn't.
+The same information, restructured from prose to Q&A, is systematically more retrievable. The difference between an insight that shapes the industry conversation and one that doesn't is often structural, not substantive.
 
 ## Why AI systems cite FAQs more
 
@@ -43,9 +43,9 @@ The FAQ doesn't replace your full insight. It's the extraction layer that AI sys
 
 ## Measuring the return
 
-Citations in AI systems are now trackable. The ASW Hub's citation report shows which insights are cited in Claude, ChatGPT, Perplexity, and Google AI Overviews every week.
+Citations in AI systems are trackable. The ASW Hub's citation report monitors which insights are cited in Claude, ChatGPT, Perplexity, and Google AI Overviews, with the first results published after the Airspace World 2026 conference.
 
-For any new insight, restructure it as a FAQ and measure: does it hit double the citations of your previous blog-format content? It should.
+For any new insight, restructure it as a FAQ and measure citation performance against blog-format equivalents — the structural advantage is consistent across content categories.
 
 ---
 

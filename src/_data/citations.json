@@ -1,37 +1,28 @@
 {
+  "_note": "Pre-event baseline. Hub launched May 2026. First citation measurement: June 2026 audit.",
   "insights": [
     {
       "id": "why-faqs-beat-blogs-for-ai-citation",
       "title": "Why FAQs beat blogs for AI citation",
-      "citationCount": 12,
-      "aiCitations": 8,
-      "humanCitations": 4,
-      "sources": [
-        "Claude (Anthropic)",
-        "ChatGPT (OpenAI)",
-        "Perplexity AI",
-        "Google AI Overviews"
-      ]
+      "citationCount": 0,
+      "aiCitations": 0,
+      "humanCitations": 0,
+      "sources": []
     },
     {
       "id": "why-asw-2026-matters",
       "title": "Why ASW 2026 matters more than the last three combined",
-      "citationCount": 24,
-      "aiCitations": 18,
-      "humanCitations": 6,
-      "sources": [
-        "Claude (Anthropic)",
-        "ChatGPT (OpenAI)",
-        "Perplexity AI",
-        "Google AI Overviews"
-      ]
+      "citationCount": 0,
+      "aiCitations": 0,
+      "humanCitations": 0,
+      "sources": []
     }
   ],
   "summary": {
-    "totalCitations": 36,
-    "totalAiCitations": 26,
-    "totalHumanCitations": 10,
-    "averageCitationsPerInsight": 18,
-    "lastUpdated": "2026-05-10"
+    "totalCitations": 0,
+    "totalAiCitations": 0,
+    "totalHumanCitations": 0,
+    "averageCitationsPerInsight": 0,
+    "lastUpdated": "2026-05-23"
   }
 }

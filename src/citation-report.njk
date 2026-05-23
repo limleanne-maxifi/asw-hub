@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
   <div class="container">
     <p class="eyebrow">Citation Report · Last updated {{ citations.summary.lastUpdated }}</p>
     <h1>How AI is citing the hub</h1>
-    <p>Weekly tracking of ASW Hub insights cited in Claude, ChatGPT, Perplexity, and Google AI Overviews as primary sources for ATM operator questions.</p>
+    <p>Tracking of ASW Hub insights cited in Claude, ChatGPT, Perplexity, and Google AI Overviews as primary sources for ATM operator questions. Hub launched May 2026 — first citation measurement will be published in June 2026.</p>
   </div>
 </header>
 
@@ -18,45 +18,43 @@ eleventyExcludeFromCollections: true
   <div class="container">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
       <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Total citations</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">{{ citations.summary.totalCitations }}</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">Across {{ citations.insights.length }} insights</p>
+        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Insights tracked</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">{{ citations.insights.length }}</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">Live at launch</p>
       </div>
       <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">AI citations</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">{{ citations.summary.totalAiCitations }}</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">From LLM responses</p>
+        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">AI engines monitored</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">4</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">Claude · ChatGPT · Perplexity · Google AIO</p>
       </div>
       <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Human citations</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">{{ citations.summary.totalHumanCitations }}</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">From web/articles</p>
+        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">First audit</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">Jun</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">Results published June 2026</p>
       </div>
     </div>
 
-    <h2 style="margin-top: 2rem; margin-bottom: 1.5rem;">Most-cited insights</h2>
+    <div style="background: #fffbeb; border: 1px solid #f59e0b; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem;">
+      <p style="margin: 0; font-weight: 600;">Pre-event baseline — first measurement June 2026</p>
+      <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #555;">The hub launched in May 2026, ahead of the Airspace World conference (26–28 May, Lisbon). AI search engines index new content over several weeks. The first citation audit will run in June 2026 and results will appear here.</p>
+    </div>
+
+    <h2 style="margin-top: 2rem; margin-bottom: 1.5rem;">Insights being tracked</h2>
     <div class="list-grid">
-      {% for insight in citations.insights | sort(attribute="citationCount") | reverse %}
+      {% for insight in citations.insights %}
       <div style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem;">
         <h3 style="margin-top: 0;">{{ insight.title }}</h3>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0 0 0; font-size: 0.875rem;">
           <div>
             <p style="margin: 0 0 0.25rem 0; color: #999; font-weight: 500;">Total citations</p>
-            <p style="margin: 0; font-size: 1.5rem; font-weight: 700;">{{ insight.citationCount }}</p>
+            <p style="margin: 0; font-size: 1.5rem; font-weight: 700; color: #999;">—</p>
           </div>
           <div>
             <p style="margin: 0 0 0.25rem 0; color: #999; font-weight: 500;">AI citations</p>
-            <p style="margin: 0; font-size: 1.5rem; font-weight: 700;">{{ insight.aiCitations }}</p>
+            <p style="margin: 0; font-size: 1.5rem; font-weight: 700; color: #999;">—</p>
           </div>
         </div>
-        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #f0f0f0;">
-          <p style="margin: 0 0 0.5rem 0; font-size: 0.75rem; color: #999; text-transform: uppercase; font-weight: 500;">Cited in</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-            {% for source in insight.sources %}
-            <span style="background: #f5f5f5; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem;">{{ source }}</span>
-            {% endfor %}
-          </div>
-        </div>
+        <p style="margin: 1rem 0 0 0; font-size: 0.8rem; color: #aaa;">First measurement: June 2026</p>
         <a href="/insights/{{ insight.id }}/" style="display: inline-block; margin-top: 1rem; color: #0066cc; text-decoration: none; font-weight: 500;">Read insight →</a>
       </div>
       {% endfor %}
