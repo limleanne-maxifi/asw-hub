@@ -5,7 +5,7 @@ featured: true
 day: Tuesday 26 May 2026
 time: 10:30 – 11:20
 room: Integra Theatre
-theme: Digital ATM Transformation
+theme: Innovation to Enable Future Skies
 speakers: CANSO Director General · NATS CEO · NAV CANADA CEO · Airports Authority of India
 summary: A CEO-level conversation on how ANSPs operating under different ownership and funding models — government agency, state-owned enterprise, and private company — are approaching ATM modernisation investment differently, and what the performance outcomes reveal.
 ---
@@ -30,4 +30,4 @@ NATS is mid-way through a £1.3bn technology investment programme covering its n
 
 ## Linked theme
 
-- [Digital ATM Transformation](/themes/digital-atm-transformation/)
+- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)

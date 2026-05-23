@@ -5,7 +5,7 @@ featured: false
 day: Wednesday 27 May 2026
 time: 10:00 – 10:50
 room: Integra Theatre
-theme: Sustainable Aviation & Net Zero
+theme: Collaborative Operations for Sustainable Skies
 speakers: CANSO Environment Standing Committee · EUROCONTROL · Airlines for Europe (A4E)
 summary: A frank assessment of what CANSO's Net Zero 2050 commitment requires from ANSPs — trajectory optimisation, ground operations electrification, and the ATM network changes that can deliver measurable CO₂ reductions before 2030.
 ---
@@ -33,4 +33,4 @@ There is currently no standardised ANSP carbon accounting methodology. CANSO's E
 
 ## Linked theme
 
-- [Sustainable Aviation & Net Zero](/themes/sustainable-aviation/)
+- [Collaborative Operations for Sustainable Skies](/themes/collaborative-operations/)

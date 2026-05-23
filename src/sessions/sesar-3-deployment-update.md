@@ -5,7 +5,7 @@ featured: false
 day: Tuesday 26 May 2026
 time: 14:00 – 14:50
 room: Integra Theatre
-theme: Digital ATM Transformation
+theme: Innovation to Enable Future Skies
 speakers: SESAR Deployment Manager · EUROCONTROL · Airbus
 summary: A progress review of SESAR 3 deployment across European FABs, including trajectory-based operations rollout, digital datalink adoption rates, and the outstanding capacity gaps the programme must close before 2030.
 ---
@@ -37,5 +37,5 @@ SESAR deployment is the operational backbone of the Single European Sky. This se
 
 ## Linked themes
 
-- [Digital ATM Transformation](/themes/digital-atm-transformation/)
-- [Single European Sky](/themes/single-european-sky/)
+- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)
+- [Policy, Regulation & Governance](/themes/policy-regulation-governance/)

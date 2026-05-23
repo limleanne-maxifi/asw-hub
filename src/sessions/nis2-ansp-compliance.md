@@ -5,7 +5,7 @@ featured: false
 day: Thursday 28 May 2026
 time: 11:00 – 11:50
 room: Integra Theatre
-theme: Cybersecurity in Air Navigation Services
+theme: Safety, Security & Resilience in ATM
 speakers: ENISA · EUROCONTROL CERT · Skyguide · NATS
 summary: Practical guidance on implementing the NIS2 Directive for air navigation service providers — incident reporting obligations, supply chain security requirements, and the governance changes ANSP boards must make by the national transposition deadlines.
 ---
@@ -33,4 +33,4 @@ NIS2 Article 20 requires that management bodies of essential entities approve an
 
 ## Linked theme
 
-- [Cybersecurity in Air Navigation Services](/themes/cybersecurity-in-ans/)
+- [Safety, Security & Resilience in ATM](/themes/safety-security-resilience/)

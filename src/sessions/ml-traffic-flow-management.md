@@ -5,7 +5,7 @@ featured: false
 day: Wednesday 27 May 2026
 time: 15:00 – 15:50
 room: Viasat Theatre
-theme: AI in Air Traffic Control
+theme: Innovation to Enable Future Skies
 speakers: EUROCONTROL Network Manager · Thales · Airbus UTM · MIT Lincoln Laboratory
 summary: Operational results from machine learning deployments in European and US traffic flow management — demand prediction accuracy, sector load balancing, and the human oversight models that have enabled certification of AI-assisted ATFM tools.
 ---
@@ -30,4 +30,4 @@ Current ML tools are decision support, not decision replacement. The session wil
 
 ## Linked theme
 
-- [AI in Air Traffic Control](/themes/ai-in-air-traffic-control/)
+- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)

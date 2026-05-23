@@ -5,7 +5,7 @@ featured: false
 day: Thursday 28 May 2026
 time: 10:00 – 10:50
 room: Viasat Theatre
-theme: Airspace Capacity & Network Resilience
+theme: Collaborative Operations for Sustainable Skies
 speakers: EUROCONTROL · FABCE · ENAIRE · HUNGAROCONTROL
 summary: The state of free route airspace implementation across Europe — where it has delivered measurable fuel savings, which airspace volumes remain constrained, and the military coordination agreements required to close the remaining gaps.
 ---
@@ -30,4 +30,4 @@ EUROCONTROL estimates that FRA implementation across Europe has saved approximat
 
 ## Linked theme
 
-- [Airspace Capacity & Network Resilience](/themes/airspace-capacity-resilience/)
+- [Collaborative Operations for Sustainable Skies](/themes/collaborative-operations/)

@@ -5,7 +5,7 @@ featured: false
 day: Wednesday 27 May 2026
 time: 16:00 – 16:50
 room: Integra Theatre
-theme: ATM Workforce of the Future
+theme: People, Skills & Next-Gen
 speakers: EUROCONTROL Human Factors · NATS · Skyguide · Cranfield University
 summary: An evidence-based review of where increasing automation in ATM is improving safety and efficiency — and where it is creating new human performance risks including skill degradation, automation bias, and loss of situation awareness.
 ---
@@ -33,4 +33,4 @@ The concept of "appropriate automation" — allocating tasks to human or machine
 
 ## Linked theme
 
-- [ATM Workforce of the Future](/themes/atm-workforce-future/)
+- [People, Skills & Next-Gen](/themes/people-skills-next-gen/)

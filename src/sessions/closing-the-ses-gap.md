@@ -5,7 +5,7 @@ featured: true
 day: Tuesday 26 May 2026
 time: 10:30 – 11:20
 room: Integra Theatre
-theme: Airspace Capacity & Network Resilience
+theme: Collaborative Operations for Sustainable Skies
 speakers: Tim Arel (CANSO) · ANSP CEOs from multiple regions
 summary: A candid conversation between CANSO and leading ANSP CEOs on how air navigation service providers across different funding models and regulatory regimes are modernising operations, managing capacity, and sustaining investment in transformation.
 ---
@@ -25,4 +25,4 @@ This session cuts across the structural differences that often divide ANSP discu
 
 ## Linked theme
 
-- [Airspace Capacity & Network Resilience](/themes/airspace-capacity-resilience/)
+- [Collaborative Operations for Sustainable Skies](/themes/collaborative-operations/)

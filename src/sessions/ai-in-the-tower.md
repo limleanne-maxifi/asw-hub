@@ -5,7 +5,7 @@ featured: true
 day: Tuesday 26 May 2026
 time: 10:00 – 10:50
 room: Viasat Theatre
-theme: Digital ATM Transformation
+theme: Innovation to Enable Future Skies
 speakers: Philipp Piber (Austro Control, A6 Alliance) · DFS Deutsche Flugsicherung · ENAIRE · DSNA · NATS · SESAR Deployment Manager
 summary: Leadership from the A6 Alliance (Austria, Spain, France, Germany, UK, NATS) discusses strategic coordination on European ATM modernisation, digitalisation, and cross-border operational innovation.
 ---
@@ -25,4 +25,4 @@ The A6 Alliance represents the operational and strategic direction of European A
 
 ## Linked theme
 
-- [Digital ATM Transformation](/themes/digital-atm-transformation/)
+- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)

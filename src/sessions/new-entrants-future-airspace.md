@@ -5,7 +5,7 @@ featured: true
 day: Thursday 28 May 2026
 time: 10:00 – 10:50
 room: Boeing Theatre
-theme: Drones & Unmanned Traffic Management
+theme: Drones & UTM
 speakers: U-space Operators · Supersonic Programme Leads · High-Altitude Operations Specialists · Space & Aviation Integration Experts
 summary: How air navigation services are preparing for multiple new categories of airspace users — unmanned aircraft, high-altitude operations, supersonic return, and space launches — and the integration challenges that define the next decade of ATM.
 ---
@@ -25,4 +25,4 @@ Traditional ATM was optimised for a narrow band of manned aircraft. The next 10 
 
 ## Linked theme
 
-- [Drones & Unmanned Traffic Management](/themes/drones-utm/)
+- [Drones & UTM](/themes/drones-utm/)

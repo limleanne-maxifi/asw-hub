@@ -5,7 +5,7 @@ featured: true
 day: Tuesday 26 May 2026
 time: 12:00 – 12:50
 room: Viasat Theatre
-theme: Digital ATM Transformation
+theme: Innovation to Enable Future Skies
 speakers: Véronique Travers Sutter (EUROCONTROL) · Boeing · Thales · Airbus
 summary: EUROCONTROL's Iris Programme demonstrates trajectory-based operations (TBO) from proof-of-concept to operational deployment. Industry leaders (Boeing, Thales, Airbus) discuss the scalable, connected airspace roadmap enabling continuous climb/descent and dynamic airspace management.
 ---
@@ -25,4 +25,4 @@ TBO is the operational cornerstone of European ATM modernisation. This session s
 
 ## Linked theme
 
-- [Digital ATM Transformation](/themes/digital-atm-transformation/)
+- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)

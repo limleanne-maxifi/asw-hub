@@ -5,7 +5,7 @@ featured: true
 day: Tuesday 26 May 2026
 time: 10:00 – 10:25
 room: Frequentis Theatre
-theme: Digital ATM Transformation
+theme: Innovation to Enable Future Skies
 speakers: CANSO Director General · Portuguese Minister of Infrastructure · ANA Aeroportos de Portugal
 summary: The official opening of Airspace World 2026 — the CANSO Director General's global ATM state-of-the-industry address, a welcome from the Portuguese host authorities, and the launch of CANSO's annual Global Air Navigation Report.
 ---
@@ -25,4 +25,4 @@ The Director General's opening address is typically the single most-cited piece 
 
 ## Linked theme
 
-- [Digital ATM Transformation](/themes/digital-atm-transformation/)
+- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)

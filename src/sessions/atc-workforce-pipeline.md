@@ -5,7 +5,7 @@ featured: false
 day: Thursday 28 May 2026
 time: 14:00 – 14:50
 room: Frequentis Theatre
-theme: ATM Workforce of the Future
+theme: People, Skills & Next-Gen
 speakers: CANSO Workforce Standing Committee · NATS Academy · DFS · Airways New Zealand
 summary: How ANSPs are addressing the global ATC controller shortage — from ab initio training pipeline capacity to competency-based licensing, simulation-led validation, and the retention challenge in a post-pandemic aviation recovery.
 ---
@@ -33,4 +33,4 @@ Post-pandemic traffic recovery has increased operational intensity faster than A
 
 ## Linked theme
 
-- [ATM Workforce of the Future](/themes/atm-workforce-future/)
+- [People, Skills & Next-Gen](/themes/people-skills-next-gen/)

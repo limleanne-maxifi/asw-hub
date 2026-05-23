@@ -5,7 +5,7 @@ featured: false
 day: Tuesday 26 May 2026
 time: 16:00 – 16:50
 room: Viasat Theatre
-theme: Single European Sky
+theme: Policy, Regulation & Governance
 speakers: European Commission DG MOVE · EUROCONTROL · FABEC · BLUE MED FAB
 summary: A frank review of SES2+ implementation two years after the revised regulation entered force — which performance targets are being met, where the political obstacles remain, and what the European Commission's enforcement options look like.
 ---
@@ -33,5 +33,5 @@ Under SES2+, the Commission can impose corrective measures on ANSPs that persist
 
 ## Linked themes
 
-- [Single European Sky](/themes/single-european-sky/)
-- [Digital ATM Transformation](/themes/digital-atm-transformation/)
+- [Policy, Regulation & Governance](/themes/policy-regulation-governance/)
+- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)

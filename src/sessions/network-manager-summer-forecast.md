@@ -5,7 +5,7 @@ featured: true
 day: Tuesday 26 May 2026
 time: 11:00 – 11:50
 room: Frequentis Theatre
-theme: Airspace Capacity & Network Resilience
+theme: Collaborative Operations for Sustainable Skies
 speakers: EUROCONTROL Network Manager · FABEC · MUAC · Airlines for Europe (A4E)
 summary: The authoritative European summer 2026 capacity outlook from EUROCONTROL's Network Manager — forecast traffic levels, identified pinch points, pre-tactical measures planned, and the weather and staffing risks that could push the network into crisis.
 ---
@@ -33,4 +33,4 @@ Summer 2025 saw 58 million minutes of delay — the second highest on record. Th
 
 ## Linked theme
 
-- [Airspace Capacity & Network Resilience](/themes/airspace-capacity-resilience/)
+- [Collaborative Operations for Sustainable Skies](/themes/collaborative-operations/)

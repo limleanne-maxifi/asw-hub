@@ -5,7 +5,7 @@ featured: false
 day: Wednesday 27 May 2026
 time: 11:00 – 11:50
 room: Boeing Theatre
-theme: Drones & Unmanned Traffic Management
+theme: Drones & UTM
 speakers: EUROCONTROL · ENAIRE · DFS Deutsche Flugsicherung · Altitude Angel
 summary: How the EU U-space regulation (EU 2021/664) is being implemented operationally — which U-space airspace volumes are live, how U-space service providers are interfacing with ANSPs, and the technical standards still outstanding.
 ---
@@ -33,4 +33,4 @@ The boundary between U-space and controlled airspace remains operationally compl
 
 ## Linked theme
 
-- [Drones & Unmanned Traffic Management](/themes/drones-utm/)
+- [Drones & UTM](/themes/drones-utm/)

@@ -5,7 +5,7 @@ featured: false
 day: Tuesday 26 May 2026
 time: 15:00 – 15:50
 room: Boeing Theatre
-theme: Digital ATM Transformation
+theme: Innovation to Enable Future Skies
 speakers: Frequentis · Saab Digital Air Traffic Solutions · LFV (Sweden) · NATS
 summary: How remote and digital tower technology is moving from single-airport demonstrations to multi-airport operational networks, and what the regulatory, human factors, and business case challenges look like at scale.
 ---
@@ -33,4 +33,4 @@ EASA published its remote tower framework under EU 2017/373. This session will c
 
 ## Linked theme
 
-- [Digital ATM Transformation](/themes/digital-atm-transformation/)
+- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)

@@ -5,7 +5,7 @@ featured: true
 day: Wednesday 27 May 2026
 time: 11:00 – 11:50
 room: Frequentis Theatre
-theme: Digital ATM Transformation
+theme: Innovation to Enable Future Skies
 speakers: Global ANSP Leaders
 summary: A cross-continental panel examining why modernisation speed is critical in the 2020s — the competitive and operational imperatives driving ANSPs in North America, Europe, Asia-Pacific, and Latin America to accelerate digital transformation timelines.
 ---
@@ -25,4 +25,4 @@ Modernisation is no longer a luxury or a technology roadmap exercise — it's a 
 
 ## Linked theme
 
-- [Digital ATM Transformation](/themes/digital-atm-transformation/)
+- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)
