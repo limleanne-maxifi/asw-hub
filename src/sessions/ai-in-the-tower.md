@@ -5,8 +5,16 @@ featured: true
 day: Tuesday 26 May 2026
 time: 10:00 – 10:50
 room: Viasat Theatre
-theme: Digital ATM Transformation
-speakers: Philipp Piber (Austro Control, A6 Alliance) · DFS Deutsche Flugsicherung · ENAIRE · DSNA · NATS · SESAR Deployment Manager
+theme: Policy, Regulation & Governance
+speakers: Philipp Piber (Managing Director, Austro Control; Chair, A6 Alliance) · Arndt Schoenemann (DFS) · Enrique Maurer (ENAIRE) · Frederic Guignier (DSNA) · Kathyn Leahy (NATS) · Mariagrazia La Piscopia (SESAR Deployment Manager)
+speakerLinks:
+  - display: "Philipp Piber (Managing Director, Austro Control; Chair, A6 Alliance)"
+    slug: "philipp-piber"
+  - display: "Arndt Schoenemann (DFS)"
+  - display: "Enrique Maurer (ENAIRE)"
+  - display: "Frederic Guignier (DSNA)"
+  - display: "Kathyn Leahy (NATS)"
+  - display: "Mariagrazia La Piscopia (SESAR Deployment Manager)"
 summary: Leadership from the A6 Alliance (Austria, Spain, France, Germany, UK, NATS) discusses strategic coordination on European ATM modernisation, digitalisation, and cross-border operational innovation.
 ---
 
@@ -25,4 +33,4 @@ The A6 Alliance represents the operational and strategic direction of European A
 
 ## Linked theme
 
-- [Digital ATM Transformation](/themes/digital-atm-transformation/)
+- [Policy, Regulation & Governance](/themes/policy-regulation-governance/)

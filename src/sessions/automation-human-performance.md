@@ -1,36 +1,26 @@
 ---
-title: "Automation and Human Performance: Where ATM Gets the Balance Wrong"
+title: "CANSO Safety: Creating a Collaborative Culture for Safe and Resilient Integrated Airspace"
 order: 15
 featured: false
-day: Wednesday 27 May 2026
-time: 16:00 – 16:50
+day: Tuesday 26 May 2026
+time: 14:00 – 14:50
 room: Integra Theatre
-theme: ATM Workforce of the Future
-speakers: EUROCONTROL Human Factors · NATS · Skyguide · Cranfield University
-summary: An evidence-based review of where increasing automation in ATM is improving safety and efficiency — and where it is creating new human performance risks including skill degradation, automation bias, and loss of situation awareness.
+theme: Safety, Security & Resilience in ATM
+speakers: Jia Xu · Mário Chaves · Peter Merz · Rita Somogyi · Victor Tan
+chair: Andrea Sack
+summary: A CANSO Safety session examining how ANSPs are building collaborative safety cultures capable of managing an increasingly integrated and complex airspace — bringing together perspectives from across the global ANSP community on what resilient safety management looks like in practice.
 ---
 
 ## What to expect
 
-Automation in ATM is accelerating. This session presents the human performance evidence:
+As airspace becomes more integrated — accommodating drones, advanced air mobility, space operations, and conventional aviation simultaneously — the safety culture and management systems ANSPs have built for a simpler operating environment face new demands. This session examines how the CANSO community is responding:
 
-- **Skill degradation** — what happens to controller manual handling skills under high automation
-- **Automation bias** — evidence for over-reliance on automated advisories in operational ATM
-- **Mode awareness** — how controllers track what automated systems are and aren't doing
-- **Complacency and vigilance** — the monitoring challenge in highly automated environments
-- **Design principles** for automation that keeps humans meaningfully in the loop
-
-## Key questions this session will address
-
-**Does automation degrade ATC controller skills?**
-EUROCONTROL research published in 2024 confirms measurable degradation in manual radar control skills in controllers operating in highly automated environments for more than two years continuously. The session will present the findings and the training interventions that address them.
-
-**What is automation bias and how does it manifest in ATC?**
-Automation bias is the tendency to over-rely on automated recommendations even when they are incorrect. Three ATC incidents in 2024–2025 have been attributed partly to automation bias. The session will examine the contributing factors and how system design can reduce risk.
-
-**How do you design automation that keeps humans in the loop?**
-The concept of "appropriate automation" — allocating tasks to human or machine based on who does them better — is straightforward in principle but difficult in practice. The session will present design principles from SESAR research and operational trial findings.
+- **Collaborative safety culture** — what it means to build a culture where safety information flows freely across organisations, sectors, and airspace user communities rather than being siloed within individual ANSPs
+- **Safety in integrated airspace** — the specific safety challenges that arise when manned and unmanned, conventional and new-entrant operations share the same airspace volumes
+- **Resilience as a safety property** — how ANSPs are developing the organisational and technical resilience to maintain safe operations through disruption, system degradation, and unexpected events
+- **CANSO Safety workstream** — the frameworks, tools, and guidance the CANSO Safety Standing Committee is developing to support member ANSPs in building robust safety management systems
+- **Perspectives from across the membership** — how ANSPs in different operational and regulatory environments approach collaborative safety culture
 
 ## Linked theme
 
-- [ATM Workforce of the Future](/themes/atm-workforce-future/)
+- [Safety, Security & Resilience in ATM](/themes/safety-security-resilience/)

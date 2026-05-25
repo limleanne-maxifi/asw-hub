@@ -12,7 +12,16 @@ schemaSession: true
       <div><strong>Day</strong> · {{ day }}</div>
       <div><strong>Time</strong> · {{ time }}</div>
       <div><strong>Room</strong> · {{ room }}</div>
-      {% if speakers %}<div><strong>Speakers</strong> · {{ speakers }}</div>{% endif %}
+      {% if speakerLinks %}
+        <div><strong>Speakers</strong> · {% for s in speakerLinks %}{% if s.slug %}<a href="/speakers/{{ s.slug }}/">{{ s.display }}</a>{% else %}{{ s.display }}{% endif %}{% if not loop.last %} · {% endif %}{% endfor %}</div>
+      {% elif speakers %}
+        <div><strong>Speakers</strong> · {{ speakers }}</div>
+      {% endif %}
+      {% if chairLink %}
+        <div><strong>Chair</strong> · <a href="/speakers/{{ chairLink.slug }}/">{{ chairLink.display }}</a></div>
+      {% elif chair %}
+        <div><strong>Chair</strong> · {{ chair }}</div>
+      {% endif %}
     </dl>
   </div>
 </header>

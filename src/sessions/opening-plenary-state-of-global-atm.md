@@ -5,8 +5,12 @@ featured: true
 day: Tuesday 26 May 2026
 time: 10:00 – 10:25
 room: Frequentis Theatre
-theme: Opening
-speakers: CANSO Leadership
+theme: Innovation to Enable Future Skies
+speakers: Tim Arel (Chair, CANSO; COO, FAA Air Traffic Organization) · CANSO Leadership
+speakerLinks:
+  - display: "Tim Arel (Chair, CANSO; COO, FAA Air Traffic Organization)"
+    slug: "tim-arel"
+  - display: "CANSO Leadership"
 summary: Opens the three-day Airspace World 2026 conference agenda with keynote remarks on the state of global air traffic management and industry priorities.
 ---
 

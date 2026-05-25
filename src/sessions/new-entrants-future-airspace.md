@@ -1,28 +1,29 @@
 ---
-title: "New Entrants – U-space, HAO, Supersonic Aircraft and Space"
+title: "New Entrants — U-Space, HAO, Supersonic Aircraft and Space & Aviation"
 order: 6
 featured: true
 day: Thursday 28 May 2026
 time: 10:00 – 10:50
 room: Boeing Theatre
-theme: Drones & Unmanned Traffic Management
-speakers: U-space Operators · Supersonic Programme Leads · High-Altitude Operations Specialists · Space & Aviation Integration Experts
-summary: How air navigation services are preparing for multiple new categories of airspace users — unmanned aircraft, high-altitude operations, supersonic return, and space launches — and the integration challenges that define the next decade of ATM.
+theme: Seamless Skies for All
+speakers: Maria Algar Ruiz · Olivia Nunez · Ovidiu Dumitrache
+chairs: Jakub Karas · Stephen O'Sullivan
+summary: How air navigation services are preparing for multiple new categories of airspace users — from U-space drone operations and high-altitude platforms to supersonic aircraft and space launches — and the integration challenges that define the next decade of ATM.
 ---
 
 ## What to expect
 
-A forward-looking session on multiple simultaneous airspace integration challenges:
+Traditional ATM was designed for a relatively narrow band of manned commercial aircraft. The coming years will require ANSPs to manage a far broader spectrum of airspace users with vastly different operational profiles. This session examines the four major new entrant categories simultaneously reshaping the airspace:
 
-- **U-space maturation** — the transition from regulatory framework to operational integration with manned airspace
-- **Supersonic aircraft return** — what ATM changes are needed for 21st-century supersonic commercial operations
-- **High-altitude operations** — stratospheric aircraft and the challenges of very-long-endurance platforms
-- **Space-aviation coordination** — the emerging interface between launch operations and air traffic management
+- **U-space** — the maturation of regulatory frameworks into operational integration with manned airspace, and the coordination requirements as drone operations scale
+- **High-altitude operations (HAO)** — stratospheric platforms including HAPS (High-Altitude Pseudo-Satellites) and the unique ATM challenges of very-long-endurance operations at the boundary of controlled airspace
+- **Supersonic aircraft** — the return of commercial supersonic flight and what ATM changes are needed to accommodate 21st-century supersonic operations in existing airspace structures
+- **Space and aviation** — the growing interface between commercial launch operations and civil aviation, including trajectory management, hazard area coordination, and the increasing cadence of space launches from sites in or near established flight information regions
 
 ## Why it matters
 
-Traditional ATM was optimised for a narrow band of manned aircraft. The next 10 years will see ANSPs managing an exponentially broader spectrum of airspace users with vastly different operational profiles. Preparation starts now.
+ANSPs cannot address these new entrant categories sequentially — they are arriving simultaneously. This session examines the integration challenges, the common themes across different vehicle types, and the ATM architecture decisions that will determine whether new entrants can be safely and efficiently accommodated.
 
 ## Linked theme
 
-- [Drones & Unmanned Traffic Management](/themes/drones-utm/)
+- [Seamless Skies for All](/themes/seamless-skies/)

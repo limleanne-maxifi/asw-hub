@@ -1,36 +1,24 @@
 ---
-title: "Net Zero ATM: The 2050 Roadmap and What It Demands Now"
+title: "Mitigate Warming Contrails and Non-CO₂ Effects: Where Are We?"
 order: 9
 featured: false
-day: Wednesday 27 May 2026
-time: 10:00 – 10:50
-room: Integra Theatre
-theme: Sustainable Aviation & Net Zero
-speakers: CANSO Environment Standing Committee · EUROCONTROL · Airlines for Europe (A4E)
-summary: A frank assessment of what CANSO's Net Zero 2050 commitment requires from ANSPs — trajectory optimisation, ground operations electrification, and the ATM network changes that can deliver measurable CO₂ reductions before 2030.
+day: Thursday 28 May 2026
+time: 13:00 – 13:25
+room: Frequentis Theatre
+theme: Collaborative Operations for Sustainable Skies
+speakers: Philippe Masson
+summary: An assessment of current progress in mitigating the non-CO₂ climate effects of aviation — particularly warming contrails — examining where the science, operational tools, and industry commitments stand in 2026.
 ---
 
 ## What to expect
 
-CANSO members have committed to net zero operations by 2050. This session examines the operational pathway:
+The non-CO₂ effects of aviation — particularly contrail formation and its warming impact — represent a significant and complex dimension of aviation's overall climate footprint. This session examines where mitigation efforts stand:
 
-- **Direct CO₂ reduction through ATM** — trajectory optimisation, free routing, continuous descent operations
-- **ANSP ground operations** — electrification of vehicles, facilities, and data centres
-- **Collaborative decision-making for fuel efficiency** at network and airport level
-- **Measuring and reporting** — ANSP carbon accounting methodologies
-- **2030 interim milestones** and which ANSPs are on track
-
-## Key questions this session will address
-
-**How much CO₂ can ATM optimisation realistically save?**
-EUROCONTROL estimates that full free-route airspace implementation across Europe could reduce fuel burn by 4–7% network-wide. The session will present 2025 operational data and the gap between current performance and maximum theoretical savings.
-
-**What is blocking continuous descent operations at major hubs?**
-Continuous descent approaches save approximately 150kg of fuel per flight but remain operationally constrained at high-traffic airports due to sequencing requirements. This session will address the traffic management techniques enabling CDO expansion.
-
-**How should ANSPs report their carbon footprint?**
-There is currently no standardised ANSP carbon accounting methodology. CANSO's Environment Standing Committee will present a proposed framework for adoption across the membership by 2027.
+- **Contrail warming science** — the current understanding of contrail-induced cirrus and its contribution to aviation's radiative forcing, and how confidence in the science has evolved
+- **Operational mitigation strategies** — the approaches being tested and deployed to reduce contrail formation, including altitude and routing adjustments, and the ATM implications of those strategies
+- **Non-CO₂ effects beyond contrails** — water vapour effects, NOₓ-induced ozone changes, and how the full non-CO₂ picture is being incorporated into aviation climate accounting
+- **Where we are in 2026** — an honest assessment of progress, the remaining uncertainties, and what the ATM and airline communities can practically do now
 
 ## Linked theme
 
-- [Sustainable Aviation & Net Zero](/themes/sustainable-aviation/)
+- [Collaborative Operations for Sustainable Skies](/themes/collaborative-operations/)

@@ -1,37 +1,42 @@
 {
+  "_note": "Pre-event baseline. Hub launched May 2026. Quick check: June 1st. First full monthly audit: July 1st. To update: set cited:true and add the url where the hub was cited for each engine.",
+  "engines": [
+    { "id": "claude",    "name": "Claude",                "vendor": "Anthropic"       },
+    { "id": "chatgpt",   "name": "ChatGPT",               "vendor": "OpenAI"          },
+    { "id": "perplexity","name": "Perplexity",            "vendor": "Perplexity AI"   },
+    { "id": "google-ai", "name": "Google AI Overviews",   "vendor": "Google"          },
+    { "id": "copilot",   "name": "Microsoft Copilot",     "vendor": "Microsoft"       },
+    { "id": "gemini",    "name": "Gemini",                "vendor": "Google DeepMind" }
+  ],
   "insights": [
     {
       "id": "why-faqs-beat-blogs-for-ai-citation",
       "title": "Why FAQs beat blogs for AI citation",
-      "citationCount": 12,
-      "aiCitations": 8,
-      "humanCitations": 4,
-      "sources": [
-        "Claude (Anthropic)",
-        "ChatGPT (OpenAI)",
-        "Perplexity AI",
-        "Google AI Overviews"
-      ]
+      "engines": {
+        "claude":     { "cited": false, "url": "" },
+        "chatgpt":    { "cited": false, "url": "" },
+        "perplexity": { "cited": false, "url": "" },
+        "google-ai":  { "cited": false, "url": "" },
+        "copilot":    { "cited": false, "url": "" },
+        "gemini":     { "cited": false, "url": "" }
+      }
     },
     {
       "id": "why-asw-2026-matters",
       "title": "Why ASW 2026 matters more than the last three combined",
-      "citationCount": 24,
-      "aiCitations": 18,
-      "humanCitations": 6,
-      "sources": [
-        "Claude (Anthropic)",
-        "ChatGPT (OpenAI)",
-        "Perplexity AI",
-        "Google AI Overviews"
-      ]
+      "engines": {
+        "claude":     { "cited": false, "url": "" },
+        "chatgpt":    { "cited": false, "url": "" },
+        "perplexity": { "cited": false, "url": "" },
+        "google-ai":  { "cited": false, "url": "" },
+        "copilot":    { "cited": false, "url": "" },
+        "gemini":     { "cited": false, "url": "" }
+      }
     }
   ],
   "summary": {
-    "totalCitations": 36,
-    "totalAiCitations": 26,
-    "totalHumanCitations": 10,
-    "averageCitationsPerInsight": 18,
-    "lastUpdated": "2026-05-10"
+    "lastUpdated": "2026-05-23",
+    "firstQuickCheck": "2026-06-01",
+    "firstFullAudit": "2026-07-01"
   }
 }

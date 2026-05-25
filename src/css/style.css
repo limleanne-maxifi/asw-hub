@@ -413,6 +413,7 @@ section.section-tight { padding: clamp(32px, 5vw, 56px) 0; }
 .btn-primary:hover { background: var(--electric-2); color: var(--paper); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3); }
 .btn-ghost     { background: transparent; color: var(--paper); border-color: var(--hairline); }
 .btn-ghost:hover { border-color: var(--paper); color: var(--paper); transform: translateY(-2px); }
+.btn-disabled  { background: transparent; color: var(--paper-faint); border-color: var(--hairline); opacity: 0.5; cursor: not-allowed; pointer-events: none; }
 
 /* ============================================================
    COLLECTION INDEX PAGES & DETAIL PAGES

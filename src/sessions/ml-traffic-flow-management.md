@@ -1,33 +1,29 @@
 ---
-title: "Machine Learning for Traffic Flow Management: From Research to Operations"
+title: "Enhancing Aviation Performance and Flow Management through Generative AI and Advanced Machine Learning Frameworks"
 order: 17
 featured: false
 day: Wednesday 27 May 2026
-time: 15:00 – 15:50
-room: Viasat Theatre
-theme: AI in Air Traffic Control
-speakers: EUROCONTROL Network Manager · Thales · Airbus UTM · MIT Lincoln Laboratory
-summary: Operational results from machine learning deployments in European and US traffic flow management — demand prediction accuracy, sector load balancing, and the human oversight models that have enabled certification of AI-assisted ATFM tools.
+time: 10:30 – 10:55
+room: Frequentis Theatre
+theme: Innovation to Enable Future Skies
+speakers: Christoph Czech
+summary: An examination of how generative AI and advanced machine learning frameworks are being applied to aviation performance management and traffic flow management — moving beyond traditional optimisation tools to more adaptive, data-driven operational support.
 ---
 
 ## What to expect
 
-ML is now operational in traffic flow management at several major ANSPs. This session presents what the data shows:
+Machine learning and generative AI are entering aviation performance and flow management. This session examines the current state of these technologies and their operational implications:
 
-- **Demand prediction accuracy** — ML vs. statistical models across 12-hour, 6-hour, and 2-hour horizons
-- **Sector load balancing** — how ML-generated flow measures compare to human planner decisions
-- **Collaborative ATFM** — AI tools that incorporate airline preference data into flow management
-- **Validation methodology** — how to test and certify an ML system that changes over time
-- **Failure modes** — what happens when ML predictions are wrong and how human oversight catches it
+- **Generative AI applications in ATM** — how large language models and generative approaches are being applied beyond conventional prediction tasks
+- **Advanced ML frameworks for traffic flow management** — the architecture and capabilities of next-generation flow management tools
+- **Aviation performance enhancement** — how AI-driven analysis is improving operational efficiency across network, airport, and sector levels
+- **From research to operations** — the transition pathway from experimental ML frameworks to certified, operationally deployed tools
+- **Human-AI collaboration in flow management** — how controllers and planners work with AI-generated recommendations
 
-## Key questions this session will address
+## Why it matters
 
-**How much more accurate is ML demand prediction vs. traditional methods?**
-EUROCONTROL's Network Manager has been running parallel ML and statistical prediction models since 2023. The ML model outperforms statistical baselines by 12–18% at the 6-hour horizon and 8–11% at the 2-hour horizon. The session will present the full validation dataset.
-
-**Can ML replace human traffic flow management planners?**
-Current ML tools are decision support, not decision replacement. The session will address why full automation of ATFM decisions is not operationally appropriate at current technology maturity and what the path to higher automation levels looks like.
+The application of generative AI and sophisticated ML frameworks to ATM represents a significant step beyond the rule-based and statistical tools that have historically supported flow management. This session examines what these technologies can realistically deliver and what their operational integration requires.
 
 ## Linked theme
 
-- [AI in Air Traffic Control](/themes/ai-in-air-traffic-control/)
+- [Innovation to Enable Future Skies](/themes/innovation-future-skies/)
