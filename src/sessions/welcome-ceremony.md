@@ -2,6 +2,7 @@
 title: "Welcome Ceremony and Opening Keynote"
 order: 1
 featured: true
+eleventyExcludeFromCollections: true
 day: Tuesday 26 May 2026
 time: 10:00 – 10:25
 room: Frequentis Theatre
