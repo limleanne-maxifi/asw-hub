@@ -1,0 +1,177 @@
+---
+layout: base.njk
+---
+
+{# =============================================================
+   session-canonical.njk
+   ---------------------
+   Layout for marquee / canonical session records on the
+   Airspace World 2026 AI Visibility Hub.
+
+   Structure:  hero (with side meta) → at-a-glance strip →
+               3-column main (TOC · article · sidebar) →
+               standard CTA → colophon (AEO readiness badges)
+
+   All page content is driven by front-matter variables defined
+   in the .md file. The {{ content | safe }} block renders inside
+   the centre article column.
+   ============================================================= #}
+
+{% if topRailLeft or topRailRight %}
+<div class="canonical-toprail" data-aeo-id="canonical-toprail">
+  <div class="container-wide">
+    <div class="canonical-toprail-left">
+      <span class="canonical-toprail-dot"></span>
+      <span>{{ topRailLeft }}</span>
+    </div>
+    {% if topRailRight %}<div class="canonical-toprail-right">{{ topRailRight }}</div>{% endif %}
+  </div>
+</div>
+{% endif %}
+
+<header class="canonical-header" data-aeo-id="session-header">
+  <div class="container-wide">
+    <div class="canonical-header-grid">
+      <div>
+        {% if heroEyebrow %}<p class="canonical-eyebrow">{{ heroEyebrow }}</p>{% endif %}
+        <h1 class="canonical-h1" data-aeo-id="session-title">{{ title | safe }}</h1>
+        {% if summary %}<p class="canonical-dek">{{ summary | safe }}</p>{% endif %}
+      </div>
+      {% if heroMeta %}
+      <dl class="canonical-meta" aria-label="Session details" data-aeo-id="session-meta">
+        {% for item in heroMeta %}
+          <dt>{{ item.label }}</dt>
+          <dd>{{ item.value | safe }}</dd>
+        {% endfor %}
+      </dl>
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+{% if glanceItems %}
+<section class="canonical-glance" data-aeo-id="glance-strip">
+  <div class="container-wide">
+    <div class="canonical-glance-grid">
+    {% for cell in glanceItems %}
+      <div class="canonical-glance-cell">
+        <div class="canonical-glance-label">{{ cell.label }}</div>
+        <div class="canonical-glance-value">{{ cell.value }}{% if cell.sub %}<small>{{ cell.sub }}</small>{% endif %}</div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<div class="canonical-main">
+  <div class="container-wide canonical-main-grid">
+
+    {% if tocItems %}
+    <aside class="canonical-toc" aria-label="Table of contents">
+      <div class="canonical-toc-label">In this record</div>
+      <ul class="canonical-toc-list">
+      {% for item in tocItems %}
+        <li><a href="#{{ item.anchor }}"><span class="canonical-toc-num">{{ item.num }}</span> {{ item.label }}</a></li>
+      {% endfor %}
+      </ul>
+    </aside>
+    {% endif %}
+
+    <article class="canonical-article prose" data-aeo-id="session-article">
+      {{ content | safe }}
+    </article>
+
+    <aside class="canonical-sidebar" aria-label="Related content">
+
+      {% if topicCluster %}
+      <div class="canonical-aside" data-aeo-id="topic-cluster">
+        <div class="canonical-aside-label">Part of Topic Cluster</div>
+        <div class="canonical-aside-title">
+          {% if topicCluster.url %}<a href="{{ topicCluster.url }}">{{ topicCluster.title }}</a>{% else %}{{ topicCluster.title }}{% endif %}
+        </div>
+        {% if topicCluster.meta %}<div class="canonical-aside-meta">{{ topicCluster.meta }}</div>{% endif %}
+      </div>
+      {% endif %}
+
+      {% if relatedSessions %}
+      <div class="canonical-aside">
+        <div class="canonical-aside-label">Related Sessions</div>
+        {% for sess in relatedSessions %}
+          <div class="canonical-aside-item">
+            <div class="canonical-aside-title"><a href="{{ sess.url }}">{{ sess.title }}</a></div>
+            <div class="canonical-aside-meta">{{ sess.meta }}</div>
+          </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if topicTags %}
+      <div class="canonical-aside">
+        <div class="canonical-aside-label">Topic Tags</div>
+        <div class="canonical-tag-list">
+          {% for tag in topicTags %}
+            <a class="canonical-topic-tag" href="/sessions/?tag={{ tag | lower | replace(' ', '-') }}">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if citation %}
+      <div class="canonical-aside canonical-aside-dark">
+        <div class="canonical-aside-label">Cite this record</div>
+        <p>{{ citation | safe }}</p>
+      </div>
+      {% endif %}
+
+    </aside>
+
+  </div>
+</div>
+
+<section class="section-tight" style="border-bottom: 0;">
+  <div class="container">
+    <div class="maxifi-cta" data-aeo-id="session-cta">
+      <div>
+        <p class="eyebrow">Browse the agenda</p>
+        <h2>All sessions at ASW 2026</h2>
+        <p>See every session indexed in this hub, or jump to the related theme.</p>
+      </div>
+      <div class="maxifi-cta-actions">
+        <a class="btn btn-primary" href="/sessions/">All sessions →</a>
+        <a class="btn btn-ghost" href="/themes/">Browse themes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if colophon %}
+<section class="canonical-colophon">
+  <div class="container-wide">
+    <div class="canonical-colophon-grid">
+      <div>
+        <h5>{{ colophon.aboutTitle or "About this hub" }}</h5>
+        <p>{{ colophon.aboutBody | safe }}</p>
+      </div>
+      <div>
+        <h5>AEO Readiness</h5>
+        <div class="canonical-readiness">
+          {% for badge in colophon.readiness %}<span>{{ badge }}</span>{% endfor %}
+        </div>
+      </div>
+      <div>
+        <h5>Verified Crawlers</h5>
+        <ul>{% for c in colophon.crawlers %}<li>{{ c }}</li>{% endfor %}</ul>
+      </div>
+      <div>
+        <h5>Distribution</h5>
+        <ul>{% for d in colophon.distribution %}<li>{% if d.url %}<a href="{{ d.url }}">{{ d.label }}</a>{% else %}{{ d.label }}{% endif %}</li>{% endfor %}</ul>
+      </div>
+    </div>
+    <div class="canonical-colophon-bottom">
+      <div><strong>{{ colophon.publisher or "CANSO" }}</strong> · {{ colophon.publisherFull or "Civil Air Navigation Services Organisation" }} · Hub published {{ colophon.publishedDate or page.date | readableDate }}</div>
+      <div>Powered by <span class="canonical-powered">Maxifi · AEO Engine</span></div>
+    </div>
+  </div>
+</section>
+{% endif %}
