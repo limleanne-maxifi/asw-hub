@@ -1909,3 +1909,48 @@ body.aeo-active [data-aeo-label] {
   border-radius: 2px;
   font-size: 11.5px;
 }
+
+/* ==============================================================
+   CANONICAL COLOUR-RESET
+   Override site-global light-text defaults (--paper, --paper-mute)
+   that are invisible on the canonical layout's white/light backgrounds.
+   All selectors use at least one class to beat the element-level
+   specificity of style.css's h1/h2/p rules.
+   ============================================================== */
+
+/* Plain <p> tags inside canonical light sections */
+.canonical-header p,
+.canonical-glance p,
+.canonical-main p,
+.canonical-article p,
+.canonical-section p,
+.canonical-aside p {
+  color: var(--c-text-soft);
+}
+
+/* h1–h4 without an explicit canonical class */
+.canonical-header h1,
+.canonical-header h2,
+.canonical-header h3,
+.canonical-article h2,
+.canonical-article h3,
+.canonical-article h4,
+.canonical-section h2,
+.canonical-section h3,
+.canonical-section h4 {
+  color: var(--c-text);
+}
+
+/* Restore correct colours on the dark colophon and dark algo block */
+.canonical-colophon p,
+.canonical-colophon li,
+.canonical-colophon h2,
+.canonical-colophon h3,
+.canonical-colophon h4,
+.canonical-colophon h5 {
+  color: var(--c-text-inv-dim);
+}
+.canonical-colophon h5 { color: var(--c-accent); }
+
+.aeo-algo p { color: var(--c-text-inv-dim); }
+.aeo-algo h4 { color: var(--c-text-inv); }
