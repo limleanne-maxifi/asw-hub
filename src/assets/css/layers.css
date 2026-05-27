@@ -1153,22 +1153,23 @@ body.aeo-active [data-aeo-label] {
 
 :root {
   /* If your style.css already defines these, this block is a no-op fallback. */
-  --c-text:        #15192c;
-  --c-text-soft:   #3f4759;
-  --c-text-dim:    #6b7280;
-  --c-rule:        #e5e7eb;
-  --c-bg:          #ffffff;
-  --c-bg-soft:     #fafaf7;
-  --c-brand:       #0a3d52;
-  --c-brand-dark:  #052633;
-  --c-brand-soft:  #e6eef1;
+  /* Dark-theme palette — all "light" bg tokens mapped to navy to match the site */
+  --c-text:        #ffffff;
+  --c-text-soft:   #e8eaf0;
+  --c-text-dim:    #8b94a7;
+  --c-rule:        #1f2a3e;
+  --c-bg:          #0c1525;
+  --c-bg-soft:     #0e1a2c;
+  --c-brand:       #4a9bbf;
+  --c-brand-dark:  #2d7a9a;
+  --c-brand-soft:  #0d1e35;
   --c-accent:      #e87722;
-  --c-accent-dark: #b85a0f;
-  --c-accent-soft: #fdf3e8;
-  --c-success:     #2d6e4e;
-  --c-warn:        #b54708;
-  --c-bg-dark:     #0c1525;
-  --c-bg-darker:   #08101e;
+  --c-accent-dark: #c4641a;
+  --c-accent-soft: #2a1a08;
+  --c-success:     #34d399;
+  --c-warn:        #fb7185;
+  --c-bg-dark:     #08101e;
+  --c-bg-darker:   #050d18;
   --c-text-inv:    #e8eaf0;
   --c-text-inv-dim:#8b94a7;
   --c-rule-dark:   #1f2a3e;
@@ -1911,14 +1912,12 @@ body.aeo-active [data-aeo-label] {
 }
 
 /* ==============================================================
-   CANONICAL COLOUR-RESET
-   Override site-global light-text defaults (--paper, --paper-mute)
-   that are invisible on the canonical layout's white/light backgrounds.
-   All selectors use at least one class to beat the element-level
-   specificity of style.css's h1/h2/p rules.
+   CANONICAL TEXT OVERRIDE
+   Ensure all unclassed p and heading elements inside canonical
+   sections render in white (--c-text / --c-text-soft) regardless
+   of the site-global near-white element rules in style.css.
    ============================================================== */
 
-/* Plain <p> tags inside canonical light sections */
 .canonical-header p,
 .canonical-glance p,
 .canonical-main p,
@@ -1928,7 +1927,6 @@ body.aeo-active [data-aeo-label] {
   color: var(--c-text-soft);
 }
 
-/* h1–h4 without an explicit canonical class */
 .canonical-header h1,
 .canonical-header h2,
 .canonical-header h3,
@@ -1940,17 +1938,3 @@ body.aeo-active [data-aeo-label] {
 .canonical-section h4 {
   color: var(--c-text);
 }
-
-/* Restore correct colours on the dark colophon and dark algo block */
-.canonical-colophon p,
-.canonical-colophon li,
-.canonical-colophon h2,
-.canonical-colophon h3,
-.canonical-colophon h4,
-.canonical-colophon h5 {
-  color: var(--c-text-inv-dim);
-}
-.canonical-colophon h5 { color: var(--c-accent); }
-
-.aeo-algo p { color: var(--c-text-inv-dim); }
-.aeo-algo h4 { color: var(--c-text-inv); }
