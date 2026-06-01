@@ -63,7 +63,7 @@ eleventyExcludeFromCollections: true
               {% if engineData and engineData.cited %}
                 <a href="{{ engineData.url }}" target="_blank" rel="noopener" title="Hub cited by {{ engine.name }}" style="display: inline-block; width: 1.5rem; height: 1.5rem; background: #16a34a; border-radius: 50%; text-align: center; line-height: 1.5rem; color: white; font-size: 0.7rem; text-decoration: none;">✓</a>
               {% else %}
-                <span title="Not yet measured — {{ engine.name }}" style="display: inline-block; width: 1.5rem; height: 1.5rem; background: #e5e7eb; border-radius: 50%;"></span>
+                <span title="Not yet measured — {{ engine.name }}" aria-label="Not yet measured" style="display: inline-block; width: 1.5rem; height: 1.5rem; border: 2px solid var(--paper-faint); border-radius: 50%; line-height: 1.3rem; text-align: center; color: var(--paper-faint); font-size: 0.85rem;">–</span>
               {% endif %}
             </td>
             {% endfor %}
