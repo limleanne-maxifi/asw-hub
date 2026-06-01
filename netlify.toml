@@ -35,6 +35,13 @@
   status = 301
   force  = true
 
+## Staging host redirect — asw-hub.netlify.app → aswhub.maxifidigital.com
+[[redirects]]
+  from  = "https://asw-hub.netlify.app/*"
+  to    = "https://aswhub.maxifidigital.com/:splat"
+  status = 301
+  force  = true
+
 [[redirects]]
   from   = "/themes"
   to     = "/themes/"
