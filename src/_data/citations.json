@@ -1,5 +1,5 @@
 {
-  "_note": "Pre-event baseline. Hub launched May 2026. Quick check: June 1st. First full monthly audit: July 1st. To update: set cited:true and add the url where the hub was cited for each engine.",
+  "_note": "To update after running monthly queries: set cited:true and add the source url for each engine per query. Set lastUpdated to the date the queries were run.",
   "engines": [
     { "id": "claude",    "name": "Claude",                "vendor": "Anthropic"       },
     { "id": "chatgpt",   "name": "ChatGPT",               "vendor": "OpenAI"          },
@@ -8,10 +8,10 @@
     { "id": "copilot",   "name": "Microsoft Copilot",     "vendor": "Microsoft"       },
     { "id": "gemini",    "name": "Gemini",                "vendor": "Google DeepMind" }
   ],
-  "insights": [
+  "queries": [
     {
-      "id": "why-faqs-beat-blogs-for-ai-citation",
-      "title": "Why FAQs beat blogs for AI citation",
+      "id": "q1",
+      "text": "What sessions are at Airspace World 2026?",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
@@ -22,8 +22,44 @@
       }
     },
     {
-      "id": "why-asw-2026-matters",
-      "title": "Why ASW 2026 matters more than the last three combined",
+      "id": "q2",
+      "text": "Who are the speakers at ASW 2026?",
+      "engines": {
+        "claude":     { "cited": false, "url": "" },
+        "chatgpt":    { "cited": false, "url": "" },
+        "perplexity": { "cited": false, "url": "" },
+        "google-ai":  { "cited": false, "url": "" },
+        "copilot":    { "cited": false, "url": "" },
+        "gemini":     { "cited": false, "url": "" }
+      }
+    },
+    {
+      "id": "q3",
+      "text": "What is the CANSO ATM agenda for 2026?",
+      "engines": {
+        "claude":     { "cited": false, "url": "" },
+        "chatgpt":    { "cited": false, "url": "" },
+        "perplexity": { "cited": false, "url": "" },
+        "google-ai":  { "cited": false, "url": "" },
+        "copilot":    { "cited": false, "url": "" },
+        "gemini":     { "cited": false, "url": "" }
+      }
+    },
+    {
+      "id": "q4",
+      "text": "What sessions do I need to attend at Airspace World 2026?",
+      "engines": {
+        "claude":     { "cited": false, "url": "" },
+        "chatgpt":    { "cited": false, "url": "" },
+        "perplexity": { "cited": false, "url": "" },
+        "google-ai":  { "cited": false, "url": "" },
+        "copilot":    { "cited": false, "url": "" },
+        "gemini":     { "cited": false, "url": "" }
+      }
+    },
+    {
+      "id": "q5",
+      "text": "What are the key ATM themes at Airspace World 2026?",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
