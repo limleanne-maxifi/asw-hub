@@ -71,6 +71,9 @@ schemaFaq: true
           </div>
 
           <div class="audit-bar-block">
+            {% if engine.status == 'pending' %}
+              <p class="audit-bar-pct" style="color:#888;font-size:0.85rem;margin:0.5rem 0;">Not yet measured</p>
+            {% else %}
             <div class="audit-bar-row">
               <span class="audit-bar-label">Before</span>
               <div class="audit-bar-track">
@@ -85,6 +88,7 @@ schemaFaq: true
               </div>
               <span class="audit-bar-pct">{{ engine.after }}%</span>
             </div>
+            {% endif %}
           </div>
 
           {% if engine.notes %}
