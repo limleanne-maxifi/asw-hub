@@ -8,13 +8,17 @@
     "dev": "eleventy --serve",
     "build": "eleventy",
     "clean": "rimraf _site",
-    "debug": "DEBUG=Eleventy* eleventy"
+    "debug": "DEBUG=Eleventy* eleventy",
+    "citation-check": "node scripts/citation-check.mjs"
   },
   "engines": {
     "node": ">=18"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@anthropic-ai/sdk": "^0.95.1",
+    "@google/genai": "^1.0.0",
+    "openai": "^6.0.0",
     "rimraf": "^6.1.3"
   }
 }
