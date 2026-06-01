@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
   <div class="container">
     <p class="eyebrow">Citation Report · Last updated {{ citations.summary.lastUpdated }}</p>
     <h1>How AI is citing the hub</h1>
-    <p>Per-engine citation tracking across six AI platforms — Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini. Five standard ATM delegate queries, submitted to each engine monthly. Hub launched May 2026. First results: June 2026. Full monthly audits from July 2026.</p>
+    <p>Per-engine citation tracking across six AI platforms — Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini. Five standard test queries, submitted to each engine monthly. The hub launched May 2026, ahead of Airspace World (26–28 May, Lisbon). First results land June 2026; the first full six-engine audit runs July 2026.</p>
   </div>
 </header>
 
@@ -36,8 +36,8 @@ eleventyExcludeFromCollections: true
     </div>
 
     <div style="background: #fffbeb; border: 1px solid #f59e0b; border-radius: 8px; padding: 1.5rem; margin-bottom: 2.5rem;">
-      <p style="margin: 0; font-weight: 600; color: #111;">Pre-event baseline — first results June 2026</p>
-      <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #555;">The hub launched in May 2026, ahead of Airspace World (26–28 May, Lisbon). First results are expected in June 2026, capturing fast-indexing engines (Perplexity, Claude). The first full monthly audit — covering all six engines including Google AI Overviews, Copilot, and Gemini — runs July 2026 after the full indexing window has passed.</p>
+      <p style="margin: 0; font-weight: 600; color: #111;">Indexing window — first results landing June 2026</p>
+      <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #555;">The hub launched in May 2026, just before Airspace World (26–28 May, Lisbon). The table below fills in as engines index the hub: fast movers (Perplexity, Claude) first in June, with the first full monthly audit across all six engines — including Google AI Overviews, Copilot, and Gemini — in July 2026, once the indexing window has fully passed.</p>
     </div>
 
     <h2 style="margin-bottom: 0.5rem;">Citation status by standard query</h2>
@@ -73,7 +73,7 @@ eleventyExcludeFromCollections: true
       </table>
     </div>
 
-    <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--paper-faint);">✓ = hub cited in latest audit &nbsp;·&nbsp; ○ = not yet measured &nbsp;·&nbsp; Click ✓ to see the source response</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--paper-faint);">✓ = hub cited in latest audit &nbsp;·&nbsp; – = not yet measured &nbsp;·&nbsp; Click ✓ to see the source response</p>
 
   </div>
 </section>
@@ -84,7 +84,7 @@ eleventyExcludeFromCollections: true
       <div>
         <p class="eyebrow">Methodology</p>
         <h2>How citations are tracked</h2>
-        <p>Each month, the five standard queries below are submitted manually to all six engines. A citation is recorded when an engine either links directly to a page on this hub or quotes its content verbatim in the answer. Results update here after each monthly run. To update: set <code>cited: true</code> and add the source <code>url</code> in <code>src/_data/citations.json</code>, then rebuild.</p>
+        <p>Each month, the five standard test queries below are submitted manually to all six engines. A citation is recorded when an engine either links directly to a page on this hub or quotes its content verbatim in the answer. Results update here after each monthly run. To update: set <code>cited: true</code> and add the source <code>url</code> in <code>src/_data/citations.json</code>, then rebuild.</p>
         <ol style="color: var(--paper-mute); padding-left: 1.4em; margin: 1.25em 0 0; line-height: 1.8;">
           {% for query in citations.queries %}
           <li style="font-size: 0.9rem;">{{ query.text }}</li>
