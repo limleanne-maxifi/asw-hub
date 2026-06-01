@@ -18,9 +18,7 @@ module.exports = function (eleventyConfig) {
     return new Date(dateObj).toISOString().split("T")[0];
   });
 
-  eleventyConfig.addFilter("dateToISO", (date) => {
-    return new Date(date).toISOString().split('T')[0];
-  });
+  eleventyConfig.addFilter("dateToISO", (date) => date ? new Date(date).toISOString().split("T")[0] : "");
 
   eleventyConfig.addCollection("themes", (api) =>
     api.getFilteredByGlob("src/themes/*.md").sort((a, b) =>
@@ -42,7 +40,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("insights", function(collectionApi) {
     return collectionApi.getFilteredByTag("insights").sort((a, b) => {
-      return b.date - a.date;
+      return new Date(b.date) - new Date(a.date);
     });
   });
 
