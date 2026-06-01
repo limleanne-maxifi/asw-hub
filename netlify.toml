@@ -2,6 +2,7 @@
   base    = "."
   publish = "_site"
   command = "npm run clean && npm run build"
+  edge_functions = "netlify/edge-functions"
 
 [build.environment]
   NODE_VERSION = "20"
