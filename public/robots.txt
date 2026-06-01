@@ -1,30 +1,55 @@
-# Airspace World 2026 AEO Hub - robots.txt
+# Airspace World 2026 AEO Hub — robots.txt
 
-# Allow all bots by default
 User-agent: *
 Allow: /
 
-# Explicitly allow LLM crawlers
+# OpenAI / ChatGPT crawlers
 User-agent: GPTBot
 Allow: /
 
-User-agent: CCBot
+User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: anthropic-ai
+User-agent: ChatGPT-User
 Allow: /
 
-User-agent: Claude-Web
+# Anthropic / Claude crawlers
+User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity crawlers
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google crawlers
 User-agent: Googlebot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft / Bing crawlers
 User-agent: Bingbot
 Allow: /
 
-# Disallow crawling of non-essential paths (none currently)
-# Disallow:
+# Apple crawlers
+User-agent: Applebot
+Allow: /
 
-# Sitemap location
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://aswhub.maxifidigital.com/sitemap.xml
