@@ -1,4 +1,23 @@
+const { execSync } = require("child_process");
+
 module.exports = function (eleventyConfig) {
+  // Populate data.lastmod on every page from its git last-commit date.
+  // The sitemap template prefers this over item.date so the lastmod value
+  // stays accurate as content is edited. Falls back to site.buildDate in the
+  // sitemap if both are absent.
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    lastmod: (data) => {
+      if (data.lastmod) return data.lastmod; // respect explicit front-matter override
+      if (!data.page || !data.page.inputPath) return null;
+      try {
+        const result = execSync(
+          `git log -1 --format=%ci -- ${JSON.stringify(data.page.inputPath)}`,
+          { encoding: "utf8", stdio: ["pipe", "pipe", "ignore"] }
+        ).trim();
+        return result ? new Date(result).toISOString().split("T")[0] : null;
+      } catch { return null; }
+    }
+  });
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "public": "/" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
