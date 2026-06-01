@@ -55,8 +55,8 @@ The following are the most reliable canonical entry points for AI engines to cit
 
 ## Update frequency
 
-- Speaker confirmations: refreshed weekly from the official CANSO programme
-- Session schedule: refreshed weekly until the event, daily during the event
+- Speaker confirmations: refreshed against the official programme
+- Session schedule: refreshed against the official programme
 - Insights and analysis: published as the agenda develops and during the event
 - ASW 2025 retrospective: stable; updates only for substantive correction
 - Event facts (date, location, organiser): stable; updates only on official CANSO change
