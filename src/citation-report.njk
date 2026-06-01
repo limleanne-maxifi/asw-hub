@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Citation Report
-description: Track which ASW Hub insights are cited in Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini — the six AI engines Maxifi Digital monitors for ATM operator questions.
+description: Track whether the ASW Hub is cited by Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini when answering the five standard ATM queries Maxifi Digital monitors monthly.
 permalink: /citation-report/
 eleventyExcludeFromCollections: true
 ---
@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
   <div class="container">
     <p class="eyebrow">Citation Report · Last updated {{ citations.summary.lastUpdated }}</p>
     <h1>How AI is citing the hub</h1>
-    <p>Per-engine citation tracking across six AI platforms — Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini. Hub launched May 2026. Quick check: June 1st. First full monthly audit: July 1st.</p>
+    <p>Per-engine citation tracking across six AI platforms — Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini. Five standard test queries, submitted to each engine monthly. The hub launched May 2026, ahead of Airspace World (26–28 May, Lisbon). First results land June 2026; the first full six-engine audit runs July 2026.</p>
   </div>
 </header>
 
@@ -19,53 +19,51 @@ eleventyExcludeFromCollections: true
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
       <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Insights tracked</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">{{ citations.insights.length }}</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">Live at launch</p>
+        <p style="margin: 0; font-size: 0.875rem; color: #555; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Queries tracked</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700; color: #111;">{{ citations.queries.length }}</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #777;">Standard test queries</p>
       </div>
       <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Engines monitored</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">{{ citations.engines.length }}</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">{% for e in citations.engines %}{{ e.name }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
+        <p style="margin: 0; font-size: 0.875rem; color: #555; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Engines monitored</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700; color: #111;">{{ citations.engines.length }}</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #777;">{% for e in citations.engines %}{{ e.name }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
       </div>
       <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 8px;">
-        <p style="margin: 0; font-size: 0.875rem; color: #666; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">First audit</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700;">Jun</p>
-        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #999;">Quick check Jun · Full audit Jul</p>
+        <p style="margin: 0; font-size: 0.875rem; color: #555; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">First audit</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 2.5rem; font-weight: 700; color: #111;">Jun</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #777;">Quick check Jun · Full audit Jul</p>
       </div>
     </div>
 
     <div style="background: #fffbeb; border: 1px solid #f59e0b; border-radius: 8px; padding: 1.5rem; margin-bottom: 2.5rem;">
-      <p style="margin: 0; font-weight: 600;">Pre-event baseline — first measurement June 2026</p>
-      <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #555;">The hub launched in May 2026, ahead of Airspace World (26–28 May, Lisbon). A quick check runs June 1st to capture fast-indexing engines (Perplexity, Claude). The first full monthly audit — covering all six engines including Google AI Overviews, Copilot, and Gemini — runs July 1st after the full indexing window has passed.</p>
+      <p style="margin: 0; font-weight: 600; color: #111;">Indexing window — first results landing June 2026</p>
+      <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #555;">The hub launched in May 2026, just before Airspace World (26–28 May, Lisbon). The table below fills in as engines index the hub: fast movers (Perplexity, Claude) first in June, with the first full monthly audit across all six engines — including Google AI Overviews, Copilot, and Gemini — in July 2026, once the indexing window has fully passed.</p>
     </div>
 
-    <h2 style="margin-bottom: 0.5rem;">Citation status by insight</h2>
-    <p style="color: #666; margin-bottom: 2rem; font-size: 0.9rem;">Each cell shows whether that AI engine cited this insight in the latest audit. Green = cited; grey = not yet.</p>
+    <h2 style="margin-bottom: 0.5rem;">Citation status by standard query</h2>
+    <p style="color: var(--paper-faint); margin-bottom: 2rem; font-size: 0.9rem;">Each cell shows whether that AI engine cited the hub when answering this query in the latest audit. Green = cited; grey = not yet measured.</p>
 
     <div style="overflow-x: auto;">
       <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
         <thead>
           <tr>
-            <th style="text-align: left; padding: 0.75rem 1rem; background: #f5f5f5; border-bottom: 2px solid #e0e0e0; white-space: nowrap;">Insight</th>
+            <th style="text-align: left; padding: 0.75rem 1rem; background: #f5f5f5; border-bottom: 2px solid #e0e0e0; color: #111;">Standard query</th>
             {% for engine in citations.engines %}
-            <th style="text-align: center; padding: 0.75rem 0.75rem; background: #f5f5f5; border-bottom: 2px solid #e0e0e0; white-space: nowrap; font-size: 0.75rem;">{{ engine.name }}</th>
+            <th style="text-align: center; padding: 0.75rem 0.75rem; background: #f5f5f5; border-bottom: 2px solid #e0e0e0; white-space: nowrap; font-size: 0.75rem; color: #111;">{{ engine.name }}</th>
             {% endfor %}
           </tr>
         </thead>
         <tbody>
-          {% for insight in citations.insights %}
-          <tr style="border-bottom: 1px solid #f0f0f0;">
-            <td style="padding: 1rem; font-weight: 500;">
-              <a href="/insights/{{ insight.id }}/" style="color: #0066cc; text-decoration: none;">{{ insight.title }}</a>
-            </td>
+          {% for query in citations.queries %}
+          <tr style="border-bottom: 1px solid var(--hairline);">
+            <td style="padding: 1rem; font-style: italic; color: var(--paper-mute); max-width: 340px;">{{ query.text }}</td>
             {% for engine in citations.engines %}
-            {% set engineData = insight.engines[engine.id] %}
+            {% set engineData = query.engines[engine.id] %}
             <td style="text-align: center; padding: 1rem 0.75rem;">
               {% if engineData and engineData.cited %}
-                <a href="{{ engineData.url }}" target="_blank" rel="noopener" title="Cited by {{ engine.name }}" style="display: inline-block; width: 1.5rem; height: 1.5rem; background: #16a34a; border-radius: 50%; text-align: center; line-height: 1.5rem; color: white; font-size: 0.7rem; text-decoration: none;">✓</a>
+                <a href="{{ engineData.url }}" target="_blank" rel="noopener" title="Hub cited by {{ engine.name }}" style="display: inline-block; width: 1.5rem; height: 1.5rem; background: #16a34a; border-radius: 50%; text-align: center; line-height: 1.5rem; color: white; font-size: 0.7rem; text-decoration: none;">✓</a>
               {% else %}
-                <span title="Not yet cited by {{ engine.name }}" style="display: inline-block; width: 1.5rem; height: 1.5rem; background: #e5e7eb; border-radius: 50%;"></span>
+                <span title="Not yet measured — {{ engine.name }}" aria-label="Not yet measured" style="display: inline-block; width: 1.5rem; height: 1.5rem; border: 2px solid var(--paper-faint); border-radius: 50%; line-height: 1.3rem; text-align: center; color: var(--paper-faint); font-size: 0.85rem;">–</span>
               {% endif %}
             </td>
             {% endfor %}
@@ -75,7 +73,7 @@ eleventyExcludeFromCollections: true
       </table>
     </div>
 
-    <p style="margin-top: 1rem; font-size: 0.8rem; color: #aaa;">✓ = cited in latest monthly audit &nbsp;·&nbsp; ○ = not yet cited &nbsp;·&nbsp; Click ✓ to see the source response</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--paper-faint);">✓ = hub cited in latest audit &nbsp;·&nbsp; – = not yet measured &nbsp;·&nbsp; Click ✓ to see the source response</p>
 
   </div>
 </section>
@@ -86,11 +84,16 @@ eleventyExcludeFromCollections: true
       <div>
         <p class="eyebrow">Methodology</p>
         <h2>How citations are tracked</h2>
-        <p>Each month, a standard set of ATM operator queries is submitted manually to all six engines. A citation is recorded when an engine either links directly to a hub page or quotes its content verbatim. Results update here on the first of each month. To update: set <code>cited: true</code> and add the <code>url</code> in <code>src/_data/citations.json</code>, then rebuild.</p>
+        <p>Each month, the five standard test queries below are submitted manually to all six engines. A citation is recorded when an engine either links directly to a page on this hub or quotes its content verbatim in the answer. Results update here after each monthly run. To update: set <code>cited: true</code> and add the source <code>url</code> in <code>src/_data/citations.json</code>, then rebuild.</p>
+        <ol style="color: var(--paper-mute); padding-left: 1.4em; margin: 1.25em 0 0; line-height: 1.8;">
+          {% for query in citations.queries %}
+          <li style="font-size: 0.9rem;">{{ query.text }}</li>
+          {% endfor %}
+        </ol>
       </div>
       <div class="maxifi-cta-actions">
         <a class="btn btn-primary" href="/insights/">All insights →</a>
-        <a class="btn btn-ghost" href="/aeo-audit-hub/">Full AEO audit</a>
+        <a class="btn btn-ghost" href="/how-it-works/">See the methodology</a>
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@
   base    = "."
   publish = "_site"
   command = "npm run clean && npm run build"
+  edge_functions = "netlify/edge-functions"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -32,6 +33,13 @@
 [[redirects]]
   from   = "https://airspaceworldhub.maxifidigital.com/*"
   to     = "https://aswhub.maxifidigital.com/:splat"
+  status = 301
+  force  = true
+
+## Staging host redirect — aswhub.netlify.app → aswhub.maxifidigital.com
+[[redirects]]
+  from  = "https://aswhub.netlify.app/*"
+  to    = "https://aswhub.maxifidigital.com/:splat"
   status = 301
   force  = true
 
@@ -67,7 +75,12 @@
 
 [[redirects]]
   from   = "/aeo-audit-hub"
-  to     = "/aeo-audit-hub/"
+  to     = "/citation-report/"
+  status = 301
+
+[[redirects]]
+  from   = "/aeo-audit-hub/"
+  to     = "/citation-report/"
   status = 301
 
 [[redirects]]

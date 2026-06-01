@@ -1,30 +1,80 @@
-# Airspace World 2026 AEO Hub - robots.txt
+# Airspace World 2026: AI Visibility Hub — robots.txt
+# Canonical domain: https://aswhub.maxifidigital.com/
+#
+# Default: allow all crawlers full access. The explicit groups below are an
+# intentional allowlist of current AI/answer-engine crawlers (documentation of
+# AEO intent). NOTE: named groups read ONLY their own rules — if you ever add a
+# global Disallow under "User-agent: *", you must repeat it in each named group
+# or these bots will ignore it.
 
-# Allow all bots by default
 User-agent: *
 Allow: /
 
-# Explicitly allow LLM crawlers
+# --- OpenAI (ChatGPT) ---
 User-agent: GPTBot
 Allow: /
 
-User-agent: CCBot
+User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+# --- Anthropic (Claude) ---
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Legacy Anthropic tokens (kept for older crawlers)
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: Claude-Web
 Allow: /
 
+# --- Perplexity ---
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# --- Google (Search, AI Overviews, Gemini grounding/training) ---
 User-agent: Googlebot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+# --- Microsoft (Bing / Copilot) ---
 User-agent: Bingbot
 Allow: /
 
-# Disallow crawling of non-essential paths (none currently)
-# Disallow:
+# --- Apple (Apple Intelligence) ---
+User-agent: Applebot
+Allow: /
 
-# Sitemap location
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Common Crawl (training corpus used by many LLMs) ---
+User-agent: CCBot
+Allow: /
+
+# --- Other AI agents (optional but common) ---
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+# Sitemap
 Sitemap: https://aswhub.maxifidigital.com/sitemap.xml

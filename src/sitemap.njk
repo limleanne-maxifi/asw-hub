@@ -2,92 +2,104 @@
 permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
+{#
+  FIXES vs previous version:
+  1. Filter renamed isoDate -> dateToISO (the filter actually registered in .eleventy.js).
+     If you prefer the name "isoDate", register an alias in .eleventy.js instead.
+  2. <lastmod> added to EVERY url, including static pages and themes/speakers.
+     Static pages use {{ site.buildDate }} — add src/_data/site.js (snippet below).
+  3. For dynamic pages, lastmod prefers an explicit front-matter `lastmod`, then falls
+     back to item.date. Best practice: feed `lastmod` from git last-commit date so the
+     "refreshed weekly" claim is truthful. changefreq/priority kept but note Google ignores them.
+
+  src/_data/site.js:
+    module.exports = { buildDate: new Date().toISOString().split("T")[0] };
+#}
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   {# Static pages #}
   <url>
     <loc>https://aswhub.maxifidigital.com/</loc>
+    <lastmod>{{ site.buildDate }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://aswhub.maxifidigital.com/how-it-works/</loc>
+    <lastmod>{{ site.buildDate }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aswhub.maxifidigital.com/themes/</loc>
+    <lastmod>{{ site.buildDate }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aswhub.maxifidigital.com/sessions/</loc>
+    <lastmod>{{ site.buildDate }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aswhub.maxifidigital.com/speakers/</loc>
+    <lastmod>{{ site.buildDate }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aswhub.maxifidigital.com/insights/</loc>
+    <lastmod>{{ site.buildDate }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://aswhub.maxifidigital.com/citation-report/</loc>
+    <lastmod>{{ site.buildDate }}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aswhub.maxifidigital.com/aeo-audit-hub/</loc>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aswhub.maxifidigital.com/asw-2025/</loc>
+    <lastmod>{{ site.buildDate }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   {# Dynamic: Themes #}
   {% for item in collections.themes %}
   <url>
     <loc>https://aswhub.maxifidigital.com{{ item.url }}</loc>
+    <lastmod>{{ (item.data.lastmod or item.date) | dateToISO }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   {% endfor %}
-
   {# Dynamic: Sessions #}
   {% for item in collections.sessions %}
   <url>
     <loc>https://aswhub.maxifidigital.com{{ item.url }}</loc>
-    {% if item.date %}<lastmod>{{ item.date | isoDate }}</lastmod>{% endif %}
+    <lastmod>{{ (item.data.lastmod or item.date) | dateToISO }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   {% endfor %}
-
   {# Dynamic: Speakers #}
   {% for item in collections.speakers %}
   <url>
     <loc>https://aswhub.maxifidigital.com{{ item.url }}</loc>
+    <lastmod>{{ (item.data.lastmod or item.date) | dateToISO }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   {% endfor %}
-
   {# Dynamic: Insights #}
   {% for item in collections.insights %}
   <url>
     <loc>https://aswhub.maxifidigital.com{{ item.url }}</loc>
-    {% if item.date %}<lastmod>{{ item.date | isoDate }}</lastmod>{% endif %}
+    <lastmod>{{ (item.data.lastmod or item.date) | dateToISO }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   {% endfor %}
-
 </urlset>
