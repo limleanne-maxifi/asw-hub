@@ -657,3 +657,32 @@ section:nth-of-type(6) { animation-delay: 300ms; }
   line-height: 1.4;
 }
 .hero-disclaimer a { color: inherit; text-decoration: underline; }
+
+.problem-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+.problem-head-main { min-width: 0; }
+.aeo-explainer {
+  background: #f6f8fb;
+  border-left: 4px solid #2b6cb0;
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.aeo-explainer-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2b6cb0;
+}
+.aeo-explainer-body { margin: 0; color: #1f2937; }
+@media (max-width: 760px) {
+  .problem-head { grid-template-columns: 1fr; gap: 1.25rem; }
+}
