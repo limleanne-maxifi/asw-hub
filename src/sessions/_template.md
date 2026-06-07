@@ -9,33 +9,94 @@ day: Tuesday 26 May 2026
 time: 00:00 – 00:00
 room: ROOM NAME HERE
 theme: THEME NAME HERE
-speakers: SPEAKER NAME · ORGANISATION
-summary: One or two sentence summary of what this session covers and why it matters.
+speakers: SPEAKER NAME (ROLE, ORGANISATION)
+speakerLinks:
+  - display: "SPEAKER NAME (ROLE, ORGANISATION)"
+    slug: "speaker-slug"
+summary: One or two sentence summary of what this session covers and why it matters for ATM operators.
 ---
 
-## What to expect
+## What this session covers
 
-Brief intro paragraph — what the session will cover, who is presenting, and the key focus areas.
+Three sentences. Name the speaker(s) and their affiliations explicitly, name the operational question or entity at the centre of the session, and state what the audience will walk away with. Treat this paragraph as the citable summary an AI answer engine will lift.
 
-- **Topic one** — brief explanation
-- **Topic two** — brief explanation
-- **Topic three** — brief explanation
+## Why it matters now
 
-## Key questions this session will address
+One paragraph of concrete 2026 context — name the regulation, deadline, incident, programme milestone, or operational pressure that makes this session live this year. Cite specifics (NIS2, SESAR 3, Eurocontrol forecast, FAA NAS modernisation, GNSS interference, ICAO Annex update, etc.) so the page is useful even to readers who never attend the session.
 
-**Question one?**
-Answer in 2–3 sentences. Be specific — cite regulations, data, or operational context.
+## Key takeaways for ATM operators
 
-**Question two?**
+- **Takeaway one.** One-sentence claim with the supporting entity, regulation, or data source named inline.
+- **Takeaway two.** One-sentence claim with the supporting entity, regulation, or data source named inline.
+- **Takeaway three.** One-sentence claim with the supporting entity, regulation, or data source named inline.
+
+## Frequently asked questions
+
+### Question one — who/what/when style?
+
+Answer in 2–3 sentences. Be specific; cite regulations, dates, organisations, or operational context.
+
+### Question two?
+
 Answer in 2–3 sentences.
 
-**Question three?**
+### Question three?
+
 Answer in 2–3 sentences.
 
-## Why it matters
+### Question four?
 
-One paragraph explaining the broader significance for the ATM industry.
+Answer in 2–3 sentences.
 
-## Linked theme
+### Question five?
 
-- [THEME NAME](/themes/THEME-SLUG/)
+Answer in 2–3 sentences.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Question one — who/what/when style?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer in 2–3 sentences. Mirror the prose answer above."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Question two?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer in 2–3 sentences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Question three?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer in 2–3 sentences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Question four?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer in 2–3 sentences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Question five?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer in 2–3 sentences."
+      }
+    }
+  ]
+}
+</script>

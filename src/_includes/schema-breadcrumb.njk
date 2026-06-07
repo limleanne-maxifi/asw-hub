@@ -1,0 +1,23 @@
+{%- set crumbs = page.url | breadcrumbs -%}
+{%- if crumbs.length -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://aswhub.maxifidigital.com/"
+    }{% for c in crumbs %},
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index + 1 }},
+      "name": "{{ title if loop.last and title else c.name }}",
+      "item": "https://aswhub.maxifidigital.com{{ c.url }}"
+    }{% endfor %}
+  ]
+}
+</script>
+{%- endif -%}

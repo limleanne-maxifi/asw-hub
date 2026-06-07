@@ -2,7 +2,7 @@
 
 Independent AEO/GEO reference site for **Airspace World 2026** (ASW 2026), the
 CANSO air traffic management (ATM) trade show, 26–28 May 2026, FIL Lisbon. Built
-and maintained by Maxifi Digital (UK AEO consultancy). Not affiliated with CANSO.
+and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy). Not affiliated with CANSO.
 
 ## Stack & layout
 - **Eleventy (11ty)** with Nunjucks (`.njk`) + Markdown (`.md`). Output to Netlify.
@@ -24,10 +24,104 @@ and maintained by Maxifi Digital (UK AEO consultancy). Not affiliated with CANSO
 - Schema must validate (Google Rich Results / schema.org validator) before considering a fix done.
 
 ## Current work
-- Active branch: **`claude/clever-einstein-a32jJ`** — never push elsewhere without explicit permission.
-- Ongoing AEO/GEO optimisation. **See `HANDOFF.md`** for the audit, per-page scores,
-  and the prioritised backlog. Current focus: fixing the **Session page class**
-  (schema bugs in `schema-session.njk`, thin `sessions/*.md` bodies, H1 entity tail).
+- Default target: **`main`** (this is where merged work lands). New work goes on
+  a fresh feature branch; never push directly to `main` without explicit permission.
+- The Session page class fix, Home / How It Works rewrites, site-wide entity graph,
+  per-page BreadcrumbList, and the AI Citation Tracker rebuild are all merged.
+- **See `HANDOFF.md`** for what just shipped and the prioritised next-step backlog.
+  Top of the queue: rolling the canonical Session page pattern across the remaining
+  `src/sessions/*.md` files.
+
+## Eleventy filters registered in `.eleventy.js`
+- `split(value, sep)` — string split (Nunjucks has no built-in).
+- `daysUntil(isoDate)` — integer days from today; powers the citation-tracker countdown.
+- `longDate(isoDate)` — "1 July 2026" in en-GB.
+- `breadcrumbs(pageUrl)` — list of `{name, url}` from a permalink; powers `schema-breadcrumb.njk`.
+- `readableDate`, `isoDate`, `dateToISO` — date formatting carried from earlier work.
+
+## Site-wide schema includes (emitted on every page via `base.njk`)
+- `schema-site.njk` — `@graph` of `WebSite` + Maxifi `Organization` + canonical ASW 2026 `Event`.
+- `schema-breadcrumb.njk` — per-page `BreadcrumbList`, suppressed on `/`.
+
+## Per-page schema includes (toggle via front-matter flag)
+- `schemaEvent`, `schemaFaq`, `schemaSession`, `schemaSpeaker`, `schemaInsight`, `schemaHowTo`.
+
+## Canonical Session page pattern (reference: `opening-plenary-state-of-global-atm.md`)
+
+The Opening Plenary page is the gold-standard template for the Session page class.
+When converting any other `src/sessions/*.md` file, mirror it exactly. The
+`src/sessions/_template.md` file already encodes this structure for new sessions —
+keep them in sync if you change one.
+
+### 1. Front-matter (required keys)
+```yaml
+---
+title: "Session Title — no trailing 'ASW 2026' (the H1 layout appends it)"
+order: <integer, lower = earlier>
+featured: <true|false>
+day: Tuesday 26 May 2026   # or Wednesday 27 / Thursday 28 May 2026
+time: HH:MM – HH:MM        # en-dash with spaces (` – `), 24-hour, Lisbon local
+room: Frequentis Theatre   # named room inside FIL
+theme: Innovation to Enable Future Skies   # one of the eight ASW 2026 themes
+speakers: "Name (Role, Org) · Name (Role, Org)"   # flat string fallback
+speakerLinks:                                     # preferred — drives schema URLs
+  - display: "Name (Role, Org)"
+    slug: "name-slug"        # omit slug if no /speakers/<slug>/ page exists yet
+summary: One or two sentences naming the entity, the operational question, and the audience takeaway.
+---
+```
+Notes:
+- `time` MUST use ` – ` (space, en-dash, space) — `schema-session.njk` splits on
+  that literal to emit `startDate`/`endDate`.
+- `day` MUST contain the weekday word (Tuesday / Wednesday / Thursday) OR the
+  day number (26 / 27 / 28). The schema partial maps from those.
+- Prefer `speakerLinks` over the flat `speakers` string — only `speakerLinks`
+  produces a `performer[].url` in the JSON-LD.
+
+### 2. Body — the 4-block structure (≥300 words, target 500–800)
+Use these H2s, in this order:
+
+1. **`## What this session covers`** — 3 sentences. Name the speaker(s) and
+   affiliations, name the operational question/entity, state what the audience
+   walks away with. This is the paragraph an AI answer engine will lift.
+2. **`## Why it matters now`** — one paragraph of concrete 2026 context. Name the
+   regulation, deadline, incident, programme milestone, or operational pressure
+   (NIS2, SESAR 3, Eurocontrol forecast, FAA NAS modernisation, GNSS interference,
+   ICAO Annex update, etc.).
+3. **`## Key takeaways for ATM operators`** — exactly three bullets, each one
+   sentence, each naming the supporting entity/regulation/data source inline.
+4. **`## Frequently asked questions`** — 3–5 Q&A pairs as `### Question?`
+   followed by a 2–3 sentence answer. The first two questions should always be
+   the **who** (speaker/role) and the **when/where** (day, time, room, venue) —
+   these are the highest-intent retrieval queries.
+
+### 3. Inline `FAQPage` JSON-LD (required)
+Immediately after the FAQ prose, embed a `<script type="application/ld+json">`
+block with `@type: FAQPage`, mirroring each `###` question and answer verbatim
+(answer text may be tightened slightly but must say the same things). Pattern
+reference: `src/themes/safety-security-resilience.md` lines ~60–107. The
+opening-plenary file shows the session-flavoured version.
+
+### 4. Schema/layout wiring (automatic — don't duplicate)
+- `Event` JSON-LD is emitted by `src/_includes/schema-session.njk` via the
+  `schemaSession: true` flag on `src/_layouts/session.njk`. Do NOT hand-roll
+  Event schema in the markdown body.
+- H1 entity tail (` — Airspace World 2026`) is added by the layout. Do NOT put
+  it in `title`.
+- The `split` filter (registered in `.eleventy.js`) is what makes the schema
+  partial work — leave it in place.
+
+### 5. Conversion checklist (use this when migrating an existing session page)
+1. Front-matter: confirm `time` uses ` – `, `day` carries the weekday, and
+   `speakerLinks` is populated with slugs where the speaker has a page.
+2. Body: replace existing prose with the four H2 blocks above. Target ≥300 words.
+3. Append the `FAQPage` JSON-LD block matching the FAQ section.
+4. Build: `npx @11ty/eleventy` — must complete without errors.
+5. Validate: parse both `<script type="application/ld+json">` blocks on the
+   emitted page (`_site/sessions/<slug>/index.html`) as JSON; run the Event +
+   FAQPage through the Google Rich Results test or schema.org validator.
+6. Spot-check the rendered H1 carries the ` — Airspace World 2026` entity tail
+   and the `performer` array shows speaker URLs in the JSON-LD.
 
 ## Git
 - Push with `git push -u origin claude/clever-einstein-a32jJ`; retry network failures with backoff.

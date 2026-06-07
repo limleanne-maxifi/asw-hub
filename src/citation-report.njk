@@ -1,16 +1,41 @@
 ---
 layout: base.njk
-title: Citation Report
+title: AI Citation Tracker
 description: Track whether the ASW Hub is cited by Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini when answering the five standard ATM queries Maxifi Digital monitors monthly.
 permalink: /citation-report/
 eleventyExcludeFromCollections: true
 ---
 
+{% set nextDays = citations.summary.firstFullAudit | daysUntil %}
+
 <header class="page-header">
   <div class="container">
-    <p class="eyebrow">Citation Report · Last updated {{ citations.summary.lastUpdated }}</p>
-    <h1>How AI is citing the hub</h1>
-    <p>Per-engine citation tracking across six AI platforms — Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini. Five standard test queries, submitted to each engine monthly. The hub launched May 2026, ahead of Airspace World (26–28 May, Lisbon). First results land June 2026; the first full six-engine audit runs July 2026.</p>
+    <p class="eyebrow eyebrow-monitoring">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span>Monitoring</span>
+      <span class="eyebrow-sep">·</span>
+      <span>6 engines · 5 queries · monthly</span>
+    </p>
+    <h1>AI Citation Tracker</h1>
+    <p>Per-engine citation tracking across six AI platforms — Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini. Five standard test queries, submitted to each engine monthly. Four of the five target a single post-event canonical record — the SpaceX keynote at the CANSO Leadership Summit 2026 — as the test case for AI pickup of structured hub content.</p>
+
+    <dl class="audit-strip" aria-label="Audit schedule">
+      <div>
+        <dt>Last audit</dt>
+        <dd><time datetime="{{ citations.summary.lastUpdated }}">{{ citations.summary.lastUpdated | longDate }}</time></dd>
+      </div>
+      <div>
+        <dt>Next full audit</dt>
+        <dd>
+          <time datetime="{{ citations.summary.firstFullAudit }}">{{ citations.summary.firstFullAudit | longDate }}</time>
+          {% if nextDays > 0 %}<span class="audit-countdown">in {{ nextDays }} day{% if nextDays != 1 %}s{% endif %}</span>{% elif nextDays == 0 %}<span class="audit-countdown">today</span>{% endif %}
+        </dd>
+      </div>
+      <div>
+        <dt>Indexing window</dt>
+        <dd>First results June 2026 · Full six-engine audit July 2026</dd>
+      </div>
+    </dl>
   </div>
 </header>
 
@@ -35,19 +60,31 @@ eleventyExcludeFromCollections: true
       </div>
     </div>
 
-    <div style="background: #fffbeb; border: 1px solid #f59e0b; border-radius: 8px; padding: 1.5rem; margin-bottom: 2.5rem;">
-      <p style="margin: 0; font-weight: 600; color: #111;">Indexing window — first results landing June 2026</p>
-      <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #555;">The hub launched in May 2026, just before Airspace World (26–28 May, Lisbon). The table below fills in as engines index the hub: fast movers (Perplexity, Claude) first in June, with the first full monthly audit across all six engines — including Google AI Overviews, Copilot, and Gemini — in July 2026, once the indexing window has fully passed.</p>
+    <div class="context-strip">
+      <aside class="context-card context-card--window">
+        <p class="context-label">Indexing window</p>
+        <p class="context-body">A new hub takes 4–8 weeks for AI engines to crawl, index, and start citing. Fast movers (Perplexity, Claude) show first; Google AI Overviews, Copilot, and Gemini lag.</p>
+      </aside>
+
+      {% if citations.testCase %}
+      <aside class="context-card context-card--testcase">
+        <p class="context-label">{{ citations.testCase.label }}</p>
+        <p class="context-link"><a href="{{ citations.testCase.targetUrl }}">{{ citations.testCase.targetTitle }} →</a></p>
+        <p class="context-body">Four of the five queries below target this canonical record of Kiko Dontchev's keynote at the CANSO Leadership Summit, 25 May 2026.</p>
+      </aside>
+      {% endif %}
     </div>
 
     <h2 style="margin-bottom: 0.5rem;">Citation status by standard query</h2>
-    <p style="color: var(--paper-faint); margin-bottom: 2rem; font-size: 0.9rem;">Each cell shows whether that AI engine cited the hub when answering this query in the latest audit. Green = cited; grey = not yet measured.</p>
+    <p style="color: var(--paper-faint); margin-bottom: 2rem; font-size: 0.9rem;">Each cell shows whether that AI engine cited the hub when answering this query in the latest audit. Green = cited; grey = not yet measured. The <strong>Target</strong> column shows the page each query is designed to surface.</p>
 
     <div style="overflow-x: auto;">
       <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
         <thead>
           <tr>
             <th style="text-align: left; padding: 0.75rem 1rem; background: #f5f5f5; border-bottom: 2px solid #e0e0e0; color: #111;">Standard query</th>
+            <th style="text-align: left; padding: 0.75rem 0.75rem; background: #f5f5f5; border-bottom: 2px solid #e0e0e0; white-space: nowrap; font-size: 0.75rem; color: #111;">Tier</th>
+            <th style="text-align: left; padding: 0.75rem 0.75rem; background: #f5f5f5; border-bottom: 2px solid #e0e0e0; white-space: nowrap; font-size: 0.75rem; color: #111;">Target page</th>
             {% for engine in citations.engines %}
             <th style="text-align: center; padding: 0.75rem 0.75rem; background: #f5f5f5; border-bottom: 2px solid #e0e0e0; white-space: nowrap; font-size: 0.75rem; color: #111;">{{ engine.name }}</th>
             {% endfor %}
@@ -57,6 +94,16 @@ eleventyExcludeFromCollections: true
           {% for query in citations.queries %}
           <tr style="border-bottom: 1px solid var(--hairline);">
             <td style="padding: 1rem; font-style: italic; color: var(--paper-mute); max-width: 340px;">{{ query.text }}</td>
+            <td style="padding: 1rem 0.75rem; font-size: 0.75rem; color: var(--paper-mute); white-space: nowrap;">
+              {% if query.tier == "Control" %}
+                <span style="display: inline-block; padding: 2px 8px; background: #e5e7eb; color: #374151; border-radius: 999px; font-weight: 600; letter-spacing: 0.04em;">Control</span>
+              {% else %}
+                <span style="display: inline-block; padding: 2px 8px; background: #dbeafe; color: #1d4ed8; border-radius: 999px; font-weight: 600; letter-spacing: 0.04em;">{{ query.tier }}</span>
+              {% endif %}
+            </td>
+            <td style="padding: 1rem 0.75rem; font-size: 0.8rem;">
+              {% if query.targetUrl %}<a href="{{ query.targetUrl }}" style="color: var(--paper-mute); text-decoration: underline;">{{ query.targetLabel or query.targetUrl }}</a>{% else %}<span style="color: var(--paper-faint);">—</span>{% endif %}
+            </td>
             {% for engine in citations.engines %}
             {% set engineData = query.engines[engine.id] %}
             <td style="text-align: center; padding: 1rem 0.75rem;">
@@ -84,7 +131,7 @@ eleventyExcludeFromCollections: true
       <div>
         <p class="eyebrow">Methodology</p>
         <h2>How citations are tracked</h2>
-        <p>Each month, the five standard test queries below are submitted manually to all six engines. A citation is recorded when an engine either links directly to a page on this hub or quotes its content verbatim in the answer. Results update here after each monthly run. To update: set <code>cited: true</code> and add the source <code>url</code> in <code>src/_data/citations.json</code>, then rebuild.</p>
+        <p>Each month, the five standard queries below are submitted manually to all six engines. Query 1 is a <strong>generic control</strong> — a head-of-funnel browse query for the whole event. Queries 2–5 are <strong>Tier 1 head queries</strong> targeting the SpaceX keynote canonical record, written as a real attendee, journalist, or operator would phrase them after the event. A citation is recorded when an engine either links directly to a page on this hub or quotes its content verbatim in the answer. Results update here after each monthly run. To update: set <code>cited: true</code> and add the source <code>url</code> in <code>src/_data/citations.json</code>, then rebuild.</p>
         <ol style="color: var(--paper-mute); padding-left: 1.4em; margin: 1.25em 0 0; line-height: 1.8;">
           {% for query in citations.queries %}
           <li style="font-size: 0.9rem;">{{ query.text }}</li>

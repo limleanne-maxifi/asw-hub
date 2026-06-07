@@ -39,6 +39,43 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("dateToISO", (date) => date ? new Date(date).toISOString().split("T")[0] : "");
 
+  eleventyConfig.addFilter("split", (value, sep) => {
+    if (value === undefined || value === null) return [];
+    return String(value).split(sep);
+  });
+
+  // Days from today to an ISO date string. Negative if the date is in the past.
+  eleventyConfig.addFilter("daysUntil", (isoDate) => {
+    if (!isoDate) return null;
+    const target = new Date(isoDate);
+    const now = new Date();
+    const msPerDay = 1000 * 60 * 60 * 24;
+    return Math.round((target - now) / msPerDay);
+  });
+
+  // Render a date as "1 July 2026" in en-GB.
+  eleventyConfig.addFilter("longDate", (isoDate) => {
+    if (!isoDate) return "";
+    return new Date(isoDate).toLocaleDateString("en-GB", {
+      day: "numeric", month: "long", year: "numeric"
+    });
+  });
+
+  // Build BreadcrumbList items from a permalink URL.
+  // /sessions/opening-plenary-state-of-global-atm/ →
+  //   [{ name: "Sessions", url: "/sessions/" },
+  //    { name: "Opening plenary state of global atm", url: "/sessions/opening-plenary-state-of-global-atm/" }]
+  eleventyConfig.addFilter("breadcrumbs", (pageUrl) => {
+    if (!pageUrl || pageUrl === "/") return [];
+    const parts = pageUrl.split("/").filter(Boolean);
+    let acc = "";
+    return parts.map((p) => {
+      acc += "/" + p;
+      const name = p.replace(/-/g, " ").replace(/^./, (c) => c.toUpperCase());
+      return { name, url: acc + "/" };
+    });
+  });
+
   eleventyConfig.addCollection("themes", (api) =>
     api.getFilteredByGlob("src/themes/*.md").sort((a, b) =>
       (a.data.order || 0) - (b.data.order || 0)
