@@ -25,11 +25,14 @@
 
   <link rel="stylesheet" href="/css/style.css">
 
+  {% include "schema-site.njk" %}
+  {% include "schema-breadcrumb.njk" %}
   {% if schemaEvent %}{% include "schema-event.njk" %}{% endif %}
   {% if schemaFaq %}{% include "schema-faq.njk" %}{% endif %}
   {% if schemaSession %}{% include "schema-session.njk" %}{% endif %}
   {% if schemaSpeaker %}{% include "schema-speaker.njk" %}{% endif %}
   {% if schemaInsight %}{% include "schema-insight.njk" %}{% endif %}
+  {% if schemaHowTo %}{% include "schema-howto.njk" %}{% endif %}
   <link rel="stylesheet" href="/assets/css/layers.css">
 </head>
 <body>

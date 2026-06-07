@@ -44,6 +44,21 @@ module.exports = function (eleventyConfig) {
     return String(value).split(sep);
   });
 
+  // Build BreadcrumbList items from a permalink URL.
+  // /sessions/opening-plenary-state-of-global-atm/ →
+  //   [{ name: "Sessions", url: "/sessions/" },
+  //    { name: "Opening plenary state of global atm", url: "/sessions/opening-plenary-state-of-global-atm/" }]
+  eleventyConfig.addFilter("breadcrumbs", (pageUrl) => {
+    if (!pageUrl || pageUrl === "/") return [];
+    const parts = pageUrl.split("/").filter(Boolean);
+    let acc = "";
+    return parts.map((p) => {
+      acc += "/" + p;
+      const name = p.replace(/-/g, " ").replace(/^./, (c) => c.toUpperCase());
+      return { name, url: acc + "/" };
+    });
+  });
+
   eleventyConfig.addCollection("themes", (api) =>
     api.getFilteredByGlob("src/themes/*.md").sort((a, b) =>
       (a.data.order || 0) - (b.data.order || 0)
