@@ -24,10 +24,27 @@ and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy)
 - Schema must validate (Google Rich Results / schema.org validator) before considering a fix done.
 
 ## Current work
-- Active branch: **`claude/clever-einstein-a32jJ`** — never push elsewhere without explicit permission.
-- Ongoing AEO/GEO optimisation. **See `HANDOFF.md`** for the audit, per-page scores,
-  and the prioritised backlog. Current focus: rolling the canonical Session page
-  pattern across the remaining `src/sessions/*.md` files.
+- Default target: **`main`** (this is where merged work lands). New work goes on
+  a fresh feature branch; never push directly to `main` without explicit permission.
+- The Session page class fix, Home / How It Works rewrites, site-wide entity graph,
+  per-page BreadcrumbList, and the AI Citation Tracker rebuild are all merged.
+- **See `HANDOFF.md`** for what just shipped and the prioritised next-step backlog.
+  Top of the queue: rolling the canonical Session page pattern across the remaining
+  `src/sessions/*.md` files.
+
+## Eleventy filters registered in `.eleventy.js`
+- `split(value, sep)` — string split (Nunjucks has no built-in).
+- `daysUntil(isoDate)` — integer days from today; powers the citation-tracker countdown.
+- `longDate(isoDate)` — "1 July 2026" in en-GB.
+- `breadcrumbs(pageUrl)` — list of `{name, url}` from a permalink; powers `schema-breadcrumb.njk`.
+- `readableDate`, `isoDate`, `dateToISO` — date formatting carried from earlier work.
+
+## Site-wide schema includes (emitted on every page via `base.njk`)
+- `schema-site.njk` — `@graph` of `WebSite` + Maxifi `Organization` + canonical ASW 2026 `Event`.
+- `schema-breadcrumb.njk` — per-page `BreadcrumbList`, suppressed on `/`.
+
+## Per-page schema includes (toggle via front-matter flag)
+- `schemaEvent`, `schemaFaq`, `schemaSession`, `schemaSpeaker`, `schemaInsight`, `schemaHowTo`.
 
 ## Canonical Session page pattern (reference: `opening-plenary-state-of-global-atm.md`)
 
