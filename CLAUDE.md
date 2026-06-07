@@ -2,7 +2,7 @@
 
 Independent AEO/GEO reference site for **Airspace World 2026** (ASW 2026), the
 CANSO air traffic management (ATM) trade show, 26–28 May 2026, FIL Lisbon. Built
-and maintained by Maxifi Digital (UK AEO consultancy). Not affiliated with CANSO.
+and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy). Not affiliated with CANSO.
 
 ## Stack & layout
 - **Eleventy (11ty)** with Nunjucks (`.njk`) + Markdown (`.md`). Output to Netlify.

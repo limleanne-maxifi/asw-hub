@@ -66,13 +66,14 @@
   margin-bottom: 0;
 }
 .problem-section .aeo-explainer {
-  background: rgba(255, 255, 255, 0.04);
+  background: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-left: 4px solid var(--electric-2, #3B82F6);
   border-radius: 8px;
   padding: 18px 20px;
   font-size: 0.95rem;
   line-height: 1.55;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
 }
 .problem-section .aeo-explainer-label {
   margin: 0 0 6px;
@@ -85,7 +86,7 @@
 }
 .problem-section .aeo-explainer-body {
   margin: 0;
-  color: rgba(248, 250, 252, 0.85);
+  color: #0F172A;
 }
 @media (max-width: 900px) {
   .problem-section .problem-head {
