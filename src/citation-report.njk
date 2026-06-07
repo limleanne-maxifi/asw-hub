@@ -60,18 +60,20 @@ eleventyExcludeFromCollections: true
       </div>
     </div>
 
-    <div style="background: #fffbeb; border: 1px solid #f59e0b; border-radius: 8px; padding: 1.5rem; margin-bottom: 2.5rem;">
-      <p style="margin: 0; font-weight: 600; color: #111;">Indexing window — first results landing June 2026</p>
-      <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem; color: #555;">The hub launched in May 2026, just before Airspace World (26–28 May, Lisbon). The table below fills in as engines index the hub: fast movers (Perplexity, Claude) first in June, with the first full monthly audit across all six engines — including Google AI Overviews, Copilot, and Gemini — in July 2026, once the indexing window has fully passed.</p>
-    </div>
+    <div class="context-strip">
+      <aside class="context-card context-card--window">
+        <p class="context-label">Indexing window</p>
+        <p class="context-body">A new hub takes 4–8 weeks for AI engines to crawl, index, and start citing. Fast movers (Perplexity, Claude) show first; Google AI Overviews, Copilot, and Gemini lag.</p>
+      </aside>
 
-    {% if citations.testCase %}
-    <div style="background: #eff6ff; border: 1px solid #3B82F6; border-left-width: 4px; border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 2rem;">
-      <p style="margin: 0 0 0.35rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1d4ed8;">{{ citations.testCase.label }}</p>
-      <p style="margin: 0 0 0.5rem; font-weight: 600; color: #0f172a;"><a href="{{ citations.testCase.targetUrl }}" style="color: inherit;">{{ citations.testCase.targetTitle }} →</a></p>
-      <p style="margin: 0; font-size: 0.9rem; color: #1f2937; line-height: 1.55;">{{ citations.testCase.description }}</p>
+      {% if citations.testCase %}
+      <aside class="context-card context-card--testcase">
+        <p class="context-label">{{ citations.testCase.label }}</p>
+        <p class="context-link"><a href="{{ citations.testCase.targetUrl }}">{{ citations.testCase.targetTitle }} →</a></p>
+        <p class="context-body">Four of the five queries below target this canonical record of Kiko Dontchev's keynote at the CANSO Leadership Summit, 25 May 2026.</p>
+      </aside>
+      {% endif %}
     </div>
-    {% endif %}
 
     <h2 style="margin-bottom: 0.5rem;">Citation status by standard query</h2>
     <p style="color: var(--paper-faint); margin-bottom: 2rem; font-size: 0.9rem;">Each cell shows whether that AI engine cited the hub when answering this query in the latest audit. Green = cited; grey = not yet measured. The <strong>Target</strong> column shows the page each query is designed to surface.</p>
