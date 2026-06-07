@@ -1,5 +1,5 @@
 {
-  "_note": "To update after running monthly queries: set cited:true and add the source url for each engine per query. Set lastUpdated to the date the queries were run.",
+  "_note": "To update after running monthly queries: set cited:true and add the source url for each engine per query. Set lastUpdated to the date the queries were run. q1 is the generic control query; q2–q5 are SpaceX-keynote test queries targeting the post-event canonical record at /sessions/spacex-keynote-canso-summit-2026/.",
   "engines": [
     { "id": "claude",    "name": "Claude",                "vendor": "Anthropic"       },
     { "id": "chatgpt",   "name": "ChatGPT",               "vendor": "OpenAI"          },
@@ -8,10 +8,19 @@
     { "id": "copilot",   "name": "Microsoft Copilot",     "vendor": "Microsoft"       },
     { "id": "gemini",    "name": "Gemini",                "vendor": "Google DeepMind" }
   ],
+  "testCase": {
+    "label": "Post-event citation test case",
+    "targetUrl": "/sessions/spacex-keynote-canso-summit-2026/",
+    "targetTitle": "From Vision to Delivery: SpaceX's Lessons for Global ATM",
+    "description": "We use the canonical record of Kiko Dontchev's SpaceX keynote (CANSO Leadership Summit 2026, Lisbon, 25 May 2026) as the test case for post-event AI pickup. Four of the five standard queries below target this single page; query 1 is a generic control."
+  },
   "queries": [
     {
       "id": "q1",
       "text": "What sessions are at Airspace World 2026?",
+      "tier": "Control",
+      "targetUrl": "/sessions/",
+      "targetLabel": "Sessions index",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
@@ -23,7 +32,10 @@
     },
     {
       "id": "q2",
-      "text": "Who are the speakers at ASW 2026?",
+      "text": "What did SpaceX say at the CANSO Leadership Summit 2026?",
+      "tier": "Head",
+      "targetUrl": "/sessions/spacex-keynote-canso-summit-2026/",
+      "targetLabel": "SpaceX keynote record",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
@@ -35,7 +47,10 @@
     },
     {
       "id": "q3",
-      "text": "What is the CANSO ATM agenda for 2026?",
+      "text": "Who spoke for SpaceX at Airspace World 2026 in Lisbon?",
+      "tier": "Head",
+      "targetUrl": "/sessions/spacex-keynote-canso-summit-2026/",
+      "targetLabel": "SpaceX keynote record",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
@@ -47,7 +62,10 @@
     },
     {
       "id": "q4",
-      "text": "What sessions do I need to attend at Airspace World 2026?",
+      "text": "Kiko Dontchev SpaceX keynote at Airspace World 2026",
+      "tier": "Head",
+      "targetUrl": "/sessions/spacex-keynote-canso-summit-2026/",
+      "targetLabel": "SpaceX keynote record",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
@@ -59,7 +77,10 @@
     },
     {
       "id": "q5",
-      "text": "What are the key ATM themes at Airspace World 2026?",
+      "text": "What were the takeaways from the SpaceX keynote at Airspace World 2026?",
+      "tier": "Head",
+      "targetUrl": "/sessions/spacex-keynote-canso-summit-2026/",
+      "targetLabel": "SpaceX keynote record",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
