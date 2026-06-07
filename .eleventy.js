@@ -39,6 +39,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("dateToISO", (date) => date ? new Date(date).toISOString().split("T")[0] : "");
 
+  eleventyConfig.addFilter("split", (value, sep) => {
+    if (value === undefined || value === null) return [];
+    return String(value).split(sep);
+  });
+
   eleventyConfig.addCollection("themes", (api) =>
     api.getFilteredByGlob("src/themes/*.md").sort((a, b) =>
       (a.data.order || 0) - (b.data.order || 0)

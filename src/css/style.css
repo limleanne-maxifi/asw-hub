@@ -639,3 +639,12 @@ section:nth-of-type(6) { animation-delay: 300ms; }
     scroll-behavior: auto !important;
   }
 }
+
+.entity-tail {
+  display: inline-block;
+  margin-left: 0.4rem;
+  font-size: 0.6em;
+  font-weight: 400;
+  color: var(--muted, #6b6b6b);
+  letter-spacing: 0.01em;
+}

@@ -1,35 +1,66 @@
+{%- set dayDate = "2026-05-26" -%}
+{%- if day and "27" in day -%}{%- set dayDate = "2026-05-27" -%}{%- endif -%}
+{%- if day and "28" in day -%}{%- set dayDate = "2026-05-28" -%}{%- endif -%}
+{%- if day and "Wednesday" in day -%}{%- set dayDate = "2026-05-27" -%}{%- endif -%}
+{%- if day and "Thursday" in day -%}{%- set dayDate = "2026-05-28" -%}{%- endif -%}
+{%- set timeParts = (time or "") | split(" – ") -%}
+{%- set startTime = timeParts[0] | trim if timeParts[0] else "09:00" -%}
+{%- set endTime = timeParts[1] | trim if timeParts[1] else startTime -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Event",
   "name": "{{ title }}",
   "description": "{{ summary }}",
-  "startDate": "2026-05-{{ '26' if day and 'Tuesday' in day else ('27' if day and 'Wednesday' in day else '28') }}",
+  "startDate": "{{ dayDate }}T{{ startTime }}:00+01:00",
+  "endDate": "{{ dayDate }}T{{ endTime }}:00+01:00",
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {
     "@type": "Place",
-    "name": "{{ room or 'Airspace World 2026' }}",
+    "name": "{{ room or 'FIL — Feira Internacional de Lisboa' }}{% if room %}, FIL — Feira Internacional de Lisboa{% endif %}",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Rua do Bojador, Parque das Nações",
       "addressLocality": "Lisbon",
+      "postalCode": "1998-010",
       "addressCountry": "PT"
     }
   },
   "superEvent": {
     "@type": "Event",
     "name": "Airspace World 2026",
-    "url": "https://aswhub.maxifidigital.com/"
+    "startDate": "2026-05-26",
+    "endDate": "2026-05-28",
+    "url": "https://aswhub.maxifidigital.com/",
+    "location": {
+      "@type": "Place",
+      "name": "FIL — Feira Internacional de Lisboa",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lisbon",
+        "addressCountry": "PT"
+      }
+    }
   },
   "url": "https://aswhub.maxifidigital.com{{ page.url }}",
   "organizer": {
     "@type": "Organization",
     "name": "CANSO",
     "url": "https://canso.org"
-  }{% if speakers %},
-  "performer": {
-    "@type": "Person",
-    "name": "{{ speakers }}"
-  }{% endif %}
+  }{% if speakerLinks %},
+  "performer": [{% for s in speakerLinks %}
+    {
+      "@type": "Person",
+      "name": "{{ s.display }}"{% if s.slug %},
+      "url": "https://aswhub.maxifidigital.com/speakers/{{ s.slug }}/"{% endif %}
+    }{% if not loop.last %},{% endif %}{% endfor %}
+  ]{% elif speakers %},
+  "performer": [
+    {
+      "@type": "Person",
+      "name": "{{ speakers }}"
+    }
+  ]{% endif %}
 }
 </script>
