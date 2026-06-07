@@ -1985,3 +1985,93 @@ body.aeo-active [data-aeo-label] {
 .canonical-section h4 {
   color: var(--c-text);
 }
+
+/* ===========================================================
+   AI CITATION TRACKER — live monitoring indicator + audit strip
+   =========================================================== */
+.eyebrow-monitoring {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 10px;
+  background: rgba(34, 197, 94, 0.10);
+  border: 1px solid rgba(34, 197, 94, 0.30);
+  border-radius: 999px;
+  color: #16a34a;
+  font-weight: 600;
+}
+.eyebrow-monitoring .eyebrow-sep { opacity: 0.5; }
+.eyebrow-monitoring > span:last-child {
+  color: rgba(248, 250, 252, 0.7);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.live-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.65);
+  animation: live-dot-pulse 1.8s ease-out infinite;
+  flex-shrink: 0;
+}
+@keyframes live-dot-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.65); }
+  70%  { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .live-dot { animation: none; }
+}
+
+.audit-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0;
+  margin: 28px 0 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.audit-strip > div {
+  padding: 14px 20px 14px 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.audit-strip > div:last-child { border-right: 0; }
+.audit-strip dt {
+  margin: 0 0 4px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(248, 250, 252, 0.55);
+}
+.audit-strip dd {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--paper, #F8FAFC);
+  font-weight: 500;
+}
+.audit-countdown {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 999px;
+  color: #93c5fd;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  vertical-align: 1px;
+}
+@media (max-width: 700px) {
+  .audit-strip > div {
+    padding: 12px 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .audit-strip > div:last-child { border-bottom: 0; }
+}

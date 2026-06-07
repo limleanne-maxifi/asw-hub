@@ -1,16 +1,41 @@
 ---
 layout: base.njk
-title: Citation Report
+title: AI Citation Tracker
 description: Track whether the ASW Hub is cited by Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini when answering the five standard ATM queries Maxifi Digital monitors monthly.
 permalink: /citation-report/
 eleventyExcludeFromCollections: true
 ---
 
+{% set nextDays = citations.summary.firstFullAudit | daysUntil %}
+
 <header class="page-header">
   <div class="container">
-    <p class="eyebrow">Citation Report · Last updated {{ citations.summary.lastUpdated }}</p>
-    <h1>How AI is citing the hub</h1>
-    <p>Per-engine citation tracking across six AI platforms — Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini. Five standard test queries, submitted to each engine monthly. Four of the five target a single post-event canonical record — the SpaceX keynote at the CANSO Leadership Summit 2026 — as the test case for AI pickup of structured hub content. The hub launched May 2026, ahead of Airspace World (26–28 May, Lisbon). First results land June 2026; the first full six-engine audit runs July 2026.</p>
+    <p class="eyebrow eyebrow-monitoring">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span>Monitoring</span>
+      <span class="eyebrow-sep">·</span>
+      <span>6 engines · 5 queries · monthly</span>
+    </p>
+    <h1>AI Citation Tracker</h1>
+    <p>Per-engine citation tracking across six AI platforms — Claude, ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and Gemini. Five standard test queries, submitted to each engine monthly. Four of the five target a single post-event canonical record — the SpaceX keynote at the CANSO Leadership Summit 2026 — as the test case for AI pickup of structured hub content.</p>
+
+    <dl class="audit-strip" aria-label="Audit schedule">
+      <div>
+        <dt>Last audit</dt>
+        <dd><time datetime="{{ citations.summary.lastUpdated }}">{{ citations.summary.lastUpdated | longDate }}</time></dd>
+      </div>
+      <div>
+        <dt>Next full audit</dt>
+        <dd>
+          <time datetime="{{ citations.summary.firstFullAudit }}">{{ citations.summary.firstFullAudit | longDate }}</time>
+          {% if nextDays > 0 %}<span class="audit-countdown">in {{ nextDays }} day{% if nextDays != 1 %}s{% endif %}</span>{% elif nextDays == 0 %}<span class="audit-countdown">today</span>{% endif %}
+        </dd>
+      </div>
+      <div>
+        <dt>Indexing window</dt>
+        <dd>First results June 2026 · Full six-engine audit July 2026</dd>
+      </div>
+    </dl>
   </div>
 </header>
 

@@ -44,6 +44,23 @@ module.exports = function (eleventyConfig) {
     return String(value).split(sep);
   });
 
+  // Days from today to an ISO date string. Negative if the date is in the past.
+  eleventyConfig.addFilter("daysUntil", (isoDate) => {
+    if (!isoDate) return null;
+    const target = new Date(isoDate);
+    const now = new Date();
+    const msPerDay = 1000 * 60 * 60 * 24;
+    return Math.round((target - now) / msPerDay);
+  });
+
+  // Render a date as "1 July 2026" in en-GB.
+  eleventyConfig.addFilter("longDate", (isoDate) => {
+    if (!isoDate) return "";
+    return new Date(isoDate).toLocaleDateString("en-GB", {
+      day: "numeric", month: "long", year: "numeric"
+    });
+  });
+
   // Build BreadcrumbList items from a permalink URL.
   // /sessions/opening-plenary-state-of-global-atm/ →
   //   [{ name: "Sessions", url: "/sessions/" },
