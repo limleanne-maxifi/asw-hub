@@ -236,46 +236,6 @@ schemaFaq: true
 </section>
 
 {# ============================================================
-   EMAIL CAPTURE
-   ============================================================ #}
-<section class="section-tight">
-  <div class="container">
-    <div class="signup">
-      <p class="eyebrow" style="color: rgba(248, 250, 252, 0.85);">Stay informed</p>
-      <h2>Weekly ASW 2026 briefing</h2>
-      <p>
-        One email each Monday: new sessions confirmed, speaker line-up changes, and the
-        most-cited ATM analysis from the past week. No filler. Unsubscribe in one click.
-      </p>
-
-      <form
-        class="signup-form"
-        name="asw-signup"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        action="/?subscribed=true"
-      >
-        <input type="hidden" name="form-name" value="asw-signup">
-        <p class="honeypot">
-          <label>Don't fill this out if you're human: <input name="bot-field"></label>
-        </p>
-
-        <label for="signup-name" class="visually-hidden" style="position:absolute;left:-9999px;">Name</label>
-        <input id="signup-name" type="text" name="name" placeholder="Your name" required autocomplete="name">
-
-        <label for="signup-email" class="visually-hidden" style="position:absolute;left:-9999px;">Email</label>
-        <input id="signup-email" type="email" name="email" placeholder="you@organisation.com" required autocomplete="email">
-
-        <button type="submit">Subscribe</button>
-      </form>
-
-      <p class="signup-note">Stored on Netlify Forms. We only use your email to send the briefing.</p>
-    </div>
-  </div>
-</section>
-
-{# ============================================================
    MAXIFI CTA
    ============================================================ #}
 <section class="section-tight" style="border-bottom: 0;">
