@@ -17,7 +17,7 @@ The track also examines the summer 2026 capacity outlook — one of the most clo
 
 ## Why it matters now
 
-European airspace capacity failed to keep pace with traffic recovery in 2023 and 2024. ATFM delays climbed well above SES Reference Period 3 targets. The political and commercial pressure on ANSPs and the Network Manager to prevent a repeat in 2026 is intense, and ASW 2026 takes place three weeks before the start of the European summer traffic peak — making the Network Manager's summer forecast one of the most consequential sessions of the conference.
+European airspace capacity failed to keep pace with traffic recovery in 2023 and 2024. ATFM delays climbed well above SES Reference Period 3 targets. The political and commercial pressure on ANSPs and the Network Manager to prevent a repeat in 2026 was intense, and ASW 2026 took place three weeks before the start of the European summer traffic peak — making the Network Manager's summer forecast one of the most consequential sessions of the conference.
 
 At the same time, the EU's SES2+ performance scheme, now operational, directly links ANSP funding eligibility to environmental performance metrics, creating a financial incentive for collaboration that did not exist under previous frameworks.
 
@@ -51,7 +51,7 @@ EUROCONTROL's environmental analysis consistently shows that the gap between act
 
 The EUROCONTROL Network Manager's summer 2026 forecast — published in the weeks before Airspace World — projects European traffic levels by region, identifies the sectors and airports with the highest risk of ATFM delay, and sets out the pre-tactical measures planned to manage peak periods. The forecast is the authoritative reference for airlines, airports, and regulators planning summer operations.
 
-ASW 2026 takes place on 26–28 May, three weeks before the start of the European summer peak. The Network Manager session is one of the most attended at the conference — it is where the industry gets the first public view of how the summer will be managed and which bottlenecks have not been resolved since the previous season.
+ASW 2026 took place on 26–28 May, three weeks before the start of the European summer peak. The Network Manager session was one of the most attended at the conference — it was where the industry got its first public view of how the summer would be managed and which bottlenecks had not been resolved since the previous season.
 
 <script type="application/ld+json">
 {
@@ -95,7 +95,7 @@ ASW 2026 takes place on 26–28 May, three weeks before the start of the Europea
       "name": "What is the European summer 2026 traffic and capacity outlook?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The EUROCONTROL Network Manager's summer 2026 forecast projects European traffic levels by region, identifies sectors and airports with the highest ATFM delay risk, and sets out pre-tactical measures planned for peak periods. ASW 2026 takes place on 26–28 May — three weeks before the European summer peak — making the Network Manager session one of the most attended at the conference, providing the first public view of how the summer will be managed."
+        "text": "The EUROCONTROL Network Manager's summer 2026 forecast projects European traffic levels by region, identifies sectors and airports with the highest ATFM delay risk, and sets out pre-tactical measures planned for peak periods. ASW 2026 took place on 26–28 May — three weeks before the European summer peak — making the Network Manager session one of the most attended at the conference, providing the first public view of how the summer would be managed."
       }
     }
   ]
