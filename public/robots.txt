@@ -62,6 +62,10 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
+# --- Cohere ---
+User-agent: cohere-ai
+Allow: /
+
 # --- Common Crawl (training corpus used by many LLMs) ---
 User-agent: CCBot
 Allow: /
