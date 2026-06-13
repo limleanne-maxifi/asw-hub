@@ -4,6 +4,12 @@ Independent AEO/GEO reference site for **Airspace World 2026** (ASW 2026), the
 CANSO air traffic management (ATM) trade show, 26–28 May 2026, FIL Lisbon. Built
 and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy). Not affiliated with CANSO.
 
+## Related Maxifi projects (cross-reference)
+- **Maxifi Digital main site (`maxifidigital.com`) is an Astro build, NOT Webflow.**
+  Repo: `limleanne-maxifi/dashboard` (Astro, deployed on Netlify). Structured-data /
+  AEO work on that site is done in code (`.astro` pages + `BaseLayout.astro` JSON-LD),
+  not in a CMS. This repo (`asw-hub`) and the `dashboard` repo are separate codebases.
+
 ## Stack & layout
 - **Eleventy (11ty)** with Nunjucks (`.njk`) + Markdown (`.md`). Output to Netlify.
 - Source: `src/`. Build config: `.eleventy.js`. Dev: `npx @11ty/eleventy --serve`.
