@@ -1,0 +1,427 @@
+---
+layout: base.njk
+title: Conference Content AEO Scorecard
+description: Ten independently verifiable signals that determine whether ChatGPT, Claude, Perplexity, and Google AI Overviews cite conference content — with live verification links. Built by Maxifi Digital.
+permalink: /compare/
+---
+
+<header class="page-header">
+  <div class="container">
+    <p class="eyebrow">AEO Readiness · Maxifi Digital</p>
+    <h1>Conference Content AEO Scorecard <span class="entity-tail">— what AI engines actually check</span></h1>
+    <p>Ten structural signals determine whether ChatGPT, Claude, Perplexity, and Google AI Overviews cite conference content or ignore it. Every row below is independently verifiable in under 30 seconds. The ASW Hub implements all ten — check them live in the meeting.</p>
+
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.75rem;">
+      <div style="background: #16a34a; color: white; padding: 0.5rem 1.25rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em;">
+        ASW Hub: 10 / 10 signals active
+      </div>
+      <div style="background: #f3f4f6; color: #374151; padding: 0.5rem 1.25rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600;">
+        Built by Maxifi Digital · Independent of CANSO
+      </div>
+    </div>
+  </div>
+</header>
+
+{# ============================================================
+   VERIFY LIVE — quick-access strip for meeting demos
+   ============================================================ #}
+<section style="background: #f8f9fa; border-bottom: 1px solid #e5e7eb;">
+  <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+    <p class="eyebrow">Run these live in the meeting</p>
+    <p style="font-size: 0.9rem; color: var(--paper-mute); margin-bottom: 1.5rem; max-width: 640px;">Three checks that take under a minute each. Open ASW Hub, then open the same URL on the conference site you want to compare.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+
+      <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.25rem;">
+        <p style="margin: 0 0 0.25rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #6b7280;">Check 1 · AI bot permissions</p>
+        <p style="margin: 0 0 1rem; font-size: 0.875rem; color: #111;">Does the site explicitly invite AI crawlers?</p>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="https://aswhub.maxifidigital.com/robots.txt" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #16a34a; font-weight: 600;">→ aswhub.maxifidigital.com/robots.txt</a>
+          <span style="font-size: 0.8rem; color: #9ca3af;">Then: [conferencedomain.com]/robots.txt</span>
+        </div>
+      </div>
+
+      <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.25rem;">
+        <p style="margin: 0 0 0.25rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #6b7280;">Check 2 · Machine-readable index</p>
+        <p style="margin: 0 0 1rem; font-size: 0.875rem; color: #111;">Does the site publish an llms.txt for AI crawlers?</p>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="https://aswhub.maxifidigital.com/llms.txt" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #16a34a; font-weight: 600;">→ aswhub.maxifidigital.com/llms.txt</a>
+          <span style="font-size: 0.8rem; color: #9ca3af;">Then: [conferencedomain.com]/llms.txt</span>
+        </div>
+      </div>
+
+      <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.25rem;">
+        <p style="margin: 0 0 0.25rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #6b7280;">Check 3 · Schema.org validation</p>
+        <p style="margin: 0 0 1rem; font-size: 0.875rem; color: #111;">Does Google's own tool detect structured data?</p>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2Fthemes%2Fsafety-security-resilience%2F" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #16a34a; font-weight: 600;">→ Test ASW Hub (pre-filled)</a>
+          <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #6b7280;">→ Test any URL in Google's tool</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# ============================================================
+   FULL COMPARISON TABLE
+   ============================================================ #}
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Full scorecard</p>
+      <h2>Ten signals, all verifiable</h2>
+      <p>Each row shows the ASW Hub's implementation and how to verify it — or run the same check on any conference website. Green = active on the ASW Hub with direct evidence link.</p>
+    </div>
+
+    <div style="overflow-x: auto; margin-top: 2.5rem;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem; min-width: 680px;">
+        <thead>
+          <tr>
+            <th style="text-align: left; padding: 0.875rem 1rem; background: #111; color: white; border-bottom: 2px solid #111; width: 22%;">Signal</th>
+            <th style="text-align: left; padding: 0.875rem 1rem; background: #111; color: white; border-bottom: 2px solid #111; width: 32%;">Why AI engines need it</th>
+            <th style="text-align: center; padding: 0.875rem 1rem; background: #111; color: white; border-bottom: 2px solid #111; width: 16%;">ASW Hub</th>
+            <th style="text-align: left; padding: 0.875rem 1rem; background: #111; color: white; border-bottom: 2px solid #111; width: 30%;">Verify live →</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {# ---- CATEGORY: AI CRAWLER PERMISSIONS ---- #}
+          <tr>
+            <td colspan="4" style="padding: 0.6rem 1rem; background: #f3f4f6; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; border-top: 2px solid #e5e7eb;">
+              Category 1 — AI Crawler Permissions
+            </td>
+          </tr>
+
+          <tr style="border-bottom: 1px solid #f0f0f0;">
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <strong style="display: block; color: #111; margin-bottom: 0.2rem;">Named AI bot entries in robots.txt</strong>
+              <span style="font-size: 0.78rem; color: #6b7280;">GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, CCBot</span>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top; color: #374151; line-height: 1.5;">
+              Explicitly invites the crawlers that power ChatGPT, Claude, Perplexity, Google AI Overviews, and Apple Intelligence. Without named entries, bots must infer permission — and increasingly default to conservative behaviour.
+            </td>
+            <td style="padding: 1rem 1rem; text-align: center; vertical-align: top;">
+              <a href="https://aswhub.maxifidigital.com/robots.txt" target="_blank" rel="noopener"
+                 title="View ASW Hub robots.txt"
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: #16a34a; border-radius: 50%; color: white; font-size: 0.8rem; font-weight: 700; text-decoration: none;">✓</a>
+              <div style="font-size: 0.7rem; color: #16a34a; margin-top: 0.3rem;">13 bots named</div>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <a href="https://aswhub.maxifidigital.com/robots.txt" target="_blank" rel="noopener" style="display: block; font-size: 0.8rem; color: #16a34a; font-weight: 600; margin-bottom: 0.4rem;">ASW Hub robots.txt ↗</a>
+              <span style="display: block; font-size: 0.78rem; color: #9ca3af;">Compare: replace domain in URL with any conference site</span>
+            </td>
+          </tr>
+
+          <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <strong style="display: block; color: #111; margin-bottom: 0.2rem;">llms.txt — machine-readable content index</strong>
+              <span style="font-size: 0.78rem; color: #6b7280;">Adopted by Anthropic, Perplexity, and Common Crawl</span>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top; color: #374151; line-height: 1.5;">
+              A structured plain-text index written for AI crawlers rather than browsers — lists every page, its purpose, and its canonical URL. Analogous to robots.txt but for LLM training and retrieval, not just crawl access.
+            </td>
+            <td style="padding: 1rem 1rem; text-align: center; vertical-align: top;">
+              <a href="https://aswhub.maxifidigital.com/llms.txt" target="_blank" rel="noopener"
+                 title="View ASW Hub llms.txt"
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: #16a34a; border-radius: 50%; color: white; font-size: 0.8rem; font-weight: 700; text-decoration: none;">✓</a>
+              <div style="font-size: 0.7rem; color: #16a34a; margin-top: 0.3rem;">Full index live</div>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <a href="https://aswhub.maxifidigital.com/llms.txt" target="_blank" rel="noopener" style="display: block; font-size: 0.8rem; color: #16a34a; font-weight: 600; margin-bottom: 0.4rem;">ASW Hub llms.txt ↗</a>
+              <span style="display: block; font-size: 0.78rem; color: #9ca3af;">Compare: replace domain in URL. A 404 means not implemented.</span>
+            </td>
+          </tr>
+
+          {# ---- CATEGORY: STRUCTURED DATA ---- #}
+          <tr>
+            <td colspan="4" style="padding: 0.6rem 1rem; background: #f3f4f6; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; border-top: 2px solid #e5e7eb;">
+              Category 2 — Structured Data (Schema.org)
+            </td>
+          </tr>
+
+          <tr style="border-bottom: 1px solid #f0f0f0;">
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <strong style="display: block; color: #111; margin-bottom: 0.2rem;">FAQPage JSON-LD</strong>
+              <span style="font-size: 0.78rem; color: #6b7280;">Discrete Q&A pairs AI engines extract directly</span>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top; color: #374151; line-height: 1.5;">
+              A page with FAQPage schema is structurally identical to the format an AI engine assembles when answering a question. Without it, the engine must extract and repackage prose — introducing uncertainty and lowering citation frequency.
+            </td>
+            <td style="padding: 1rem 1rem; text-align: center; vertical-align: top;">
+              <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2Fthemes%2Fsafety-security-resilience%2F" target="_blank" rel="noopener"
+                 title="Validate FAQPage schema via Google Rich Results Test"
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: #16a34a; border-radius: 50%; color: white; font-size: 0.8rem; font-weight: 700; text-decoration: none;">✓</a>
+              <div style="font-size: 0.7rem; color: #16a34a; margin-top: 0.3rem;">5 Q&A per page</div>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2Fthemes%2Fsafety-security-resilience%2F" target="_blank" rel="noopener" style="display: block; font-size: 0.8rem; color: #16a34a; font-weight: 600; margin-bottom: 0.4rem;">Test ASW Hub theme page ↗</a>
+              <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" style="display: block; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.4rem;">Test any URL in Google's tool ↗</a>
+              <span style="display: block; font-size: 0.78rem; color: #9ca3af;">Look for "FAQ" in the detected rich results</span>
+            </td>
+          </tr>
+
+          <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <strong style="display: block; color: #111; margin-bottom: 0.2rem;">Event JSON-LD per session</strong>
+              <span style="font-size: 0.78rem; color: #6b7280;">startDate, endDate, performer, location, superEvent</span>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top; color: #374151; line-height: 1.5;">
+              Tells Google, Bing, and AI engines exactly when, where, and who — the three fields most commonly queried for event content. Without per-session Event schema, queries like "when is [session] at ASW 2026?" have no structured answer to retrieve.
+            </td>
+            <td style="padding: 1rem 1rem; text-align: center; vertical-align: top;">
+              <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2Fsessions%2Fopening-plenary-state-of-global-atm%2F" target="_blank" rel="noopener"
+                 title="Validate Event schema on ASW Hub session page"
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: #16a34a; border-radius: 50%; color: white; font-size: 0.8rem; font-weight: 700; text-decoration: none;">✓</a>
+              <div style="font-size: 0.7rem; color: #16a34a; margin-top: 0.3rem;">All sessions</div>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2Fsessions%2Fopening-plenary-state-of-global-atm%2F" target="_blank" rel="noopener" style="display: block; font-size: 0.8rem; color: #16a34a; font-weight: 600; margin-bottom: 0.4rem;">Test ASW Hub session page ↗</a>
+              <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" style="display: block; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.4rem;">Test any session page ↗</a>
+              <span style="display: block; font-size: 0.78rem; color: #9ca3af;">Look for "Event" with startDate and performer fields</span>
+            </td>
+          </tr>
+
+          <tr style="border-bottom: 1px solid #f0f0f0;">
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <strong style="display: block; color: #111; margin-bottom: 0.2rem;">Person schema for speakers</strong>
+              <span style="font-size: 0.78rem; color: #6b7280;">jobTitle, worksFor, sameAs, performerIn</span>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top; color: #374151; line-height: 1.5;">
+              Creates a persistent entity record for each speaker. When an AI engine is asked "who is [speaker]?" it retrieves a structured Person entity, not a fragmented LinkedIn snippet or a stale bio. Bidirectional links to sessions establish the graph edge.
+            </td>
+            <td style="padding: 1rem 1rem; text-align: center; vertical-align: top;">
+              <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2Fspeakers%2Ftim-arel%2F" target="_blank" rel="noopener"
+                 title="Validate Person schema on ASW Hub speaker page"
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: #16a34a; border-radius: 50%; color: white; font-size: 0.8rem; font-weight: 700; text-decoration: none;">✓</a>
+              <div style="font-size: 0.7rem; color: #16a34a; margin-top: 0.3rem;">All confirmed speakers</div>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2Fspeakers%2Ftim-arel%2F" target="_blank" rel="noopener" style="display: block; font-size: 0.8rem; color: #16a34a; font-weight: 600; margin-bottom: 0.4rem;">Test ASW Hub speaker page ↗</a>
+              <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener" style="display: block; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.4rem;">Test any speaker page ↗</a>
+              <span style="display: block; font-size: 0.78rem; color: #9ca3af;">Look for "Person" with jobTitle and worksFor fields</span>
+            </td>
+          </tr>
+
+          <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <strong style="display: block; color: #111; margin-bottom: 0.2rem;">Site-wide entity @graph</strong>
+              <span style="font-size: 0.78rem; color: #6b7280;">WebSite + Organization + Event on every page</span>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top; color: #374151; line-height: 1.5;">
+              Declares the authoritative relationship between this domain, the publishing organisation, and the ASW 2026 event on every page. Establishes provenance and publisher identity — the fields that determine whether AI engines treat a source as authoritative.
+            </td>
+            <td style="padding: 1rem 1rem; text-align: center; vertical-align: top;">
+              <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2F" target="_blank" rel="noopener"
+                 title="Validate site-wide entity graph on ASW Hub homepage"
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: #16a34a; border-radius: 50%; color: white; font-size: 0.8rem; font-weight: 700; text-decoration: none;">✓</a>
+              <div style="font-size: 0.7rem; color: #16a34a; margin-top: 0.3rem;">Every page</div>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2F" target="_blank" rel="noopener" style="display: block; font-size: 0.8rem; color: #16a34a; font-weight: 600; margin-bottom: 0.4rem;">Test ASW Hub homepage ↗</a>
+              <span style="display: block; font-size: 0.78rem; color: #9ca3af;">Look for @graph with WebSite, Organization, and Event all present</span>
+            </td>
+          </tr>
+
+          <tr style="border-bottom: 1px solid #f0f0f0;">
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <strong style="display: block; color: #111; margin-bottom: 0.2rem;">BreadcrumbList per page</strong>
+              <span style="font-size: 0.78rem; color: #6b7280;">Structured navigation hierarchy on every interior page</span>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top; color: #374151; line-height: 1.5;">
+              Signals the structural relationship between pages to Google AI Overviews and rich snippets. Used in the presentation layer (breadcrumb trail in search results) and in how AI engines understand content hierarchy within a domain.
+            </td>
+            <td style="padding: 1rem 1rem; text-align: center; vertical-align: top;">
+              <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2Fsessions%2Fopening-plenary-state-of-global-atm%2F" target="_blank" rel="noopener"
+                 title="Validate BreadcrumbList on ASW Hub session page"
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: #16a34a; border-radius: 50%; color: white; font-size: 0.8rem; font-weight: 700; text-decoration: none;">✓</a>
+              <div style="font-size: 0.7rem; color: #16a34a; margin-top: 0.3rem;">Auto-generated</div>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Faswhub.maxifidigital.com%2Fsessions%2Fopening-plenary-state-of-global-atm%2F" target="_blank" rel="noopener" style="display: block; font-size: 0.8rem; color: #16a34a; font-weight: 600; margin-bottom: 0.4rem;">Test ASW Hub session ↗</a>
+              <span style="display: block; font-size: 0.78rem; color: #9ca3af;">Look for "Breadcrumb" in the detected enhancements</span>
+            </td>
+          </tr>
+
+          {# ---- CATEGORY: CONTENT ARCHITECTURE ---- #}
+          <tr>
+            <td colspan="4" style="padding: 0.6rem 1rem; background: #f3f4f6; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; border-top: 2px solid #e5e7eb;">
+              Category 3 — Content Architecture
+            </td>
+          </tr>
+
+          <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <strong style="display: block; color: #111; margin-bottom: 0.2rem;">FAQ-first content format</strong>
+              <span style="font-size: 0.78rem; color: #6b7280;">≥300 words · question → direct answer structure</span>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top; color: #374151; line-height: 1.5;">
+              AI engines pattern-match queries to content formatted as questions with direct answers. A 500-word FAQ-first page consistently outperforms a 2,000-word narrative recap for citation frequency — the structure, not the volume, determines retrieval.
+            </td>
+            <td style="padding: 1rem 1rem; text-align: center; vertical-align: top;">
+              <a href="/themes/safety-security-resilience/"
+                 title="View ASW Hub flagship theme page"
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: #16a34a; border-radius: 50%; color: white; font-size: 0.8rem; font-weight: 700; text-decoration: none;">✓</a>
+              <div style="font-size: 0.7rem; color: #16a34a; margin-top: 0.3rem;">All theme + featured session pages</div>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <a href="/themes/safety-security-resilience/" style="display: block; font-size: 0.8rem; color: #16a34a; font-weight: 600; margin-bottom: 0.4rem;">View ASW Hub example ↗</a>
+              <span style="display: block; font-size: 0.78rem; color: #9ca3af;">Compare the structure of any session page on the official site — is it Q&A-first or narrative prose?</span>
+            </td>
+          </tr>
+
+          <tr style="border-bottom: 1px solid #f0f0f0;">
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <strong style="display: block; color: #111; margin-bottom: 0.2rem;">Named entity citations inline</strong>
+              <span style="font-size: 0.78rem; color: #6b7280;">Regulations, bodies, deadlines, data sources named explicitly</span>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top; color: #374151; line-height: 1.5;">
+              AI engines cite specifics, not generalities. Content that names the regulation (NIS2 Directive (EU) 2022/2555), the body (EASA, ICAO, EUROCONTROL), the penalty (€10 million or 2% of global turnover), and the deadline (October 2024) is citable as a reference. Content that discusses "cybersecurity requirements" is not.
+            </td>
+            <td style="padding: 1rem 1rem; text-align: center; vertical-align: top;">
+              <a href="/themes/safety-security-resilience/#what-is-the-nis2-directive-and-what-does-it-require-of-ansps"
+                 title="View NIS2 entity-rich answer on ASW Hub"
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: #16a34a; border-radius: 50%; color: white; font-size: 0.8rem; font-weight: 700; text-decoration: none;">✓</a>
+              <div style="font-size: 0.7rem; color: #16a34a; margin-top: 0.3rem;">All theme pages</div>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <a href="/themes/safety-security-resilience/" style="display: block; font-size: 0.8rem; color: #16a34a; font-weight: 600; margin-bottom: 0.4rem;">View NIS2 answer example ↗</a>
+              <span style="display: block; font-size: 0.78rem; color: #9ca3af;">Count regulation names, penalty figures, and specific dates in any comparable page on the official site.</span>
+            </td>
+          </tr>
+
+          {# ---- CATEGORY: MEASUREMENT ---- #}
+          <tr>
+            <td colspan="4" style="padding: 0.6rem 1rem; background: #f3f4f6; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; border-top: 2px solid #e5e7eb;">
+              Category 4 — Measurement
+            </td>
+          </tr>
+
+          <tr style="border-bottom: 1px solid #f0f0f0; background: #fafafa;">
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <strong style="display: block; color: #111; margin-bottom: 0.2rem;">AI citation tracker</strong>
+              <span style="font-size: 0.78rem; color: #6b7280;">6 engines × 5 queries · monthly audit · public dashboard</span>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top; color: #374151; line-height: 1.5;">
+              Closes the measurement loop: which AI engines cite which pages, for which queries, in which month. Turns AEO from a set-and-forget publishing tactic into an iterated discipline — showing clients exactly where they stand and what to optimise next.
+            </td>
+            <td style="padding: 1rem 1rem; text-align: center; vertical-align: top;">
+              <a href="/citation-report/"
+                 title="View ASW Hub AI Citation Tracker"
+                 style="display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; background: #16a34a; border-radius: 50%; color: white; font-size: 0.8rem; font-weight: 700; text-decoration: none;">✓</a>
+              <div style="font-size: 0.7rem; color: #16a34a; margin-top: 0.3rem;">Live dashboard</div>
+            </td>
+            <td style="padding: 1rem 1rem; vertical-align: top;">
+              <a href="/citation-report/" style="display: block; font-size: 0.8rem; color: #16a34a; font-weight: 600; margin-bottom: 0.4rem;">View ASW Hub Citation Tracker ↗</a>
+              <span style="display: block; font-size: 0.78rem; color: #9ca3af;">Maxifi Digital–specific — not typically present on conference websites.</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top: 1rem; font-size: 0.78rem; color: var(--paper-faint);">
+      All verification links open Google's own Rich Results Test or publicly accessible file paths — no proprietary tools required. Links open in a new tab.
+    </p>
+
+  </div>
+</section>
+
+{# ============================================================
+   SCORE SUMMARY
+   ============================================================ #}
+<section style="background: #111; color: white;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0; text-align: center; padding: 2.5rem 0;">
+      <div style="padding: 1rem; border-right: 1px solid #333;">
+        <div style="font-size: 2.5rem; font-weight: 800; color: #4ade80;">10</div>
+        <div style="font-size: 0.78rem; color: #9ca3af; margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.05em;">Signals active</div>
+      </div>
+      <div style="padding: 1rem; border-right: 1px solid #333;">
+        <div style="font-size: 2.5rem; font-weight: 800; color: #4ade80;">6</div>
+        <div style="font-size: 0.78rem; color: #9ca3af; margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.05em;">AI engines targeted</div>
+      </div>
+      <div style="padding: 1rem; border-right: 1px solid #333;">
+        <div style="font-size: 2.5rem; font-weight: 800; color: #4ade80;">13</div>
+        <div style="font-size: 0.78rem; color: #9ca3af; margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.05em;">Named crawlers allowed</div>
+      </div>
+      <div style="padding: 1rem;">
+        <div style="font-size: 2.5rem; font-weight: 800; color: #4ade80;">4</div>
+        <div style="font-size: 0.78rem; color: #9ca3af; margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.05em;">Weeks to build</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ============================================================
+   CONTEXT: THE QUERY SPACE ARGUMENT
+   ============================================================ #}
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The strategic argument</p>
+      <h2>Two different query spaces — only one is contested</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem;">
+      <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.75rem;">
+        <p style="margin: 0 0 0.5rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #6b7280;">Brand / navigational queries</p>
+        <p style="margin: 0 0 1rem; font-size: 1rem; font-weight: 700; color: #111;">"What is Airspace World" · "When is ASW 2026"</p>
+        <p style="margin: 0; font-size: 0.875rem; color: #374151; line-height: 1.6;">The official domain wins these. It should — it is the primary source. This is not contested ground, and no AEO strategy targets it.</p>
+      </div>
+      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 1.75rem;">
+        <p style="margin: 0 0 0.5rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #16a34a;">Answer / long-tail operational queries</p>
+        <p style="margin: 0 0 1rem; font-size: 1rem; font-weight: 700; color: #111;">"What did SpaceX say at the CANSO summit" · "NIS2 obligations for ANSPs" · "What were the takeaways from [session]"</p>
+        <p style="margin: 0; font-size: 0.875rem; color: #374151; line-height: 1.6;">No structured answer exists on the official site. AI engines have nothing clean to retrieve. This is the gap AEO closes — and it is where citations compound over time.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--paper-mute); max-width: 720px;">
+      The Conference Content Sprint applies this system to your event presence. Sessions, panels, and exhibition coverage are turned into AEO assets within four weeks — with the same schema depth, FAQ-first structure, and citation tracking shown on this hub.
+    </p>
+  </div>
+</section>
+
+{# ============================================================
+   CTA
+   ============================================================ #}
+<section class="section-tight" style="border-bottom: 0;">
+  <div class="container">
+    <div class="maxifi-cta">
+      <div>
+        <p class="eyebrow">Maxifi Digital — Conference Visibility</p>
+        <h2>Want this scorecard run on your event or organisation?</h2>
+        <p>We apply this ten-signal framework to any conference, trade show, or association website — producing a structured audit that shows exactly what AI engines can and cannot retrieve, and a four-week plan to close the gap.</p>
+      </div>
+      <div class="maxifi-cta-actions">
+        <a class="btn btn-primary" href="mailto:hello@maxifidigital.com?subject=AEO%20Scorecard%20request">Request a free scorecard</a>
+        <a class="btn btn-ghost" href="/how-it-works/">See the methodology</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://aswhub.maxifidigital.com/compare/#article",
+  "headline": "Conference Content AEO Scorecard: Ten Signals AI Engines Check",
+  "description": "Ten independently verifiable signals that determine whether ChatGPT, Claude, Perplexity, and Google AI Overviews cite conference content. Built by Maxifi Digital as part of the ASW 2026 AI Visibility Hub.",
+  "url": "https://aswhub.maxifidigital.com/compare/",
+  "inLanguage": "en-GB",
+  "publisher": { "@id": "https://maxifidigital.com/#organization" },
+  "about": [
+    { "@id": "https://aswhub.maxifidigital.com/#event" },
+    {
+      "@type": "Thing",
+      "name": "Answer Engine Optimisation",
+      "alternateName": "AEO"
+    },
+    {
+      "@type": "Thing",
+      "name": "Schema.org structured data"
+    }
+  ]
+}
+</script>
