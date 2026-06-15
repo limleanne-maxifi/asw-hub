@@ -3,7 +3,41 @@
 **Branch:** merge target is `main`. Active feature branch: `claude/clever-einstein-a32jJ` (open until merged).
 **Stack:** Eleventy (Nunjucks + Markdown) → Netlify. Source in `src/`, output via 11ty.
 **Canonical domain:** `https://aswhub.maxifidigital.com/`
-**Last updated:** 2026-06-08
+**Last updated:** 2026-06-15
+
+## ⏩ Monthly index & citation monitor — activation hand-off (2026-06-15)
+
+A second monitoring routine shipped alongside the daily monitor: the **monthly
+index & citation check**, which confirms every sitemap URL is *actually indexed*
+via the Google Search Console + Bing Webmaster APIs (headless engine scraping is
+bot-blocked, so the APIs are the authoritative signal). It runs on the **15th of
+each month** (cron `0 9 15 * *`). Code is merged to `main` (PR #13).
+
+**Shipped & merged:**
+- `scripts/monthly-index-check.mjs` — dependency-free Node helper (`npm run monthly-check`).
+- `routines/monthly-index-citation-check.md` — the routine prompt + secrets/scheduling notes.
+- `public/BingSiteAuth.xml` — Bing site-verification file, **live on production** at
+  `https://aswhub.maxifidigital.com/BingSiteAuth.xml` (confirmed 200).
+- `MONITORING.md` + `CLAUDE.md` — documented the routine, schedule, egress hosts, secrets.
+
+**Activation checklist (Claude Code web UI — no code left):**
+
+| Step | State | Notes |
+|---|---|---|
+| GSC API enabled, service account created | ✅ | `aswhub-index-checker@maxifi-aswhub-index.iam.gserviceaccount.com` |
+| Service account added as Search Console user | ⏳ verify | Must be **Full** user or GSC calls 403 |
+| Bing site verified + API key generated | ⏳ verify | Settings → API access → API Key |
+| 4 secrets on environment | ⏳ verify | `GSC_SA_JSON`, `GSC_SITE_URL=https://aswhub.maxifidigital.com/`, `BING_API_KEY`, `BING_SITE_URL=https://aswhub.maxifidigital.com` |
+| 3 API hosts on egress allowlist | ⏳ verify | `searchconsole.googleapis.com`, `oauth2.googleapis.com`, `ssl.bing.com` |
+| Routine created (15th monthly) | ⏳ | Prompt: `routines/monthly-index-citation-check.md` |
+
+**⚠️ Verification must happen in a FRESH session.** Env vars and the egress
+allowlist are fixed when a container starts — a session that was already running
+when the secrets/allowlist were edited will show empty secrets and
+`host_not_allowed` even when the config is correct. Start a new session, then run
+`npm run monthly-check`; success = the GSC and Bing sections show real
+indexed/not-indexed counts instead of `SKIPPED`. Ready-to-paste verification
+prompt: `routines/fresh-session-verify.md`.
 
 ## Context
 
