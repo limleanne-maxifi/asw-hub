@@ -38,6 +38,18 @@ and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy)
   Top of the queue: rolling the canonical Session page pattern across the remaining
   `src/sessions/*.md` files.
 
+## Monitoring & automation (see `MONITORING.md`)
+Two Claude Code on the web routines track indexing/citation health:
+- **Daily monitor** — sitemap + page-health spot-checks + best-effort citation sweep.
+- **Monthly index & citation check** — runs the **15th of every month** (cron
+  `0 9 15 * *`). Prompt: `routines/monthly-index-citation-check.md`; helper
+  script: `scripts/monthly-index-check.mjs` (`npm run monthly-check`).
+  Confirms each sitemap URL is **actually indexed** via the Google Search Console
+  URL Inspection API + Bing Webmaster API — headless scraping of the engines is
+  bot-blocked, so APIs are the authoritative signal and the scrape is best-effort.
+  Reads optional secrets `GSC_SA_JSON`, `GSC_SITE_URL`, `BING_API_KEY`,
+  `BING_SITE_URL` (missing creds → that section is SKIPPED, not a failure).
+
 ## Eleventy filters registered in `.eleventy.js`
 - `split(value, sep)` — string split (Nunjucks has no built-in).
 - `daysUntil(isoDate)` — integer days from today; powers the citation-tracker countdown.

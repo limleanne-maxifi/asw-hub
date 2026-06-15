@@ -1,9 +1,15 @@
-# Monitoring — daily indexing & citation tracker
+# Monitoring — indexing & citation tracker
 
-The ASW Hub runs a daily automated monitor (a Claude Code on the web
-[routine](https://code.claude.com/docs/en/routines)) that checks sitemap
-health, spot-checks key pages, and tracks whether the hub is being cited
-across five AI answer engines.
+The ASW Hub runs two automated monitors, both Claude Code on the web
+[routines](https://code.claude.com/docs/en/routines):
+
+- **Daily monitor** — sitemap health, key-page spot-checks, and a best-effort
+  citation sweep across five AI answer engines.
+- **Monthly index & citation check (15th of each month)** — a deeper,
+  API-backed audit that confirms every sitemap URL is *actually indexed* in
+  Google and Bing (not merely reachable), then runs the same citation sweep.
+  Prompt: `routines/monthly-index-citation-check.md`. Helper script:
+  `scripts/monthly-index-check.mjs` (`npm run monthly-check`).
 
 ## Required network egress domains
 
@@ -24,7 +30,12 @@ www.google.com
 www.bing.com
 chatgpt.com
 claude.ai
+searchconsole.googleapis.com
+oauth2.googleapis.com
+ssl.bing.com
 ```
+
+The last three are needed only by the monthly index check (GSC + Bing APIs).
 
 - `aswhub.maxifidigital.com` is **required** for the sitemap and page-health
   checks. Without it the monitor cannot run at all.
@@ -45,6 +56,37 @@ The egress policy is fixed when a container starts. Editing the allowlist does
 **not** unblock a session that is already running — a fresh session (or the
 next scheduled routine run) picks up the new policy. If you change the
 allowlist and still see `host_not_allowed`, start a new session to confirm.
+
+## Why the monthly check uses APIs, not scraping
+
+Headless requests to Google, Bing, Perplexity, ChatGPT and Claude are
+bot-blocked from the sandbox (consent/JS walls, 403s), so scraping cannot
+reliably confirm indexing — it mostly returns `BLOCKED`. The monthly check
+therefore reads index status from official APIs and keeps the scrape only as a
+best-effort citation signal.
+
+### Scheduling the monthly routine
+
+Create a Claude Code on the web routine, paste the prompt from
+`routines/monthly-index-citation-check.md`, and set its schedule to the **15th
+of every month** (cron `0 9 15 * *`, or the monthly option in the routine
+scheduler). It runs `npm run monthly-check` and relays the report.
+
+### API credentials (set as environment variables / routine secrets)
+
+All optional — a missing credential degrades that section to `SKIPPED`, not a
+failure.
+
+| Variable        | Where to get it |
+|-----------------|-----------------|
+| `GSC_SA_JSON`   | Google Cloud service-account key JSON (raw or base64). Enable the Search Console API, then add the service-account email as a **user** in Search Console. |
+| `GSC_SITE_URL`  | `sc-domain:aswhub.maxifidigital.com` (domain property) or `https://aswhub.maxifidigital.com/`. |
+| `BING_API_KEY`  | Bing Webmaster Tools → **Settings → API access**. |
+| `BING_SITE_URL` | `https://aswhub.maxifidigital.com`. |
+
+The same egress note above applies: the routine's container must have the
+allowlist domains plus `searchconsole.googleapis.com`, `oauth2.googleapis.com`,
+and `ssl.bing.com` for the index APIs to work.
 
 ## Manual checks (run from a browser, not the sandbox)
 
