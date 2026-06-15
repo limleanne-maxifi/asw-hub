@@ -1,0 +1,40 @@
+# Fresh-session verification prompt — monthly index check
+
+Paste the block below as the **first message in a brand-new Claude Code on the
+web session** on the `asw-hub` environment. A fresh session is required because
+environment variables and the egress allowlist are only applied at container
+start — an already-running session will not see newly-added secrets or hosts.
+
+---
+
+You are verifying the ASW Hub monthly index & citation check
+(https://aswhub.maxifidigital.com) after its API credentials and egress
+allowlist were configured.
+
+1. **Egress + secrets preflight.** Confirm this fresh session picked up the
+   config:
+   - `curl -s -o /dev/null -w "%{http_code}\n" -I https://aswhub.maxifidigital.com/` → expect 200.
+   - Confirm the four secrets are present (names only, never print values):
+     `GSC_SA_JSON`, `GSC_SITE_URL`, `BING_API_KEY`, `BING_SITE_URL`.
+   - Confirm the three API hosts are NOT `host_not_allowed`:
+     `searchconsole.googleapis.com`, `oauth2.googleapis.com`, `ssl.bing.com`.
+
+2. **Run the check:** `npm run monthly-check` (run `npm install` first if
+   `node_modules` is missing).
+
+3. **Interpret the output:**
+   - ✅ PASS = the **Google Search Console** and **Bing Webmaster** sections show
+     real counts (e.g. "Inspected 52 URLs: 50 indexed, 2 not indexed"), not
+     `SKIPPED`.
+   - If a section says **SKIPPED** → that secret didn't load (check exact name/spelling).
+   - If **GSC auth failed** → the service account
+     `aswhub-index-checker@maxifi-aswhub-index.iam.gserviceaccount.com` is not yet
+     added as a Full user in Search Console, or `GSC_SA_JSON` was truncated.
+   - If **Bing errors / host_not_allowed** → `ssl.bing.com` missing from the allowlist.
+
+4. **Report:** post the script's Markdown output, flag any URL listed as *not
+   indexed* (actionable: resubmit in GSC / check robots, canonical, noindex), and
+   state clearly whether the monthly automation is fully live.
+
+The citation-scrape table staying `BLOCKED` is expected and fine — the
+index-status sections are the authoritative signal.
