@@ -11,9 +11,9 @@ chair: Chris Jeeves
 summary: How EUROCONTROL's Maastricht Upper Area Control Centre is developing and deepening civil-military cooperation — examining the practical frameworks, operational arrangements, and lessons that MUAC offers as a model for integrated civil-military airspace management in Europe.
 ---
 
-## What to expect
+## What this session covered
 
-The EUROCONTROL Maastricht Upper Area Control Centre (MUAC) manages some of the most complex upper airspace in Europe, covering Belgium, the Netherlands, Luxembourg, and north-west Germany. Civil-military cooperation is central to its operation. This session examines:
+The EUROCONTROL Maastricht Upper Area Control Centre (MUAC) manages some of the most complex upper airspace in Europe, covering Belgium, the Netherlands, Luxembourg, and north-west Germany. Civil-military cooperation is central to its operation. This session examined:
 
 - **MUAC's civil-military operational model** — how MUAC coordinates with national military authorities across four countries to manage flexible use of airspace, temporary reserved areas, and real-time coordination
 - **Operational arrangements in practice** — the protocols, tools, and communication processes that enable effective civil-military coordination at MUAC's scale and complexity

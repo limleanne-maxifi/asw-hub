@@ -17,9 +17,9 @@ chair: Markus Klopf
 summary: A global panel examining why modernisation speed is critical — the operational and competitive imperatives driving ANSPs to accelerate digital transformation timelines, what implementation looks like in practice, and why the pace of change must increase.
 ---
 
-## What to expect
+## What this session covered
 
-ATM modernisation is no longer a future programme — it is an active operational imperative. This session brings together global perspectives on what it takes to move from concept to reality, and why speed is the defining variable:
+ATM modernisation is no longer a future programme — it is an active operational imperative. This session brought together global perspectives on what it takes to move from concept to reality, and why speed is the defining variable:
 
 - **The case for speed** — the capacity, safety, and sustainability consequences of delayed modernisation
 - **From concept to operational deployment** — what the transition looks like for ANSPs that have moved digital systems into live operations
@@ -29,7 +29,7 @@ ATM modernisation is no longer a future programme — it is an active operationa
 
 ## Why it matters
 
-The ATM community has been discussing modernisation for decades. This session focuses on the transition from planning to execution — and on the urgent need to close the gap between what the technology can deliver and what is operationally deployed.
+The ATM community has been discussing modernisation for decades. This session focused on the transition from planning to execution — and on the urgent need to close the gap between what the technology can deliver and what is operationally deployed.
 
 ## Linked theme
 

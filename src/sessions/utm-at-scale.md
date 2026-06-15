@@ -11,9 +11,9 @@ chair: Matthew Satterley
 summary: A global look at how drone operations are moving from regulatory frameworks into operational deployment — examining digital service architectures, collaborative implementation models, and the practical lessons from shared airspace at scale.
 ---
 
-## What to expect
+## What this session covered
 
-Drone integration into shared airspace is no longer a future challenge — it is an active operational and regulatory reality across multiple regions. This session examines what collaborative implementation looks like in practice:
+Drone integration into shared airspace is no longer a future challenge — it is an active operational and regulatory reality across multiple regions. This session examined what collaborative implementation looks like in practice:
 
 - **Digital service architectures for drone operations** — the UTM and U-space platforms supporting real-world BVLOS and urban operations
 - **Collaborative implementation models** — how ANSPs, drone operators, and digital service providers are working together to enable safe shared airspace
@@ -23,7 +23,7 @@ Drone integration into shared airspace is no longer a future challenge — it is
 
 ## Why it matters
 
-The path from regulatory frameworks to scalable, operational drone integration requires active collaboration between multiple stakeholders. This session presents real-world implementation experience and the practical requirements for making shared airspace work globally.
+The path from regulatory frameworks to scalable, operational drone integration requires active collaboration between multiple stakeholders. This session presented real-world implementation experience and the practical requirements for making shared airspace work globally.
 
 ## Linked theme
 
