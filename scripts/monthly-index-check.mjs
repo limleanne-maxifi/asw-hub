@@ -139,8 +139,14 @@ async function checkGoogleIndex(urls) {
   const sa = loadSaJson();
   const siteUrl = process.env.GSC_SITE_URL;
   if (!sa || !siteUrl) {
-    log('- ⏭️ SKIPPED — set `GSC_SA_JSON` (service-account JSON) and ' +
-        '`GSC_SITE_URL`. Add the service account as a user in Search Console.\n');
+    // Be specific about which credential is missing — vague "set both" notes
+    // made this section hard to diagnose when only one var was absent.
+    const missing = [];
+    if (!process.env.GSC_SA_JSON) missing.push('`GSC_SA_JSON` (service-account JSON, raw or base64)');
+    else if (!sa) missing.push('`GSC_SA_JSON` is set but did not parse as JSON — check it is the full service-account key (raw or base64)');
+    if (!siteUrl) missing.push('`GSC_SITE_URL` (e.g. `sc-domain:aswhub.maxifidigital.com` or `https://aswhub.maxifidigital.com/`)');
+    log(`- ⏭️ SKIPPED — missing: ${missing.join('; ')}. ` +
+        'Add the service account as a user in Search Console once set.\n');
     return;
   }
   let token;
