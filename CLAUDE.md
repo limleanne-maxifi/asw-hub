@@ -34,6 +34,10 @@ and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy)
   a fresh feature branch; never push directly to `main` without explicit permission.
 - The Session page class fix, Home / How It Works rewrites, site-wide entity graph,
   per-page BreadcrumbList, and the AI Citation Tracker rebuild are all merged.
+- The **monthly index & citation monitor** (API-backed; see Monitoring below) is
+  merged. Remaining is operator-side activation only (secrets + egress allowlist +
+  routine schedule), verified from a fresh session — see the activation checklist
+  and `routines/fresh-session-verify.md` in `HANDOFF.md`.
 - **See `HANDOFF.md`** for what just shipped and the prioritised next-step backlog.
   Top of the queue: rolling the canonical Session page pattern across the remaining
   `src/sessions/*.md` files.
@@ -49,6 +53,13 @@ Two Claude Code on the web routines track indexing/citation health:
   bot-blocked, so APIs are the authoritative signal and the scrape is best-effort.
   Reads optional secrets `GSC_SA_JSON`, `GSC_SITE_URL`, `BING_API_KEY`,
   `BING_SITE_URL` (missing creds → that section is SKIPPED, not a failure).
+  Bing site verification ships as `public/BingSiteAuth.xml` (served at site root).
+  **Activation is operator-side:** add the four secrets and the three API egress
+  hosts (`searchconsole.googleapis.com`, `oauth2.googleapis.com`, `ssl.bing.com`),
+  add the GSC service account as a Search Console user, then verify in a **fresh**
+  session (env/allowlist only apply at container start). Paste
+  `routines/fresh-session-verify.md` to confirm the GSC + Bing sections return real
+  counts instead of SKIPPED.
 
 ## Eleventy filters registered in `.eleventy.js`
 - `split(value, sep)` — string split (Nunjucks has no built-in).
@@ -142,5 +153,7 @@ opening-plenary file shows the session-flavoured version.
    and the `performer` array shows speaker URLs in the JSON-LD.
 
 ## Git
-- Push with `git push -u origin claude/clever-einstein-a32jJ`; retry network failures with backoff.
+- Work on the current task's feature branch (set per session); never push directly
+  to `main` without explicit permission. Push with
+  `git push -u origin <feature-branch>`; retry network failures with backoff.
 - After pushing, ensure a **draft PR** exists for the branch.
