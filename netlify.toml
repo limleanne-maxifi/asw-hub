@@ -87,3 +87,26 @@
   from   = "/asw-2025"
   to     = "/asw-2025/"
   status = 301
+
+## Renamed sessions — old slugs were misleading (did not match the actual session)
+## ses2plus-implementation → next-generation-atm-talent (People, Skills & Next-Gen)
+[[redirects]]
+  from   = "/sessions/ses2plus-implementation"
+  to     = "/sessions/next-generation-atm-talent/"
+  status = 301
+
+[[redirects]]
+  from   = "/sessions/ses2plus-implementation/"
+  to     = "/sessions/next-generation-atm-talent/"
+  status = 301
+
+## closing-the-ses-gap → civil-military-collaboration (Defence & Military)
+[[redirects]]
+  from   = "/sessions/closing-the-ses-gap"
+  to     = "/sessions/civil-military-collaboration/"
+  status = 301
+
+[[redirects]]
+  from   = "/sessions/closing-the-ses-gap/"
+  to     = "/sessions/civil-military-collaboration/"
+  status = 301
