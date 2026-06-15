@@ -34,9 +34,9 @@ The Opening Plenary frames the entire Airspace World 2026 conference. Tim Arel �
 
 Tim Arel chairs the Opening Plenary in his capacity as Chair of CANSO. Tim Arel is Chief Operating Officer of the FAA Air Traffic Organization, the operational arm of the United States Federal Aviation Administration that runs the National Airspace System. He is joined by CANSO leadership delivering the State of Global ATM address that opens the conference programme.
 
-### When and where is the Opening Plenary at ASW 2026?
+### When and where was the Opening Plenary at ASW 2026?
 
-The Opening Plenary takes place on Tuesday 26 May 2026 from 10:00 to 10:25 local Lisbon time (WEST, UTC+1) in the Frequentis Theatre at FIL — Feira Internacional de Lisboa, the Parque das Nações venue hosting Airspace World 2026 from 26 to 28 May 2026.
+The Opening Plenary took place on Tuesday 26 May 2026 from 10:00 to 10:25 local Lisbon time (WEST, UTC+1) in the Frequentis Theatre at FIL — Feira Internacional de Lisboa, the Parque das Nações venue that hosted Airspace World 2026 from 26 to 28 May 2026.
 
 ### What is CANSO and why does it host Airspace World?
 
@@ -65,10 +65,10 @@ The priorities articulated in the Opening Plenary thread through the four ASW 20
     },
     {
       "@type": "Question",
-      "name": "When and where is the Opening Plenary at ASW 2026?",
+      "name": "When and where was the Opening Plenary at ASW 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Opening Plenary takes place on Tuesday 26 May 2026 from 10:00 to 10:25 local Lisbon time (WEST, UTC+1) in the Frequentis Theatre at FIL — Feira Internacional de Lisboa, the Parque das Nações venue hosting Airspace World 2026 from 26 to 28 May 2026."
+        "text": "The Opening Plenary took place on Tuesday 26 May 2026 from 10:00 to 10:25 local Lisbon time (WEST, UTC+1) in the Frequentis Theatre at FIL — Feira Internacional de Lisboa, the Parque das Nações venue that hosted Airspace World 2026 from 26 to 28 May 2026."
       }
     },
     {
