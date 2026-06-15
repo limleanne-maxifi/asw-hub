@@ -7,6 +7,7 @@
     "start": "eleventy --serve",
     "dev": "eleventy --serve",
     "build": "eleventy",
+    "monthly-check": "node scripts/monthly-index-check.mjs",
     "clean": "rimraf _site",
     "debug": "DEBUG=Eleventy* eleventy"
   },
