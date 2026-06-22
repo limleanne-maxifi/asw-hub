@@ -1,5 +1,5 @@
 {
-  "_note": "To update after running monthly queries: set cited:true and add the source url for each engine per query. Set lastUpdated to the date the queries were run. q1 is the generic control query; q2–q5 are SpaceX-keynote test queries targeting the post-event canonical record at /sessions/spacex-keynote-canso-summit-2026/.",
+  "_note": "To update after running monthly queries: set cited:true and add the source url for each engine per query. Set lastUpdated to the date the queries were run. q1 is the generic control query; q2–q5 are SpaceX-keynote test queries targeting the post-event canonical record at /sessions/spacex-keynote-canso-summit-2026/. 2026-06-22 quick-check: hub confirmed indexed (site: query returns hub content) but not yet cited for any head query — organic results for q2–q5 are dominated by canso.org, airspaceworld.com, globalairspaceradar.com and atc-network.com. No AI-engine citation recorded; all cells remain not-yet-measured pending the full audit. Do NOT mark cited:true without a verifiable source URL from the engine's answer.",
   "engines": [
     { "id": "claude",    "name": "Claude",                "vendor": "Anthropic"       },
     { "id": "chatgpt",   "name": "ChatGPT",               "vendor": "OpenAI"          },
@@ -92,7 +92,7 @@
     }
   ],
   "summary": {
-    "lastUpdated": "2026-06-01",
+    "lastUpdated": "2026-06-22",
     "firstQuickCheck": "2026-06-01",
     "firstFullAudit": "2026-07-01"
   }
