@@ -14,10 +14,13 @@ allowlist were configured.
 1. **Egress + secrets preflight.** Confirm this fresh session picked up the
    config:
    - `curl -s -o /dev/null -w "%{http_code}\n" -I https://aswhub.maxifidigital.com/` → expect 200.
-   - Confirm the four secrets are present (names only, never print values):
-     `GSC_SA_JSON`, `GSC_SITE_URL`, `BING_API_KEY`, `BING_SITE_URL`.
-   - Confirm the three API hosts are NOT `host_not_allowed`:
+   - Confirm the secrets are present (names only, never print values). Core
+     (index status): `GSC_SA_JSON`, `GSC_SITE_URL`, `BING_API_KEY`,
+     `BING_SITE_URL`. Optional (citation/rank probes): `PERPLEXITY_API_KEY`,
+     `BING_SEARCH_API_KEY`.
+   - Confirm the API hosts are NOT `host_not_allowed`. Core:
      `searchconsole.googleapis.com`, `oauth2.googleapis.com`, `ssl.bing.com`.
+     Optional probes: `api.perplexity.ai`, `api.bing.microsoft.com`.
 
 2. **Run the check:** `npm run monthly-check` (run `npm install` first if
    `node_modules` is missing).
@@ -31,6 +34,9 @@ allowlist were configured.
      `aswhub-index-checker@maxifi-aswhub-index.iam.gserviceaccount.com` is not yet
      added as a Full user in Search Console, or `GSC_SA_JSON` was truncated.
    - If **Bing errors / host_not_allowed** → `ssl.bing.com` missing from the allowlist.
+   - The **Perplexity** and **Bing rank** sections are optional: SKIPPED means
+     their key isn't set; that does not fail verification. When live they pre-fill
+     `monitoring/latest-capture.csv` for the manual battery.
 
 4. **Report:** post the script's Markdown output, flag any URL listed as *not
    indexed* (actionable: resubmit in GSC / check robots, canonical, noindex), and

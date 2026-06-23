@@ -1,6 +1,9 @@
 node_modules/
 _site/
 .cache/
+# Monthly-check working artifact: regenerated every run from src/_data/citations.json.
+# The persistent index baseline (monitoring/index-baseline.json) IS tracked.
+monitoring/latest-capture.csv
 .DS_Store
 *.log
 .env
