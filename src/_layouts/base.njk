@@ -3,21 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} — Airspace World 2026: AI Visibility Hub</title>
-  <meta name="description" content="{{ description or 'The canonical ATM resource for Airspace World 2026 — sessions, speakers, themes, and insights from the global air traffic management community.' }}">
+  {%- set metaTitle = title + " — Airspace World 2026: AI Visibility Hub" -%}
+  {%- set metaDescription = description or summary or "The canonical ATM resource for Airspace World 2026 — sessions, speakers, themes, and insights from the global air traffic management community." -%}
+  <title>{{ metaTitle }}</title>
+  <meta name="description" content="{{ metaDescription }}">
   <link rel="canonical" href="https://aswhub.maxifidigital.com{{ page.url }}">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ title }} — Airspace World 2026: AI Visibility Hub">
-  <meta property="og:description" content="{{ description or 'The canonical ATM resource for Airspace World 2026.' }}">
+  <meta property="og:site_name" content="Airspace World 2026: AI Visibility Hub">
+  <meta property="og:title" content="{{ metaTitle }}">
+  <meta property="og:description" content="{{ metaDescription }}">
   <meta property="og:url" content="https://aswhub.maxifidigital.com{{ page.url }}">
   <meta property="og:image" content="https://aswhub.maxifidigital.com/images/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Airspace World 2026: AI Visibility Hub">
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ metaTitle }}">
+  <meta name="twitter:description" content="{{ metaDescription }}">
   <meta name="twitter:image" content="https://aswhub.maxifidigital.com/images/og-image.png">
+  <meta name="twitter:image:alt" content="Airspace World 2026: AI Visibility Hub">
   <meta name="msvalidate.01" content="1F14880D43A6A0045A2FDA30B5BDA3B0">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +35,6 @@
 
   {% include "schema-site.njk" %}
   {% include "schema-breadcrumb.njk" %}
-  {% if schemaEvent %}{% include "schema-event.njk" %}{% endif %}
   {% if schemaFaq %}{% include "schema-faq.njk" %}{% endif %}
   {% if schemaSession %}{% include "schema-session.njk" %}{% endif %}
   {% if schemaSpeaker %}{% include "schema-speaker.njk" %}{% endif %}

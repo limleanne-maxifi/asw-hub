@@ -4,21 +4,23 @@
 {%- if day and "Wednesday" in day -%}{%- set dayDate = "2026-05-27" -%}{%- endif -%}
 {%- if day and "Thursday" in day -%}{%- set dayDate = "2026-05-28" -%}{%- endif -%}
 {%- set timeParts = (time or "") | split(" – ") -%}
-{%- set startTime = timeParts[0] | trim if timeParts[0] else "09:00" -%}
-{%- set endTime = timeParts[1] | trim if timeParts[1] else startTime -%}
+{# Extract a bare HH:MM from each part, tolerating a trailing token (e.g. "14:45 BST"). #}
+{%- set startTime = (timeParts[0] | trim | split(" "))[0] if timeParts[0] else "09:00" -%}
+{%- set endTime = (timeParts[1] | trim | split(" "))[0] if timeParts[1] else startTime -%}
+{%- set locationName = (room ~ ", FIL — Feira Internacional de Lisboa") if room else "FIL — Feira Internacional de Lisboa" -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Event",
-  "name": "{{ title }}",
-  "description": "{{ summary }}",
+  "name": {{ title | dump | safe }},
+  "description": {{ summary | dump | safe }},
   "startDate": "{{ dayDate }}T{{ startTime }}:00+01:00",
   "endDate": "{{ dayDate }}T{{ endTime }}:00+01:00",
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {
     "@type": "Place",
-    "name": "{{ room or 'FIL — Feira Internacional de Lisboa' }}{% if room %}, FIL — Feira Internacional de Lisboa{% endif %}",
+    "name": {{ locationName | dump | safe }},
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rua do Bojador, Parque das Nações",
@@ -52,14 +54,14 @@
   "performer": [{% for s in speakerLinks %}
     {
       "@type": "Person",
-      "name": "{{ s.display }}"{% if s.slug %},
+      "name": {{ s.display | dump | safe }}{% if s.slug %},
       "url": "https://aswhub.maxifidigital.com/speakers/{{ s.slug }}/"{% endif %}
     }{% if not loop.last %},{% endif %}{% endfor %}
   ]{% elif speakers %},
   "performer": [
     {
       "@type": "Person",
-      "name": "{{ speakers }}"
+      "name": {{ speakers | dump | safe }}
     }
   ]{% endif %}
 }

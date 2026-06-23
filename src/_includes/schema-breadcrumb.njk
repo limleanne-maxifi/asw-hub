@@ -14,7 +14,7 @@
     {
       "@type": "ListItem",
       "position": {{ loop.index + 1 }},
-      "name": "{{ title if loop.last and title else c.name }}",
+      "name": {{ (title if loop.last and title else c.name) | dump | safe }},
       "item": "https://aswhub.maxifidigital.com{{ c.url }}"
     }{% endfor %}
   ]

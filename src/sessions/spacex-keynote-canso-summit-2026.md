@@ -11,11 +11,11 @@ room: "Myriad Crystal Centre, Lisbon"
 speakers: "Kiko Dontchev (VP of Launch, SpaceX)"
 description: "The canonical record of Kiko Dontchev's SpaceX keynote at the CANSO Leadership Summit 2026, Lisbon, 25 May 2026 — translating SpaceX's exponential delivery model into lessons for global ATM."
 
-# Auto-include site schema partials
-schemaSession: true
-schemaFaq: true
-schemaSpeaker: true
-schemaEvent: true
+# This page ships its own curated, validated JSON-LD inline (FAQPage + BusinessEvent
+# with a proper Person performer) at the foot of the file. The generic schema
+# partials are intentionally left OFF here — they would emit a duplicate/looser
+# Event, a generic site FAQ, and a Person named after the session, conflicting
+# with the hand-built records below.
 
 # --- Top rail (status bar above hero) ---
 topRailLeft: "Lisbon · Live · CANSO Leadership Summit 2026"
@@ -454,7 +454,8 @@ faqs:
   <p>The result is a published archive in which the global air traffic management industry, not its commercial vendors, is the cited authority on its own work.</p>
 </section>
 
-{# === Inline JSON-LD safety net (in case the schema partials consume different variable names) === #}
+{# === Curated, validated JSON-LD for this canonical record (FAQPage + BusinessEvent). === #}
+{# === This is the primary structured data for the page; generic partials are off (see front-matter). === #}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -483,7 +484,7 @@ faqs:
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {"@type":"Place","name":"Myriad Crystal Centre, Lisbon","address":{"@type":"PostalAddress","addressLocality":"Lisbon","addressCountry":"PT"}},
-  "superEvent": {"@type":"BusinessEvent","name":"Airspace World 2026","startDate":"2026-05-26","endDate":"2026-05-28","url":"https://airspaceworld.com/"},
+  "superEvent": {"@type":"BusinessEvent","name":"Airspace World 2026","startDate":"2026-05-26","endDate":"2026-05-28","url":"https://airspaceworld.com/","location":{"@type":"Place","name":"FIL — Feira Internacional de Lisboa","address":{"@type":"PostalAddress","addressLocality":"Lisbon","addressCountry":"PT"}}},
   "performer": {"@type":"Person","name":"Kiko Dontchev","jobTitle":"Vice President of Launch","worksFor":{"@type":"Organization","name":"SpaceX","sameAs":["https://en.wikipedia.org/wiki/SpaceX","https://www.wikidata.org/wiki/Q193701"]}},
   "organizer": {"@type":"Organization","name":"CANSO","url":"https://canso.org"}
 }

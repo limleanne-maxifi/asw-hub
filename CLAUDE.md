@@ -15,8 +15,11 @@ and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy)
 - Source: `src/`. Build config: `.eleventy.js`. Dev: `npx @11ty/eleventy --serve`.
 - Layouts: `src/_layouts/` (`base`, `session`, `speaker`, `theme`, `insight`).
 - Per-type JSON-LD partials: `src/_includes/schema-*.njk`, toggled by front-matter
-  flags (`schemaEvent`, `schemaFaq`, `schemaSession`, `schemaSpeaker`, `schemaInsight`)
-  wired in `base.njk`.
+  flags (`schemaFaq`, `schemaSession`, `schemaSpeaker`, `schemaInsight`, `schemaHowTo`)
+  wired in `base.njk`. The canonical ASW 2026 `Event` is emitted site-wide by
+  `schema-site.njk` (no per-page `Event` flag — that's why there is no `schema-event.njk`).
+  **All string values in schema partials must be interpolated with `| dump | safe`** so
+  Nunjucks autoescaping cannot leak `&amp;`/`&#39;` into JSON-LD or break it on quotes.
 - Content collections: `sessions/`, `speakers/`, `themes/`, `insights/` (each has an
   index `.njk`, a `.json` data file, and a `_template.md`).
 - Crawl/trust files in `public/`: `llms.txt`, `robots.txt` (AI-bot allowlist),
@@ -73,7 +76,9 @@ Two Claude Code on the web routines track indexing/citation health:
 - `schema-breadcrumb.njk` — per-page `BreadcrumbList`, suppressed on `/`.
 
 ## Per-page schema includes (toggle via front-matter flag)
-- `schemaEvent`, `schemaFaq`, `schemaSession`, `schemaSpeaker`, `schemaInsight`, `schemaHowTo`.
+- `schemaFaq`, `schemaSession`, `schemaSpeaker`, `schemaInsight`, `schemaHowTo`.
+- The canonical conference `Event` is already in the site-wide `@graph` (`schema-site.njk`),
+  so do not add a per-page standalone `Event` — it would duplicate the graph node.
 
 ## Canonical Session page pattern (reference: `opening-plenary-state-of-global-atm.md`)
 
