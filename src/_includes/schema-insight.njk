@@ -2,10 +2,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "{{ title }}",
-  "description": "{{ summary }}",
+  "headline": {{ title | dump | safe }},
+  "description": {{ summary | dump | safe }},
   "datePublished": "{{ date | isoDate }}",
-  "dateModified": "{{ date | isoDate }}",
+  "dateModified": "{{ lastmod or (date | isoDate) }}",
   "url": "https://aswhub.maxifidigital.com{{ page.url }}",
   "publisher": {
     "@type": "Organization",

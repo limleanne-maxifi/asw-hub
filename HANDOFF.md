@@ -1,9 +1,54 @@
 # Hand-off: ASW Hub AEO/GEO optimisation
 
-**Branch:** merge target is `main`. Active feature branch: `claude/clever-einstein-a32jJ` (open until merged).
+**Branch:** merge target is `main`. Active feature branch: `claude/wizardly-feynman-g0ra6h` (AEO hardening; open until merged).
 **Stack:** Eleventy (Nunjucks + Markdown) → Netlify. Source in `src/`, output via 11ty.
 **Canonical domain:** `https://aswhub.maxifidigital.com/`
-**Last updated:** 2026-06-15
+**Last updated:** 2026-06-23
+
+## ⏩ AEO hardening pass — structured data, meta layer, canonical, citation table (2026-06-23)
+
+Hardening sweep ahead of the 25 June 2026 CANSO pitch. All changes on
+`claude/wizardly-feynman-g0ra6h`.
+
+**Structured data (Task 1):**
+- **Root-cause fix:** every schema partial interpolated front-matter raw
+  (`"name": "{{ title }}"`), so Nunjucks autoescaping leaked `&amp;`/`&#39;` into
+  JSON-LD string values site-wide (e.g. theme breadcrumbs, every apostrophe). All
+  string values now use `| dump | safe` (`schema-session/speaker/insight/breadcrumb`).
+- **SpaceX keynote page** emitted 8 JSON-LD blocks with 4 conflicting Events
+  (one with the invalid datetime `2026-05-26T14:45 BST:00+01:00`), a `Person` named
+  after the *session* with empty `jobTitle`, and a duplicate generic FAQ. The generic
+  partials are now OFF for that page — it keeps its curated, validated inline
+  `FAQPage` + `BusinessEvent` (now down to 4 clean blocks). Added `location` to its
+  `superEvent`.
+- **`schema-speaker.njk`:** dropped the meaningless self-referential `sameAs`;
+  `jobTitle`/`worksFor` are now conditional (no empty strings); added optional
+  front-matter `sameAs` (array of external profile URLs) support.
+- **Removed `schema-event.njk`** — it duplicated the canonical `Event` already in the
+  site-wide `@graph`. Enriched the graph `Event` with the full FIL postal address +
+  `organizer.url`. Dropped the now-defunct `schemaEvent` flag from home + SpaceX.
+- Validation: all **157** JSON-LD blocks parse; **0** contain HTML entities; required
+  `Event`/`Person`/`FAQPage`/`BreadcrumbList`/`Article` fields all present, dates ISO-valid.
+
+**Meta layer (Task 2):** `base.njk` description now falls back `description → summary →
+generic`, so all **54** pages have a **unique** meta description (sessions/speakers/
+themes/insights inherit their `summary`). Added `og:site_name`, `og:image:alt`,
+`twitter:title`, `twitter:description`, `twitter:image:alt`. Fixed double-encoded
+`&amp;amp;` in `themes/index` meta description.
+
+**Canonical (Task 3):** this repo is airtight — self-referential `rel=canonical` on
+every page, all schema/llms/robots reference `aswhub.maxifidigital.com` only, **no**
+competing reference to `maxifidigital.com/asw-hub` anywhere in `src/`/`public/`.
+⚠️ **Owner action:** if the duplicate at `maxifidigital.com/asw-hub` is live, the dedupe
+must happen in the **`dashboard`** repo (the Astro site) / Netlify — either a 301 to the
+subdomain or `rel=canonical` pointing at it. Out of scope for this repo.
+
+**Citation table (Task 4):** template now renders the owner's drop-in results cleanly —
+a cited cell links to its source `url`, or shows a non-link ✓ with the verbatim `quote`
+as a tooltip if no url. `citations.json` `_note` carries the exact drop-in recipe
+(set `cited:true` + `url`, optional `quote`/`screenshot`). Bumped `lastUpdated` to
+2026-06-23 (live-monitoring date; next full audit 2026-07-01 drives the countdown).
+**No ✓ fabricated** — all cells stay `–` until the owner records real, screenshotted results.
 
 ## ⏩ Monthly index & citation monitor — activation hand-off (2026-06-15)
 
@@ -132,8 +177,13 @@ session ↔ speaker links.
   the citation-tracker recommendation (item 4 of that proposal).
 
 ### 7. Smaller fixes (carry-over from prior backlog)
-- Fix `Offer` (`price`, `priceCurrency`) in `schema-event.njk`.
+- ~~Fix `Offer` in `schema-event.njk`~~ — moot: `schema-event.njk` removed (the
+  canonical `Event` lives in the site-wide `@graph`). The event is concluded, so no
+  ticket `Offer` is needed; add one to the graph `Event` only if a future event is added.
 - Replace `btn-disabled` "Conference Sprint" CTA on home + how-it-works with a working link, or remove.
+- Populate speaker `sameAs` (LinkedIn / Wikipedia / Wikidata / official bio) in
+  `src/speakers/*.md` front-matter — `schema-speaker.njk` now emits a `sameAs` array
+  when present (left empty rather than fabricated).
 
 ## Acceptance gates for any future change
 1. `npx @11ty/eleventy` builds clean — no warnings on touched files.
