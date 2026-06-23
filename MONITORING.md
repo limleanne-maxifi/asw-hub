@@ -33,9 +33,14 @@ claude.ai
 searchconsole.googleapis.com
 oauth2.googleapis.com
 ssl.bing.com
+api.perplexity.ai
+api.bing.microsoft.com
 ```
 
-The last three are needed only by the monthly index check (GSC + Bing APIs).
+The API hosts power the monitor's authoritative signals: `searchconsole.googleapis.com`
++ `oauth2.googleapis.com` (Google index), `ssl.bing.com` (Bing index),
+`api.perplexity.ai` (real Perplexity citation check), and `api.bing.microsoft.com`
+(Bing Web Search rank — the Copilot proxy).
 
 - `aswhub.maxifidigital.com` is **required** for the sitemap and page-health
   checks. Without it the monitor cannot run at all.

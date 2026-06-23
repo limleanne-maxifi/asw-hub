@@ -1,0 +1,7 @@
+{
+  "_note": "Index baseline for scripts/monthly-index-check.mjs. The monitor routine overwrites google/bing/perplexityCited each run and commits this file so the next run can diff. Seeded empty; the first activated full run establishes the real baseline.",
+  "updated": "",
+  "google": [],
+  "bing": [],
+  "perplexityCited": []
+}
