@@ -17,10 +17,10 @@
   "queries": [
     {
       "id": "q1",
-      "text": "What sessions are at Airspace World 2026?",
+      "text": "What are the eight themes of Airspace World 2026?",
       "tier": "Control",
-      "targetUrl": "/sessions/",
-      "targetLabel": "Sessions index",
+      "targetUrl": "/themes/",
+      "targetLabel": "Themes index",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
