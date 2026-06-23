@@ -39,9 +39,13 @@ themes/insights inherit their `summary`). Added `og:site_name`, `og:image:alt`,
 **Canonical (Task 3):** this repo is airtight — self-referential `rel=canonical` on
 every page, all schema/llms/robots reference `aswhub.maxifidigital.com` only, **no**
 competing reference to `maxifidigital.com/asw-hub` anywhere in `src/`/`public/`.
-⚠️ **Owner action:** if the duplicate at `maxifidigital.com/asw-hub` is live, the dedupe
-must happen in the **`dashboard`** repo (the Astro site) / Netlify — either a 301 to the
-subdomain or `rel=canonical` pointing at it. Out of scope for this repo.
+✅ **Resolved (confirmed 2026-06-23):** no action outstanding. The `dashboard` (Astro)
+build generates **no `/asw-hub` route** (no `src/pages/asw-hub/`, no content collections,
+no dynamic slug source — only an image asset references the name), so there is no duplicate
+*content* to dedupe. And the `/asw-hub` → subdomain **301s already ship** in `dashboard`'s
+`netlify.toml` (commit `40d8d87`, 2026-06-02, on `origin/main`): `/asw-hub` → subdomain
+root and `/asw-hub/*` → `:splat`, both `force=true`. Canonical is therefore verified
+end-to-end: self-referential `rel=canonical` here + the apex 301 there.
 
 **Citation table (Task 4):** template now renders the owner's drop-in results cleanly —
 a cited cell links to its source `url`, or shows a non-link ✓ with the verbatim `quote`
