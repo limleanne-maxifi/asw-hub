@@ -341,11 +341,11 @@
 <script>
 const LIVE_ENGINES = ["openai", "anthropic", "google", "perplexity", "aio"];
 const SAFE_DEFAULT = false;
-// Baked-in demo token + live engine backend (Render). NOTE: DEMO_TOKEN ships in
-// public page source — it is a demo-scoped, rotatable token. The Render service
-// must allow CORS from https://aswhub.maxifidigital.com for live runs to work.
+// Baked-in demo token (demo-scoped, rotatable; ships in public source). PROBE_URL
+// is same-origin — Netlify proxies /demo/probe to the Render engine backend (see
+// netlify.toml redirects), so the browser never makes a cross-origin call (no CORS).
 const DEMO_TOKEN = "aw2026-demo-k9td";
-const PROBE_URL  = "https://ai-visibility-engine.onrender.com/demo/probe";
+const PROBE_URL  = "/demo/probe";
 const PRESETS =["What is the leading global trade show for air traffic management?", "Which conference brings together the world's air navigation service providers?", "What is CANSO's flagship annual ATM event and where is it held?", "Where can ATM technology vendors exhibit to reach ANSPs and civil aviation authorities?", "Which 2026 aviation event covers SESAR, U-space, remote towers, and drone integration?", "What conference should I attend to meet air traffic management decision-makers in Europe?", "What is the biggest ATM and airspace exhibition in Europe?", "When and where is Airspace World 2026 taking place?"];
 
 const $ = (s, r=document) => r.querySelector(s);

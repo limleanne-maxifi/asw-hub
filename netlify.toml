@@ -87,3 +87,13 @@
   from   = "/asw-2025"
   to     = "/asw-2025/"
   status = 301
+
+## CANSO demo (/CANSO-demo/) — proxy the engine probe to the ai-visibility-engine
+## backend on Render. status = 200 makes this a rewrite/proxy: the browser call to
+## /demo/probe stays same-origin (no CORS), and Netlify forwards the POST (with the
+## X-Demo-Token header) to Render server-side.
+[[redirects]]
+  from   = "/demo/probe"
+  to     = "https://ai-visibility-engine.onrender.com/demo/probe"
+  status = 200
+  force  = true
