@@ -12,7 +12,7 @@ FAQ, themes, and session briefs.
 
 > This file is documentation only and lives under `docs/` (outside the Eleventy
 > build). The built showcase page now **ships with the site** as a passthrough
-> page — `public/demo/index.html`, served at **`/demo/`** (see "Live demo").
+> page — `public/CANSO-demo/index.html`, served at **`/CANSO-demo/`** (see "Live demo").
 > Do **not** edit `ai-visibility-engine` from this repo/session — copy these
 > values across there.
 
@@ -20,8 +20,8 @@ FAQ, themes, and session briefs.
 
 The seeded showcase page is published with the site and is publicly reachable:
 
-- **Live (production):** <https://aswhub.maxifidigital.com/demo/>
-- **Source:** `public/demo/index.html` — a self-contained single-file page
+- **Live (production):** <https://aswhub.maxifidigital.com/CANSO-demo/>
+- **Source:** `public/CANSO-demo/index.html` — a self-contained single-file page
   (inline CSS/JS, embedded Maxifi wordmark) copied verbatim to the site root by
   Eleventy's `public/` passthrough, so it is **not** in the nav, collections, or
   sitemap and does not touch the reference hub.
