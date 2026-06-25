@@ -32,11 +32,26 @@ queries, lede + trust hero, official Maxifi Digital wordmark, Inter headings on
 IBM Plex Sans Light, conversion CTAs to `checkyourvisibility` / `aswhub`, and a
 "CANSO · Premium AI Visibility" citation ticker.
 
-Note: live engine runs POST to `/demo/probe`, which only exists on the
-`ai-visibility-engine` backend (Render). On the static aswhub host the page
-shows the **on-load sample render** (3/5 — Airspace World cited by ChatGPT and
-Perplexity) plus the "Safe demo (sample data)" view; point it at the backend for
-real-time runs.
+### Live-run wiring (tokenised)
+
+The page is **pre-authorised** for live runs: it bakes a demo token and points the
+probe at the Render backend, so the bare `/CANSO-demo/` URL works as a tokenised
+link (no `?token=` needed). In the page `<script>`:
+
+- `DEMO_TOKEN = "aw2026-demo-k9td"` — demo-scoped token, used as the fallback when
+  no `?token=` / manual token is present. **It ships in public page source** —
+  keep it rotatable and low-budget; rotate it on Render after the pitch.
+- `PROBE_URL = "https://ai-visibility-engine.onrender.com/demo/probe"` — live engine
+  backend on Render (replaces the old same-origin `/demo/probe`).
+
+**Backend dependency (operator-side, on Render):** the `ai-visibility-engine`
+service must allow CORS from `https://aswhub.maxifidigital.com` — i.e. respond to
+the preflight with `Access-Control-Allow-Origin: https://aswhub.maxifidigital.com`
+and allow `POST` + the `Content-Type` / `X-Demo-Token` headers — or the browser
+blocks the cross-origin call. The on-load **sample render** (3/5 — Airspace World
+cited by ChatGPT and Perplexity) and "Safe demo (sample data)" view work
+regardless. To rotate the token or change the backend, edit those two constants in
+`public/CANSO-demo/index.html`.
 
 ## Event facts (for reference)
 
