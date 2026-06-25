@@ -59,10 +59,15 @@ passthrough — single-file (inline CSS/JS, embedded Maxifi wordmark) — and is
 - Design: Inter headings on IBM Plex Sans Light, official Maxifi Digital wordmark,
   lede + trust hero, conversion CTAs to `checkyourvisibility` / `aswhub`, and a
   "CANSO · Premium AI Visibility" citation ticker.
-- Live engine runs POST to `/demo/probe` (only on the ai-visibility-engine
-  backend); on the static host the page shows the seeded on-load sample render.
+- **Tokenised for live runs:** the page bakes `DEMO_TOKEN` and a Render
+  `PROBE_URL` (`https://ai-visibility-engine.onrender.com/demo/probe`), so the bare
+  `/CANSO-demo/` URL is pre-authorised (no `?token=` needed). The token ships in
+  public source — it's demo-scoped/rotatable. Live runs require the Render service
+  to allow **CORS** from `https://aswhub.maxifidigital.com`; the on-load sample
+  render works regardless. Edit the two constants in the page `<script>` to rotate
+  the token or change the backend.
 - **To edit:** change `public/CANSO-demo/index.html` directly (single source); keep
-  `docs/aeo-demo-presets.md` in sync if the brand/queries change.
+  `docs/aeo-demo-presets.md` in sync if the brand/queries/token change.
 
 ## Monitoring & automation (see `MONITORING.md`)
 Two Claude Code on the web routines track indexing/citation health:
