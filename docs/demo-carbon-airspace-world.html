@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Maxifi Digital — AI Visibility, live</title>
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap");
   /* ════════ IBM CARBON THEME · white canvas · Blue 60 (#0f62fe) accent ════════
      The /demo page is themed on the IBM Carbon design system: white canvas,
      IBM Plex type, sharp corners, and Blue 60 (#0f62fe) as the single
@@ -15,7 +15,6 @@
      background stays white. The 3-state result-badge colours are an invariant. */
   :root{
     --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
-    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
     --primary:#0f62fe; --primary-hover:#0050e6; --primary-active:#002d9c; --on-primary:#ffffff;
     --blue-40:#78a9ff;                 /* accessible blue on dark surfaces */
     --canvas:#ffffff;                  /* page background — white */
@@ -45,7 +44,7 @@
   .mx-section{padding:54px 0}
   .mx-section.is-tight{padding:28px 0}
   /* type */
-  .mx-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  .mx-eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.48px;text-transform:uppercase;
     color:var(--primary);font-weight:600;display:flex;align-items:center}
   .mx-eyebrow.is-gold{color:var(--ink-muted)}
   .mx-acc-line{display:inline-block;width:24px;height:1px;background:var(--primary);margin-right:12px}
@@ -56,7 +55,7 @@
   .mx-italic{font-style:italic}
   .mx-body{font-family:var(--sans);font-size:16px;line-height:1.55;color:var(--ink-muted)}
   .mx-body-lg{font-family:var(--sans);font-size:19px;line-height:1.5;color:var(--ink-muted)}
-  .mx-meta{font-family:var(--mono);font-size:12px;letter-spacing:.02em;color:var(--ink-subtle);text-transform:uppercase}
+  .mx-meta{font-family:var(--sans);font-size:12px;letter-spacing:.02em;color:var(--ink-subtle);text-transform:uppercase}
   .mx-num{font-variant-numeric:tabular-nums}
   /* buttons (Carbon — square, productive; 240ms curve) */
   .mx-btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:14px;
@@ -77,7 +76,7 @@
   .mx-card{background:var(--canvas);border:1px solid var(--hairline);border-radius:0;padding:24px;
     transition:border-color .22s ease}
   .mx-card:hover{border-color:var(--border-strong)}
-  .mx-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;
+  .mx-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:11px;
     letter-spacing:.06em;text-transform:uppercase;color:var(--ink-muted);padding:5px 10px;
     border:1px solid var(--hairline);border-radius:0;align-self:flex-start}
   .mx-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--primary)}
@@ -124,7 +123,7 @@
   input[type=text]::placeholder{color:var(--placeholder)}
   input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 2px rgba(15,98,254,.15)}
   .presets{margin:16px 0 2px;display:flex;flex-wrap:wrap;gap:8px}
-  .chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:none;
+  .chip{font-family:var(--sans);font-size:11px;letter-spacing:.04em;text-transform:none;
     border:1px solid var(--border-strong);background:transparent;color:var(--ink-muted);
     border-radius:0;padding:6px 12px;cursor:pointer;transition:border-color .16s,color .16s}
   .chip:hover{border-color:var(--primary);color:var(--primary)}
@@ -138,8 +137,8 @@
   .notice{margin-top:16px;padding:12px 14px;border-radius:0;font-size:14px;
     background:#fffaeb;color:#684e00;border-left:3px solid #f1c21b}
   .samplebar{margin-top:16px;padding:12px 14px;border-radius:0;font-size:12px;font-weight:600;
-    font-family:var(--mono);letter-spacing:.02em;background:#fffaeb;color:#684e00;border-left:3px solid #f1c21b}
-  .runmeta{margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+    font-family:var(--sans);letter-spacing:.02em;background:#fffaeb;color:#684e00;border-left:3px solid #f1c21b}
+  .runmeta{margin-top:26px;font-family:var(--sans);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
   .runmeta.live{color:#0e6027}
   .runmeta.sample{color:#8e6a00}
   /* summary */
@@ -149,7 +148,7 @@
     letter-spacing:-1px;color:var(--primary);font-variant-numeric:tabular-nums}
   .summary.s0 .score{color:var(--error)} .summary.s1 .score{color:#8e6a00}
   .summary.s2 .score{color:var(--primary)} .summary.s3 .score{color:#0e6027}
-  .summary .slab{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  .summary .slab{font-family:var(--sans);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
     color:var(--ink-subtle);margin-bottom:6px}
   .summary .headline{font-family:var(--sans);font-weight:400;font-size:19px;line-height:1.3;color:var(--ink)}
   /* tiles */
@@ -175,7 +174,7 @@
   .body{font-size:14px;line-height:1.5;white-space:pre-wrap;max-height:220px;overflow:auto;
     color:var(--ink-muted);background:var(--field);border:1px solid var(--hairline);border-radius:0;padding:12px}
   .cites{margin-top:2px}
-  .cites-head{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  .cites-head{font-family:var(--sans);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
     color:var(--ink-subtle);margin-bottom:5px}
   .cites-list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:3px}
   .cites-list li{font-size:12.5px;line-height:1.35}
@@ -203,7 +202,7 @@
   /* footer */
   footer{background:var(--canvas);border-top:1px solid var(--hairline);padding:40px 0}
   footer .frow{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-  footer .fnote{margin-top:18px;color:var(--ink-subtle);font-size:11px;line-height:1.7;font-family:var(--mono);
+  footer .fnote{margin-top:18px;color:var(--ink-subtle);font-size:11px;line-height:1.7;font-family:var(--sans);
     letter-spacing:.01em}
   /* CTA pulse — Carbon Blue 60 ring (per aeosimulator.css) */
   @keyframes ctaPulse{
@@ -244,7 +243,7 @@
   <p class="mx-h2" style="max-width:800px;margin:0">See exactly what ChatGPT, Claude, Gemini, Perplexity and Google's AI Overviews say about a brand — <span class="mx-italic" style="color:var(--primary)">live, word for word.</span> If the answer engines don't cite you, your highest-value clients never hear your name.</p>
   <div class="cta-row" style="margin-top:34px">
     <a class="mx-btn" href="https://checkyourvisibility.maxifidigital.com" target="_blank" rel="noopener">Check your visibility <span class="mx-arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>
-    <a class="mx-btn is-secondary" href="https://aswhub.maxifidigital.com" target="_blank" rel="noopener">See a live example — the ASW Hub</a>
+    <a class="mx-btn is-secondary" href="https://aswhub.maxifidigital.com" target="_blank" rel="noopener">See a live example</a>
   </div>
 </div></section>
 
