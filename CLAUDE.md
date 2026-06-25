@@ -45,10 +45,10 @@ and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy)
   Top of the queue: rolling the canonical Session page pattern across the remaining
   `src/sessions/*.md` files.
 
-## AEO sales demo — `/demo/` (Airspace World proof-of-reference)
+## AEO sales demo — `/CANSO-demo/` (Airspace World proof-of-reference)
 A self-contained, buyer-facing **AI-visibility showcase** lives at
-`public/demo/index.html` and is served at **`/demo/`**
-(<https://aswhub.maxifidigital.com/demo/>). It is copied verbatim by the `public/`
+`public/CANSO-demo/index.html` and is served at **`/CANSO-demo/`**
+(<https://aswhub.maxifidigital.com/CANSO-demo/>). It is copied verbatim by the `public/`
 passthrough — single-file (inline CSS/JS, embedded Maxifi wordmark) — and is
 **not** in the nav, collections, or sitemap, so it doesn't touch the reference hub.
 - It reconstructs the preset landing for the sibling `ai-visibility-engine`
@@ -61,7 +61,7 @@ passthrough — single-file (inline CSS/JS, embedded Maxifi wordmark) — and is
   "CANSO · Premium AI Visibility" citation ticker.
 - Live engine runs POST to `/demo/probe` (only on the ai-visibility-engine
   backend); on the static host the page shows the seeded on-load sample render.
-- **To edit:** change `public/demo/index.html` directly (single source); keep
+- **To edit:** change `public/CANSO-demo/index.html` directly (single source); keep
   `docs/aeo-demo-presets.md` in sync if the brand/queries change.
 
 ## Monitoring & automation (see `MONITORING.md`)
