@@ -26,7 +26,7 @@ heroEyebrow: "Keynote · 25 May 2026 · 14:15 — 14:45 BST"
 heroMeta:
   - label: "Speaker"
     value: "<strong>Kiko Dontchev</strong><br>Vice President of Launch, SpaceX"
-  - label: "Date &amp; Time"
+  - label: "Date & Time"
     value: "Monday, 25 May 2026<br>14:15 — 14:45 BST"
   - label: "Venue"
     value: "Myriad Crystal Centre<br>Lisbon, Portugal"
@@ -47,7 +47,7 @@ glanceItems:
     value: "Vision → Delivery"
     sub: "Skies in Transition"
   - label: "Topic Cluster"
-    value: "Innovation &amp; Scale"
+    value: "Innovation & Scale"
     sub: "Cross-industry transfer"
 
 # --- Left sidebar TOC ---
@@ -79,7 +79,7 @@ tocItems:
 
 # --- Right sidebar ---
 topicCluster:
-  title: "Innovation &amp; Scale in ATM"
+  title: "Innovation & Scale in ATM"
   meta: "14 sessions · 8 speakers · ASW 2026"
   url: "/themes/innovation-future-skies/"
 
