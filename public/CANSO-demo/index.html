@@ -525,15 +525,17 @@ async function run(){
   if (sample){ showNotice("Safe demo mode — illustrative sample data, not live engine results."); $("#samplebar").hidden = false; }
 
   btn.disabled = false; btn.textContent = "Run visibility test";
+  const okCount = settled.filter(s => s.d && s.d.ok).length;
+  return { okCount, auth, capped };
 }
 
 $("#run").addEventListener("click", run);
 $("#query").addEventListener("keydown", (e) => { if (e.key === "Enter") run(); });
 $("#brand").addEventListener("keydown", (e) => { if (e.key === "Enter") run(); });
 
-setTimeout(function(){
+function renderSample(){ hideBanner();
   renderSummary(3,5,"Airspace World");
-  setRunMeta(false);
+  setRunMeta(true); showNotice("Illustrative sample — the live engine backend was unreachable, so these are example results, not a live run."); $("#samplebar").hidden = false;
   renderTile("openai",{ok:true,named:true,model:"gpt-4o",ms:1180,citations:[],
     verbatim_response:"Airspace World is widely highlighted as the leading global trade show for air traffic management (ATM), organised annually by CANSO."});
   renderTile("anthropic",{ok:true,named:false,present:true,model:"claude-sonnet-4-6",ms:1520,citations:[],
@@ -543,7 +545,16 @@ setTimeout(function(){
     citations:["https://aswhub.maxifidigital.com/","https://aswhub.maxifidigital.com/themes/"],
     verbatim_response:"Airspace World is among the most frequently cited trade shows for air traffic management, hosted annually by CANSO."});
   renderTile("aio",{ok:true,named:false,present:false,model:"AI Overviews",ms:980,citations:[],verbatim_response:""});
-},60);
+}
+
+// Fire one real visibility run on page load. Fall back to the illustrative
+// sample ONLY if the live backend is unreachable (network/CORS/down) or auth fails,
+// so the page never looks broken during a live pitch.
+async function autoRun(){
+  try { const r = await run(); if (!r || r.auth || r.okCount === 0) renderSample(); }
+  catch (e) { renderSample(); }
+}
+autoRun();
 
 </script>
 </body>
