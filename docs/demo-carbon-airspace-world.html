@@ -221,6 +221,22 @@
   /* ── Type pairing — Inter for headings, IBM Plex Sans Light 300 for the rest ── */
   h1,h2,h3,h4,h5,h6,.mx-display,.mx-h2,.summary .headline,.summary .score,.tname{font-family:var(--heading)}
   .mx-eyebrow,.mx-btn,.status,.navlinks a,.reslink,.toggle{font-weight:300}
+  /* ── Proof-of-reference citation ticker (CANSO premium visibility) ── */
+  .ticker{display:flex;align-items:stretch;overflow:hidden;background:var(--layer);border-bottom:1px solid var(--hairline);font-family:var(--sans)}
+  .ticker-tag{flex:none;display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:#fff;font-size:11px;font-weight:300;letter-spacing:.5px;text-transform:uppercase;padding:0 18px;white-space:nowrap}
+  .ticker-dot{width:7px;height:7px;border-radius:50%;background:#42be65;box-shadow:0 0 0 0 rgba(66,190,101,.5);animation:tkPulse 2s ease-out infinite}
+  .ticker-viewport{position:relative;flex:1;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+  .ticker-track{display:inline-flex;align-items:center;white-space:nowrap;padding:9px 0;will-change:transform;animation:tickerScroll 46s linear infinite}
+  .ticker:hover .ticker-track{animation-play-state:paused}
+  .tk-set{display:inline-flex;align-items:center}
+  .ticker-item{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;color:var(--ink-muted);padding:0 6px;white-space:nowrap}
+  .ticker-item .tk-q{font-style:italic}
+  .ticker-item .tk-cite{display:inline-flex;align-items:center;gap:5px;color:#0e6027;letter-spacing:.2px}
+  .ticker-sep{color:var(--border-strong);font-size:8px;padding:0 16px}
+  @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes tkPulse{0%{box-shadow:0 0 0 0 rgba(66,190,101,.5)}70%,100%{box-shadow:0 0 0 6px rgba(66,190,101,0)}}
+  @media(max-width:680px){.ticker-tag{font-size:10px;padding:0 12px;letter-spacing:.3px}}
+  @media (prefers-reduced-motion: reduce){.ticker-track{animation:none}.ticker-dot{animation:none}}
 </style>
 </head>
 <body>
@@ -229,18 +245,17 @@
   <a class="mx-logo" href="https://maxifidigital.com" target="_blank" rel="noopener">
     <span class="mx-logo-img" role="img" aria-label="Maxifi Digital"></span>
   </a>
-  <nav class="navlinks">
-    <a href="https://maxifidigital.com/#services">Services</a>
-    <a href="https://maxifidigital.com/#framework">Framework</a>
-    <a href="https://maxifidigital.com/#insights">Insights</a>
-    <a href="https://maxifidigital.com/#about">About</a>
-  </nav>
   <div class="navend">
-    <a class="reslink" href="https://maxifidigital.com">Resources</a>
-    <a class="mx-btn is-sm" href="https://maxifidigital.com/#audit">Book an audit
+    <a class="mx-btn is-sm" href="https://checkyourvisibility.maxifidigital.com" target="_blank" rel="noopener">Check your visibility
       <span class="mx-arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>
   </div>
 </div></div></header>
+
+<!-- proof-of-reference citation ticker — CANSO premium visibility -->
+<div class="ticker" aria-label="Live AI citation feed — Airspace World cited across answer engines">
+  <span class="ticker-tag"><span class="ticker-dot"></span>CANSO · Premium AI Visibility</span>
+  <div class="ticker-viewport"><div class="ticker-track"><span class="tk-set"><span class="ticker-item"><span class="tk-q">“leading global trade show for air traffic management”</span><span class="tk-cite">✓ ChatGPT</span></span><span class="ticker-sep">◆</span><span class="ticker-item"><span class="tk-q">“CANSO’s flagship annual ATM event”</span><span class="tk-cite">✓ Perplexity</span></span><span class="ticker-sep">◆</span><span class="ticker-item"><span class="tk-q">“where air navigation service providers meet”</span><span class="tk-cite">✓ Gemini</span></span><span class="ticker-sep">◆</span><span class="ticker-item"><span class="tk-q">“biggest ATM &amp; airspace exhibition in Europe”</span><span class="tk-cite">✓ Google AI Overviews</span></span><span class="ticker-sep">◆</span><span class="ticker-item"><span class="tk-q">“SESAR, U-space &amp; remote towers under one roof”</span><span class="tk-cite">✓ ChatGPT</span></span><span class="ticker-sep">◆</span><span class="ticker-item"><span class="tk-q">“when &amp; where is Airspace World 2026”</span><span class="tk-cite">✓ Perplexity</span></span><span class="ticker-sep">◆</span></span><span class="tk-set" aria-hidden="true"><span class="ticker-item"><span class="tk-q">“leading global trade show for air traffic management”</span><span class="tk-cite">✓ ChatGPT</span></span><span class="ticker-sep">◆</span><span class="ticker-item"><span class="tk-q">“CANSO’s flagship annual ATM event”</span><span class="tk-cite">✓ Perplexity</span></span><span class="ticker-sep">◆</span><span class="ticker-item"><span class="tk-q">“where air navigation service providers meet”</span><span class="tk-cite">✓ Gemini</span></span><span class="ticker-sep">◆</span><span class="ticker-item"><span class="tk-q">“biggest ATM &amp; airspace exhibition in Europe”</span><span class="tk-cite">✓ Google AI Overviews</span></span><span class="ticker-sep">◆</span><span class="ticker-item"><span class="tk-q">“SESAR, U-space &amp; remote towers under one roof”</span><span class="tk-cite">✓ ChatGPT</span></span><span class="ticker-sep">◆</span><span class="ticker-item"><span class="tk-q">“when &amp; where is Airspace World 2026”</span><span class="tk-cite">✓ Perplexity</span></span><span class="ticker-sep">◆</span></span></div></div>
+</div>
 
 <section class="hero"><div class="hero-glow" aria-hidden="true"></div><div class="mx-container">
   <div class="mx-eyebrow" style="margin-bottom:22px"><span class="mx-acc-line"></span>AI Visibility · Live Demonstration</div>
