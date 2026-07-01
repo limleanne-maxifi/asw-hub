@@ -3,7 +3,34 @@
 **Branch:** merge target is `main`. Active feature branch: `claude/wizardly-feynman-g0ra6h` (AEO hardening; open until merged).
 **Stack:** Eleventy (Nunjucks + Markdown) → Netlify. Source in `src/`, output via 11ty.
 **Canonical domain:** `https://aswhub.maxifidigital.com/`
-**Last updated:** 2026-06-23
+**Last updated:** 2026-07-01
+
+## ⏩ CANSO demo — real auto-run on load + live-response verification (2026-07-01)
+
+The `/CANSO-demo/` sales page (`public/CANSO-demo/index.html`) now **fires one real
+visibility probe on page load** (`autoRun()`), so a prospect's first view is a
+genuine live run (green `● LIVE · queried …` stamp), not the old scripted sample.
+If the Render backend is unreachable / CORS-blocked / auth-fails, it falls back to a
+clearly-labelled illustrative sample (`renderSample()`) so the page never looks
+broken — the sample is never passed off as live. Also this pass: the whole page
+switched to **Inter** throughout, the Maxifi wordmark was enlarged, and a hero
+line-break was added. Merged to `main` (PRs #32–#35).
+
+**▶ Action for the next session — verify the demo responses are genuinely live.**
+The auto-run only returns real engine output if the Render `ai-visibility-engine`
+service is in live mode: `DEMO_SAFE_MODE=false` **and** each engine's API key set
+(OpenAI / Anthropic / Google-Gemini / Perplexity; AI Overviews + Copilot come from a
+SERP layer, not official APIs). Missing keys or safe mode ⇒ labelled sample, not
+real. **Verify in a FRESH session** (env vars + egress allowlist only apply at
+container start) with the ready-to-paste prompt **`routines/demo-live-verify.md`**.
+
+| Step | State | Notes |
+|---|---|---|
+| Backend `DEMO_SAFE_MODE=false` | ⏳ verify | else all runs return sample data |
+| Engine API keys set on Render | ⏳ verify | OpenAI, Anthropic, Google/Gemini, Perplexity — exact env names in `ai-visibility-engine` → `src/visibility_engine/demo.py` |
+| `ai-visibility-engine.onrender.com` on egress allowlist | ⏳ verify | needed to curl `/demo/probe` from a session; was blocked in the session that shipped this |
+| CORS allows `https://aswhub.maxifidigital.com` | ⏳ verify | else the browser blocks the cross-origin probe |
+| Live signal confirmed | ⏳ | every tile `ok` + real model id (no `· sample`) + non-empty text; page reads `● LIVE · queried …` |
 
 ## ⏩ AEO hardening pass — structured data, meta layer, canonical, citation table (2026-06-23)
 
