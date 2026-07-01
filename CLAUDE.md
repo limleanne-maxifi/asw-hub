@@ -56,18 +56,36 @@ passthrough — single-file (inline CSS/JS, embedded Maxifi wordmark) — and is
   preset queries. The exact values to paste into that app's `DEMO_PRESET_BRAND` /
   `DEMO_PRESET_QUERY` / `DEMO_PRESET_QUERIES` env vars live in
   `docs/aeo-demo-presets.md`.
-- Design: Inter headings on IBM Plex Sans Light, official Maxifi Digital wordmark,
+- Design: Inter throughout, official Maxifi Digital wordmark,
   lede + trust hero, conversion CTAs to `checkyourvisibility` / `aswhub`, and a
   "CANSO · Premium AI Visibility" citation ticker.
 - **Tokenised for live runs:** the page bakes `DEMO_TOKEN` and a Render
   `PROBE_URL` (`https://ai-visibility-engine.onrender.com/demo/probe`), so the bare
   `/CANSO-demo/` URL is pre-authorised (no `?token=` needed). The token ships in
   public source — it's demo-scoped/rotatable. Live runs require the Render service
-  to allow **CORS** from `https://aswhub.maxifidigital.com`; the on-load sample
-  render works regardless. Edit the two constants in the page `<script>` to rotate
-  the token or change the backend.
+  to allow **CORS** from `https://aswhub.maxifidigital.com`. Edit the two constants
+  in the page `<script>` to rotate the token or change the backend.
+- **Auto-runs on page load:** `autoRun()` fires one real probe (same path as the Run
+  button — pre-filled brand + default query, baked token, `safe:false`) the moment
+  the page loads, so a prospect's first view is genuine engine output with the green
+  `● LIVE · queried …` stamp. If the backend is unreachable (network/CORS/down) or
+  auth fails, it falls back to a **clearly-labelled illustrative sample**
+  (`renderSample()`: sample bar + "backend was unreachable" notice + `Sample data —
+  illustrative` run-meta) so the page never looks broken — the sample is never passed
+  off as live. Note every page load spends real (paid) engine budget against the
+  Render daily cap; once capped, runs return the labelled sample.
+- **⚠ Verify responses are LIVE before any pitch.** The auto-run only returns genuine
+  results if the Render backend is in live mode: `DEMO_SAFE_MODE=false` **and** each
+  engine's API key set (OpenAI / Anthropic / Google-Gemini / Perplexity; AI Overviews
+  + Copilot come from a SERP layer, not official APIs). Missing keys or safe mode ⇒
+  the backend returns sample data (correctly labelled, but not real). Verify in a
+  **fresh** session — env/allowlist only apply at container start — with the
+  ready-to-paste prompt `routines/demo-live-verify.md`. Live = every tile shows `ok`,
+  a real model id (no `· sample`), non-empty text, and the page reads `● LIVE ·
+  queried …`.
 - **To edit:** change `public/CANSO-demo/index.html` directly (single source); keep
-  `docs/aeo-demo-presets.md` in sync if the brand/queries/token change.
+  `docs/aeo-demo-presets.md` and `routines/demo-live-verify.md` in sync if the
+  brand/queries/token/backend change.
 
 ## Monitoring & automation (see `MONITORING.md`)
 Two Claude Code on the web routines track indexing/citation health:

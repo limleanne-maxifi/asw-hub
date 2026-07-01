@@ -28,8 +28,8 @@ The seeded showcase page is published with the site and is publicly reachable:
 
 It is the IBM-Carbon `/demo` design reference reworked into an Airspace World
 proof-of-reference sales page: Airspace-World-seeded brand + buyer-intent preset
-queries, lede + trust hero, official Maxifi Digital wordmark, Inter headings on
-IBM Plex Sans Light, conversion CTAs to `checkyourvisibility` / `aswhub`, and a
+queries, lede + trust hero, official Maxifi Digital wordmark, Inter throughout,
+conversion CTAs to `checkyourvisibility` / `aswhub`, and a
 "CANSO · Premium AI Visibility" citation ticker.
 
 ### Live-run wiring (tokenised)
@@ -48,10 +48,17 @@ link (no `?token=` needed). In the page `<script>`:
 service must allow CORS from `https://aswhub.maxifidigital.com` — i.e. respond to
 the preflight with `Access-Control-Allow-Origin: https://aswhub.maxifidigital.com`
 and allow `POST` + the `Content-Type` / `X-Demo-Token` headers — or the browser
-blocks the cross-origin call. The on-load **sample render** (3/5 — Airspace World
-cited by ChatGPT and Perplexity) and "Safe demo (sample data)" view work
-regardless. To rotate the token or change the backend, edit those two constants in
-`public/CANSO-demo/index.html`.
+blocks the cross-origin call. **The page now fires one real probe on page load**
+(`autoRun()`), so the first view is a genuine live run with the `● LIVE · queried …`
+stamp; it falls back to a clearly-labelled **illustrative sample** only if the
+backend is unreachable / CORS-blocked / auth fails, so the page never looks broken.
+The sample is never presented as live. To rotate the token or change the backend,
+edit those two constants in `public/CANSO-demo/index.html`.
+
+**Verify responses are live before a pitch.** Genuine results require the Render
+backend in live mode (`DEMO_SAFE_MODE=false` + each engine's API key set) — else it
+returns labelled sample data. Verify in a **fresh** Claude Code on the web session
+using the ready-to-paste prompt `routines/demo-live-verify.md`.
 
 ## Event facts (for reference)
 
