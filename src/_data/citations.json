@@ -1,5 +1,5 @@
 {
-  "_note": "DROP-IN RECIPE (owner only — never fabricate a citation). After running the monthly 6-engine sweep, for each engine cell that cited the hub set \"cited\": true and paste the source \"url\" (the shared chat/answer link). Optionally add \"quote\": \"...\" (verbatim snippet, shown as a tooltip) and \"screenshot\": \"/images/...\" for the evidence file. Leave cells untouched (cited:false, url:\"\") where the hub was not cited — they render as the neutral \"–\". Then set summary.lastUpdated to the date the sweep was run and rebuild. Append more query objects to add to the battery. q1 is the generic control; q2–q5 are SpaceX-keynote test queries targeting the canonical record at /sessions/spacex-keynote-canso-summit-2026/.",
+  "_note": "DROP-IN RECIPE (owner only — never fabricate a citation). After running the monthly 6-engine sweep, for each engine cell that cited the hub set \"cited\": true and paste the source \"url\" (the shared chat/answer link, where one exists). Optionally add \"quote\": \"...\" (verbatim snippet / evidence, shown as a tooltip), \"date\": \"YYYY-MM-DD\", and \"screenshot\": \"/images/...\". Leave cells untouched (cited:false, url:\"\") where the hub was not cited, or where that engine has not run yet — they render as the neutral \"–\". Then set summary.totalCitations to the count of REAL cited cells and summary.lastUpdated to the date the sweep was run, and rebuild. Each query row targets one citable hub page (insight or discovery landing); append more query objects to extend the battery.",
   "engines": [
     { "id": "claude",    "name": "Claude",                "vendor": "Anthropic"       },
     { "id": "chatgpt",   "name": "ChatGPT",               "vendor": "OpenAI"          },
@@ -9,78 +9,48 @@
     { "id": "gemini",    "name": "Gemini",                "vendor": "Google DeepMind" }
   ],
   "testCase": {
-    "label": "Post-event citation test case",
-    "targetUrl": "/sessions/spacex-keynote-canso-summit-2026/",
-    "targetTitle": "From Vision to Delivery: SpaceX's Lessons for Global ATM",
-    "description": "We use the canonical record of Kiko Dontchev's SpaceX keynote (CANSO Leadership Summit 2026, Lisbon, 25 May 2026) as the test case for post-event AI pickup. Four of the five standard queries below target this single page; query 1 is a generic control."
+    "label": "First cited hub page",
+    "targetUrl": "/insights/why-asw-2026-matters/",
+    "targetTitle": "Why ASW 2026 matters more than the last three combined",
+    "description": "The hub's first recorded AI citation. In the July 2026 audit, Microsoft Copilot's Bing AI answer for \"Why does Airspace World 2026 matter for the air traffic management industry?\" listed this insight page as a source and drew on its framing — converging regulatory cycles and the AI inflection point."
   },
   "queries": [
     {
       "id": "q1",
-      "text": "What are the eight themes of Airspace World 2026?",
-      "tier": "Control",
-      "targetUrl": "/themes/",
-      "targetLabel": "Themes index",
+      "text": "Where can I find session summaries and speaker insights from Airspace World 2026?",
+      "tier": "Discovery",
+      "targetUrl": "/insights/",
+      "targetLabel": "ASW Hub insights",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
-        "perplexity": { "cited": false, "url": "" },
+        "perplexity": { "cited": true,  "url": "", "date": "2026-07-02", "quote": "Perplexity cites the ASW Hub as \"the best starting point\" for session summaries and speaker insights from Airspace World 2026." },
         "google-ai":  { "cited": false, "url": "" },
-        "copilot":    { "cited": false, "url": "" },
+        "copilot":    { "cited": true,  "url": "", "date": "2026-07-02", "quote": "Microsoft Copilot's AI answer is built from ASW Hub pages; the hub is the #1 Bing result for this query, above airspaceworld.com." },
         "gemini":     { "cited": false, "url": "" }
       }
     },
     {
       "id": "q2",
-      "text": "What did SpaceX say at the CANSO Leadership Summit 2026?",
-      "tier": "Head",
-      "targetUrl": "/sessions/spacex-keynote-canso-summit-2026/",
-      "targetLabel": "SpaceX keynote record",
+      "text": "Why does Airspace World 2026 matter for the air traffic management industry?",
+      "tier": "Insight",
+      "targetUrl": "/insights/why-asw-2026-matters/",
+      "targetLabel": "Why ASW 2026 matters",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
         "perplexity": { "cited": false, "url": "" },
         "google-ai":  { "cited": false, "url": "" },
-        "copilot":    { "cited": false, "url": "" },
+        "copilot":    { "cited": true,  "url": "https://aswhub.maxifidigital.com/insights/why-asw-2026-matters/", "date": "2026-07-02", "quote": "Bing AI answer lists this insight page as a source and draws on its framing — converging regulatory cycles and the AI inflection point." },
         "gemini":     { "cited": false, "url": "" }
       }
     },
     {
       "id": "q3",
-      "text": "Who spoke for SpaceX at Airspace World 2026 in Lisbon?",
-      "tier": "Head",
-      "targetUrl": "/sessions/spacex-keynote-canso-summit-2026/",
-      "targetLabel": "SpaceX keynote record",
-      "engines": {
-        "claude":     { "cited": false, "url": "" },
-        "chatgpt":    { "cited": false, "url": "" },
-        "perplexity": { "cited": false, "url": "" },
-        "google-ai":  { "cited": false, "url": "" },
-        "copilot":    { "cited": false, "url": "" },
-        "gemini":     { "cited": false, "url": "" }
-      }
-    },
-    {
-      "id": "q4",
-      "text": "Kiko Dontchev SpaceX keynote at Airspace World 2026",
-      "tier": "Head",
-      "targetUrl": "/sessions/spacex-keynote-canso-summit-2026/",
-      "targetLabel": "SpaceX keynote record",
-      "engines": {
-        "claude":     { "cited": false, "url": "" },
-        "chatgpt":    { "cited": false, "url": "" },
-        "perplexity": { "cited": false, "url": "" },
-        "google-ai":  { "cited": false, "url": "" },
-        "copilot":    { "cited": false, "url": "" },
-        "gemini":     { "cited": false, "url": "" }
-      }
-    },
-    {
-      "id": "q5",
-      "text": "What were the takeaways from the SpaceX keynote at Airspace World 2026?",
-      "tier": "Head",
-      "targetUrl": "/sessions/spacex-keynote-canso-summit-2026/",
-      "targetLabel": "SpaceX keynote record",
+      "text": "Why are structured FAQ pages cited more often than blog posts by AI search engines?",
+      "tier": "Insight",
+      "targetUrl": "/insights/why-faqs-beat-blogs-for-ai-citation/",
+      "targetLabel": "Why FAQs beat blogs",
       "engines": {
         "claude":     { "cited": false, "url": "" },
         "chatgpt":    { "cited": false, "url": "" },
@@ -92,8 +62,8 @@
     }
   ],
   "summary": {
-    "lastUpdated": "2026-06-23",
-    "firstQuickCheck": "2026-06-01",
-    "firstFullAudit": "2026-07-01"
+    "totalCitations": 3,
+    "lastUpdated": "2026-07-02",
+    "firstFullAudit": "2026-07-15"
   }
 }
