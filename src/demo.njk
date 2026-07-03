@@ -375,7 +375,7 @@ eleventyExcludeFromCollections: true
 
   <div class="summary" id="summary" hidden>
     <div class="score" id="score">–</div>
-    <div><div class="slab">Visibility score</div><div class="headline" id="headline"></div></div>
+    <div><div class="slab" id="scorelab">Visibility score</div><div class="headline" id="headline"></div></div>
   </div>
 
   {#- email gate: appears with results; unblurs the gated engines + score -#}
@@ -683,14 +683,27 @@ $("#grid").addEventListener("click", (e) => {
   body.hidden = !body.hidden;
   e.target.textContent = body.hidden ? "Show response" : "Hide response";
 });
-function renderSummary(named, total, brand){
-  const el = $("#summary"); el.hidden = false;
-  $("#score").textContent = named + " / " + total;
+// Score out of the engines that actually responded, so an engine outage
+// reads as "n of N responding" rather than silently deflating the score.
+function renderSummary(named, responding, brand){
+  const el = $("#summary");
+  const total = LIVE_ENGINES.length;
+  if (!responding){
+    el.hidden = true;
+    showNotice("No engines responded on this run — that's a connection issue, not a visibility verdict. Try again in a moment.");
+    return;
+  }
+  el.hidden = false;
+  $("#score").textContent = named + " / " + responding;
+  $("#scorelab").textContent = responding < total
+    ? "Visibility score · " + responding + " of " + total + " engines responding"
+    : "Visibility score";
+  const qual = responding < total ? " responding" : "";
   let cls, msg;
-  if (named === 0){ cls = "s0"; msg = "Invisible — not one engine cited " + brand + ". This is the gap."; }
-  else if (named <= total/2){ cls = "s1"; msg = "Barely visible — AI cites " + brand + " on only " + named + " of " + total + " engines."; }
-  else if (named < total){ cls = "s2"; msg = "Partial visibility — AI cites " + brand + " on some engines but misses you on others."; }
-  else { cls = "s3"; msg = "Strong visibility — every engine cited " + brand + ". Now defend that lead."; }
+  if (named === 0){ cls = "s0"; msg = "Invisible — not one" + qual + " engine cited " + brand + ". This is the gap."; }
+  else if (named <= responding/2){ cls = "s1"; msg = "Barely visible — AI cites " + brand + " on only " + named + " of " + responding + qual + " engines."; }
+  else if (named < responding){ cls = "s2"; msg = "Partial visibility — AI cites " + brand + " on some" + qual + " engines but misses you on others."; }
+  else { cls = "s3"; msg = "Strong visibility — every" + qual + " engine cited " + brand + ". Now defend that lead."; }
   el.classList.remove("s0","s1","s2","s3"); el.classList.add(cls);
   $("#headline").textContent = msg;
 }
@@ -786,13 +799,14 @@ async function run(){
     if (d.ok && d.named) named++;
   });
 
+  const okCount = settled.filter(s => s.d && s.d.ok).length;
   if (auth){ showBanner("Invalid or missing demo token — check your link."); }
   else if (capped){ showBanner(capMsg || "Daily demo budget reached."); }
-  else { renderSummary(named, LIVE_ENGINES.length, brand); setRunMeta(sample); applyGate(); }
+  else if (okCount === 0){ renderSummary(0, 0, brand); }   // no responders: notice, no score, no LIVE stamp
+  else { renderSummary(named, okCount, brand); setRunMeta(sample); applyGate(); }
   if (sample){ showNotice("Safe demo mode — illustrative sample data, not live engine results."); $("#samplebar").hidden = false; }
 
   btn.disabled = false; btn.textContent = "Run visibility test";
-  const okCount = settled.filter(s => s.d && s.d.ok).length;
   return { okCount, auth, capped };
 }
 $("#run").addEventListener("click", run);
@@ -804,7 +818,7 @@ $("#brand").addEventListener("keydown", (e) => { if (e.key === "Enter") run(); }
 function renderSample(){
   hideBanner();
   const brand = $("#brand").value.trim() || "the brand";
-  renderSummary(2, 5, brand);
+  renderSummary(2, 4, brand);   // the illustrative set has 4 responding tiles (one shows an error)
   setRunMeta(true);
   showNotice("Illustrative sample — the live engine backend was unreachable, so these are example results, not a live run.");
   $("#samplebar").hidden = false;
