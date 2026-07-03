@@ -1,0 +1,27 @@
+{
+  "slug": "ortus",
+  "client_name": "The Ortus Club",
+  "sector_label": "Executive events · B2B",
+  "ticker_quotes": [
+    { "quote": "REPLACE — run mini-audit", "engine": "ChatGPT", "cited": false },
+    { "quote": "REPLACE — run mini-audit", "engine": "Perplexity", "cited": false },
+    { "quote": "REPLACE — run mini-audit", "engine": "Gemini", "cited": false },
+    { "quote": "REPLACE — run mini-audit", "engine": "Google AI Overviews", "cited": false }
+  ],
+  "brand_default": "The Ortus Club",
+  "query_default": "best executive roundtable companies",
+  "preset_queries": [
+    "best executive roundtable companies",
+    "who organises C-level dinners in APAC",
+    "knowledge-sharing events for CIOs Singapore",
+    "Ortus Club alternatives"
+  ],
+  "competitor_names": [],
+  "value_defaults": { "M": 100, "A": 0.5, "X": 0.05, "I_influence": 0.05, "F": 1.0, "I_income": 20000, "X_comp": 0.5, "fee": 4500 },
+  "case_links": {
+    "live_hub": "https://aswhub.maxifidigital.com",
+    "citation_report": "https://aswhub.maxifidigital.com/citation-report/"
+  },
+  "booking_url": "https://lunacal.ai/maxifidigital",
+  "snapshot_url": "https://checkyourvisibility.maxifidigital.com"
+}

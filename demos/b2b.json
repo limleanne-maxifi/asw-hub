@@ -1,0 +1,27 @@
+{
+  "slug": "b2b",
+  "client_name": "Your brand",
+  "sector_label": "B2B",
+  "ticker_quotes": [
+    { "quote": "best providers in your category", "engine": "ChatGPT", "cited": false },
+    { "quote": "who should we shortlist for this?", "engine": "Perplexity", "cited": false },
+    { "quote": "recommended partners for our sector", "engine": "Gemini", "cited": false },
+    { "quote": "alternatives to the market leader", "engine": "Google AI Overviews", "cited": false }
+  ],
+  "brand_default": "",
+  "query_default": "Who are the best providers in this category?",
+  "preset_queries": [
+    "Who are the best providers in this category?",
+    "Which company should we shortlist for this?",
+    "Who do experts recommend in this sector?",
+    "What are the alternatives to the market leader?"
+  ],
+  "competitor_names": [],
+  "value_defaults": { "M": 100, "A": 0.5, "X": 0.05, "I_influence": 0.05, "F": 1.0, "I_income": 20000, "X_comp": 0.5, "fee": 4500 },
+  "case_links": {
+    "live_hub": "https://aswhub.maxifidigital.com",
+    "citation_report": "https://aswhub.maxifidigital.com/citation-report/"
+  },
+  "booking_url": "https://lunacal.ai/maxifidigital",
+  "snapshot_url": "https://checkyourvisibility.maxifidigital.com"
+}
