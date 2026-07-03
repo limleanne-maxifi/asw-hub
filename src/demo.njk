@@ -584,6 +584,7 @@ $("#video-poster").addEventListener("click", async () => {
       const doc = frame.contentDocument;
       $$("a,button", doc).forEach((el) => {
         if (/calculate\s+your\s+visibility\s+value/i.test(el.textContent || "")) {
+          el.onclick = null;   // the explainer binds its view-swap via the onclick property
           el.addEventListener("click", (ev) => {
             ev.preventDefault(); ev.stopImmediatePropagation();
             document.getElementById("calculator").scrollIntoView({ behavior: "smooth" });

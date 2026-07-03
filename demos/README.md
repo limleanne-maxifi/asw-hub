@@ -35,11 +35,15 @@ page (hero, ticker, preset queries, calculator seeds, CTAs) comes from the confi
 
 ## Explainer video
 
-The embed slot loads `/demo-assets/visibility-value-explainer.html` on click.
-Copy the final `Visibility_Value_Model_Explainer.html` (from
-`MD_strategic-command-centre`) to `public/demo-assets/visibility-value-explainer.html`
-and put `maxifi-logo-black.png` next to it. Until the file exists, the poster
-degrades to an "explainer coming soon" note — the page never looks broken.
+The embed slot loads `/demo-assets/visibility-value-explainer.html` on click
+(poster first, no autoplay; captions are always visible in the player). The file
+ships in this repo — it is the final `Visibility_Value_Model_Explainer.html`
+from `MD_strategic-command-centre`, with one change: when embedded in a demo
+page, its final "Calculate Your Visibility Value" CTA scrolls to the page's
+MAXIFI calculator instead of swapping to the explainer's own calculator view
+(standalone behaviour is unchanged). `maxifi-logo-black.png` sits next to it.
+If a future re-export replaces the file, re-apply that CTA patch (see the
+`btnCalc` handler) — the template also rebinds it at runtime as a fallback.
 
 ## Email gate
 
