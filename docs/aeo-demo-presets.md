@@ -21,6 +21,10 @@ FAQ, themes, and session briefs.
 The seeded showcase page is published with the site and is publicly reachable:
 
 - **Live (production):** <https://aswhub.maxifidigital.com/CANSO-demo/>
+- **Config-driven sibling:** the same brand + preset queries also live in
+  `demos/canso.json`, rendered through the generic template at
+  <https://aswhub.maxifidigital.com/demo/canso/> — keep the two in sync if the
+  presets ever change (see `demos/README.md`).
 - **Source:** `public/CANSO-demo/index.html` — a self-contained single-file page
   (inline CSS/JS, embedded Maxifi wordmark) copied verbatim to the site root by
   Eleventy's `public/` passthrough, so it is **not** in the nav, collections, or

@@ -41,9 +41,47 @@ and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy)
   merged. Remaining is operator-side activation only (secrets + egress allowlist +
   routine schedule), verified from a fresh session — see the activation checklist
   and `routines/fresh-session-verify.md` in `HANDOFF.md`.
+- The **generic demo template** (`/demo/{slug}` from `demos/*.json` — see the
+  section below) is merged (PR #41, 2026-07-03) and live.
 - **See `HANDOFF.md`** for what just shipped and the prioritised next-step backlog.
-  Top of the queue: rolling the canonical Session page pattern across the remaining
-  `src/sessions/*.md` files.
+  Top of the queue: Ortus mini-audit ticker quotes, then rolling the canonical
+  Session page pattern across the remaining `src/sessions/*.md` files.
+
+## Generic demo template — `/demo/{slug}` (per-prospect sales pages)
+One reusable Eleventy template renders a full AI-visibility demo page per prospect
+from a config file. **Adding a prospect = one JSON file, zero code changes** —
+3-step how-to and full schema reference in **`demos/README.md`**.
+- **Pieces:** `demos/{slug}.json` (configs; `probe` slug reserved) →
+  `src/_data/demos.js` (loader) → `src/demo.njk` (template; paginated, one page per
+  config at `/demo/{slug}/`, excluded from collections/sitemap).
+- **Live instances:** `/demo/canso/` (original Airspace World content),
+  `/demo/ortus/` (⚠ ticker quotes are `REPLACE — run mini-audit` placeholders until
+  the mini-audit is run — do not pitch it before then), `/demo/b2b/` (generic
+  default; empty `brand_default` ⇒ **no auto-run, spends no engine budget**).
+- **Sections, in conversion order:** hero + config ticker + sticky booking CTA ·
+  explainer video (poster, click-to-load iframe of
+  `public/demo-assets/visibility-value-explainer.html`; its final CTA scrolls to the
+  calculator when embedded — re-apply that `btnCalc` patch if the file is ever
+  re-exported) · live engine tester (same `/demo/probe` proxy as `/CANSO-demo/`,
+  preset chips, **email gate**: ChatGPT+Claude free, other 3 + score blur until the
+  form passes → **Netlify Forms** `demo-gate`) · MAXIFI calculator (seeded from
+  `value_defaults`; zero-gap guard) · proof block · ladder (Snapshot → Visibility
+  Report → Visibility Engine; ROO line) · FAQs/method note (Measured/Modelled/
+  Momentum) · dual CTA. FAQPage + Organization JSON-LD on every page.
+- **Scoring honesty:** the visibility score counts **responding engines only**
+  ("n / R · R of 5 engines responding"); a zero-responder run shows a connection
+  notice, never a "0 / 5 invisible" verdict. Mixed sample/live runs are always
+  labelled sample. Citation links appear only for engines whose API returns them
+  (Perplexity always; AI Overviews when present; ChatGPT/Claude/Gemini are bare
+  model APIs — no links unless the backend enables search grounding).
+- **Analytics:** `test_run`, `gate_pass`, `video_play`, `calc_use`, `cta_click` →
+  `window.dataLayer`; optional GoatCounter via `analytics_goatcounter` config key
+  (off by default — no external calls).
+- **Header note:** site-wide `X-Frame-Options` is **SAMEORIGIN** (was DENY) so these
+  pages can iframe the same-origin explainer — don't revert to DENY.
+- **Budget warning:** every `/demo/{slug}` page with a non-empty `brand_default`
+  auto-runs 5 live engine calls per page load against the shared Render daily cap
+  and shared demo token. Empty the `brand_default` of pages not actively pitched.
 
 ## AEO sales demo — `/CANSO-demo/` (Airspace World proof-of-reference)
 A self-contained, buyer-facing **AI-visibility showcase** lives at
@@ -51,6 +89,10 @@ A self-contained, buyer-facing **AI-visibility showcase** lives at
 (<https://aswhub.maxifidigital.com/CANSO-demo/>). It is copied verbatim by the `public/`
 passthrough — single-file (inline CSS/JS, embedded Maxifi wordmark) — and is
 **not** in the nav, collections, or sitemap, so it doesn't touch the reference hub.
+`/canso-demo` (lowercase) 301s here; the same content rendered through the generic
+template lives at `/demo/canso/` (`demos/canso.json`). This original file is kept
+untouched as the pixel-reference — prefer editing the template/config system for
+new work.
 - It reconstructs the preset landing for the sibling `ai-visibility-engine`
   `/demo` (Python app on Render): Airspace-World-seeded brand + buyer-intent
   preset queries. The exact values to paste into that app's `DEMO_PRESET_BRAND` /

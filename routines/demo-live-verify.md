@@ -11,6 +11,14 @@ auto-runs one real probe on load and only falls back to a clearly-labelled sampl
 if the backend is unreachable or in safe mode, so "it shows tiles" is **not** proof
 they are live.
 
+> **Also covers the generic demo pages.** Every `/demo/{slug}/` page
+> (`/demo/canso/`, `/demo/ortus/`, …) uses the identical probe mechanics — a
+> same-origin POST to `/demo/probe`, which Netlify proxies to the same Render
+> backend with the same token — so this verification applies to them verbatim.
+> One extra browser signal on those pages: the visibility score reads
+> "n / R · R of 5 engines responding" if any engine errored; on a healthy live
+> run it should read "n / 5" with no responding qualifier.
+
 ---
 
 You are verifying that the ASW Hub AEO sales demo returns **live** AI-engine
