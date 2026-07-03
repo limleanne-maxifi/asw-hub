@@ -7,10 +7,13 @@
 [build.environment]
   NODE_VERSION = "20"
 
+## X-Frame-Options: SAMEORIGIN (not DENY) — the /demo/{slug} pages embed the
+## Visibility Value explainer (/demo-assets/…) in a same-origin iframe, which
+## DENY would block. SAMEORIGIN keeps third-party framing (clickjacking) blocked.
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options        = "DENY"
+    X-Frame-Options        = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy        = "strict-origin-when-cross-origin"
     Permissions-Policy     = "geolocation=(), microphone=(), camera=()"
