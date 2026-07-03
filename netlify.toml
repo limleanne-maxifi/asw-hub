@@ -88,10 +88,24 @@
   to     = "/asw-2025/"
   status = 301
 
-## CANSO demo (/CANSO-demo/) — proxy the engine probe to the ai-visibility-engine
-## backend on Render. status = 200 makes this a rewrite/proxy: the browser call to
-## /demo/probe stays same-origin (no CORS), and Netlify forwards the POST (with the
-## X-Demo-Token header) to Render server-side.
+## Lowercase alias for the original single-client demo page. The canonical file
+## stays untouched at /CANSO-demo/ (public/ passthrough); the config-driven
+## equivalent renders at /demo/canso/ from demos/canso.json.
+[[redirects]]
+  from   = "/canso-demo"
+  to     = "/CANSO-demo/"
+  status = 301
+
+[[redirects]]
+  from   = "/canso-demo/"
+  to     = "/CANSO-demo/"
+  status = 301
+
+## Engine probe — proxy to the ai-visibility-engine backend on Render. Used by
+## /CANSO-demo/ and every /demo/{slug}/ page. status = 200 makes this a
+## rewrite/proxy: the browser call to /demo/probe stays same-origin (no CORS),
+## and Netlify forwards the POST (with the X-Demo-Token header) to Render
+## server-side. The slug "probe" is reserved (enforced in src/_data/demos.js).
 [[redirects]]
   from   = "/demo/probe"
   to     = "https://ai-visibility-engine.onrender.com/demo/probe"
