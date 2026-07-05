@@ -9,6 +9,12 @@ and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy)
   Repo: `limleanne-maxifi/dashboard` (Astro, deployed on Netlify). Structured-data /
   AEO work on that site is done in code (`.astro` pages + `BaseLayout.astro` JSON-LD),
   not in a CMS. This repo (`asw-hub`) and the `dashboard` repo are separate codebases.
+- **`ai-visibility-engine`** (separate repo — Python app on Render) is the visibility
+  probe backend behind the `/CANSO-demo/` and `/demo/{slug}/` sales pages.
+- **RuFlow (multi-agent swarm) engine-review SOP:** `docs/ruflo-engine-review-spec.md`
+  is a cross-project reference — a tightly-constrained `ruflo` task spec + phased rollout
+  + safeguards for reviewing the `ai-visibility-engine`. It targets that separate repo and
+  changes **no** `asw-hub` code; the doc lives here only for convenience.
 
 ## Stack & layout
 - **Eleventy (11ty)** with Nunjucks (`.njk`) + Markdown (`.md`). Output to Netlify.
