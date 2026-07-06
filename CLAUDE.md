@@ -50,8 +50,8 @@ and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy)
 - The **generic demo template** (`/demo/{slug}` from `demos/*.json` — see the
   section below) is merged (PR #41, 2026-07-03) and live.
 - **See `HANDOFF.md`** for what just shipped and the prioritised next-step backlog.
-  Top of the queue: Ortus mini-audit ticker quotes, then rolling the canonical
-  Session page pattern across the remaining `src/sessions/*.md` files.
+  Top of the queue: rolling the canonical Session page pattern across the remaining
+  `src/sessions/*.md` files.
 
 ## Generic demo template — `/demo/{slug}` (per-prospect sales pages)
 One reusable Eleventy template renders a full AI-visibility demo page per prospect
@@ -61,9 +61,10 @@ from a config file. **Adding a prospect = one JSON file, zero code changes** —
   `src/_data/demos.js` (loader) → `src/demo.njk` (template; paginated, one page per
   config at `/demo/{slug}/`, excluded from collections/sitemap).
 - **Live instances:** `/demo/canso/` (original Airspace World content),
-  `/demo/ortus/` (⚠ ticker quotes are `REPLACE — run mini-audit` placeholders until
-  the mini-audit is run — do not pitch it before then), `/demo/b2b/` (generic
-  default; empty `brand_default` ⇒ **no auto-run, spends no engine budget**).
+  `/demo/ortus/` (ticker populated from the 2026-07 mini-audit — ChatGPT/Claude/
+  Gemini recommend Vistage/YPO/EO with Ortus absent, Perplexity cites ortusclub.com
+  buried 5th; Gemini line added after a re-run), `/demo/b2b/` (generic default;
+  empty `brand_default` ⇒ **no auto-run, spends no engine budget**).
 - **Sections, in conversion order:** hero + config ticker + sticky booking CTA ·
   explainer video (poster, click-to-load iframe of
   `public/demo-assets/visibility-value-explainer.html`; its final CTA scrolls to the
