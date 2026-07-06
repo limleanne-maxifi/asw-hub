@@ -3,10 +3,10 @@
   "client_name": "The Ortus Club",
   "sector_label": "Executive events · B2B",
   "ticker_quotes": [
-    { "quote": "REPLACE — run mini-audit", "engine": "ChatGPT", "cited": false },
-    { "quote": "REPLACE — run mini-audit", "engine": "Perplexity", "cited": false },
-    { "quote": "REPLACE — run mini-audit", "engine": "Gemini", "cited": false },
-    { "quote": "REPLACE — run mini-audit", "engine": "Google AI Overviews", "cited": false }
+    { "quote": "points buyers to Vistage, YPO & EO — not Ortus", "engine": "ChatGPT", "cited": false },
+    { "quote": "recommends YPO & Vistage — Ortus absent", "engine": "Claude", "cited": false },
+    { "quote": "cites ortusclub.com — but 5th, behind directories", "engine": "Perplexity", "cited": true },
+    { "quote": "no AI Overview shown for this query", "engine": "Google AI Overviews", "cited": false }
   ],
   "brand_default": "The Ortus Club",
   "query_default": "best executive roundtable companies",

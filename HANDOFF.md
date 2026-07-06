@@ -1,9 +1,36 @@
 # Hand-off: ASW Hub AEO/GEO optimisation
 
-**Branch:** merge target is `main`. Active feature branch: `claude/wizardly-feynman-g0ra6h` (AEO hardening; open until merged).
+**Branch:** merge target is `main`.
 **Stack:** Eleventy (Nunjucks + Markdown) → Netlify. Source in `src/`, output via 11ty.
 **Canonical domain:** `https://aswhub.maxifidigital.com/`
-**Last updated:** 2026-07-01
+**Last updated:** 2026-07-03
+
+## ⏩ Generic demo template — `/demo/{slug}` from per-prospect configs (2026-07-03)
+
+The single-client sales demo is refactored into **one reusable template**
+(`src/demo.njk`) driven by `demos/{slug}.json` configs — merged to `main` as
+PR #41 and deployed. Full architecture + config schema in `demos/README.md`;
+operating notes in `CLAUDE.md` → "Generic demo template".
+
+**Live:** `/demo/canso/` (original content), `/demo/ortus/` (first prospect),
+`/demo/b2b/` (generic default, no auto-run). `/CANSO-demo/` untouched
+(byte-identical); `/canso-demo` 301s to it. Also shipped: the Visibility Value
+Model explainer at `/demo-assets/visibility-value-explainer.html` (embedded
+poster-first; its final CTA scrolls to the on-page MAXIFI calculator),
+email gate → **Netlify Forms `demo-gate`**, responding-engines-only visibility
+score, `X-Frame-Options` DENY→SAMEORIGIN, and analytics events in
+`window.dataLayer` (optional GoatCounter hook, off by default).
+
+**▶ Actions for the next session / operator:**
+
+| # | Action | Notes |
+|---|---|---|
+| 1 | **Ortus mini-audit** — replace the 4 `REPLACE — run mini-audit` ticker quotes in `demos/ortus.json` | Do NOT send `/demo/ortus/` to the prospect before this. Never invent quotes. |
+| 2 | Verify live engine runs on `/demo/canso/` | Green `● LIVE · queried …`, real model ids, no `· sample` — `routines/demo-live-verify.md` (fresh session) |
+| 3 | Netlify UI: confirm form `demo-gate` registered; add email notification | Site → Forms; otherwise gate submissions sit unread |
+| 4 | **Decide: search-grounded citations for ChatGPT/Claude/Gemini** | Backend change in `ai-visibility-engine` — ready-to-paste prompt in `routines/engine-citations-upgrade.md` |
+| 5 | Budget: empty `brand_default` on demo pages not actively pitched | Each page-load auto-run = 5 live engine calls against the shared Render daily cap |
+| 6 | Swap generic Forrester/Pew links in the FAQs section for exact study URLs | `src/demo.njk` method-note block |
 
 ## ⏩ CANSO demo — real auto-run on load + live-response verification (2026-07-01)
 
