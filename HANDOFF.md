@@ -3,7 +3,35 @@
 **Branch:** merge target is `main`.
 **Stack:** Eleventy (Nunjucks + Markdown) → Netlify. Source in `src/`, output via 11ty.
 **Canonical domain:** `https://aswhub.maxifidigital.com/`
-**Last updated:** 2026-07-03
+**Last updated:** 2026-07-13
+
+## ⏩ CANSO demo — Visibility Value Model embed + Plausible analytics (2026-07-13, commit 4498e26)
+
+`/CANSO-demo/` changes: the "Why you can trust this" four-card section is
+**replaced** by an embedded, autoplaying Visibility Value Model explainer
+(iframe of the new page below, `?embed=1&autoplay=1`). Autoplay is **silent
+visual playback** (browsers block speech synthesis without a user gesture);
+pressing ▶ Play inside the player restarts with narration.
+
+New page: **`/CANSO-demo/visibility-value-model/`**
+(`public/CANSO-demo/visibility-value-model/index.html`) — the MAXIFI explainer
++ client calculator, restyled to the demo's Carbon theme (same tokens, header
+with "← Back to CANSO demo", footer, 1056px container, base64 wordmark).
+`?embed=1` strips header/footer for iframing. Lowercase URL aliases 301 in
+`netlify.toml`. Note: this is a second, Carbon-styled instance of the explainer —
+the `/demo/{slug}` pages still embed `public/demo-assets/visibility-value-explainer.html`
+(different styling, poster-first); keep the two in mind if the narration/model
+figures ever change.
+
+**Plausible analytics** (`plausible.io/js/pa-1DGmaSeWeUEL2dZa0kz81.js`) added to
+the `<head>` of both pages — `?ref=` is captured into `sessionStorage` **before**
+`plausible.init()` and sent as a custom property; outbound links + file
+downloads tracked. Other pages on the site do NOT carry Plausible yet.
+
+Also fixed: two dead `relatedSessions` links on
+`src/sessions/spacex-keynote-canso-summit-2026.md` (pointed at never-created
+`state-of-the-industry-2026` / `global-panel-vision-to-deployment`; now point at
+the opening plenary and the CANSO leadership conversation).
 
 ## ⏩ Generic demo template — `/demo/{slug}` from per-prospect configs (2026-07-03)
 
@@ -234,23 +262,4 @@ session ↔ speaker links.
 - Once the first citation lands, add the ticker / counter element described in
   the citation-tracker recommendation (item 4 of that proposal).
 
-### 7. Smaller fixes (carry-over from prior backlog)
-- ~~Fix `Offer` in `schema-event.njk`~~ — moot: `schema-event.njk` removed (the
-  canonical `Event` lives in the site-wide `@graph`). The event is concluded, so no
-  ticket `Offer` is needed; add one to the graph `Event` only if a future event is added.
-- Replace `btn-disabled` "Conference Sprint" CTA on home + how-it-works with a working link, or remove.
-- Populate speaker `sameAs` (LinkedIn / Wikipedia / Wikidata / official bio) in
-  `src/speakers/*.md` front-matter — `schema-speaker.njk` now emits a `sameAs` array
-  when present (left empty rather than fabricated).
-
-## Acceptance gates for any future change
-1. `npx @11ty/eleventy` builds clean — no warnings on touched files.
-2. All `<script type="application/ld+json">` blocks on touched pages parse as valid JSON. Validate Event / FAQPage / HowTo / Article / BreadcrumbList via Google Rich Results test or schema.org validator.
-3. Word counts on session/insight pages ≥300 (excluding embedded JSON-LD).
-4. British-English spelling preserved (optimisation, organise, programme, centre, etc.).
-5. Canonical domain only: `https://aswhub.maxifidigital.com/`.
-
-## Notes
-- Locale: British English (`en-GB`).
-- Two `layers.css` files used to exist in the repo — the duplicate at `src/_includes/components/layers.css` was deleted in this hand-off after it caused a "wrong file edited" debug session. The only `layers.css` now is `src/assets/css/layers.css`, served via the assets passthrough copy.
-- `daysUntil` filter in `.eleventy.js` computes the citation-tracker countdown at build time, so the deploy cadence determines how fresh the "in N days" pill stays.
+### 

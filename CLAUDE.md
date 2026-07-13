@@ -97,9 +97,19 @@ A self-contained, buyer-facing **AI-visibility showcase** lives at
 passthrough — single-file (inline CSS/JS, embedded Maxifi wordmark) — and is
 **not** in the nav, collections, or sitemap, so it doesn't touch the reference hub.
 `/canso-demo` (lowercase) 301s here; the same content rendered through the generic
-template lives at `/demo/canso/` (`demos/canso.json`). This original file is kept
-untouched as the pixel-reference — prefer editing the template/config system for
-new work.
+template lives at `/demo/canso/` (`demos/canso.json`). Prefer the template/config
+system for new prospects, but this file IS now edited directly for CANSO-specific
+work (2026-07-13, commit 4498e26): the "Why you can trust this" section was
+replaced by an embedded, silently-autoplaying **Visibility Value Model explainer**
+(iframe of `/CANSO-demo/visibility-value-model/?embed=1&autoplay=1`; narration
+needs a user gesture — visitor presses ▶ Play), and **Plausible analytics** was
+added to the `<head>` (`?ref=` captured before `plausible.init()` — keep that order).
+- **Companion page `/CANSO-demo/visibility-value-model/`**
+  (`public/CANSO-demo/visibility-value-model/index.html`): MAXIFI explainer +
+  client calculator, Carbon-themed to match this page; `?embed=1` strips its
+  header/footer for iframing; lowercase aliases 301 via `netlify.toml`. It is a
+  separate instance from `public/demo-assets/visibility-value-explainer.html`
+  (used by `/demo/{slug}` pages) — update both if the model narrative changes.
 - It reconstructs the preset landing for the sibling `ai-visibility-engine`
   `/demo` (Python app on Render): Airspace-World-seeded brand + buyer-intent
   preset queries. The exact values to paste into that app's `DEMO_PRESET_BRAND` /
@@ -239,17 +249,4 @@ opening-plenary file shows the session-flavoured version.
 ### 5. Conversion checklist (use this when migrating an existing session page)
 1. Front-matter: confirm `time` uses ` – `, `day` carries the weekday, and
    `speakerLinks` is populated with slugs where the speaker has a page.
-2. Body: replace existing prose with the four H2 blocks above. Target ≥300 words.
-3. Append the `FAQPage` JSON-LD block matching the FAQ section.
-4. Build: `npx @11ty/eleventy` — must complete without errors.
-5. Validate: parse both `<script type="application/ld+json">` blocks on the
-   emitted page (`_site/sessions/<slug>/index.html`) as JSON; run the Event +
-   FAQPage through the Google Rich Results test or schema.org validator.
-6. Spot-check the rendered H1 carries the ` — Airspace World 2026` entity tail
-   and the `performer` array shows speaker URLs in the JSON-LD.
-
-## Git
-- Work on the current task's feature branch (set per session); never push directly
-  to `main` without explicit permission. Push with
-  `git push -u origin <feature-branch>`; retry network failures with backoff.
-- After pushing, ensure a **draft PR** exists for the branch.
+2. Body: replac

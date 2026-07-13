@@ -84,12 +84,12 @@ topicCluster:
   url: "/themes/innovation-future-skies/"
 
 relatedSessions:
-  - title: "State of the Industry 2026"
-    meta: "Simon Hocquard · CANSO · 25 May"
-    url: "/sessions/state-of-the-industry-2026/"
-  - title: "Global Panel: Vision to Deployment"
-    meta: "Pilling, Hocquard, Martinez · 25 May"
-    url: "/sessions/global-panel-vision-to-deployment/"
+  - title: "Opening Plenary: State of Global ATM"
+    meta: "CANSO leadership · 26 May"
+    url: "/sessions/opening-plenary-state-of-global-atm/"
+  - title: "CANSO Leadership Conversation: ATM Modernisation"
+    meta: "CANSO CEO panel · 26 May"
+    url: "/sessions/canso-ceo-conversation/"
   - title: "ATM Modernisation: Concept to Reality"
     meta: "Global panel · 27 May"
     url: "/sessions/atm-modernisation-global-perspective/"
@@ -488,4 +488,4 @@ faqs:
   "performer": {"@type":"Person","name":"Kiko Dontchev","jobTitle":"Vice President of Launch","worksFor":{"@type":"Organization","name":"SpaceX","sameAs":["https://en.wikipedia.org/wiki/SpaceX","https://www.wikidata.org/wiki/Q193701"]}},
   "organizer": {"@type":"Organization","name":"CANSO","url":"https://canso.org"}
 }
-</script>
+</scrip
