@@ -104,6 +104,22 @@
   to     = "/CANSO-demo/"
   status = 301
 
+## Visibility Value Model explainer (static passthrough under /CANSO-demo/).
+[[redirects]]
+  from   = "/CANSO-demo/visibility-value-model"
+  to     = "/CANSO-demo/visibility-value-model/"
+  status = 301
+
+[[redirects]]
+  from   = "/canso-demo/visibility-value-model"
+  to     = "/CANSO-demo/visibility-value-model/"
+  status = 301
+
+[[redirects]]
+  from   = "/canso-demo/visibility-value-model/"
+  to     = "/CANSO-demo/visibility-value-model/"
+  status = 301
+
 ## Engine probe — proxy to the ai-visibility-engine backend on Render. Used by
 ## /CANSO-demo/ and every /demo/{slug}/ page. status = 200 makes this a
 ## rewrite/proxy: the browser call to /demo/probe stays same-origin (no CORS),
