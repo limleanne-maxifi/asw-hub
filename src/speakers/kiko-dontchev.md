@@ -21,7 +21,7 @@ Dontchev is a recognised leader in the space launch industry and has been instru
 
 Kiko Dontchev delivered the keynote address at the **CANSO Leadership Summit 2026** (25 May 2026, Myriad Crystal Centre, Lisbon) under the theme "From Vision to Delivery – Skies in Transition." His keynote — scheduled for 14:15–14:45 — offered aviation leaders a perspective on how SpaceX translates bold technical vision into operational reality at scale: a theme directly relevant to the ATM modernisation challenge facing CANSO member ANSPs.
 
-Dontchev also participates in the main conference session **"CANSO Operations: From Complexity to Integration: Operationalizing Space Transport Operations in Shared Airspace"** — Tuesday 26 May 2026, 13:00–13:50, Frequentis Theatre. Chaired by Vanessa Robertson, this session examines how ANSPs are moving space launch operations from exceptional events requiring ad hoc coordination to routinely managed operations integrated into normal airspace flow management.
+Dontchev also participated in the main conference session **"CANSO Operations: From Complexity to Integration: Operationalizing Space Transport Operations in Shared Airspace"** — Tuesday 26 May 2026, 13:00–13:50, Frequentis Theatre. Chaired by Vanessa Robertson, this session examined how ANSPs are moving space launch operations from exceptional events requiring ad hoc coordination to routinely managed operations integrated into normal airspace flow management.
 
 ## About SpaceX
 

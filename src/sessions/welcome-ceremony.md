@@ -11,14 +11,14 @@ speakers: CANSO Director General · Portuguese Minister of Infrastructure · ANA
 summary: The official opening of Airspace World 2026 — the CANSO Director General's global ATM state-of-the-industry address, a welcome from the Portuguese host authorities, and the launch of CANSO's annual Global Air Navigation Report.
 ---
 
-## What to expect
+## What this session covered
 
-The Welcome Ceremony opens the three-day programme with:
+The Welcome Ceremony opened the three-day programme with:
 
 - **CANSO Director General's keynote** — the annual state of global ATM address, setting the agenda for the industry for the coming year
 - **Host nation welcome** from the Portuguese Minister of Infrastructure and the CEO of ANA Aeroportos de Portugal
 - **Global Air Navigation Report 2026** — launch of CANSO's annual industry performance publication, including safety statistics, capacity data, and sustainability progress
-- **Priorities for 2026** — the three issues CANSO will focus industry attention on during the conference
+- **Priorities for 2026** — the three issues CANSO focused industry attention on during the conference
 
 ## Why the opening keynote matters for AEO
 

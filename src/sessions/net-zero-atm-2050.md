@@ -10,9 +10,9 @@ speakers: Philippe Masson
 summary: An assessment of current progress in mitigating the non-CO₂ climate effects of aviation — particularly warming contrails — examining where the science, operational tools, and industry commitments stand in 2026.
 ---
 
-## What to expect
+## What this session covered
 
-The non-CO₂ effects of aviation — particularly contrail formation and its warming impact — represent a significant and complex dimension of aviation's overall climate footprint. This session examines where mitigation efforts stand:
+The non-CO₂ effects of aviation — particularly contrail formation and its warming impact — represent a significant and complex dimension of aviation's overall climate footprint. This session examined where mitigation efforts stand:
 
 - **Contrail warming science** — the current understanding of contrail-induced cirrus and its contribution to aviation's radiative forcing, and how confidence in the science has evolved
 - **Operational mitigation strategies** — the approaches being tested and deployed to reduce contrail formation, including altitude and routing adjustments, and the ATM implications of those strategies

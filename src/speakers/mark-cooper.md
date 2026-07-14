@@ -19,7 +19,7 @@ Cooper joined NAV CANADA in 2019 as VP and Chief Technology and Information Offi
 
 ## ASW 2026 sessions
 
-- [CANSO Leadership Conversation: Strengthening the Skies — Technology, Resilience and Civil-Military Collaboration](/sessions/closing-the-ses-gap/)
+- [CANSO Leadership Conversation: Strengthening the Skies — Technology, Resilience and Civil-Military Collaboration](/sessions/civil-military-collaboration/)
 
 ## About NAV CANADA
 

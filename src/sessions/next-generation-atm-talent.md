@@ -11,9 +11,9 @@ chair: Benjamin Binet
 summary: A CANSO Leadership Conversation examining how the next generation of ATM will be shaped by the intersection of advanced technology and the talent, diversity, and human capability needed to operate it — and what aviation leaders must do now to build that future workforce.
 ---
 
-## What to expect
+## What this session covered
 
-The next generation of ATM is not only a technology transition — it is a talent and cultural transformation. This CANSO Leadership Conversation brings together senior leaders to address what it takes to build the workforce that will operate tomorrow's highly automated, AI-augmented airspace:
+The next generation of ATM is not only a technology transition — it is a talent and cultural transformation. This CANSO Leadership Conversation brought together senior leaders to address what it takes to build the workforce that will operate tomorrow's highly automated, AI-augmented airspace:
 
 - **The talent imperative** — the skills, competencies, and mindsets that next-generation ATM systems will require from controllers, engineers, and managers
 - **Diversity as a strategic asset** — why a more diverse ATM workforce is not just a social objective but an operational necessity for the innovation and problem-solving the sector needs

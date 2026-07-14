@@ -17,9 +17,9 @@ chair: Sabine Hornig
 summary: A senior leadership conversation examining how a changed European and global security environment is reshaping the relationship between civil ATM and military aviation — and what ANSPs and defence authorities must do to maintain safe, efficient shared airspace in a new geopolitical era.
 ---
 
-## What to expect
+## What this session covered
 
-This CANSO Leadership Conversation brings together ANSP chief executives to address the strategic intersection of technology, resilience, and civil-military collaboration. Against the backdrop of elevated military activity across European airspace and shifting global security dynamics, the session examines:
+This CANSO Leadership Conversation brought together ANSP chief executives to address the strategic intersection of technology, resilience, and civil-military collaboration. Against the backdrop of elevated military activity across European airspace and shifting global security dynamics, the session examined:
 
 - **Civil-military coordination under pressure** — how ANSPs are managing increased temporary reserved airspace and the operational costs to commercial aviation
 - **Technology as an enabler of resilience** — the role of digital tools, data sharing, and interoperable systems in strengthening civil-military airspace management
@@ -29,7 +29,7 @@ This CANSO Leadership Conversation brings together ANSP chief executives to addr
 
 ## Why it matters
 
-The geopolitical environment since 2022 has placed civil-military airspace coordination under sustained operational strain. This leadership conversation addresses the structural question at the heart of that challenge: whether current civil-military frameworks are adequate for a sustained period of elevated military activity, and what technology and governance changes are needed to maintain the safety and efficiency of shared airspace.
+The geopolitical environment since 2022 has placed civil-military airspace coordination under sustained operational strain. This leadership conversation addressed the structural question at the heart of that challenge: whether current civil-military frameworks are adequate for a sustained period of elevated military activity, and what technology and governance changes are needed to maintain the safety and efficiency of shared airspace.
 
 ## Linked theme
 
