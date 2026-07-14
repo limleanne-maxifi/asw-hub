@@ -104,15 +104,104 @@ dd0a15f 2026-07-13 Docs: record explainer embed + Plausible; fix dead relatedSes
 
 1. **Blocker (minor):** `feature/educational-layers` deletion needs the two
    operator commands in §2 — session push scope prevented direct execution.
-2. **Stale-branch debt:** ~36 old `claude/*` session branches on origin.
-   Harmless but noisy. **10 open draft PRs** (#6, #11, #16–#20, #24, #25, #38)
-   also pending triage — several may be superseded (e.g. #16/#17/#18 predate the
-   merged monitoring work; #24 vs #25 overlap). Recommend a 15-minute
-   close-or-merge sweep, but that is a content decision, not housekeeping —
-   deliberately not executed here.
+2. **Stale-branch debt:** triaged in full on 2026-07-14 (second pass) — see §5
+   below for the complete branch and PR disposition table.
 3. **Stale task briefs:** this brief was built from a ~2-month-old repo
    snapshot. Before acting on repo-state claims in future briefs, verify
    against live `git status` first (as done here) — acting on the stale claims
    would have meant hunting for phantom files.
 4. **No risk to the CANSO pipeline:** nothing in this pass touches the live
    site, the `/CANSO-demo/` page, or the demo backend.
+
+---
+
+## 5. Branch & PR triage — second pass, 2026-07-14
+
+Method: `git cherry origin/main <branch>` (patch-equivalence) + mapping each
+branch to its merged squash commit on main + review of all 10 open draft PRs.
+
+### 5a. Open draft PRs (10) — decisions
+
+| PR | Branch | Decision | Rationale |
+|---|---|---|---|
+| #6 citation-check script | `claude/affectionate-bohr-WCwVD` | **CLOSED** ✔ (2026-07-14) | Superseded by merged monthly monitor (#13) + manual live-fire audit process (#39); engine keys live on Render, not here |
+| #11 session fixes + 6 canonical conversions | `claude/adoring-hopper-vq6kok` | **KEEP — highest-value open PR** | Does exactly the top backlog item (canonical Session pattern rollout) + URL fixes; predates merged post-event tense sweep (#10) so needs a rebase before merge |
+| #16 GSC skip diagnostic | `claude/vibrant-newton-jnuvqd` | **CLOSED** ✔ (2026-07-14) | Moot — GSC activation since confirmed working end-to-end |
+| #17 Google discovery seeding docs | `claude/wonderful-planck-pwn3sr` | **MERGE** (docs-only) | Google indexing gap (0/52) is still the standing issue; checklist still accurate |
+| #18 GSC_SA_JSON credentials note | `claude/eager-curie-wbg4wr` | **MERGE** (docs-only) | Captures two hard-won activation gotchas; still accurate |
+| #19 /compare/ AEO scorecard page | `claude/comparison-page` | **USER DECISION** | Sales asset that could support the Treacher pivot, but written pre-event — needs a freshness/tense pass before it can go live |
+| #20 22-June citation quick-check | `claude/nifty-galileo-kajyu4` | **CLOSED** ✔ (2026-07-14) | Superseded by the merged 2 July full audit (#39) |
+| #24 monitor alerts variant | `claude/index-citation-alerts` | **CLOSED** ✔ (2026-07-14) | #25 is the richer superset of the same upgrade; the two conflicted |
+| #25 monthly monitor upgrade | `claude/serene-sagan-um37kt` | **MERGE after rebase + fresh-session verify** | Brings deployed script up to the routine's spec; verified against live creds when written |
+| #38 OpenAI model-access routine | `claude/asw-hub-aeo-demo-verify-bh8zqa` | **MERGE** (docs-only) | Current; supports the demo model-upgrade decision |
+
+### 5b. Branches with no open PR (26) — all safe to delete
+
+**18 branches with zero unmerged patches** (`git cherry` shows every commit
+already in main): `aeo-demo-publish`, `awesome-noether-25erl6`,
+`canso-demo-fonts-logo`, `canso-demo-inter`, `canso-demo-linebreak`,
+`canso-demo-netlify-proxy`, `canso-demo-path`, `canso-demo-token`,
+`citation-q1-themes`, `citation-report-july-audit-nbfzvm`,
+`demo-live-verify-docs`, `friendly-mccarthy-jhoqaq`,
+`generic-demo-template-7qxbel`, `great-ritchie-wd7olz`,
+`handoff-canonical-note`, `monitor-egress-domains`, `pensive-turing-3q9o1b`,
+`wizardly-feynman-g0ra6h`.
+
+**7 branches whose work landed via squash-merge** (patch-ids differ but content
+is on main): `clever-einstein-a32jJ` (→ #7 + #8), `nice-carson-G7P6O` (→ #4
+SpaceX keynote + canonical layout), `replace-themes-official-tracks` (→
+`7fad69a` official-tracks alignment), `resume-session-Q0smv` (→ `03c7ae7` site
+title; footer naming since superseded twice), `ruflo-init-wizard-install-fqyzp8`
+(→ #43), `sweet-johnson-x41k1p` (→ #27 presets doc), `zen-newton-0o0lgh` (→
+#27/#28 Carbon demo, since evolved into /CANSO-demo/).
+
+**Plus `feature/educational-layers`** (§2) and, after the 4 closures above,
+the 4 branches behind the closed PRs (`affectionate-bohr-WCwVD`,
+`vibrant-newton-jnuvqd`, `nifty-galileo-kajyu4`, `index-citation-alerts`).
+
+**Total: 30 branches ready for deletion.** Session push scope prevents doing it
+from here; ready-to-paste operator command:
+
+```bash
+git push origin --delete \
+  feature/educational-layers \
+  claude/aeo-demo-publish claude/awesome-noether-25erl6 \
+  claude/canso-demo-fonts-logo claude/canso-demo-inter claude/canso-demo-linebreak \
+  claude/canso-demo-netlify-proxy claude/canso-demo-path claude/canso-demo-token \
+  claude/citation-q1-themes claude/citation-report-july-audit-nbfzvm \
+  claude/demo-live-verify-docs claude/friendly-mccarthy-jhoqaq \
+  claude/generic-demo-template-7qxbel claude/great-ritchie-wd7olz \
+  claude/handoff-canonical-note claude/monitor-egress-domains \
+  claude/pensive-turing-3q9o1b claude/wizardly-feynman-g0ra6h \
+  claude/clever-einstein-a32jJ claude/nice-carson-G7P6O \
+  claude/replace-themes-official-tracks claude/resume-session-Q0smv \
+  claude/ruflo-init-wizard-install-fqyzp8 claude/sweet-johnson-x41k1p \
+  claude/zen-newton-0o0lgh \
+  claude/affectionate-bohr-WCwVD claude/vibrant-newton-jnuvqd \
+  claude/nifty-galileo-kajyu4 claude/index-citation-alerts
+```
+
+Branches to KEEP until their PRs resolve: `adoring-hopper-vq6kok` (#11),
+`wonderful-planck-pwn3sr` (#17), `eager-curie-wbg4wr` (#18), `comparison-page`
+(#19), `serene-sagan-um37kt` (#25), `asw-hub-aeo-demo-verify-bh8zqa` (#38).
+
+## 6. Insights page → "Briefings and analysis" + new AEO article (2026-07-14)
+
+Shipped on this branch alongside the triage:
+
+- **Rename:** page `title`, eyebrow, nav label, footer link, and insight-layout
+  CTA now read "Briefings & analysis" (the H1 already did). **URLs unchanged** —
+  `/insights/` and all article slugs stay as-is so nothing indexed or cited
+  breaks.
+- **New lead article:** `/insights/ai-answers-deleting-clicks-aeo-non-negotiable/`
+  ("AI answers are deleting traditional clicks — why AEO is now non-negotiable"),
+  dated 2026-07-14. AEO-optimised per the flagship pattern: answer-first opening
+  paragraph, question-phrased H2s, en-GB throughout, named entities (six engines,
+  Forrester Jan 2026 stats), three-bullet takeaways, 5-question FAQ with inline
+  `FAQPage` JSON-LD. Built page carries 4 valid JSON-LD blocks (site @graph,
+  BreadcrumbList, Article, FAQPage); in sitemap and llms.txt.
+- **The 15 Jan article stays live** (owner decision, 2026-07-14): it is the page
+  Microsoft Copilot cited on 2 July — the tracked test-case URL in the public AI
+  Citation Tracker (`src/_data/citations.json`) — so deleting it would 404 the
+  URL the sales proof points at. It simply no longer leads the listing (newest
+  first).
