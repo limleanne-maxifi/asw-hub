@@ -18,9 +18,9 @@ speakerLinks:
 summary: Leadership from the A6 Alliance (Austria, Spain, France, Germany, UK, NATS) discusses strategic coordination on European ATM modernisation, digitalisation, and cross-border operational innovation.
 ---
 
-## What to expect
+## What this session covered
 
-The A6 Alliance brings together six major European air navigation service providers to discuss:
+The A6 Alliance brought together six major European air navigation service providers to discuss:
 
 - **Strategic modernisation** roadmaps across diverse national ANSPs
 - **Cross-border operational coordination** enabling seamless European airspace
@@ -29,7 +29,7 @@ The A6 Alliance brings together six major European air navigation service provid
 
 ## Why it matters
 
-The A6 Alliance represents the operational and strategic direction of European ATM outside formal SES/FAB structures. This session is where the real modernisation commitments from major ANSPs are articulated publicly.
+The A6 Alliance represents the operational and strategic direction of European ATM outside formal SES/FAB structures. This session was where the real modernisation commitments from major ANSPs were articulated publicly.
 
 ## Linked theme
 

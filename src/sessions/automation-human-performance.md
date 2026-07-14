@@ -11,9 +11,9 @@ chair: Andrea Sack
 summary: A CANSO Safety session examining how ANSPs are building collaborative safety cultures capable of managing an increasingly integrated and complex airspace — bringing together perspectives from across the global ANSP community on what resilient safety management looks like in practice.
 ---
 
-## What to expect
+## What this session covered
 
-As airspace becomes more integrated — accommodating drones, advanced air mobility, space operations, and conventional aviation simultaneously — the safety culture and management systems ANSPs have built for a simpler operating environment face new demands. This session examines how the CANSO community is responding:
+As airspace becomes more integrated — accommodating drones, advanced air mobility, space operations, and conventional aviation simultaneously — the safety culture and management systems ANSPs have built for a simpler operating environment face new demands. This session examined how the CANSO community is responding:
 
 - **Collaborative safety culture** — what it means to build a culture where safety information flows freely across organisations, sectors, and airspace user communities rather than being siloed within individual ANSPs
 - **Safety in integrated airspace** — the specific safety challenges that arise when manned and unmanned, conventional and new-entrant operations share the same airspace volumes

@@ -10,9 +10,9 @@ speakers: Christoph Czech
 summary: An examination of how generative AI and advanced machine learning frameworks are being applied to aviation performance management and traffic flow management — moving beyond traditional optimisation tools to more adaptive, data-driven operational support.
 ---
 
-## What to expect
+## What this session covered
 
-Machine learning and generative AI are entering aviation performance and flow management. This session examines the current state of these technologies and their operational implications:
+Machine learning and generative AI are entering aviation performance and flow management. This session examined the current state of these technologies and their operational implications:
 
 - **Generative AI applications in ATM** — how large language models and generative approaches are being applied beyond conventional prediction tasks
 - **Advanced ML frameworks for traffic flow management** — the architecture and capabilities of next-generation flow management tools
@@ -22,7 +22,7 @@ Machine learning and generative AI are entering aviation performance and flow ma
 
 ## Why it matters
 
-The application of generative AI and sophisticated ML frameworks to ATM represents a significant step beyond the rule-based and statistical tools that have historically supported flow management. This session examines what these technologies can realistically deliver and what their operational integration requires.
+The application of generative AI and sophisticated ML frameworks to ATM represents a significant step beyond the rule-based and statistical tools that have historically supported flow management. This session examined what these technologies can realistically deliver and what their operational integration requires.
 
 ## Linked theme
 
