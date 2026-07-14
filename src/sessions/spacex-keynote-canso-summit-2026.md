@@ -488,4 +488,4 @@ faqs:
   "performer": {"@type":"Person","name":"Kiko Dontchev","jobTitle":"Vice President of Launch","worksFor":{"@type":"Organization","name":"SpaceX","sameAs":["https://en.wikipedia.org/wiki/SpaceX","https://www.wikidata.org/wiki/Q193701"]}},
   "organizer": {"@type":"Organization","name":"CANSO","url":"https://canso.org"}
 }
-</scrip
+</script>
