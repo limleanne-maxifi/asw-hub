@@ -93,3 +93,39 @@ and `ssl.bing.com` for the index APIs to work.
 - Google Search Console: https://search.google.com/search-console/index?resource_id=https%3A%2F%2Faswhub.maxifidigital.com%2F
 - Bing Webmaster Tools: https://www.bing.com/webmasters/home
 - Google index check: https://www.google.com/search?q=site%3Aaswhub.maxifidigital.com
+
+## Seeding Google discovery (when GSC reports URLs not indexed)
+
+Verified live on 2026-06-15: the GSC section of the monthly check now returns
+real counts (auth works), but Google reported **0/52 indexed** — `/` and
+`/asw-2025/` as *"Crawled – currently not indexed"* and the other 50 as
+*"URL is unknown to Google"*. Bing already has all 52 indexed, so this is a
+Google **discovery** gap, not a crawl block:
+
+- robots.txt is allow-all (`User-agent: *` → `Allow: /`, plus an explicit
+  AI-bot allowlist) — nothing is disallowed.
+- `/sitemap.xml` serves 52 `<loc>` URLs and is declared in robots.txt.
+
+Discovery is seeded operator-side in the GSC web UI (cannot be done from the
+sandbox). Property-type note: the monthly script authenticates against the
+**URL-prefix** property (`GSC_SITE_URL` = `https://aswhub.maxifidigital.com/`),
+so do the steps below on that same property for the data to line up.
+
+1. **Confirm the sitemap is submitted.** GSC → **Indexing → Sitemaps** → add
+   `sitemap.xml` → Submit. Confirm **Status: Success** and **Discovered URLs:
+   52**. Re-submit if it shows "Couldn't fetch" (the file is live and returns
+   200, so a fetch error is transient).
+2. **Re-confirm robots isn't blocking.** GSC → **Settings → robots.txt** shows
+   Allowed; on any URL use **URL Inspection → Test live URL** and confirm
+   "Crawl allowed? Yes" / "Indexing allowed? Yes" (no stray noindex/canonical).
+3. **Request indexing for the hub pages** (Google then crawls outward via the
+   sitemap + internal links — no need to do all 52). Paste each into the URL
+   Inspection bar → **Request Indexing**:
+   - `/`, `/how-it-works/`
+   - `/themes/`, `/sessions/`, `/speakers/`, `/insights/`
+   - flagship: `/themes/safety-security-resilience/`,
+     `/sessions/opening-plenary-state-of-global-atm/`
+   - Daily quota is ~10–12 manual requests; prioritise these hubs.
+4. **Re-measure** after ~a week (or the next 15th cron run): `npm run
+   monthly-check`. The GSC section should move from "URL is unknown to Google"
+   → "Crawled" → "Submitted and indexed".
