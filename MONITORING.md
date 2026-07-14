@@ -33,9 +33,14 @@ claude.ai
 searchconsole.googleapis.com
 oauth2.googleapis.com
 ssl.bing.com
+api.perplexity.ai
+api.bing.microsoft.com
 ```
 
-The last three are needed only by the monthly index check (GSC + Bing APIs).
+The last five are needed only by the monthly index check: `searchconsole.googleapis.com`
++ `oauth2.googleapis.com` (GSC URL Inspection), `ssl.bing.com` (Bing Webmaster
+index API), `api.perplexity.ai` (Perplexity citation API), and
+`api.bing.microsoft.com` (Azure Bing Web Search v7 — the Copilot rank proxy).
 
 - `aswhub.maxifidigital.com` is **required** for the sitemap and page-health
   checks. Without it the monitor cannot run at all.
@@ -77,16 +82,36 @@ scheduler). It runs `npm run monthly-check` and relays the report.
 All optional — a missing credential degrades that section to `SKIPPED`, not a
 failure.
 
-| Variable        | Where to get it |
-|-----------------|-----------------|
-| `GSC_SA_JSON`   | Google Cloud service-account key JSON (raw or base64). Enable the Search Console API, then add the service-account email as a **user** in Search Console. |
-| `GSC_SITE_URL`  | `sc-domain:aswhub.maxifidigital.com` (domain property) or `https://aswhub.maxifidigital.com/`. |
-| `BING_API_KEY`  | Bing Webmaster Tools → **Settings → API access**. |
-| `BING_SITE_URL` | `https://aswhub.maxifidigital.com`. |
+| Variable              | Where to get it |
+|-----------------------|-----------------|
+| `GSC_SA_JSON`         | Google Cloud service-account key JSON (raw or base64). Enable the Search Console API, then add the service-account email as a **user** in Search Console. |
+| `GSC_SITE_URL`        | `sc-domain:aswhub.maxifidigital.com` (domain property) or `https://aswhub.maxifidigital.com/`. |
+| `BING_API_KEY`        | Bing Webmaster Tools → **Settings → API access** (index status). |
+| `BING_SITE_URL`       | `https://aswhub.maxifidigital.com`. |
+| `PERPLEXITY_API_KEY`  | Perplexity API key — the one engine with a real citation API. Pre-fills the Perplexity column of the capture sheet. |
+| `PERPLEXITY_MODEL`    | Optional; defaults to `sonar`. |
+| `BING_SEARCH_API_KEY` | Azure **Bing Web Search v7** key (a Copilot rank proxy) — **distinct** from `BING_API_KEY`. |
+
+`SKIP_SCRAPE=1` skips the best-effort headless scrape (usually BLOCKED anyway;
+the index-status + Perplexity API sections are the authoritative signals).
 
 The same egress note above applies: the routine's container must have the
 allowlist domains plus `searchconsole.googleapis.com`, `oauth2.googleapis.com`,
-and `ssl.bing.com` for the index APIs to work.
+`ssl.bing.com`, `api.perplexity.ai`, and `api.bing.microsoft.com` for the index
++ citation APIs to work.
+
+### What the monthly check writes
+
+- **`monitoring/index-baseline.json`** — the per-URL Google/Bing index verdicts
+  from this run. **Commit it** so next month can diff against it (the report's
+  "Index changes since last baseline" section and the 🚨 Alerts block depend on
+  it). Newly-indexed Google pages are the headline cue to re-run the manual
+  6-engine battery.
+- **`monitoring/latest-capture.csv`** — a pre-filled capture sheet (6 engines ×
+  the `src/_data/citations.json` battery) for that manual run. The Perplexity
+  column is auto-filled from the API and the Copilot column carries the Bing-rank
+  hint; the rest are left blank for the human. It is regenerated every run, so it
+  is **git-ignored** (not committed).
 
 ### Credentials & exposure — read before adding `GSC_SA_JSON`
 

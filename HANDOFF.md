@@ -87,6 +87,31 @@ container start) with the ready-to-paste prompt **`routines/demo-live-verify.md`
 | CORS allows `https://aswhub.maxifidigital.com` | ⏳ verify | else the browser blocks the cross-origin probe |
 | Live signal confirmed | ⏳ | every tile `ok` + real model id (no `· sample`) + non-empty text; page reads `● LIVE · queried …` |
 
+## ⏩ Monthly-check upgrade — baseline diff, citation/rank APIs, capture sheet (2026-06-23)
+
+`scripts/monthly-index-check.mjs` upgraded from "sitemap + GSC/Bing index +
+best-effort scrape" to the full spec the routine prompt describes. New in this pass:
+
+- **🚨 Alerts block** assembled from all results and printed first (newly-indexed
+  Google pages are the headline cue to re-run the manual battery).
+- **Baseline diff:** reads `monitoring/index-baseline.json`, reports per-engine
+  newly-indexed / dropped URLs vs last run, then rewrites the baseline. **This file
+  is committed** each run (STEP 3 of the routine); a SKIPPED engine preserves its
+  prior baseline rather than wiping it.
+- **Perplexity citation probe** (`PERPLEXITY_API_KEY`, host `api.perplexity.ai`)
+  and **Bing rank proxy** for Copilot (`BING_SEARCH_API_KEY`, Azure Bing Web Search
+  v7, host `api.bing.microsoft.com`) — both run over the live
+  `src/_data/citations.json` battery (6 engines × 5 queries), both SKIP cleanly
+  when their key/host is absent.
+- **Capture sheet** `monitoring/latest-capture.csv` (git-ignored) — pre-filled with
+  the Perplexity result + Copilot rank hint; the four manual engines left blank for
+  the human battery. The routine still never edits `src/_data/citations.json`.
+- `SKIP_SCRAPE=1` now actually skips the best-effort scrape.
+- Docs synced: `MONITORING.md` (egress + secrets + outputs), `CLAUDE.md`,
+  `routines/monthly-index-citation-check.md`, `routines/fresh-session-verify.md`,
+  `.gitignore`. Verified end-to-end this session: GSC 0/52 + Bing 52/52 (real API
+  counts), baseline seed + diff both exercised, capture CSV well-formed (30 rows).
+
 ## ⏩ AEO hardening pass — structured data, meta layer, canonical, citation table (2026-06-23)
 
 Hardening sweep ahead of the 25 June 2026 CANSO pitch. All changes on
@@ -158,8 +183,9 @@ each month** (cron `0 9 15 * *`). Code is merged to `main` (PR #13).
 | GSC API enabled, service account created | ✅ | `aswhub-index-checker@maxifi-aswhub-index.iam.gserviceaccount.com` |
 | Service account added as Search Console user | ⏳ verify | Must be **Full** user or GSC calls 403 |
 | Bing site verified + API key generated | ⏳ verify | Settings → API access → API Key |
-| 4 secrets on environment | ⏳ verify | `GSC_SA_JSON`, `GSC_SITE_URL=https://aswhub.maxifidigital.com/`, `BING_API_KEY`, `BING_SITE_URL=https://aswhub.maxifidigital.com` |
-| 3 API hosts on egress allowlist | ⏳ verify | `searchconsole.googleapis.com`, `oauth2.googleapis.com`, `ssl.bing.com` |
+| 4 core secrets on environment | ⏳ verify | `GSC_SA_JSON`, `GSC_SITE_URL=https://aswhub.maxifidigital.com/`, `BING_API_KEY`, `BING_SITE_URL=https://aswhub.maxifidigital.com` |
+| 2 optional probe secrets | ⏳ optional | `PERPLEXITY_API_KEY` (citation API), `BING_SEARCH_API_KEY` (Azure Bing Web Search v7 → Copilot rank). Missing → those sections SKIPPED. |
+| 5 API hosts on egress allowlist | ⏳ verify | Core: `searchconsole.googleapis.com`, `oauth2.googleapis.com`, `ssl.bing.com`. Probes: `api.perplexity.ai`, `api.bing.microsoft.com` |
 | Routine created (15th monthly) | ⏳ | Prompt: `routines/monthly-index-citation-check.md` |
 
 **⚠️ Verification must happen in a FRESH session.** Env vars and the egress

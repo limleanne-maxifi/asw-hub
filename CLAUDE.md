@@ -155,15 +155,22 @@ Two Claude Code on the web routines track indexing/citation health:
   Confirms each sitemap URL is **actually indexed** via the Google Search Console
   URL Inspection API + Bing Webmaster API — headless scraping of the engines is
   bot-blocked, so APIs are the authoritative signal and the scrape is best-effort.
+  Also **diffs against last run's baseline** (`monitoring/index-baseline.json`),
+  probes the **Perplexity** citation API + an **Azure Bing Web Search** rank proxy
+  (Copilot) over the `src/_data/citations.json` battery, leads the report with a
+  🚨 Alerts block, and writes a pre-filled **capture sheet**
+  (`monitoring/latest-capture.csv`, git-ignored) for the manual 6-engine battery.
   Reads optional secrets `GSC_SA_JSON`, `GSC_SITE_URL`, `BING_API_KEY`,
-  `BING_SITE_URL` (missing creds → that section is SKIPPED, not a failure).
+  `BING_SITE_URL`, `PERPLEXITY_API_KEY`, `BING_SEARCH_API_KEY` (missing creds →
+  that section is SKIPPED, not a failure; `SKIP_SCRAPE=1` skips the scrape).
   Bing site verification ships as `public/BingSiteAuth.xml` (served at site root).
-  **Activation is operator-side:** add the four secrets and the three API egress
-  hosts (`searchconsole.googleapis.com`, `oauth2.googleapis.com`, `ssl.bing.com`),
-  add the GSC service account as a Search Console user, then verify in a **fresh**
-  session (env/allowlist only apply at container start). Paste
-  `routines/fresh-session-verify.md` to confirm the GSC + Bing sections return real
-  counts instead of SKIPPED.
+  **Activation is operator-side:** add the secrets and the five API egress hosts
+  (`searchconsole.googleapis.com`, `oauth2.googleapis.com`, `ssl.bing.com`,
+  `api.perplexity.ai`, `api.bing.microsoft.com`), add the GSC service account as a
+  Search Console user, then verify in a **fresh** session (env/allowlist only apply
+  at container start). Paste `routines/fresh-session-verify.md` to confirm the GSC +
+  Bing sections return real counts instead of SKIPPED. The routine **commits
+  `monitoring/index-baseline.json`** each run so the next run can diff against it.
 
 ## Eleventy filters registered in `.eleventy.js`
 - `split(value, sep)` — string split (Nunjucks has no built-in).
