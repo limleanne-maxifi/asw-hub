@@ -88,6 +88,33 @@ The same egress note above applies: the routine's container must have the
 allowlist domains plus `searchconsole.googleapis.com`, `oauth2.googleapis.com`,
 and `ssl.bing.com` for the index APIs to work.
 
+### Credentials & exposure — read before adding `GSC_SA_JSON`
+
+Two gotchas bite every first-time activation:
+
+1. **There is no dedicated secrets store** in Claude Code on the web (per the
+   [docs](https://code.claude.com/docs/en/claude-code-on-the-web)). Environment
+   variables are **visible to anyone who can edit the environment** — the config
+   dialog even warns "don't add secrets or credentials." There is no safer field
+   to use; env vars are the only way to get a credential into a session. So treat
+   the GSC service account as **disposable and least-privilege**: give it **no GCP
+   IAM roles**, add it to Search Console as a **Restricted** user on the one
+   property, and **rotate the key** periodically (and after any exposure — e.g. a
+   screenshot). Its only power is then *reading index status for this one site*.
+   If that exposure is unacceptable, skip `GSC_SA_JSON` entirely — the section
+   degrades to `SKIPPED`, Bing still works, and you can check Google manually.
+
+2. **Paste `GSC_SA_JSON` as a single base64 line**, not the raw multi-line JSON.
+   The env-var field is `.env` format and truncates/mangles multi-line input
+   (you end up saving just `{`), which is why the GSC section silently stays
+   `SKIPPED`. Encode it on your own machine —
+   `base64 < service-account.json | tr -d '\n'` (or `base64 -w0 …` on Linux) —
+   and paste that one line, **no quotes, no spaces, no `GSC_SA_JSON=` prefix** in
+   the value field. The script's `loadSaJson()` auto-detects and decodes base64.
+
+Either way, env vars only load **at container start**, so add them, then verify
+in a **fresh** session — see `routines/fresh-session-verify.md`.
+
 ## Manual checks (run from a browser, not the sandbox)
 
 - Google Search Console: https://search.google.com/search-console/index?resource_id=https%3A%2F%2Faswhub.maxifidigital.com%2F
