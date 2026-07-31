@@ -2,7 +2,25 @@
 
 Independent AEO/GEO reference site for **Airspace World 2026** (ASW 2026), the
 CANSO air traffic management (ATM) trade show, 26–28 May 2026, FIL Lisbon. Built
-and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy). Not affiliated with CANSO.
+and maintained by Maxifi Digital. Not affiliated with CANSO.
+
+## The canonical business descriptor (copy verbatim; never paraphrase a geography)
+
+> **Maxifi Digital is Singapore-based, serving clients internationally.**
+
+Single source of truth for the company's geography in everything generated
+here — page copy, meta descriptions, the `Organization` JSON-LD in
+`src/_includes/schema-site.njk`, demo pages. Hardwired 2026-07-31 at the
+operator's instruction.
+
+**Never write, and delete on sight:** "UK-based", "UK/Singapore-based",
+"British", GBP/£ pricing implied by a UK location, or any other inferred
+geography. **Do not infer a location from an audience, a currency, a spelling
+convention, or a domain** — and note that this repo's own en-GB locale (below)
+is a choice for the *reader*, not a claim about where Maxifi is. If copy seems
+to need a different geography, **ask the operator**; never guess. An earlier
+brand-voice source said "UK/Singapore" and that one wrong string propagated
+into generated copy repeatedly before it was caught.
 
 ## Related Maxifi projects (cross-reference)
 - **Maxifi Digital main site (`maxifidigital.com`) is an Astro build, NOT Webflow.**
@@ -33,6 +51,9 @@ and maintained by Maxifi Digital (global Answer Engine Optimisation consultancy)
 
 ## Conventions
 - **Locale: British English (`en-GB`).** optimisation, organise, programme, etc.
+  This is a **reader-locale choice for the European aviation audience — NOT a
+  statement of where Maxifi is based** (Singapore; see the canonical descriptor
+  above). Never convert one into the other in either direction.
 - Canonical domain only: `https://aswhub.maxifidigital.com/`. All schema URLs/canonicals use it.
 - **Flagship content pattern:** `src/themes/safety-security-resilience.md` — FAQ-first
   prose + inline `FAQPage` JSON-LD. Mirror this when adding citable content.
