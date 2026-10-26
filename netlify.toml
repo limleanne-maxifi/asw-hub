@@ -91,44 +91,102 @@
   to     = "/asw-2025/"
   status = 301
 
-## Lowercase alias for the original single-client demo page. The canonical file
-## stays untouched at /CANSO-demo/ (public/ passthrough); the config-driven
-## equivalent renders at /demo/canso/ from demos/canso.json.
+## ── /CANSO-demo/ retired → ai.maxifidigital.com/demo/canso/ (cutover 2026-07-31)
+## The single-file CANSO demo is superseded by /demo/canso/ on the new host. The
+## splat covers the whole tree, including the visibility-value-model companion —
+## its sibling copy at public/demo-assets/visibility-value-explainer.html, which
+## the live /demo/{slug} pages actually embed, is unaffected and still shipping
+## from maxifi-pages.
+##
+## force = true is required here: public/CANSO-demo/ is still a passthrough, so
+## the real files would otherwise win over the redirect. Nothing is deleted —
+## the files stay in the repo and dropping these rules restores the pages.
+##
+## Lowercase aliases now point straight at the new target instead of chaining
+## through /CANSO-demo/ (one 301 for the visitor, not two).
+[[redirects]]
+  from   = "/CANSO-demo/*"
+  to     = "https://ai.maxifidigital.com/demo/canso/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/CANSO-demo"
+  to     = "https://ai.maxifidigital.com/demo/canso/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/canso-demo/*"
+  to     = "https://ai.maxifidigital.com/demo/canso/"
+  status = 301
+  force  = true
+
 [[redirects]]
   from   = "/canso-demo"
-  to     = "/CANSO-demo/"
+  to     = "https://ai.maxifidigital.com/demo/canso/"
   status = 301
+  force  = true
 
-[[redirects]]
-  from   = "/canso-demo/"
-  to     = "/CANSO-demo/"
-  status = 301
-
-## Visibility Value Model explainer (static passthrough under /CANSO-demo/).
-[[redirects]]
-  from   = "/CANSO-demo/visibility-value-model"
-  to     = "/CANSO-demo/visibility-value-model/"
-  status = 301
-
-[[redirects]]
-  from   = "/canso-demo/visibility-value-model"
-  to     = "/CANSO-demo/visibility-value-model/"
-  status = 301
-
-[[redirects]]
-  from   = "/canso-demo/visibility-value-model/"
-  to     = "/CANSO-demo/visibility-value-model/"
-  status = 301
-
-## Engine probe — proxy to the ai-visibility-engine backend on Render. Used by
-## /CANSO-demo/ and every /demo/{slug}/ page. status = 200 makes this a
-## rewrite/proxy: the browser call to /demo/probe stays same-origin (no CORS),
-## and Netlify forwards the POST (with the X-Demo-Token header) to Render
-## server-side. The slug "probe" is reserved (enforced in src/_data/demos.js).
+## Engine probe — proxy to the ai-visibility-engine backend on RAILWAY.
+## status = 200 makes this a rewrite/proxy: the browser call to /demo/probe stays
+## same-origin (no CORS), and Netlify forwards the POST (with the X-Demo-Token
+## header) server-side. The slug "probe" is reserved (src/_data/demos.js).
+##
+## Repointed 2026-07-31: this pointed at ai-visibility-engine.onrender.com, which
+## is dead — the engine moved Render → Railway, so every tester served from this
+## host had been failing silently. Kept (rather than removed alongside the retired
+## demo pages below) so the endpoint works if anything here is ever un-retired.
+##
+## MUST stay above the /demo/* redirects that follow — Netlify takes the first
+## matching rule, so moving this below them would break the proxy.
 [[redirects]]
   from   = "/demo/probe"
-  to     = "https://ai-visibility-engine.onrender.com/demo/probe"
+  to     = "https://web-production-00ba0.up.railway.app/demo/probe"
   status = 200
+  force  = true
+
+## ── Demo pages retired → ai.maxifidigital.com (cutover 2026-07-31) ───────────
+## The per-prospect demo pages moved to ai.maxifidigital.com, which renders the
+## same template from limleanne-maxifi/maxifi-pages. Their demos/*.json configs
+## are removed from this repo in the same commit, so nothing builds at these
+## paths any more — these 301s keep links already shared from this host working.
+[[redirects]]
+  from   = "/demo/canso"
+  to     = "https://ai.maxifidigital.com/demo/canso/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/demo/canso/"
+  to     = "https://ai.maxifidigital.com/demo/canso/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/demo/ortus"
+  to     = "https://ai.maxifidigital.com/demo/ortus/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/demo/ortus/"
+  to     = "https://ai.maxifidigital.com/demo/ortus/"
+  status = 301
+  force  = true
+
+## b2b was the generic copy-me template here; it moved with the others. Redirected
+## rather than left to 404 — the config is being deleted in this commit too.
+[[redirects]]
+  from   = "/demo/b2b"
+  to     = "https://ai.maxifidigital.com/demo/b2b/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/demo/b2b/"
+  to     = "https://ai.maxifidigital.com/demo/b2b/"
+  status = 301
   force  = true
 ## Renamed sessions — old slugs were misleading (did not match the actual session)
 ## ses2plus-implementation → next-generation-atm-talent (People, Skills & Next-Gen)

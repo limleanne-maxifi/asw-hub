@@ -27,8 +27,12 @@ into generated copy repeatedly before it was caught.
   Repo: `limleanne-maxifi/dashboard` (Astro, deployed on Netlify). Structured-data /
   AEO work on that site is done in code (`.astro` pages + `BaseLayout.astro` JSON-LD),
   not in a CMS. This repo (`asw-hub`) and the `dashboard` repo are separate codebases.
-- **`ai-visibility-engine`** (separate repo — Python app on Render) is the visibility
-  probe backend behind the `/CANSO-demo/` and `/demo/{slug}/` sales pages.
+- **`ai-visibility-engine`** (separate repo — Python app on **Railway**, at
+  `web-production-00ba0.up.railway.app`) is the visibility probe backend. It moved
+  Render → Railway; `onrender.com` is dead and every mention of Render below is
+  historical. This repo's `/demo/probe` proxy was repointed at the cutover
+  (2026-07-31). The sales pages it served — `/CANSO-demo/` and `/demo/{slug}/` —
+  are retired here and now live on `ai.maxifidigital.com` (`maxifi-pages`).
 - **RuFlow (multi-agent swarm) engine-review SOP:** `docs/ruflo-engine-review-spec.md`
   is a cross-project reference — a tightly-constrained `ruflo` task spec + phased rollout
   + safeguards for reviewing the `ai-visibility-engine`. It targets that separate repo and
@@ -75,17 +79,34 @@ into generated copy repeatedly before it was caught.
   `src/sessions/*.md` files.
 
 ## Generic demo template — `/demo/{slug}` (per-prospect sales pages)
+> ## ⛔ RETIRED 2026-07-31 — the demo pages moved to `ai.maxifidigital.com`
+>
+> **Do not add a prospect here.** Every per-prospect demo page now lives in
+> **`limleanne-maxifi/maxifi-pages`** at `ai.maxifidigital.com/demo/{slug}/`.
+> Add `demos/{slug}.json` **in that repo**; its `CLAUDE.md` carries the current
+> rules.
+>
+> This repo's `demos/canso.json`, `ortus.json` and `b2b.json` were deleted at the
+> cutover, so nothing builds at `/demo/{slug}/` here any more. `netlify.toml`
+> 301s those paths (and the whole `/CANSO-demo/` tree) to the new host.
+>
+> The machinery below — `src/_data/demos.js`, `src/demo.njk`, `demos/README.md` —
+> is left in place and still works if a config is ever added back. The rest of
+> this section is retained as a description of that template, **not** as a
+> statement that these pages are live here.
+
 One reusable Eleventy template renders a full AI-visibility demo page per prospect
 from a config file. **Adding a prospect = one JSON file, zero code changes** —
 3-step how-to and full schema reference in **`demos/README.md`**.
 - **Pieces:** `demos/{slug}.json` (configs; `probe` slug reserved) →
   `src/_data/demos.js` (loader) → `src/demo.njk` (template; paginated, one page per
   config at `/demo/{slug}/`, excluded from collections/sitemap).
-- **Live instances:** `/demo/canso/` (original Airspace World content),
-  `/demo/ortus/` (ticker populated from the 2026-07 mini-audit — ChatGPT/Claude/
-  Gemini recommend Vistage/YPO/EO with Ortus absent, Perplexity cites ortusclub.com
-  buried 5th; Gemini line added after a re-run), `/demo/b2b/` (generic default;
-  empty `brand_default` ⇒ **no auto-run, spends no engine budget**).
+- **Former instances (now on `ai.maxifidigital.com`):** `/demo/canso/` (original
+  Airspace World content), `/demo/ortus/` (ticker populated from the 2026-07
+  mini-audit — ChatGPT/Claude/Gemini recommend Vistage/YPO/EO with Ortus absent,
+  Perplexity cites ortusclub.com buried 5th; Gemini line added after a re-run),
+  `/demo/b2b/` (generic default; empty `brand_default` ⇒ **no auto-run, spends no
+  engine budget**).
 - **Sections, in conversion order:** hero + config ticker + sticky booking CTA ·
   explainer video (poster, click-to-load iframe of
   `public/demo-assets/visibility-value-explainer.html`; its final CTA scrolls to the
@@ -112,6 +133,24 @@ from a config file. **Adding a prospect = one JSON file, zero code changes** —
   and shared demo token. Empty the `brand_default` of pages not actively pitched.
 
 ## AEO sales demo — `/CANSO-demo/` (Airspace World proof-of-reference)
+
+> ## ⛔ RETIRED 2026-07-31 — 301s to `ai.maxifidigital.com/demo/canso/`
+>
+> `netlify.toml` redirects the whole `/CANSO-demo/*` tree (and the `/canso-demo`
+> lowercase aliases) to the new host with `force = true`. **The files were not
+> deleted** — `public/CANSO-demo/` still ships in the build, which is exactly why
+> `force` is required: without it the real files would win over the redirect.
+> Dropping those rules restores the pages.
+>
+> The `visibility-value-model` companion is covered by the same splat. Its
+> sibling `public/demo-assets/visibility-value-explainer.html` — the copy the
+> live demo pages actually embed — is unaffected and still ships from
+> `maxifi-pages`.
+>
+> **Editing `public/CANSO-demo/index.html` no longer changes anything a visitor
+> can reach.** Work on `/demo/canso/` in `maxifi-pages` instead. Everything below
+> describes the retired page.
+
 A self-contained, buyer-facing **AI-visibility showcase** lives at
 `public/CANSO-demo/index.html` and is served at **`/CANSO-demo/`**
 (<https://aswhub.maxifidigital.com/CANSO-demo/>). It is copied verbatim by the `public/`
